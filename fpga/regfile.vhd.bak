@@ -1,0 +1,125 @@
+-- ================================================================================
+-- Register File -- Altera DE2 Board
+-- ================================================================================
+-- Authors : Maxime Grégoire, Patrick White
+-- Last modified: 2013
+-- ================================================================================
+Library ieee;
+use     ieee.std_logic_1164.all;
+use     ieee.std_logic_unsigned.all;
+
+entity regfile is
+port (
+	
+	address : in std_logic_vector(31 downto 0);
+	read_n : in std_logic;
+	readdata : in std_logic_vector(31 downto 0);
+	write_n : in std_logic;
+	writedata : in std_logic_vector(31 downto 0);
+	rst : in std_logic;
+	
+	clk : in std_logic;
+	
+	
+	AVINTDIS : out std_logic;
+	T1INTOVR : out std_logic;
+	T1INTSTS : out std_logic;
+	T0INTSTS : out std_logic;
+	T1INTEN : out std_logic;
+	T0INTEN : out std_logic;
+	
+	T1CNTEN : out std_logic;
+	T0CNTEN : out std_logic;
+	T1RST : out std_logic;
+	T0RST : out std_logic;
+	
+	T0CNT : out std_logic_vector(31 downto 0);
+	
+	T1CNT : out std_logic_vector(31 downto 0);
+	
+	T0CMP : out std_logic_vector(31 downto 0);
+	
+	T1CMP : out std_logic_vector(31 downto 0);
+	
+	GP0 : out std_logic_vector(31 downto 0);
+	
+	GP1 : out std_logic_vector(31 downto 0);
+	
+	  );
+	  
+end entity regfile;
+
+architecture arch of regfile is
+
+
+
+
+process(clk, rst)
+begin
+
+case address is
+	when x"0" => 
+		if rst='1' then 
+			AVINTDIS <= '0';
+			T1INTOVR <= '0';
+			T1INTSTS <= '0';
+			T0INTSTS <= '0';
+			T1INTEN <= '0';
+			T0INTEN <= '0';
+		elsif clk'event and clk = '1' then
+			if write_n = '1' then
+				AVINTDIS <= writedata(5);
+				if writedata(4) = '1' then
+					T1INTOVR <= '0';
+				end if;
+				if writedata(3) = '1' then
+					T1INTSTS <= '0';
+				end if;
+				if writedata(2) = '1' then
+					T0INTSTS <= '0';
+				end if;
+				T1INTEN <= writedata(1);
+				T0INTEN <= writedata(0);
+			elsif read_n = '1' then
+				readdata(5) <= AVINTDIS;
+				readdata(4) <= T1INTOVR;
+				readdata(3) <= T1INTSTS;
+				readdata(2) <= T0INTSTS;
+				readdata(1) <= T1INTEN;
+				readdata(0) <= T0INTEN;
+			end if;
+		end if;
+	when x"4" =>
+		if rst='1' then 
+			T1CNTEN <= '0';
+			T0CNTEN <= '0';
+			T1RST <= '0';
+			T0RST <= '0';
+		elsif clk'event and clk = '1' then
+			if write_n = '1' then
+				T1CNTEN <= writedata(3);
+				T0CNTEN <= writedata(2);
+				T1RST <= writedata(1);
+				T0RST <= writedata(0);
+			elsif read_n = '1' then
+				readdata(3) <= T1CNTEN;
+				readdata(2) <= T0CNTEN;
+				readdata(1) <= T1RST;
+				readdata(0) <= T0RST;
+			end if;
+		end if;
+	when x"8" =>
+		if rst='1' then
+			T0CNT <= to_stdlogicvector(x"0");
+		elsif clk'event and clk = '1' then
+			if read_n = '1' then
+				readdata(31 downto 0) <= T0CNT(31 downto 0);
+			end if;
+		end if;
+
+
+
+
+end regfile;
+	
+	

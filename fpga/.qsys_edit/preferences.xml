@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="269" />
+   <clocksource preferredWidth="269" />
+   <frequency preferredWidth="250" />
+  </columns>
+ </clocktable>
+ <window width="1100" height="800" x="343" y="105" />
+ <library
+   expandedCategories="Library,Library/Embedded Processors,Library/Bridges/Memory-Mapped,Library/Bridges,Library/Verification/Simulation,Library/Qsys Interconnect,Library/Qsys Interconnect/Memory-Mapped,Library/Verification,Library/Verification/Debug &amp; Performance,Project" />
+ <hdlexample language="VERILOG" />
+ <generation synthesis="VHDL" />
+</preferences>

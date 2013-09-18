@@ -147,6 +147,14 @@ architecture Structural_Basic of DE2_TOP is
 	signal counter_r     : integer;
 	signal slowcounter_r : integer;
 
+	
+	component first_nios2_system is
+		port (
+		clk_clk       : in std_logic := '0'; --   clk.clk
+		reset_reset_n : in std_logic := '0'  -- reset.reset_n
+		);
+	end component first_nios2_system;
+
 --	signal ramaddr_s    : std_logic_vector(7 downto 0);
 --	signal ramdatain_s  : std_logic_vector(7 downto 0);
 --	signal ramdataout_s : std_logic_vector(7 downto 0);
@@ -298,6 +306,12 @@ LEDR <= conv_std_logic_vector(slowcounter_r, 18);
 --LEDG(8) <= '0';
 LEDG(8 downto 0) <= (others => '0');
 
+-- Instantiate nios
+		xfirst_nios2_system : component first_nios2_system
+		port map (
+		clk_clk       => CLOCK_50, 	--   clk.clk
+		reset_reset_n => KEY(0) 		-- reset.reset_n
+		);
 
 end Structural_Basic;
 
