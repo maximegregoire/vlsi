@@ -3,20 +3,24 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="47" />
+   <connections preferredWidth="111" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="269" />
-   <clocksource preferredWidth="269" />
-   <frequency preferredWidth="250" />
+   <clockname preferredWidth="315" />
+   <clocksource preferredWidth="314" />
+   <frequency preferredWidth="295" />
   </columns>
  </clocktable>
- <window width="1100" height="800" x="343" y="105" />
  <library
-   expandedCategories="Library,Library/Embedded Processors,Library/Bridges/Memory-Mapped,Library/Bridges,Library/Verification/Simulation,Library/Qsys Interconnect,Library/Qsys Interconnect/Memory-Mapped,Library/Verification,Library/Verification/Debug &amp; Performance,Project" />
- <hdlexample language="VERILOG" />
- <generation synthesis="VHDL" />
+   expandedCategories="Project,Library/Peripherals/Microcontroller Peripherals,Library,Library/Peripherals" />
+ <window width="1236" height="800" x="417" y="106" />
+ <generation
+   synthesis="VHDL"
+   testbench_system="NONE"
+   testbench_simulation="VHDL"
+   path="_PROJECT_NAME_" />
+ <hdlexample language="VHDL" />
 </preferences>

@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
- * SOPC Builder design path: C:/Users/mgrego29/vlsi/fpga/first_nios2_system.sopcinfo
+ * SOPC Builder design path: C:/Users/pwhite8/VLSI_CAD/fpga/first_nios2_system.sopcinfo
  *
- * Generated: Wed Sep 18 18:51:04 EDT 2013
+ * Generated: Thu Sep 19 12:43:00 EDT 2013
  */
 
 /*
@@ -65,9 +65,9 @@
  *
  */
 
-#define ONCHIP_MEM_REGION_BASE 0x8020
+#define ONCHIP_MEM_REGION_BASE 0x20
 #define ONCHIP_MEM_REGION_SPAN 20448
-#define RESET_REGION_BASE 0x8000
+#define RESET_REGION_BASE 0x0
 #define RESET_REGION_SPAN 32
 
 

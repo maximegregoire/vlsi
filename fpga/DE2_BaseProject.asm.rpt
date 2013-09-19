@@ -1,5 +1,5 @@
 Assembler report for DE2_BaseProject
-Wed Sep 18 19:25:26 2013
+Thu Sep 19 12:37:22 2013
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -11,8 +11,8 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.sof
-  7. Assembler Device Options: C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.pof
+  6. Assembler Device Options: C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.sof
+  7. Assembler Device Options: C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.pof
   8. Assembler Messages
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Sep 18 19:25:26 2013 ;
+; Assembler Status      ; Successful - Thu Sep 19 12:37:22 2013 ;
 ; Revision Name         ; DE2_BaseProject                       ;
 ; Top-level Entity Name ; DE2_TOP                               ;
 ; Family                ; Cyclone II                            ;
@@ -86,41 +86,40 @@ applicable agreement for further details.
 +--------+-------------------------------+--------------+
 ; Altera ; Nios II Processor (6AF7 00A2) ; Licensed     ;
 ; Altera ; Signal Tap (6AF7 BCE1)        ; Licensed     ;
-; Altera ; Signal Tap (6AF7 BCEC)        ; Licensed     ;
 +--------+-------------------------------+--------------+
 
 
-+-------------------------------------------------+
-; Assembler Generated Files                       ;
-+-------------------------------------------------+
-; File Name                                       ;
-+-------------------------------------------------+
-; C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.sof ;
-; C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.pof ;
-+-------------------------------------------------+
++----------------------------------------------------+
+; Assembler Generated Files                          ;
++----------------------------------------------------+
+; File Name                                          ;
++----------------------------------------------------+
+; C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.sof ;
+; C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.pof ;
++----------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.sof ;
-+----------------+----------------------------------------------------------+
-; Option         ; Setting                                                  ;
-+----------------+----------------------------------------------------------+
-; Device         ; EP2C35F672C6                                             ;
-; JTAG usercode  ; 0xFFFFFFFF                                               ;
-; Checksum       ; 0x00507BB7                                               ;
-+----------------+----------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.sof ;
++----------------+-------------------------------------------------------------+
+; Option         ; Setting                                                     ;
++----------------+-------------------------------------------------------------+
+; Device         ; EP2C35F672C6                                                ;
+; JTAG usercode  ; 0xFFFFFFFF                                                  ;
+; Checksum       ; 0x004F76CC                                                  ;
++----------------+-------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.pof ;
-+--------------------+------------------------------------------------------+
-; Option             ; Setting                                              ;
-+--------------------+------------------------------------------------------+
-; Device             ; EPCS16                                               ;
-; JTAG usercode      ; 0x00000000                                           ;
-; Checksum           ; 0x1C42F8F8                                           ;
-; Compression Ratio  ; 3                                                    ;
-+--------------------+------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.pof ;
++--------------------+---------------------------------------------------------+
+; Option             ; Setting                                                 ;
++--------------------+---------------------------------------------------------+
+; Device             ; EPCS16                                                  ;
+; JTAG usercode      ; 0x00000000                                              ;
+; Checksum           ; 0x1C4B0F67                                              ;
+; Compression Ratio  ; 3                                                       ;
++--------------------+---------------------------------------------------------+
 
 
 +--------------------+
@@ -129,13 +128,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed Sep 18 19:25:21 2013
+    Info: Processing started: Thu Sep 19 12:37:17 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE2_BaseProject -c DE2_BaseProject
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 456 megabytes
-    Info: Processing ended: Wed Sep 18 19:25:26 2013
+    Info: Processing ended: Thu Sep 19 12:37:22 2013
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 

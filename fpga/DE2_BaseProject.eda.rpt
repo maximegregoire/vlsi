@@ -1,5 +1,5 @@
 EDA Netlist Writer report for DE2_BaseProject
-Wed Sep 18 19:25:37 2013
+Thu Sep 19 12:37:32 2013
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Sep 18 19:25:37 2013 ;
+; EDA Netlist Writer Status ; Successful - Thu Sep 19 12:37:32 2013 ;
 ; Revision Name             ; DE2_BaseProject                       ;
 ; Top-level Entity Name     ; DE2_TOP                               ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Simulation Generated Files                                                   ;
-+------------------------------------------------------------------------------+
-; Generated Files                                                              ;
-+------------------------------------------------------------------------------+
-; C:/Users/mgrego29/vlsi/fpga/simulation/modelsim/DE2_BaseProject.vho          ;
-; C:/Users/mgrego29/vlsi/fpga/simulation/modelsim/DE2_BaseProject_fast.vho     ;
-; C:/Users/mgrego29/vlsi/fpga/simulation/modelsim/DE2_BaseProject_vhd.sdo      ;
-; C:/Users/mgrego29/vlsi/fpga/simulation/modelsim/DE2_BaseProject_vhd_fast.sdo ;
-+------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Simulation Generated Files                                                      ;
++---------------------------------------------------------------------------------+
+; Generated Files                                                                 ;
++---------------------------------------------------------------------------------+
+; C:/Users/pwhite8/VLSI_CAD/fpga/simulation/modelsim/DE2_BaseProject.vho          ;
+; C:/Users/pwhite8/VLSI_CAD/fpga/simulation/modelsim/DE2_BaseProject_fast.vho     ;
+; C:/Users/pwhite8/VLSI_CAD/fpga/simulation/modelsim/DE2_BaseProject_vhd.sdo      ;
+; C:/Users/pwhite8/VLSI_CAD/fpga/simulation/modelsim/DE2_BaseProject_vhd_fast.sdo ;
++---------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed Sep 18 19:25:32 2013
+    Info: Processing started: Thu Sep 19 12:37:28 2013
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off DE2_BaseProject -c DE2_BaseProject
-Info (204026): Generated files "DE2_BaseProject.vho", "DE2_BaseProject_fast.vho", "DE2_BaseProject_vhd.sdo" and "DE2_BaseProject_vhd_fast.sdo" in directory "C:/Users/mgrego29/vlsi/fpga/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "DE2_BaseProject.vho", "DE2_BaseProject_fast.vho", "DE2_BaseProject_vhd.sdo" and "DE2_BaseProject_vhd_fast.sdo" in directory "C:/Users/pwhite8/VLSI_CAD/fpga/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 448 megabytes
-    Info: Processing ended: Wed Sep 18 19:25:37 2013
+    Info: Peak virtual memory: 449 megabytes
+    Info: Processing ended: Thu Sep 19 12:37:33 2013
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 

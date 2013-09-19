@@ -147,18 +147,19 @@ architecture Structural_Basic of DE2_TOP is
 	signal counter_r     : integer;
 	signal slowcounter_r : integer;
 
-	
-	component first_nios2_system is
-		port (
-		clk_clk       : in std_logic := '0'; --   clk.clk
-		reset_reset_n : in std_logic := '0'  -- reset.reset_n
-		);
-	end component first_nios2_system;
-
 --	signal ramaddr_s    : std_logic_vector(7 downto 0);
 --	signal ramdatain_s  : std_logic_vector(7 downto 0);
 --	signal ramdataout_s : std_logic_vector(7 downto 0);
 --	signal ramwren_s    : std_logic;
+
+	 component first_nios2_system is
+     port (
+         clk_clk                          : in  std_logic                    := 'X'; -- clk
+         reset_reset_n                    : in  std_logic                    := 'X'; -- reset_n
+         pio_0_external_connection_export : out std_logic_vector(7 downto 0)         -- export
+     );
+    end component first_nios2_system;
+	 
 begin 
 
 -- Here we simply make sure that unused outputs are driven with some value.
@@ -304,14 +305,13 @@ LEDR <= conv_std_logic_vector(slowcounter_r, 18);
 -- send the RAM data output to the green LEDs
 --LEDG(7 downto 0) <= ramdataout_s;
 --LEDG(8) <= '0';
-LEDG(8 downto 0) <= (others => '0');
+-- LEDG(8 downto 0) <= (others => '0');
 
--- Instantiate nios
-		xfirst_nios2_system : component first_nios2_system
-		port map (
-		clk_clk       => CLOCK_50, 	--   clk.clk
-		reset_reset_n => KEY(0) 		-- reset.reset_n
-		);
-
+xfirst_nios2_system : component first_nios2_system
+        port map (
+            clk_clk                          => CLOCK_50,                          --                       clk.clk
+            reset_reset_n                    => SW(0),                    --                     reset.reset_n
+            pio_0_external_connection_export => LEDG(7 downto 0)  -- pio_0_external_connection.export
+        );
 end Structural_Basic;
 

@@ -1,0 +1,124 @@
+!SESSION 2013-09-19 12:40:21.973 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-19 12:43:02.747
+!MESSAGE Indexed 'count_binary_bsp' (72 sources, 49 headers) in 0.55 sec: 758 declarations; 1,618 references; 92 unresolved inclusions; 4 syntax errors; 159 unresolved names (6.27%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-19 12:43:04.370
+!MESSAGE Indexed 'count_binary' (1 sources, 14 headers) in 0.02 sec: 20 declarations; 75 references; 19 unresolved inclusions; 0 syntax errors; 9 unresolved names (8.65%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:44:44.123
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:44:44.123
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:44:46.667
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:44:46.667
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:44:49.399
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:44:49.399
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:45:45.793
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:45:45.793
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:45:48.306
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:45:48.306
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:45:50.944
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:45:50.944
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:46:43.162
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:46:43.162
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:46:45.690
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:46:45.690
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:46:48.344
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:46:48.344
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:13.930
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:13.930
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:16.458
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:16.458
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:19.081
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:19.081
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:27.615
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:27.615
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:29.128
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:50.470
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:50.626
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:50.626
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:53.138
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:48:53.138
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:55.777
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:48:55.777
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-09-19 12:49:03.671
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:49:03.671
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-19 12:49:05.184
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/pwhite8/VLSI_CAD/fpga/software/count_binary/count_binary.elf]
