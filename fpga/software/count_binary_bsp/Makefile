@@ -103,7 +103,7 @@ ACDS_VERSION := 13.0
 # BUILD_NUMBER: 156
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/pwhite8/VLSI_CAD/fpga/first_nios2_system.sopcinfo
+SOPC_FILE := C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

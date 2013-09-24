@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
- * SOPC Builder design path: C:/Users/pwhite8/VLSI_CAD/fpga/first_nios2_system.sopcinfo
+ * SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
  *
- * Generated: Thu Sep 19 12:43:00 EDT 2013
+ * Generated: Sun Sep 22 21:50:56 EDT 2013
  */
 
 /*
@@ -62,7 +62,7 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_qsys"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x10820
+#define ALT_CPU_BREAK_ADDR 0x8020
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
@@ -71,7 +71,7 @@
 #define ALT_CPU_DCACHE_LINE_SIZE 0
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_DCACHE_SIZE 0
-#define ALT_CPU_EXCEPTION_ADDR 0x20
+#define ALT_CPU_EXCEPTION_ADDR 0x10020
 #define ALT_CPU_FLUSHDA_SUPPORTED
 #define ALT_CPU_FREQ 50000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
@@ -85,7 +85,7 @@
 #define ALT_CPU_ICACHE_SIZE 2048
 #define ALT_CPU_INST_ADDR_WIDTH 0x11
 #define ALT_CPU_NAME "cpu"
-#define ALT_CPU_RESET_ADDR 0x0
+#define ALT_CPU_RESET_ADDR 0x10000
 
 
 /*
@@ -94,7 +94,7 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x10820
+#define NIOS2_BREAK_ADDR 0x8020
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
@@ -103,7 +103,7 @@
 #define NIOS2_DCACHE_LINE_SIZE 0
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 0
 #define NIOS2_DCACHE_SIZE 0
-#define NIOS2_EXCEPTION_ADDR 0x20
+#define NIOS2_EXCEPTION_ADDR 0x10020
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
 #define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
@@ -115,7 +115,7 @@
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 5
 #define NIOS2_ICACHE_SIZE 2048
 #define NIOS2_INST_ADDR_WIDTH 0x11
-#define NIOS2_RESET_ADDR 0x0
+#define NIOS2_RESET_ADDR 0x10000
 
 
 /*
@@ -126,6 +126,7 @@
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_NIOS2_QSYS
+#define __REGFILE
 
 
 /*
@@ -173,7 +174,7 @@
  */
 
 #define ALT_MODULE_CLASS_led_pio altera_avalon_pio
-#define LED_PIO_BASE 0x10000
+#define LED_PIO_BASE 0x40
 #define LED_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_PIO_CAPTURE 0
@@ -202,7 +203,7 @@
 #define ALT_MODULE_CLASS_onchip_mem altera_avalon_onchip_memory2
 #define ONCHIP_MEM_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
 #define ONCHIP_MEM_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
-#define ONCHIP_MEM_BASE 0x0
+#define ONCHIP_MEM_BASE 0x10000
 #define ONCHIP_MEM_CONTENTS_INFO ""
 #define ONCHIP_MEM_DUAL_PORT 0
 #define ONCHIP_MEM_GUI_RAM_BLOCK_TYPE "AUTO"
@@ -221,5 +222,19 @@
 #define ONCHIP_MEM_SPAN 20480
 #define ONCHIP_MEM_TYPE "altera_avalon_onchip_memory2"
 #define ONCHIP_MEM_WRITABLE 1
+
+
+/*
+ * regfile_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_regfile_0 regfile
+#define REGFILE_0_BASE 0x0
+#define REGFILE_0_IRQ -1
+#define REGFILE_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define REGFILE_0_NAME "/dev/regfile_0"
+#define REGFILE_0_SPAN 64
+#define REGFILE_0_TYPE "regfile"
 
 #endif /* __SYSTEM_H_ */

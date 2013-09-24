@@ -87,11 +87,11 @@ ACDS_VERSION := 13.0
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.jdi
+JDI_FILE := C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/pwhite8/VLSI_CAD/fpga/first_nios2_system.sopcinfo
+SOPCINFO_FILE := C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

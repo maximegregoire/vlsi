@@ -1,5 +1,5 @@
 Flow report for DE2_BaseProject
-Thu Sep 19 13:38:44 2013
+Sun Sep 22 21:48:43 2013
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 19 13:38:44 2013       ;
+; Flow Status                        ; Successful - Sun Sep 22 21:48:43 2013       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DE2_BaseProject                             ;
 ; Top-level Entity Name              ; DE2_TOP                                     ;
 ; Family                             ; Cyclone II                                  ;
 ; Device                             ; EP2C35F672C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,208 / 33,216 ( 7 % )                      ;
-;     Total combinational functions  ; 2,040 / 33,216 ( 6 % )                      ;
-;     Dedicated logic registers      ; 1,361 / 33,216 ( 4 % )                      ;
-; Total registers                    ; 1361                                        ;
+; Total logic elements               ; 2,488 / 33,216 ( 7 % )                      ;
+;     Total combinational functions  ; 2,268 / 33,216 ( 7 % )                      ;
+;     Dedicated logic registers      ; 1,579 / 33,216 ( 5 % )                      ;
+; Total registers                    ; 1579                                        ;
 ; Total pins                         ; 425 / 475 ( 89 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 191,360 / 483,840 ( 40 % )                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/19/2013 13:37:54 ;
+; Start date & time ; 09/22/2013 21:47:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2_BaseProject     ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------------+----------------------------------------------------------------------+-----------------+---------------------------------------+----------------+
 ; Assignment Name                            ; Value                                                                ; Default Value   ; Entity Name                           ; Section Id     ;
 +--------------------------------------------+----------------------------------------------------------------------+-----------------+---------------------------------------+----------------+
-; COMPILER_SIGNATURE_ID                      ; 203178703681392.137961227401116                                      ; --              ; --                                    ; --             ;
+; COMPILER_SIGNATURE_ID                      ; 203178703681392.137990087504348                                      ; --              ; --                                    ; --             ;
 ; EDA_INCLUDE_VHDL_CONFIGURATION_DECLARATION ; Off                                                                  ; --              ; --                                    ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT                     ; Vhdl                                                                 ; --              ; --                                    ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                        ; ModelSim-Altera (VHDL)                                               ; <None>          ; --                                    ; --             ;
@@ -145,7 +145,7 @@ applicable agreement for further details.
 ; PARTITION_NETLIST_TYPE                     ; SOURCE                                                               ; --              ; DE2_TOP                               ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL                  ; None (CONSERVATIVE)                                                  ; --              ; --                                    ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION              ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                ; --              ; --                                    ; --             ;
-; SLD_INFO                                   ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1379608437 ; --              ; first_nios2_system                    ; --             ;
+; SLD_INFO                                   ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1379900844 ; --              ; first_nios2_system                    ; --             ;
 ; SOPCINFO_FILE                              ; first_nios2_system/synthesis/../../first_nios2_system.sopcinfo       ; --              ; --                                    ; --             ;
 ; SYNTHESIS_ONLY_QIP                         ; On                                                                   ; --              ; --                                    ; --             ;
 ; TOP_LEVEL_ENTITY                           ; DE2_TOP                                                              ; DE2_BaseProject ; --                                    ; --             ;
@@ -157,12 +157,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 603 MB              ; 00:00:10                           ;
-; Fitter                    ; 00:00:20     ; 1.4                     ; 1116 MB             ; 00:00:21                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 456 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 485 MB              ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 597 MB              ; 00:00:11                           ;
+; Fitter                    ; 00:00:16     ; 1.4                     ; 1119 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 461 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 487 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 442 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:48     ; --                      ; --                  ; 00:00:37                           ;
+; Total                     ; 00:00:45     ; --                      ; --                  ; 00:00:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

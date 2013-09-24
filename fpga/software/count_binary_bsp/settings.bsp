@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>19-Sep-2013 12:44:10 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1379609050615</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\pwhite8\VLSI_CAD\fpga\software\count_binary_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>22-Sep-2013 9:51:20 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1379901080898</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\pwhite8\vlsi\fpga\software\count_binary_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\Users\pwhite8\VLSI_CAD\fpga\first_nios2_system.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\Users\pwhite8\vlsi\fpga\first_nios2_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -839,16 +839,22 @@
                 <Group>none</Group>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>onchip_mem</slaveDescriptor>
-                <addressRange>0x00000000 - 0x00004FFF</addressRange>
-                <addressSpan>20480</addressSpan>
-                <attributes>memory</attributes>
+                <slaveDescriptor>regfile_0</slaveDescriptor>
+                <addressRange>0x00000000 - 0x0000003F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>led_pio</slaveDescriptor>
-                <addressRange>0x00010000 - 0x0001000F</addressRange>
+                <addressRange>0x00000040 - 0x0000004F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>onchip_mem</slaveDescriptor>
+                <addressRange>0x00010000 - 0x00014FFF</addressRange>
+                <addressSpan>20480</addressSpan>
+                <attributes>memory</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>

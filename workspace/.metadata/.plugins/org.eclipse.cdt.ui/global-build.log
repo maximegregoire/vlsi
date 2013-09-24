@@ -174,41 +174,11 @@ count_binary.c: In function 'count_lcd':
 Info: Linking count_binary.elf
 count_binary.c:233: warning: unused variable 'lcd'
 nios2-elf-g++  -T'../count_binary_bsp//linker.x' -msys-crt0='../count_binary_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../count_binary_bsp/  -msmallc  -Wl,-Map=count_binary.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o count_binary.elf obj/default/count_binary.o -lm 
-nios2-elf-insert count_binary.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/VLSI_CAD/fpga" --jdi C:/Users/pwhite8/VLSI_CAD/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/VLSI_CAD/fpga/first_nios2_system.sopcinfo
+nios2-elf-insert count_binary.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
 Info: (count_binary.elf) 7420 Bytes program size (code + initialized data).
 Info:                    12 KBytes free for stack + heap.
 Info: Creating count_binary.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source count_binary.elf >count_binary.objdump
-[count_binary build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project count_binary ****
-
-make all 
-Info: Building ../count_binary_bsp/
-make --no-print-directory -C ../count_binary_bsp/
-[BSP build complete]
-[count_binary build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project count_binary ****
-
-make all 
-Info: Building ../count_binary_bsp/
-make --no-print-directory -C ../count_binary_bsp/
-[BSP build complete]
-[count_binary build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project count_binary ****
-
-make all 
-Info: Building ../count_binary_bsp/
-make --no-print-directory -C ../count_binary_bsp/
-[BSP build complete]
 [count_binary build complete]
 
 **** Build Finished ****

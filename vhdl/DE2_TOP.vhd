@@ -153,11 +153,27 @@ architecture Structural_Basic of DE2_TOP is
 --	signal ramwren_s    : std_logic;
 
 	 component first_nios2_system is
-     port (
-         clk_clk                          : in  std_logic                    := 'X'; -- clk
-         reset_reset_n                    : in  std_logic                    := 'X'; -- reset_n
-         pio_0_external_connection_export : out std_logic_vector(7 downto 0)         -- export
-     );
+        port (
+            clk_clk                          : in  std_logic                     := 'X'; -- clk
+            reset_reset_n                    : in  std_logic                     := 'X'; -- reset_n
+            pio_0_external_connection_export : out std_logic_vector(7 downto 0);         -- export
+            regfile_0_conduit_end_AVINTDIS   : out std_logic;                            -- AVINTDIS
+            regfile_0_conduit_end_T1INTOVR   : out std_logic;                            -- T1INTOVR
+            regfile_0_conduit_end_T1INTSTS   : out std_logic;                            -- T1INTSTS
+            regfile_0_conduit_end_T0INTSTS   : out std_logic;                            -- T0INTSTS
+            regfile_0_conduit_end_T1INTEN    : out std_logic;                            -- T1INTEN
+            regfile_0_conduit_end_T0INTEN    : out std_logic;                            -- T0INTEN
+            regfile_0_conduit_end_T1CNTEN    : out std_logic;                            -- T1CNTEN
+            regfile_0_conduit_end_T0CNTEN    : out std_logic;                            -- T0CNTEN
+            regfile_0_conduit_end_T1RST      : out std_logic;                            -- T1RST
+            regfile_0_conduit_end_T0RST      : out std_logic;                            -- T0RST
+            regfile_0_conduit_end_T0CNT      : out std_logic_vector(31 downto 0);        -- T0CNT
+            regfile_0_conduit_end_T1CNT      : out std_logic_vector(31 downto 0);        -- T1CNT
+            regfile_0_conduit_end_T0CMP      : out std_logic_vector(31 downto 0);        -- T0CMP
+            regfile_0_conduit_end_T1CMP      : out std_logic_vector(31 downto 0);        -- T1CMP
+            regfile_0_conduit_end_GP0        : out std_logic_vector(31 downto 0);        -- GP0
+            regfile_0_conduit_end_GP1        : out std_logic_vector(31 downto 0)         -- GP1
+        );
     end component first_nios2_system;
 	 
 begin 
@@ -267,8 +283,6 @@ TD_RESET     <= '1'; -- out std_logic;    --  TV Decoder Reset
 GPIO_0   <= (Others => 'Z'); -- inout std_logic_vector(35 downto 0);  --  GPIO Connection 0
 GPIO_1   <= (Others => 'Z'); -- inout std_logic_vector(35 downto 0)   --  GPIO Connection 1
 
-
-
 -- Simple test circuit: use the red LEDs to display a slow counter.
 count : process(CLOCK_50, KEY(0))
 begin
@@ -311,7 +325,23 @@ xfirst_nios2_system : component first_nios2_system
         port map (
             clk_clk                          => CLOCK_50,                          --                       clk.clk
             reset_reset_n                    => SW(0),                    --                     reset.reset_n
-            pio_0_external_connection_export => LEDG(7 downto 0)  -- pio_0_external_connection.export
+            pio_0_external_connection_export => LEDG(7 downto 0), -- pio_0_external_connection.export
+            regfile_0_conduit_end_AVINTDIS   => open,   --     regfile_0_conduit_end.AVINTDIS
+            regfile_0_conduit_end_T1INTOVR   => open,   --                          .T1INTOVR
+            regfile_0_conduit_end_T1INTSTS   => open,   --                          .T1INTSTS
+            regfile_0_conduit_end_T0INTSTS   => open,   --                          .T0INTSTS
+            regfile_0_conduit_end_T1INTEN    => open,    --                          .T1INTEN
+            regfile_0_conduit_end_T0INTEN    => open,    --                          .T0INTEN
+            regfile_0_conduit_end_T1CNTEN    => open,    --                          .T1CNTEN
+            regfile_0_conduit_end_T0CNTEN    => open,    --                          .T0CNTEN
+            regfile_0_conduit_end_T1RST      => open,      --                          .T1RST
+            regfile_0_conduit_end_T0RST      => open,      --                          .T0RST
+            regfile_0_conduit_end_T0CNT      => open,      --                          .T0CNT
+            regfile_0_conduit_end_T1CNT      => open,      --                          .T1CNT
+            regfile_0_conduit_end_T0CMP      => open,      --                          .T0CMP
+            regfile_0_conduit_end_T1CMP      => open,      --                          .T1CMP
+            regfile_0_conduit_end_GP0        => GPIO_0(31 downto 0),        							--                          .GP0
+            regfile_0_conduit_end_GP1        => GPIO_1(31 downto 0)         							--                          .GP1
         );
 end Structural_Basic;
 

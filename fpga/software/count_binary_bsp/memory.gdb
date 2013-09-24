@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
-# SOPC Builder design path: C:/Users/pwhite8/VLSI_CAD/fpga/first_nios2_system.sopcinfo
+# SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
 #
-# Generated: Thu Sep 19 12:43:00 EDT 2013
+# Generated: Sun Sep 22 21:50:56 EDT 2013
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,4 +47,4 @@
 # by allowing GDB to cache memory contents on the host.
 
 # onchip_mem
-memory 0x0 0x5000 cache
+memory 0x10000 0x15000 cache
