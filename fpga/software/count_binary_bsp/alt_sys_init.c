@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
  *
- * Generated: Sun Sep 22 21:50:56 EDT 2013
+ * Generated: Tue Sep 24 19:42:56 EDT 2013
  */
 
 /*
@@ -59,12 +59,18 @@
  */
 
 #include "altera_nios2_qsys_irq.h"
+#include "altera_avalon_jtag_uart.h"
+#include "altera_avalon_sysid_qsys.h"
+#include "altera_avalon_timer.h"
 
 /*
  * Allocate the device storage
  */
 
 ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU, cpu);
+ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
+ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
+ALTERA_AVALON_TIMER_INSTANCE ( SYS_CLK_TIMER, sys_clk_timer);
 
 /*
  * Initialize the interrupt controller devices
@@ -87,4 +93,7 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
+    ALTERA_AVALON_TIMER_INIT ( SYS_CLK_TIMER, sys_clk_timer);
+    ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
+    ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
 }

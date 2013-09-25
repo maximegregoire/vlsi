@@ -79,7 +79,7 @@ T1CNT_sig 		<=		(others	=> '0');
 T0CMP_sig 		<=		(others	=> '0');	
 T1CMP_sig 		<=		(others	=> '0');	
 GP0_sig 			<=		(others	=> '0');	
-GP1_sig 			<=		(others	=> '0');\
+GP1_sig 			<=		(others	=> '0');
 -- READ AND WRITE PROCEDURE --
 else
 -- WRITE PROCEDURE --

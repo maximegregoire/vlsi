@@ -1,0 +1,12 @@
+Using cable "USB-Blaster [USB-0]", device 1, instance 0x00
+Processor is already paused
+Initializing CPU cache (if present)
+OK
+
+Downloading 00010000 ( 0%)
+Downloading 00011CE4 (90%)
+Downloaded 8KB in 0.0s        
+
+Verifying 00010000 ( 0%)
+Verify failed between address 0x10000 and 0x11A3B
+Leaving target processor paused

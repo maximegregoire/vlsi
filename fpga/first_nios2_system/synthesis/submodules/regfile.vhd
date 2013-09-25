@@ -10,6 +10,7 @@ use     ieee.std_logic_unsigned.all;
 
 entity regfile is
 port (	
+	-- Avalon Interface
 	address : in std_logic_vector(3 downto 0);
 	read_n : in std_logic;
 	readdata : out std_logic_vector(31 downto 0);
@@ -18,28 +19,22 @@ port (
 	rst : in std_logic;
 	clk : in std_logic;
 	
+	-- Registers
 	AVINTDIS : 	out std_logic;
 	T1INTOVR : 	out std_logic;
 	T1INTSTS : 	out std_logic;
 	T0INTSTS : 	out std_logic;
 	T1INTEN : 	out std_logic;
-	T0INTEN : 	out std_logic;
-	
+	T0INTEN : 	out std_logic;	
 	T1CNTEN : 	out std_logic;
 	T0CNTEN : 	out std_logic;
 	T1RST : 		out std_logic;
-	T0RST : 		out std_logic;
-	
-	T0CNT : 		out std_logic_vector(31 downto 0);
-	
-	T1CNT : 		out std_logic_vector(31 downto 0);
-	
-	T0CMP : 		out std_logic_vector(31 downto 0);
-	
-	T1CMP : 		out std_logic_vector(31 downto 0);
-	
-	GP0 : 		out std_logic_vector(31 downto 0);
-	
+	T0RST : 		out std_logic;	
+	T0CNT : 		out std_logic_vector(31 downto 0);	
+	T1CNT : 		out std_logic_vector(31 downto 0);	
+	T0CMP : 		out std_logic_vector(31 downto 0);	
+	T1CMP : 		out std_logic_vector(31 downto 0);	
+	GP0 : 		out std_logic_vector(31 downto 0);	
 	GP1 : 		out std_logic_vector(31 downto 0)
 	  );
 end entity regfile;
@@ -52,33 +47,23 @@ signal	T1INTSTS_sig 	: 	 std_logic;
 signal	T0INTSTS_sig 	: 	 std_logic;
 signal	T1INTEN_sig 	: 	 std_logic;
 signal	T0INTEN_sig 	: 	 std_logic;
-
 signal	T1CNTEN_sig : 	std_logic;
 signal	T0CNTEN_sig : 	std_logic;
 signal	T1RST_sig : 	std_logic;
 signal	T0RST_sig : 	std_logic;
-
 signal	T0CNT_sig : 		 	std_logic_vector(31 downto 0);
-
 signal	T1CNT_sig : 		 	std_logic_vector(31 downto 0);	
-
 signal	T0CMP_sig : 		 	std_logic_vector(31 downto 0);
-
 signal	T1CMP_sig : 		 	std_logic_vector(31 downto 0);
-
 signal	GP0_sig : 		 	std_logic_vector(31 downto 0);
-
 signal	GP1_sig : 		 	std_logic_vector(31 downto 0);
 
-
 begin
-
-
 process(clk, rst, write_n, read_n)
 begin
 if clk'event and clk='1' then
+-- RESET PROCEDURE
 if rst='1' then
--- Reset all registers
 AVINTDIS_sig 	<=		'0';
 T1INTOVR_sig 	<=		'0';
 T1INTSTS_sig 	<=		'0';
@@ -95,9 +80,9 @@ T0CMP_sig 		<=		(others	=> '0');
 T1CMP_sig 		<=		(others	=> '0');	
 GP0_sig 			<=		(others	=> '0');	
 GP1_sig 			<=		(others	=> '0');
-
+-- READ AND WRITE PROCEDURE --
 else
-
+-- WRITE PROCEDURE --
 if write_n='1' then
 case address is
 	when "0000" 	=>
@@ -139,7 +124,7 @@ case address is
 	when others	=> null;
 end case;
 end if;
-
+-- READ PROCEDURE --
 if read_n = '1' then
 case address is
 	when "0000" 	=>
@@ -175,7 +160,6 @@ case address is
 	when others	=> null;
 end case;
 end if;
-
 end if;
 end if;
 end process;

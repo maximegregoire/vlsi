@@ -1,7 +1,6 @@
 	component first_nios2_system is
 		port (
 			clk_clk                          : in  std_logic                     := 'X'; -- clk
-			reset_reset_n                    : in  std_logic                     := 'X'; -- reset_n
 			pio_0_external_connection_export : out std_logic_vector(7 downto 0);         -- export
 			regfile_0_conduit_end_AVINTDIS   : out std_logic;                            -- AVINTDIS
 			regfile_0_conduit_end_T1INTOVR   : out std_logic;                            -- T1INTOVR
@@ -18,7 +17,8 @@
 			regfile_0_conduit_end_T0CMP      : out std_logic_vector(31 downto 0);        -- T0CMP
 			regfile_0_conduit_end_T1CMP      : out std_logic_vector(31 downto 0);        -- T1CMP
 			regfile_0_conduit_end_GP0        : out std_logic_vector(31 downto 0);        -- GP0
-			regfile_0_conduit_end_GP1        : out std_logic_vector(31 downto 0)         -- GP1
+			regfile_0_conduit_end_GP1        : out std_logic_vector(31 downto 0);        -- GP1
+			reset_reset_n                    : in  std_logic                     := 'X'  -- reset_n
 		);
 	end component first_nios2_system;
 
