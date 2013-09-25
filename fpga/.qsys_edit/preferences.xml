@@ -16,11 +16,12 @@
   </columns>
  </clocktable>
  <library expandedCategories="Library,Project" />
- <window width="1617" height="975" x="16" y="23" />
+ <window width="1617" height="975" x="19" y="35" />
  <generation
    synthesis="VHDL"
-   testbench_system="NONE"
+   testbench_system="STANDARD"
    testbench_simulation="VHDL"
-   path="_PROJECT_NAME_" />
+   path="_PROJECT_NAME_"
+   simulation="VHDL" />
  <hdlexample language="VHDL" />
 </preferences>

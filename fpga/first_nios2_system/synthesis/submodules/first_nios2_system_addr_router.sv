@@ -193,7 +193,7 @@ module first_nios2_system_addr_router
 
     // ( 0x0 .. 0x40 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 20'h0   ) begin
-            src_channel = 7'b0001000;
+            src_channel = 7'b1000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
@@ -205,19 +205,19 @@ module first_nios2_system_addr_router
 
     // ( 0x50 .. 0x58 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 20'h50   ) begin
-            src_channel = 7'b0010000;
+            src_channel = 7'b0001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x60 .. 0x80 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 20'h60   ) begin
-            src_channel = 7'b0100000;
+            src_channel = 7'b0010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x80 .. 0x88 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 20'h80   ) begin
-            src_channel = 7'b1000000;
+            src_channel = 7'b0100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 

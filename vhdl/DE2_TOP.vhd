@@ -340,8 +340,8 @@ xfirst_nios2_system : component first_nios2_system
             regfile_0_conduit_end_T1CNT      => open,      --                          .T1CNT
             regfile_0_conduit_end_T0CMP      => open,      --                          .T0CMP
             regfile_0_conduit_end_T1CMP      => open,      --                          .T1CMP
-            regfile_0_conduit_end_GP0        => GPIO_0(31 downto 0),        							--                          .GP0
-            regfile_0_conduit_end_GP1        => GPIO_1(31 downto 0)         							--                          .GP1
+            regfile_0_conduit_end_GP0        => open,        							--                          .GP0
+            regfile_0_conduit_end_GP1        => open         							--                          .GP1
         );
 end Structural_Basic;
 

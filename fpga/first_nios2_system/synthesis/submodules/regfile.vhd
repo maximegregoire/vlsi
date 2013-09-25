@@ -12,7 +12,6 @@ entity regfile is
 port (	
 	-- Avalon Interface
 	address : in std_logic_vector(3 downto 0);
-	read_n : in std_logic;
 	readdata : out std_logic_vector(31 downto 0);
 	write_n : in std_logic;
 	writedata : in std_logic_vector(31 downto 0);
@@ -59,7 +58,7 @@ signal	GP0_sig : 		 	std_logic_vector(31 downto 0);
 signal	GP1_sig : 		 	std_logic_vector(31 downto 0);
 
 begin
-process(clk, rst, write_n, read_n)
+process(clk)
 begin
 if clk'event and clk='1' then
 -- RESET PROCEDURE
@@ -124,9 +123,15 @@ case address is
 	when others	=> null;
 end case;
 end if;
--- READ PROCEDURE --
-if read_n = '1' then
-case address is
+end if;
+end if;
+end process;
+
+process(address)
+	begin
+	-- Drive default value to readData output --
+	readdata <= (others => '0');
+	case address is
 	when "0000" 	=>
 		-- RW
 		readdata(0)		<= T0INTEN_sig;
@@ -158,10 +163,7 @@ case address is
 		-- RW
 		readdata(31 downto 0)	<=	GP1_sig;
 	when others	=> null;
-end case;
-end if;
-end if;
-end if;
+	end case;
 end process;
 
 	-- Assignment the signals to the outputs

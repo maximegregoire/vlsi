@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/pwhite8/VLSI_CAD/fpga/") File("DE2_BaseProject.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/Users/pwhite8/vlsi/fpga/") File("DE2_BaseProject.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"
+   type="VHDL"
+   library="irq_mapper" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"
+   type="VHDL"
+   library="rsp_xbar_mux" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"
+   type="VHDL"
+   library="rsp_xbar_demux" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho"
+   type="VHDL"
+   library="cmd_xbar_mux" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho"
+   type="VHDL"
+   library="cmd_xbar_demux_001" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho"
+   type="VHDL"
+   library="cmd_xbar_demux" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_reset_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_reset_synchronizer.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="limiter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="limiter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_traffic_limiter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="limiter"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="limiter"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho"
+   type="VHDL"
+   library="id_router" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho"
+   type="VHDL"
+   library="addr_router" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   type="VHDL"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_instruction_master_translator_avalon_universal_master_0_agent"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_instruction_master_translator_avalon_universal_master_0_agent"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_jtag_debug_module_translator"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_jtag_debug_module_translator"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_instruction_master_translator"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cpu_instruction_master_translator"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd"
+   type="VHDL"
+   library="regfile_0" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"
+   type="VHDL"
+   library="sysid" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"
+   type="VHDL"
+   library="sys_clk_timer" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd"
+   type="VHDL"
+   library="jtag_uart" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd"
+   type="VHDL"
+   library="led_pio" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.ocp"
+   type="OTHER"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.sdc"
+   type="SDC"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vhd"
+   type="VHDL_ENCRYPT"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.dat"
+   type="DAT"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_nios2_waves.do"
+   type="OTHER"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.dat"
+   type="DAT"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.dat"
+   type="DAT"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.dat"
+   type="DAT"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd"
+   type="VHDL"
+   library="cpu" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex"
+   type="HEX"
+   library="onchip_mem" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd"
+   type="VHDL"
+   library="onchip_mem" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst_reset_bfm" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst_clk_bfm" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"
+   type="VHDL"
+   library="first_nios2_system_inst" />
+ <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"
+   type="VHDL" />
+ <topLevel name="first_nios2_system_tb" />
+ <deviceFamily name="cycloneii" />
+ <modelMap
+   controllerPath="first_nios2_system_tb.first_nios2_system_inst.onchip_mem"
+   modelPath="first_nios2_system_tb.first_nios2_system_inst.onchip_mem" />
+</simPackage>

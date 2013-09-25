@@ -40,7 +40,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "4";
          type = "int";
       }
    }
@@ -64,7 +64,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "7";
          type = "int";
       }
    }
@@ -72,7 +72,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -80,7 +80,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "6";
          type = "int";
       }
    }
@@ -99,7 +99,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1380066021338" />
+ <parameter name="timeStamp" value="1380147069901" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -108,12 +108,12 @@
    internal="led_pio.external_connection"
    type="conduit"
    dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
    name="regfile_0_conduit_end"
    internal="regfile_0.conduit_end"
    type="conduit"
    dir="end" />
- <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -277,9 +277,6 @@
   <parameter name="width" value="8" />
   <parameter name="clockRate" value="50000000" />
  </module>
- <module kind="regfile" version="1.0" enabled="1" name="regfile_0">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
- </module>
  <module
    kind="altera_avalon_jtag_uart"
    version="13.0.1"
@@ -323,6 +320,7 @@
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
+ <module kind="regfile" version="1.0" enabled="1" name="regfile_0" />
  <connection
    kind="avalon"
    version="13.0"
@@ -344,12 +342,6 @@
  <connection kind="clock" version="13.0" start="clk_0.clk" end="onchip_mem.clk1" />
  <connection kind="clock" version="13.0" start="clk_0.clk" end="cpu.clk" />
  <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="onchip_mem.reset1" />
- <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="cpu.reset_n" />
- <connection
    kind="avalon"
    version="13.0"
    start="cpu.data_master"
@@ -368,11 +360,6 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="13.0" start="clk_0.clk" end="led_pio.clk" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="led_pio.reset" />
  <connection kind="avalon" version="13.0" start="cpu.data_master" end="led_pio.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0040" />
@@ -387,36 +374,7 @@
   <parameter name="baseAddress" value="0x0040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="clock" version="13.0" start="clk_0.clk" end="regfile_0.clock" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="cpu.data_master"
-   end="regfile_0.avalon_slave_0">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="cpu.instruction_master"
-   end="regfile_0.avalon_slave_0">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="regfile_0.reset_sink" />
  <connection kind="clock" version="13.0" start="clk_0.clk" end="jtag_uart.clk" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="jtag_uart.reset" />
  <connection
    kind="avalon"
    version="13.0"
@@ -437,11 +395,6 @@
  </connection>
  <connection kind="clock" version="13.0" start="clk_0.clk" end="sys_clk_timer.clk" />
  <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="sys_clk_timer.reset" />
- <connection
    kind="avalon"
    version="13.0"
    start="cpu.data_master"
@@ -460,7 +413,6 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="13.0" start="clk_0.clk" end="sysid.clk" />
- <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="sysid.reset" />
  <connection
    kind="avalon"
    version="13.0"
@@ -489,6 +441,52 @@
    end="sys_clk_timer.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="jtag_uart.reset" />
+ <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="cpu.reset_n" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="onchip_mem.reset1" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="led_pio.reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="sys_clk_timer.reset" />
+ <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="sysid.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="cpu.data_master"
+   end="regfile_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="cpu.instruction_master"
+   end="regfile_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="regfile_0.clock" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="regfile_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

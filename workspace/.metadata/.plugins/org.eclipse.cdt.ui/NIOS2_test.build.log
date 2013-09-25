@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project NIOS2_test ****
+
+make all 
+Info: Building ../NIOS2_test_bsp/
+make --no-print-directory -C ../NIOS2_test_bsp/
+[BSP build complete]
+[NIOS2_test build complete]
+
+**** Build Finished ****
