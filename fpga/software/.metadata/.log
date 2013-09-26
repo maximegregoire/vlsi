@@ -1,0 +1,45 @@
+!SESSION 2013-09-26 11:00:06.320 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-26 11:02:47.875
+!MESSAGE Indexed 'register_test' (1 sources, 63 headers) in 0,78 sec: 2 396 declarations; 2 239 references; 1 unresolved inclusions; 2 syntax errors; 6 unresolved names (0,13 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-26 11:03:34.520
+!MESSAGE Indexed 'register_test_bsp' (81 sources, 128 headers) in 0,69 sec: 4 415 declarations; 5 596 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0,18 %)
+!SESSION 2013-09-26 11:42:53.343 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-26 11:44:13.322
+!MESSAGE Indexed 'reg_test_bsp' (81 sources, 60 headers) in 0,48 sec: 952 declarations; 2 341 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5,70 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-26 11:44:14.836
+!MESSAGE Indexed 'reg_test' (1 sources, 13 headers) in 0,01 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+!SESSION 2013-09-26 12:01:25.347 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-26 12:01:50.057
+!MESSAGE Indexed 'reg_test_bsp' (80 sources, 58 headers) in 0,47 sec: 945 declarations; 2 310 references; 117 unresolved inclusions; 5 syntax errors; 197 unresolved names (5,71 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-26 12:01:51.430
+!MESSAGE Indexed 'reg_test' (1 sources, 13 headers) in 0,02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-26 12:02:54.207
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --id=0x0 --timestamp=1380211234]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-09-26 12:02:55.892
+!MESSAGE Executing: [C:/altera/13.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --id=0x0 --timestamp=1380211234 /cygdrive/c/Users/mgrego29/vlsi/fpga/software/reg_test/reg_test.elf]

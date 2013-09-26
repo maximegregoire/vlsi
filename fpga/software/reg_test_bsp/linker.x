@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
- * SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+ * SOPC Builder design path: C:/Users/mgrego29/vlsi/fpga/first_nios2_system.sopcinfo
  *
- * Generated: Wed Sep 25 18:23:12 EDT 2013
+ * Generated: Thu Sep 26 12:01:48 EDT 2013
  */
 
 /*

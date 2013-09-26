@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.09.25.18:28:43
+# ACDS 13.0 156 win32 2013.09.26.12:27:29
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -46,25 +46,6 @@ done
 # ----------------------------------------
 # create compilation libraries
 mkdir -p ./libraries/work/
-mkdir -p ./libraries/irq_mapper/
-mkdir -p ./libraries/rsp_xbar_mux/
-mkdir -p ./libraries/rsp_xbar_demux/
-mkdir -p ./libraries/cmd_xbar_mux/
-mkdir -p ./libraries/cmd_xbar_demux_001/
-mkdir -p ./libraries/cmd_xbar_demux/
-mkdir -p ./libraries/id_router/
-mkdir -p ./libraries/addr_router/
-mkdir -p ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
-mkdir -p ./libraries/regfile_0/
-mkdir -p ./libraries/sysid/
-mkdir -p ./libraries/sys_clk_timer/
-mkdir -p ./libraries/jtag_uart/
-mkdir -p ./libraries/led_pio/
-mkdir -p ./libraries/cpu/
-mkdir -p ./libraries/onchip_mem/
-mkdir -p ./libraries/first_nios2_system_inst_reset_bfm/
-mkdir -p ./libraries/first_nios2_system_inst_clk_bfm/
-mkdir -p ./libraries/first_nios2_system_inst/
 mkdir -p ./libraries/altera/
 mkdir -p ./libraries/lpm/
 mkdir -p ./libraries/sgate/
@@ -75,21 +56,19 @@ mkdir -p ./libraries/cycloneii/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.dat ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.hex ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.mif ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.dat ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.hex ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.mif ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.dat ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.hex ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.mif ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.dat ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/software/reg_test/mem_init/hdl_sim/first_nios2_system_onchip_mem.dat ./
-  cp -f C:/Users/pwhite8/vlsi/fpga/software/reg_test/mem_init/first_nios2_system_onchip_mem.hex ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.dat ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.hex ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.mif ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.dat ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.hex ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.mif ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.dat ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.hex ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.mif ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.dat ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
+  cp -f C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex ./
 fi
 
 # ----------------------------------------
@@ -116,41 +95,40 @@ fi
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"                                                               -work irq_mapper                                                               -cdslib ./cds_libs/irq_mapper.cds.lib                                                              
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                             -work rsp_xbar_mux                                                             -cdslib ./cds_libs/rsp_xbar_mux.cds.lib                                                            
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                           -work rsp_xbar_demux                                                           -cdslib ./cds_libs/rsp_xbar_demux.cds.lib                                                          
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                             -work cmd_xbar_mux                                                             -cdslib ./cds_libs/cmd_xbar_mux.cds.lib                                                            
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                       -work cmd_xbar_demux_001                                                       -cdslib ./cds_libs/cmd_xbar_demux_001.cds.lib                                                      
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                           -work cmd_xbar_demux                                                           -cdslib ./cds_libs/cmd_xbar_demux.cds.lib                                                          
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho"                                                                -work id_router                                                                -cdslib ./cds_libs/id_router.cds.lib                                                               
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho"                                                              -work addr_router                                                              -cdslib ./cds_libs/addr_router.cds.lib                                                             
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -cdslib ./cds_libs/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd"                                                                                     -work regfile_0                                                                -cdslib ./cds_libs/regfile_0.cds.lib                                                               
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                    -work sysid                                                                    -cdslib ./cds_libs/sysid.cds.lib                                                                   
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                            -work sys_clk_timer                                                            -cdslib ./cds_libs/sys_clk_timer.cds.lib                                                           
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd"                                                                -work jtag_uart                                                                -cdslib ./cds_libs/jtag_uart.cds.lib                                                               
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd"                                                                  -work led_pio                                                                  -cdslib ./cds_libs/led_pio.cds.lib                                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho"                                                                      -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                             -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                                -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"                                            -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd"                                                            -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd"                                                       -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd"                                                           -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd"                                                               -work onchip_mem                                                               -cdslib ./cds_libs/onchip_mem.cds.lib                                                              
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                                                  -work first_nios2_system_inst_reset_bfm                                        -cdslib ./cds_libs/first_nios2_system_inst_reset_bfm.cds.lib                                       
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                                                  -work first_nios2_system_inst_clk_bfm                                          -cdslib ./cds_libs/first_nios2_system_inst_clk_bfm.cds.lib                                         
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd"                                                                          -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                         -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"                                                 -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd"                                                    -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                   -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                              -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"                                           -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                      -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                        -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                               -work first_nios2_system_inst                                                  -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                 
-  ncvhdl -v93 "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                                                                                                                                                                                                    
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"                                                              
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                            
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                          
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                            
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                      
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                          
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho"                                                               
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho"                                                             
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd"                                                                                    
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                   
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                           
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd"                                                               
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd"                                                                 
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho"                                                                     
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                            
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                               
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"                                           
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd"                                                           
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd"                                                      
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd"                                                          
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd"                                                              
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                                                 
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                                                 
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd"                                                                         
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                        
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"                                                
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd"                                                   
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                  
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                             
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                     
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                       
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                              
+  ncvhdl -v93 "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                 
 fi
 
 # ----------------------------------------

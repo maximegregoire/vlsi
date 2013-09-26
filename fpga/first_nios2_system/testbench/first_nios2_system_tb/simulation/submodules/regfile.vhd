@@ -127,7 +127,7 @@ end if;
 end if;
 end process;
 
-process(address)
+process(address, clk)
 	begin
 	-- Drive default value to readData output --
 	readdata <= (others => '0');

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.09.25.18:16:17
+# ACDS 13.0 156 win32 2013.09.26.11:59:27
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -139,7 +139,6 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_led_pio_s1_translator.vhd"                                                                                                                                                                                                                                                 
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                                                                                                                
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                                                                                                                                                                                                                           
-  ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                                                                                                                        
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                                                                                                                                                                                                                   
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_cpu_instruction_master_translator.vhd"                                                                                                                                                                                                                                     
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator.vhd"                                                                                                                                                                                                                                            

@@ -265,9 +265,6 @@
    path="first_nios2_system/simulation/first_nios2_system_sys_clk_timer_s1_translator.vhd"
    type="VHDL" />
  <file
-   path="first_nios2_system/simulation/first_nios2_system_sysid_control_slave_translator.vhd"
-   type="VHDL" />
- <file
    path="first_nios2_system/simulation/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
    type="VHDL" />
  <file

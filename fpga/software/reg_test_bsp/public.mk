@@ -87,11 +87,11 @@ ACDS_VERSION := 13.0
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi
+JDI_FILE := C:/Users/mgrego29/vlsi/fpga/DE2_BaseProject.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+SOPCINFO_FILE := C:/Users/mgrego29/vlsi/fpga/first_nios2_system.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -150,15 +150,10 @@ ELF_PATCH_FLAG  += --simulation_enabled false
 SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
-# The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x80
-SOPC_SYSID_FLAG += --sidp=0x80
-ELF_PATCH_FLAG  += --sidp 0x80
-
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1380147445
-SOPC_SYSID_FLAG += --timestamp=1380147445
-ELF_PATCH_FLAG  += --timestamp 1380147445
+# setting SOPC_TIMESTAMP is 1380211234
+SOPC_SYSID_FLAG += --timestamp=1380211234
+ELF_PATCH_FLAG  += --timestamp 1380211234
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 

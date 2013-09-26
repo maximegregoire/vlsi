@@ -1,0 +1,38 @@
+
+**** Build of configuration Nios II for project reg_test ****
+
+make mem_init_generate 
+Info: Building ../reg_test_bsp/
+make --no-print-directory -C ../reg_test_bsp/
+[BSP build complete]
+Post-processing to create mem_init/first_nios2_system_onchip_mem.hex...
+bash -c 'elf2hex reg_test.elf 0x00080000 0x00084fff --width=32 \
+		--little-endian-mem --create-lanes=0  mem_init/first_nios2_system_onchip_mem.hex'
+Post-processing to create mem_init/hdl_sim/first_nios2_system_onchip_mem.dat...
+bash -c 'elf2dat --infile=reg_test.elf --outfile=mem_init/hdl_sim/first_nios2_system_onchip_mem.dat \
+		--base=0x00080000 --end=0x00084fff --width=32 \
+		--little-endian-mem --create-lanes=0 '
+Post-processing to create mem_init/hdl_sim/first_nios2_system_onchip_mem.sym...
+nios2-elf-nm -n reg_test.elf > mem_init/hdl_sim/first_nios2_system_onchip_mem.sym
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project reg_test ****
+
+make all 
+Info: Building ../reg_test_bsp/
+make --no-print-directory -C ../reg_test_bsp/
+[BSP build complete]
+[reg_test build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project reg_test ****
+
+make all 
+Info: Building ../reg_test_bsp/
+make --no-print-directory -C ../reg_test_bsp/
+[BSP build complete]
+[reg_test build complete]
+
+**** Build Finished ****

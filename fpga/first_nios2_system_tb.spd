@@ -279,10 +279,6 @@
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"
-   type="VHDL"
-   library="first_nios2_system_inst" />
- <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />

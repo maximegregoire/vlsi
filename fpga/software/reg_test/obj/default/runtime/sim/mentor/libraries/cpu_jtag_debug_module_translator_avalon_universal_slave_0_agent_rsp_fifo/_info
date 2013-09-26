@@ -2,10 +2,10 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\pwhite8\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
+Z0 dC:\Users\mgrego29\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
 Efirst_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
-!s108 1380148130.558000
-!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|-work|cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo|
-!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
+!s108 1380212841.247000
+!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|-work|cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo|
+!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
 o-work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -O0
 Z1 tExplicit 1

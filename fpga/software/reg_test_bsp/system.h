@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
- * SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+ * SOPC Builder design path: C:/Users/mgrego29/vlsi/fpga/first_nios2_system.sopcinfo
  *
- * Generated: Wed Sep 25 18:23:12 EDT 2013
+ * Generated: Thu Sep 26 12:01:48 EDT 2013
  */
 
 /*
@@ -126,7 +126,6 @@
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_PIO
-#define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
 #define __REGFILE
@@ -290,21 +289,5 @@
 #define SYS_CLK_TIMER_TICKS_PER_SEC 1000.0
 #define SYS_CLK_TIMER_TIMEOUT_PULSE_OUTPUT 0
 #define SYS_CLK_TIMER_TYPE "altera_avalon_timer"
-
-
-/*
- * sysid configuration
- *
- */
-
-#define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x80
-#define SYSID_ID 0
-#define SYSID_IRQ -1
-#define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SYSID_NAME "/dev/sysid"
-#define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1380147445
-#define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */
