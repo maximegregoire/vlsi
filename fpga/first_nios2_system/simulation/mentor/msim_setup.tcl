@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.09.26.11:59:27
+# ACDS 13.0 156 win32 2013.10.01.20:03:30
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -206,6 +206,7 @@ alias com {
   vcom     "$QSYS_SIMDIR/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                            
   vcom     "$QSYS_SIMDIR/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                                                                                                                       
   vcom     "$QSYS_SIMDIR/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                                                                                                               
+  vcom     "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                    
   vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_instruction_master_translator.vhd"                                                                                                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator.vhd"                                                                                                                                        
 }

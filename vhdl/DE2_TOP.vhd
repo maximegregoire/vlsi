@@ -155,8 +155,8 @@ architecture Structural_Basic of DE2_TOP is
 	 component first_nios2_system is
         port (
             clk_clk                          : in  std_logic                     := 'X'; -- clk
-            reset_reset_n                    : in  std_logic                     := 'X'; -- reset_n
             pio_0_external_connection_export : out std_logic_vector(7 downto 0);         -- export
+            reset_reset_n                    : in  std_logic                     := 'X'; -- reset_n
             regfile_0_conduit_end_AVINTDIS   : out std_logic;                            -- AVINTDIS
             regfile_0_conduit_end_T1INTOVR   : out std_logic;                            -- T1INTOVR
             regfile_0_conduit_end_T1INTSTS   : out std_logic;                            -- T1INTSTS
@@ -323,9 +323,9 @@ LEDR <= conv_std_logic_vector(slowcounter_r, 18);
 
 xfirst_nios2_system : component first_nios2_system
         port map (
-            clk_clk                          => CLOCK_50,                          --                       clk.clk
-            reset_reset_n                    => SW(0),                    --                     reset.reset_n
-            pio_0_external_connection_export => LEDG(7 downto 0), -- pio_0_external_connection.export
+            clk_clk                          => CLOCK_50,                          					--                       clk.clk
+            pio_0_external_connection_export => LEDG(7 downto 0), 										-- pio_0_external_connection.export
+            reset_reset_n                    => SW(0),                    								--                     reset.reset_n
             regfile_0_conduit_end_AVINTDIS   => open,   --     regfile_0_conduit_end.AVINTDIS
             regfile_0_conduit_end_T1INTOVR   => open,   --                          .T1INTOVR
             regfile_0_conduit_end_T1INTSTS   => open,   --                          .T1INTSTS
@@ -340,8 +340,8 @@ xfirst_nios2_system : component first_nios2_system
             regfile_0_conduit_end_T1CNT      => open,      --                          .T1CNT
             regfile_0_conduit_end_T0CMP      => open,      --                          .T0CMP
             regfile_0_conduit_end_T1CMP      => open,      --                          .T1CMP
-            regfile_0_conduit_end_GP0        => open,        							--                          .GP0
-            regfile_0_conduit_end_GP1        => open         							--                          .GP1
+            regfile_0_conduit_end_GP0        => open,        --                          .GP0
+            regfile_0_conduit_end_GP1        => open         --                          .GP1
         );
 end Structural_Basic;
 

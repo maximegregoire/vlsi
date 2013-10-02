@@ -11,12 +11,13 @@ use     ieee.std_logic_unsigned.all;
 entity regfile is
 port (	
 	-- Avalon Interface
-	address : in std_logic_vector(3 downto 0);
-	readdata : out std_logic_vector(31 downto 0);
-	write_n : in std_logic;
-	writedata : in std_logic_vector(31 downto 0);
-	rst : in std_logic;
-	clk : in std_logic;
+	address 	: in std_logic_vector(3 downto 0);
+	read	 	: in std_logic;
+	readdata 	: out std_logic_vector(31 downto 0);
+	write 		: in std_logic;
+	writedata 	: in std_logic_vector(31 downto 0);
+	rst 		: in std_logic;
+	clk 		: in std_logic;
 	
 	-- Registers
 	AVINTDIS : 	out std_logic;
@@ -27,12 +28,12 @@ port (
 	T0INTEN : 	out std_logic;	
 	T1CNTEN : 	out std_logic;
 	T0CNTEN : 	out std_logic;
-	T1RST : 		out std_logic;
-	T0RST : 		out std_logic;	
-	T0CNT : 		out std_logic_vector(31 downto 0);	
-	T1CNT : 		out std_logic_vector(31 downto 0);	
-	T0CMP : 		out std_logic_vector(31 downto 0);	
-	T1CMP : 		out std_logic_vector(31 downto 0);	
+	T1RST : 	out std_logic;
+	T0RST : 	out std_logic;	
+	T0CNT : 	out std_logic_vector(31 downto 0);	
+	T1CNT : 	out std_logic_vector(31 downto 0);	
+	T0CMP : 	out std_logic_vector(31 downto 0);	
+	T1CMP : 	out std_logic_vector(31 downto 0);	
 	GP0 : 		out std_logic_vector(31 downto 0);	
 	GP1 : 		out std_logic_vector(31 downto 0)
 	  );
@@ -77,12 +78,14 @@ T0CNT_sig 		<=		(others	=> '0');
 T1CNT_sig 		<=		(others	=> '0');
 T0CMP_sig 		<=		(others	=> '0');	
 T1CMP_sig 		<=		(others	=> '0');	
-GP0_sig 			<=		(others	=> '0');	
-GP1_sig 			<=		(others	=> '0');
+GP0_sig 		<=		(others	=> '0');	
+GP1_sig 		<=		(others	=> '0');
+
+readdata 		<= 		(others => '0');
 -- READ AND WRITE PROCEDURE --
 else
 -- WRITE PROCEDURE --
-if write_n='1' then
+if write='1' then
 case address is
 	when "0000" 	=>
 		-- RW
@@ -123,19 +126,15 @@ case address is
 	when others	=> null;
 end case;
 end if;
-end if;
-end if;
-end process;
 
-process(address)
-	begin
+if read = '1' then
 	-- Drive default value to readData output --
 	readdata <= (others => '0');
 	case address is
 	when "0000" 	=>
 		-- RW
-		readdata(0)		<= T0INTEN_sig;
-		readdata(1)		<= T1INTEN_sig;
+		readdata(0)	<= T0INTEN_sig;
+		readdata(1)	<= T1INTEN_sig;
 		-- RW2C (TO DO!!!!)
 		readdata(2)	<= T0INTSTS_sig;
 		readdata(3)	<= T1INTSTS_sig;
@@ -148,7 +147,7 @@ process(address)
 		readdata(1)	<=	T1RST_sig;
 		readdata(2)	<=	T0CNTEN_sig;
 		readdata(3)	<=	T1CNTEN_sig;
-	when "0010" 	=>	null;
+	when "0010" 	=> null;
 	when "0011" 	=> null;	
 	when "0100" 	=>
 		-- RW
@@ -164,6 +163,10 @@ process(address)
 		readdata(31 downto 0)	<=	GP1_sig;
 	when others	=> null;
 	end case;
+	end if;
+	
+end if;
+end if;
 end process;
 
 	-- Assignment the signals to the outputs

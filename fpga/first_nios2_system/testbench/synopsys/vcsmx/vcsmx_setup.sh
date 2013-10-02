@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.09.26.12:00:33
+# ACDS 13.0 156 win32 2013.10.01.20:04:36
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -145,6 +145,7 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                   -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                              -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                      -work first_nios2_system_inst                                                 
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"                                           -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                        -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                               -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                                                                                                
