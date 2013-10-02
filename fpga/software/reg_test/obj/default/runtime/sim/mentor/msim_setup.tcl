@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.09.26.12:27:29
+# ACDS 13.0 156 win32 2013.10.02.17:38:01
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -42,19 +42,19 @@ if ![info exists QUARTUS_INSTALL_DIR] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.dat ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.hex ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.mif ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.dat ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.hex ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.mif ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.dat ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.hex ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.mif ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.dat ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
-  file copy -force C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ic_tag_ram.mif ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_ociram_default_contents.mif ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_a.mif ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex ./
 }
 
 # ----------------------------------------
@@ -125,49 +125,48 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"                                                              
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                            
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                          
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                            
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                      
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                          
-  vlog     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v"                                                               
-  vlog     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v"                                                             
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv"                                                        
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v"                                                        
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho"                                                               
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho"                                                             
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv"                                                            
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"                                                     
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv"                                                           
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv"                                                       
-  vlog -sv "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv"                                                      
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd"                                                                                    
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                   
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                           
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd"                                                               
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd"                                                                 
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho"                                                                     
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                            
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                               
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"                                           
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd"                                                           
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd"                                                      
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd"                                                          
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd"                                                              
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                                                 
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                                                 
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd"                                                                         
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                        
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"                                                
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd"                                                   
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                  
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                             
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                     
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                       
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                              
-  vcom     "C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                 
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"                                                              
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                            
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                          
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                            
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                      
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                          
+  vlog     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v"                                                               
+  vlog     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v"                                                             
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv"                                                        
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v"                                                        
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho"                                                               
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho"                                                             
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv"                                                            
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"                                                     
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv"                                                           
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv"                                                       
+  vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv"                                                      
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd"                                                                                    
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                   
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                           
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd"                                                               
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho"                                                                     
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                            
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                               
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"                                           
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd"                                                           
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd"                                                      
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd"                                                          
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd"                                                              
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                                                 
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                                                 
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd"                                                                         
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                        
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"                                                
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                  
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                             
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"                                          
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                     
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                       
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                              
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                 
 }
 
 # ----------------------------------------

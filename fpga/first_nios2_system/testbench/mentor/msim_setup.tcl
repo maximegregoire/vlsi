@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.01.20:04:36
+# ACDS 13.0 156 win32 2013.10.02.17:30:19
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -128,8 +128,6 @@ ensure_lib                                                                      
 vmap       sys_clk_timer                                                            ./libraries/sys_clk_timer/                                                           
 ensure_lib                                                                          ./libraries/jtag_uart/                                                               
 vmap       jtag_uart                                                                ./libraries/jtag_uart/                                                               
-ensure_lib                                                                          ./libraries/led_pio/                                                                 
-vmap       led_pio                                                                  ./libraries/led_pio/                                                                 
 ensure_lib                                                                          ./libraries/cpu/                                                                     
 vmap       cpu                                                                      ./libraries/cpu/                                                                     
 ensure_lib                                                                          ./libraries/onchip_mem/                                                              
@@ -196,7 +194,6 @@ alias com {
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                    -work sysid                                                                   
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                            -work sys_clk_timer                                                           
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd"                                                                -work jtag_uart                                                               
-  vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd"                                                                  -work led_pio                                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho"                                                                      -work cpu                                                                     
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                             -work cpu                                                                     
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                                -work cpu                                                                     
@@ -210,11 +207,10 @@ alias com {
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd"                                                                          -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                         -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"                                                 -work first_nios2_system_inst                                                 
-  vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd"                                                    -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                   -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                              -work first_nios2_system_inst                                                 
-  vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                      -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"                                           -work first_nios2_system_inst                                                 
+  vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                      -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                        -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                               -work first_nios2_system_inst                                                 
   vcom     "$QSYS_SIMDIR/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                                                                                                
@@ -224,14 +220,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  vsim -t ps -L work -L work_lib -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L led_pio -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim -t ps -L work -L work_lib -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with novopt option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  vsim -novopt -t ps -L work -L work_lib -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L led_pio -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim -novopt -t ps -L work -L work_lib -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

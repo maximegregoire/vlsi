@@ -171,17 +171,6 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package altera_europa_support_lib
-# -- Loading package altera_mf_components
-# -- Compiling entity first_nios2_system_led_pio
-# -- Compiling architecture europa of first_nios2_system_led_pio
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
 # -- Loading package altera_mf_components
 # -- Loading package sgate_pack
 # -- Compiling entity first_nios2_system_cpu
@@ -301,13 +290,6 @@
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity first_nios2_system_led_pio_s1_translator
-# -- Compiling architecture rtl of first_nios2_system_led_pio_s1_translator
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
 # -- Compiling entity first_nios2_system_jtag_uart_avalon_jtag_slave_translator
 # -- Compiling architecture rtl of first_nios2_system_jtag_uart_avalon_jtag_slave_translator
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -322,15 +304,15 @@
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity first_nios2_system_regfile_0_avalon_slave_0_translator
-# -- Compiling architecture rtl of first_nios2_system_regfile_0_avalon_slave_0_translator
+# -- Compiling entity first_nios2_system_sysid_control_slave_translator
+# -- Compiling architecture rtl of first_nios2_system_sysid_control_slave_translator
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity first_nios2_system_sysid_control_slave_translator
-# -- Compiling architecture rtl of first_nios2_system_sysid_control_slave_translator
+# -- Compiling entity first_nios2_system_regfile_0_avalon_slave_0_translator
+# -- Compiling architecture rtl of first_nios2_system_regfile_0_avalon_slave_0_translator
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -382,7 +364,6 @@
 # Loading ieee.std_logic_signed(body)
 # Loading sgate.oper_add(sim_arch)
 # Loading sgate.oper_less_than(sim_arch)
-# Loading work.first_nios2_system_led_pio(europa)
 # Loading work.first_nios2_system_jtag_uart(europa)
 # Loading work.first_nios2_system_jtag_uart_scfifo_w(europa)
 # Loading work.first_nios2_system_jtag_uart_sim_scfifo_w(europa)
@@ -395,11 +376,10 @@
 # Loading work.first_nios2_system_cpu_data_master_translator(rtl)
 # Loading work.first_nios2_system_cpu_jtag_debug_module_translator(rtl)
 # Loading work.first_nios2_system_onchip_mem_s1_translator(rtl)
-# Loading work.first_nios2_system_led_pio_s1_translator(rtl)
 # Loading work.first_nios2_system_jtag_uart_avalon_jtag_slave_translator(rtl)
 # Loading work.first_nios2_system_sys_clk_timer_s1_translator(rtl)
-# Loading work.first_nios2_system_regfile_0_avalon_slave_0_translator(rtl)
 # Loading work.first_nios2_system_sysid_control_slave_translator(rtl)
+# Loading work.first_nios2_system_regfile_0_avalon_slave_0_translator(rtl)
 # ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
 # 
 # Loading work.first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo(rtl)
@@ -413,40 +393,14 @@
 # Loading work.first_nios2_system_irq_mapper(rtl)
 # Loading work.altera_avalon_clock_source(behavioral)
 # Loading work.altera_avalon_reset_source(behavioral)
-# ** Warning: (vsim-3473) Component instance "first_nios2_system_inst_pio_0_external_connection_bfm : altera_conduit_bfm" is not bound.
+# ** Warning: (vsim-3473) Component instance "first_nios2_system_inst_regfile_0_conduit_end_bfm : altera_conduit_bfm" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /first_nios2_system_tb File: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd
-# ** Warning: (vsim-3473) Component instance "first_nios2_system_inst_regfile_0_conduit_end_bfm : altera_conduit_bfm_0002" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /first_nios2_system_tb File: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd
-# ** Warning: Design size of 112 instances exceeds ModelSim ALTERA recommended capacity.
+# ** Warning: Design size of 104 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 #   
-add wave -position insertpoint sim:/first_nios2_system_tb/first_nios2_system_inst/onchip_mem/*
-add wave -position insertpoint  \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/clk \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_address \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_byteenable \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_irq \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_read \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_readdata \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_waitrequest \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_write \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_writedata \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/i_address \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/i_read \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/i_readdata \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/i_readdatavalid \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/i_waitrequest
-add wave -position insertpoint sim:/first_nios2_system_tb/first_nios2_system_inst/regfile_0/*
-run 1000 us
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
+do C:/Users/pwhite8/vlsi/fpga/wave.do
+run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_005/first_nios2_system_cmd_xbar_mux_add0_13/g1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -527,8 +481,6 @@ run 1000 us
 #    Time: 0 ps  Iteration: 0  Instance: /first_nios2_system_tb/first_nios2_system_inst/jtag_uart/the_first_nios2_system_jtag_uart_scfifo_r/the_first_nios2_system_jtag_uart_sim_scfifo_r
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /first_nios2_system_tb/first_nios2_system_inst/jtag_uart/the_first_nios2_system_jtag_uart_scfifo_r/the_first_nios2_system_jtag_uart_sim_scfifo_r
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /first_nios2_system_tb/first_nios2_system_inst/led_pio
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/nlli1Oi/g2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -992,12 +944,6 @@ run 1000 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /first_nios2_system_tb/first_nios2_system_inst/sys_clk_timer
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_006/first_nios2_system_cmd_xbar_mux_add0_13/g1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_005/first_nios2_system_cmd_xbar_mux_add0_13/g1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_005/first_nios2_system_cmd_xbar_mux_add0_13/g1
@@ -1199,6 +1145,15 @@ run 1000 us
 #    Time: 0 ps  Iteration: 4  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O01O/g1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+run
+run
+run
+run
+run
+run
+run
+run
+run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 70 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/cpu/niO0l1O/the_first_nios2_system_cpu_jtag_debug_module_sysclk
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -1225,3 +1180,31 @@ run 1000 us
 #    Time: 70 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/cpu/niO0l1O/the_first_nios2_system_cpu_jtag_debug_module_sysclk
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 70 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/cpu/niO0l1O/the_first_nios2_system_cpu_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O01O/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O01O/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O01O/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 6  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 6  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1510 ns  Iteration: 6  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1530 ns  Iteration: 5  Region: /first_nios2_system_tb/first_nios2_system_inst/cpu/n1O00i/g1
+# 1550 ns: ERROR: first_nios2_system_cpu_test_bench/M_en is 'x'
+# ** Failure: VHDL STOP
+#    Time: 1550 ns  Iteration: 1  Process: /first_nios2_system_tb/first_nios2_system_inst/cpu/the_first_nios2_system_cpu_test_bench/line__557 File: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd
+# Break in Process line__557 at C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd line 568
+run
+# 1550 ns: ERROR: first_nios2_system_cpu_test_bench/d_write is 'x'
+# ** Failure: VHDL STOP
+#    Time: 1550 ns  Iteration: 1  Process: /first_nios2_system_tb/first_nios2_system_inst/cpu/the_first_nios2_system_cpu_test_bench/line__684 File: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd
+# Break in Process line__684 at C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd line 695
+# WARNING: No extended dataflow license exists

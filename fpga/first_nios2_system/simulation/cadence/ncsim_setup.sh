@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.01.20:03:30
+# ACDS 13.0 156 win32 2013.10.02.17:29:16
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -59,7 +59,6 @@ mkdir -p ./libraries/regfile_0/
 mkdir -p ./libraries/sysid/
 mkdir -p ./libraries/sys_clk_timer/
 mkdir -p ./libraries/jtag_uart/
-mkdir -p ./libraries/led_pio/
 mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/onchip_mem/
 mkdir -p ./libraries/altera/
@@ -124,7 +123,6 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_sysid.vho"                                                                    -work sysid                                                                    -cdslib ./cds_libs/sysid.cds.lib                                                                   
   ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_sys_clk_timer.vhd"                                                            -work sys_clk_timer                                                            -cdslib ./cds_libs/sys_clk_timer.cds.lib                                                           
   ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_jtag_uart.vhd"                                                                -work jtag_uart                                                                -cdslib ./cds_libs/jtag_uart.cds.lib                                                               
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_led_pio.vhd"                                                                  -work led_pio                                                                  -cdslib ./cds_libs/led_pio.cds.lib                                                                 
   ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_cpu.vho"                                                                      -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
   ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                             -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
   ncvhdl -v93 "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                                -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
@@ -136,11 +134,10 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system.vhd"                                                                                                                                                                                                                                                                       
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                                                                                                                                                                                                                      
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_onchip_mem_s1_translator.vhd"                                                                                                                                                                                                                                              
-  ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_led_pio_s1_translator.vhd"                                                                                                                                                                                                                                                 
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                                                                                                                
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                                                                                                                                                                                                                           
-  ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                                                                                                                                                                                                                   
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                                                                                                                        
+  ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                                                                                                                                                                                                                   
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_cpu_instruction_master_translator.vhd"                                                                                                                                                                                                                                     
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator.vhd"                                                                                                                                                                                                                                            
 fi

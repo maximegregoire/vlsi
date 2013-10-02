@@ -2,22 +2,22 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\mgrego29\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
+Z0 dC:\Users\pwhite8\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
 Ealtera_avalon_clock_source
-Z1 w1380211181
+Z1 w1380749368
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\mgrego29\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
-Z5 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd
-Z6 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd
+Z4 dC:\Users\pwhite8\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
+Z5 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd
+Z6 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd
 l0
 L22
 V`Z6BK7`LZVGb@<fbk92Kl2
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1380212896.241000
-Z9 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd|
-Z10 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd|
+Z8 !s108 1380749935.850000
+Z9 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd|
+Z10 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_clock_source.vhd|
 o-O0
 Z11 tExplicit 1
 !s100 5Z6e40833Ra=11;kbYVT42
@@ -43,16 +43,16 @@ R1
 R2
 R3
 R4
-Z12 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd
-Z13 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd
+Z12 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd
+Z13 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd
 l0
 L17
 V`f4c4OJ;Fn04E^9h4iU7K0
 R7
 32
-Z14 !s108 1380212896.195000
-Z15 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd|
-Z16 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd|
+Z14 !s108 1380749935.804000
+Z15 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd|
+Z16 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/altera_avalon_reset_source.vhd|
 o-O0
 R11
 !s100 mPKC?Kj8`oI4zPf2UJgcL3
@@ -73,9 +73,9 @@ o-O0
 R11
 !s100 fFdVA2Q]1`le7fZLbR[NP0
 !i10b 1
-v7aaWCjguDRzys6EPzO99kI4lvxLwp+MTLePzFLpa1Qw=
+vkb2r5DtFwlSBDFu1lEDgmc3axUkyA4TCX+UIuy6E0tY=
 Z17 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-INZ@<TmSWKECOlJ?cV3QLL1
+IAZ4zW6@Y_J0j<f8MTj5_K3
 VzC;0]nBLKo0Q[zO07mJ[H0
 xsip
 S1
@@ -87,18 +87,18 @@ r1
 31
 Z20 o-sv -O0
 n6e0ca5
-!s100 >N[3^73O^^HCG4B6IKQzV3
+!s100 [1VW_UWfH>UATiIM`0a;52
 !s105 altera_avalon_st_pipeline_base_v_unit
-!s108 1380212893.106000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v|
+!s108 1380749932.808000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v|
 !i10b 0
-!i8a 1247897088
+!i8a 525199456
 !s85 0
 !s101 -O0
-vzZqZcB3PTyQceyycK0V09gSYsmLH0eZjersieuMtY2IStSoHK9It/joOiOagNn6S
+vsHHm1q8BJ/hJjau6sfQezS35hvOZfj0b0Z9tMUqT/CvBzeX4UgvZuWEMBlFkK32s
 R17
-IAgOSBZ_[hK7l[YA6`mfaP1
+I?0_S@Ke]4h3BVFCf66=k62
 Vk1gIA`RY2OQ1N9QbTULJo2
 xsip
 S1
@@ -110,18 +110,18 @@ r1
 31
 R20
 n4d119a2
-!s100 5[l;n2fALCaCm3j=m_Hi>3
+!s100 ;jckAYe8E@O7Z5khe`_EK0
 !s105 altera_merlin_burst_uncompressor_sv_unit
-!s108 1380212893.886000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv|
+!s108 1380749933.573000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv|
 !i10b 0
-!i8a 189568176
+!i8a 1927724032
 !s85 0
 !s101 -O0
-vfL0C3qQbjktp3obG8y5Zd/n+alYKyWtCe4j4HwS8ZL4=
+vhW9h1prM78qQMYkmtZcSmX9mIy5LWxDTsKwD1dRJsNw=
 R17
-InEk@n5<LSkz9oMFzXlZOR1
+I1nKiQJlV6:S9_9NGXDh:83
 VG[gHYg_J=R2@KnI_[bEjA0
 xsip
 S1
@@ -133,18 +133,18 @@ r1
 31
 R20
 n20adf74
-!s100 <ml?L^C<BfBH7;n?IE2]K3
+!s100 HLZ:oa[BYZePg?AXeGFUh0
 !s105 altera_merlin_master_agent_sv_unit
-!s108 1380212894.198000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv|
+!s108 1380749933.869000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv|
 !i10b 0
-!i8a 503801696
+!i8a 313906448
 !s85 0
 !s101 -O0
-vJ+s7elv0VwNp0nprSADtDuPaOVUdlrWf7sAZObvadQs=
+vA8YGuaiJIsPb0DhPRO4y2pBh/E08WxOKCJGgrE7wUVc=
 R17
-I_;n7AJeomE`mE]glEIWK]1
+IImbid2Ql3o5kj^JBY6Yi82
 V0KIH7<bW[IFhHJBzB4US?0
 xsip
 S1
@@ -157,17 +157,17 @@ r1
 R20
 n7c1e352
 !i10b 0
-!s100 eWfGQzDSo=mCDgKd?9RCe3
-!i8a 496126320
+!s100 NW]L17`4Q43;?[V6UMdTa3
+!i8a 2025664960
 !s105 altera_merlin_master_translator_sv_unit
 !s85 0
-!s108 1380212894.806000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv|
+!s108 1380749934.509000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv|
 !s101 -O0
-vcB3+vSw2XbXStTrbnxGedD48Y99qKHCHTtgJMv4TaRk=
+vmou5Ow0GBDrXvoaXxr3wyKfuJNYDMqSLjMcIR0CK1Ck=
 R17
-IF5iGBSW9cbB26Qj2nc5LW2
+I^aToP<fg2l=EP:HING_M=3
 VekU5U46jGhemBCkL?m_og2
 xsip
 S1
@@ -179,18 +179,18 @@ r1
 31
 R20
 n527aa64
-!s100 b@D1GicMOj>UfjeAP`c^`0
+!s100 A@JKiBgz8:ifLNg3m><`I0
 !s105 altera_merlin_slave_agent_sv_unit
-!s108 1380212893.574000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv|
+!s108 1380749933.261000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv|
 !i10b 0
-!i8a 1297123968
+!i8a 287855328
 !s85 0
 !s101 -O0
-vInfs2yf3BxxWNj+aQ9UH8LPXWOaV86d53j4vP9Tt1Zs=
+v48kGpywRrLlNgqYGTcTTEVPu+EfEfHpvdeKuSe8wRsE=
 R17
-Ilm^n7SQT9dkRmbIn^30FE3
+ISN`JUeFmZ7BgVLG^D>Jn[3
 VA6G6lglY;QOHbkKlTEAXC0
 xsip
 S1
@@ -202,18 +202,18 @@ r1
 31
 R20
 n6d33602
-!s100 fJ[HRO?03QUm^=82C`n[X1
+!s100 middfRZPbS6Eoh0diRFTg1
 !s105 altera_merlin_slave_translator_sv_unit
-!s108 1380212894.510000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv|
+!s108 1380749934.181000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv|
 !i10b 0
-!i8a 659778672
+!i8a 488996912
 !s85 0
 !s101 -O0
-vepLM/86zodC8UEDWDHwmzMLDs6Yk7m5aGTdc2w7VvV0=
+v4qFdC1y934RzAkk4cjmc7bx5yFiK8P5Kei7BxpvBO+M=
 R17
-IlRU]Yf><FgPl6aRB?<B1Q2
+IVbX8EBR4L33c;4d;@>FIj0
 VFToJ:O^P1mK>hGEjaBQXC3
 xsip
 S1
@@ -225,17 +225,17 @@ r1
 31
 R20
 nfd29c52
-!s100 K7[Omcj1hh_n]199KT5Gc1
+!s100 z02@3l4hPWMFagZ9Vk1i^1
 !s105 altera_merlin_traffic_limiter_sv_unit
-!s108 1380212892.794000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv|
-!s90 -reportprogress|300|-sv|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv|
+!s108 1380749932.512000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv|
+!s90 -reportprogress|300|-sv|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv|
 !i10b 0
-!i8a 335608720
+!i8a 227971648
 !s85 0
 !s101 -O0
-vrb+6zFoYFO3DZzQA5n39KeAp0jlV4Ax0AYHyfBqtiog=
-IS9:S7z[YcIQOFiVSdQU3b1
+vX3A1bHVUv0p9epQ9puJJZaS+0avF2ufu04IBjTeVDmI=
+IP]09c?LF2b@]]V<_T:fmV2
 V:mR1fj3Rf>NGziDN_:U030
 xsip
 d.
@@ -246,16 +246,16 @@ r1
 31
 o-O0
 nf2f26c2
-!s100 3D>LgUMBNQdR^R[<[gbCA2
-!s108 1380212892.170000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
-!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
+!s100 QhDeAb20lG55:fd]l429d1
+!s108 1380749931.919000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
 !i10b 0
-!i8a 284853088
+!i8a 747328496
 !s85 0
 !s101 -O0
-v+V2B1d23ZgvTqF3bTvC+Aq3RoJJy6Pngwc9YaCF+/pM=
-II07lIgm3i^<WFNJVT5n4Q3
+vjHvhnP8gGGI97j4aQrn4RZbLpHi3QkpP8rXlCo1uFNY=
+IdR:M>]h8>EP6@PEgBkFk[0
 V3CjoOZCIEdzCJgPn8]D7`2
 xsip
 d.
@@ -266,12 +266,12 @@ r1
 31
 o-O0
 n15f2da2
-!s100 MGZEBPh2fcK5U6Djn<_[X0
-!s108 1380212892.497000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
-!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
+!s100 Q1OX9zS^4ZdS2glZ?dgDZ2
+!s108 1380749932.216000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
 !i10b 0
-!i8a 1696130000
+!i8a 1100682752
 !s85 0
 !s101 -O0
 Efirst_nios2_system
@@ -280,28 +280,28 @@ Z21 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
 R4
-Z22 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd
-Z23 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd
+Z22 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd
+Z23 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd
 l0
 L9
-VeA=F`X8V7<]30P?GnG<1[1
+Vn2P0JB7HeoN5YAfDJG3RW1
 R7
 32
-Z24 !s108 1380212896.288000
-Z25 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd|
-Z26 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd|
+Z24 !s108 1380749935.897000
+Z25 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd|
+Z26 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system.vhd|
 o-O0
 R11
-!s100 jB23m`H^BRQjfTg1A^jmU2
+!s100 ;h[kMozf_SfdQY:HN@G5F2
 !i10b 1
 Artl
 R21
 R2
 R3
-DEx4 work 18 first_nios2_system 0 22 eA=F`X8V7<]30P?GnG<1[1
-l1722
-L33
-V3:OJ<LR^o?RCG33W5>Ena0
+DEx4 work 18 first_nios2_system 0 22 n2P0JB7HeoN5YAfDJG3RW1
+l1704
+L32
+VTQWoG`hTd]1b]16GPkYPm1
 R7
 32
 R24
@@ -309,23 +309,23 @@ R25
 R26
 o-O0
 R11
-!s100 fGkV6hfW6<2_c1OBbDY9<1
+!s100 jEC`9I=cbVCjANlQSJShD0
 !i10b 1
 Efirst_nios2_system_addr_router
-Z27 w1380211212
+Z27 w1380749398
 R2
 R3
 R4
-Z28 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho
-Z29 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho
+Z28 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho
+Z29 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho
 l0
 L30
 VBSGgn4_NKm9jXmARD4aNG3
 R7
 32
-Z30 !s108 1380212893.449000
-Z31 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho|
-Z32 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho|
+Z30 !s108 1380749933.152000
+Z31 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho|
+Z32 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho|
 o-O0
 R11
 !s100 3JFQlJ0YFFAdLdS94o3RF0
@@ -334,9 +334,9 @@ Artl
 R2
 R3
 DEx4 work 30 first_nios2_system_addr_router 0 22 BSGgn4_NKm9jXmARD4aNG3
-l95
+l93
 L49
-Vjj38zUDLS5C2j8e^>`Gb91
+VbZCVUo7]Q8Moh:[4Nf9Ta2
 R7
 32
 R30
@@ -344,23 +344,23 @@ R31
 R32
 o-O0
 R11
-!s100 dC9i8QHe3Ll4`0:Jgi3Y`1
+!s100 5_6fiG1[b2BZLEk91dEak3
 !i10b 1
 Efirst_nios2_system_cmd_xbar_demux
-Z33 w1380211218
+Z33 w1380749404
 R2
 R3
 R4
-Z34 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho
-Z35 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho
+Z34 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho
+Z35 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho
 l0
 L30
 Vk2Pe]]BD>_T;HO2PON@Ud2
 R7
 32
-Z36 !s108 1380212892.123000
-Z37 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho|
-Z38 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho|
+Z36 !s108 1380749931.872000
+Z37 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho|
+Z38 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux.vho|
 o-O0
 R11
 !s100 Z[dVLM4SMGaeJN5d_Sf872
@@ -382,20 +382,20 @@ R11
 !s100 `V0d2@BX81FK4Oo]P0KcN2
 !i10b 1
 Efirst_nios2_system_cmd_xbar_demux_001
-Z39 w1380211221
+Z39 w1380749407
 R2
 R3
 R4
-Z40 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho
-Z41 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho
+Z40 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho
+Z41 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho
 l0
 L30
 VgGlIjJM;ES01PTKOfDl3l1
 R7
 32
-Z42 !s108 1380212892.076000
-Z43 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho|
-Z44 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho|
+Z42 !s108 1380749931.826000
+Z43 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho|
+Z44 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho|
 o-O0
 R11
 !s100 Wz4Ec<gz3OoJi@a;:Pcb:2
@@ -417,21 +417,21 @@ R11
 !s100 ZMUc0]bU2F65gR6Of_<6<0
 !i10b 1
 Efirst_nios2_system_cmd_xbar_mux
-Z45 w1380211224
+Z45 w1380749409
 R2
 R3
 Z46 DPx5 sgate 10 sgate_pack 0 22 Z_04b9OB1h;cQWFMnW4871
 R4
-Z47 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho
-Z48 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho
+Z47 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho
+Z48 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho
 l0
 L33
 VTbF4JKLWk;`kiemi798Dk1
 R7
 32
-Z49 !s108 1380212891.967000
-Z50 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho|
-Z51 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho|
+Z49 !s108 1380749931.763000
+Z50 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho|
+Z51 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho|
 o-O0
 R11
 !s100 92JU`PcXM9]U7]2IDgV0D3
@@ -454,22 +454,22 @@ R11
 !s100 MW<i<]YR9^QbgGaA9GK7L0
 !i10b 1
 Efirst_nios2_system_cpu
-Z52 w1380211202
+Z52 w1380749388
 R46
 R2
 R3
 Z53 DPx9 altera_mf 20 altera_mf_components 0 22 No]@D`cShSLI4UOb8Ijo62
 R4
-Z54 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho
-Z55 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho
+Z54 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho
+Z55 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho
 l0
 L36
 V:]ZdjPN5VMDO15PW2H]ga0
 R7
 32
-Z56 !s108 1380212895.477000
-Z57 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho|
-Z58 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho|
+Z56 !s108 1380749935.086000
+Z57 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho|
+Z58 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.vho|
 o-O0
 R11
 !s100 ^`;2RIoB]`WgLMJk>@T953
@@ -480,9 +480,9 @@ R2
 R3
 R53
 DEx4 work 22 first_nios2_system_cpu 0 22 :]ZdjPN5VMDO15PW2H]ga0
-l4223
+l4247
 L68
-VOHG=bV5ORc0z`O2fYIOBm0
+V[@;S6]Jz]mU9<YWia]K3;2
 R7
 32
 R56
@@ -490,7 +490,7 @@ R57
 R58
 o-O0
 R11
-!s100 3=A]]g6MO]>>oU^l1hijb0
+!s100 TYe`QEJ]UW9bZ_G=N[okT3
 !i10b 1
 Efirst_nios2_system_cpu_data_master_translator
 R1
@@ -498,16 +498,16 @@ R21
 R2
 R3
 R4
-Z59 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd
-Z60 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd
+Z59 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd
+Z60 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd
 l0
 L9
 VK^L5X=`jDJ0DAOB2jNhjP2
 R7
 32
-Z61 !s108 1380212896.756000
-Z62 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd|
-Z63 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd|
+Z61 !s108 1380749936.350000
+Z62 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd|
+Z63 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd|
 o-O0
 R11
 !s100 JZVa3kf<odm?EblF?<FEU0
@@ -535,16 +535,16 @@ R21
 R2
 R3
 R4
-Z64 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd
-Z65 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd
+Z64 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd
+Z65 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd
 l0
 L9
 VJdTK@H[7Xk7QG3giBRNnX0
 R7
 32
-Z66 !s108 1380212896.709000
-Z67 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd|
-Z68 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd|
+Z66 !s108 1380749936.303000
+Z67 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd|
+Z68 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd|
 o-O0
 R11
 !s100 ?@[<?UWB0=@WjRMC8XXj92
@@ -576,16 +576,16 @@ R2
 R3
 Z71 DPx6 altera 25 altera_europa_support_lib 0 22 l<USL:m_<eTTJ0m??:EdF1
 R4
-Z72 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd
-Z73 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd
+Z72 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd
+Z73 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd
 l0
 L29
 VFnhdYn>;eM5bWK:W_mg@H2
 R7
 32
-Z74 !s108 1380212895.727000
-Z75 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd|
-Z76 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd|
+Z74 !s108 1380749935.336000
+Z75 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd|
+Z76 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd|
 o-O0
 R11
 !s100 QF4<O0RlJARkT8Y^m97NU2
@@ -621,16 +621,16 @@ R2
 R3
 R71
 R4
-Z77 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd
-Z78 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd
+Z77 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd
+Z78 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd
 l0
 L29
 V0h;H13T_:lel=U_HfSkZi3
 R7
 32
-Z79 !s108 1380212895.789000
-Z80 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd|
-Z81 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd|
+Z79 !s108 1380749935.398000
+Z80 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd|
+Z81 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd|
 o-O0
 R11
 !s100 fm4W:JFR3C7OT:c[Z`25T3
@@ -662,16 +662,16 @@ R21
 R2
 R3
 R4
-Z82 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd
-Z83 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd
+Z82 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd
+Z83 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd
 l0
 L9
 VT<1kTKCLaWN5Djk=g?9fH1
 R7
 32
-Z84 !s108 1380212896.382000
-Z85 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd|
-Z86 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd|
+Z84 !s108 1380749935.975000
+Z85 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd|
+Z86 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd|
 o-O0
 R11
 !s100 6TRI13L<5IeH=h=c<z<@E3
@@ -694,20 +694,20 @@ R11
 !s100 KYiR9eDLWF[7g`4^5KUXV3
 !i10b 1
 Efirst_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
-Z87 w1380211210
+Z87 w1380749395
 R2
 R3
 R4
-Z88 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
-Z89 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
+Z88 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
+Z89 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
 l0
 L30
 VTkECj`gUf=_IF0MXn]6n<2
 R7
 32
-Z90 !s108 1380212893.496000
-Z91 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
-Z92 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
+Z90 !s108 1380749933.198000
+Z91 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
+Z92 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
 o-O0
 R11
 !s100 GJB@Q7kLgmBo;;OFJaUU=1
@@ -738,16 +738,16 @@ R2
 R3
 R71
 R4
-Z93 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd
-Z94 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd
+Z93 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd
+Z94 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd
 l0
 L29
 VmbDV]cfFE>aWPiSWY9e9n0
 R7
 32
-Z95 !s108 1380212895.851000
-Z96 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd|
-Z97 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd|
+Z95 !s108 1380749935.460000
+Z96 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd|
+Z97 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd|
 o-O0
 R11
 !s100 M2KW0Q@aHciz[85d<MDcN2
@@ -783,16 +783,16 @@ R2
 R3
 R71
 R4
-Z99 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd
-Z100 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd
+Z99 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd
+Z100 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd
 l0
 L35
 Vki7?N3cK3nAk?AkQU6h7e1
 R7
 32
-Z101 !s108 1380212895.914000
-Z102 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd|
-Z103 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd|
+Z101 !s108 1380749935.523000
+Z102 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd|
+Z103 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_mult_cell.vhd|
 o-O0
 R11
 !s100 Jl?zi41b05_8TTTh@YaO@0
@@ -828,16 +828,16 @@ R2
 R3
 R71
 R4
-Z104 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd
-Z105 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd
+Z104 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd
+Z105 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd
 l0
 L29
 VRTm?]X0z8:=IM4S]W5dFS0
 R7
 32
-Z106 !s108 1380212895.992000
-Z107 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd|
-Z108 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd|
+Z106 !s108 1380749935.585000
+Z107 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd|
+Z108 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_oci_test_bench.vhd|
 o-O0
 R11
 !s100 ?R>DHM>TDXKG1`zFSo6ji1
@@ -873,16 +873,16 @@ R2
 R3
 R71
 R4
-Z109 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd
-Z110 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd
+Z109 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd
+Z110 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd
 l0
 L32
 V7iER@VK`Z@G6=:BfG7:FR3
 R7
 32
-Z111 !s108 1380212896.054000
-Z112 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd|
-Z113 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd|
+Z111 !s108 1380749935.648000
+Z112 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd|
+Z113 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_test_bench.vhd|
 o-O0
 R11
 !s100 kJo@iZX>I_92X_[^XbZ2E0
@@ -909,20 +909,20 @@ R11
 !s100 45]FMU:AIh1NazK`O4eCf3
 !i10b 1
 Efirst_nios2_system_id_router
-Z114 w1380211215
+Z114 w1380749401
 R2
 R3
 R4
-Z115 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho
-Z116 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho
+Z115 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho
+Z116 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho
 l0
 L30
 VQOGgYbc`<fkFRTPPK6;6l0
 R7
 32
-Z117 !s108 1380212893.402000
-Z118 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho|
-Z119 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho|
+Z117 !s108 1380749933.120000
+Z118 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho|
+Z119 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho|
 o-O0
 R11
 !s100 8n5dN5oU6;:IVWXzI@4o_3
@@ -944,20 +944,20 @@ R11
 !s100 2kYIYNgFz5Z9l;RYmi?>=1
 !i10b 1
 Efirst_nios2_system_irq_mapper
-Z120 w1380211233
+Z120 w1380749418
 R2
 R3
 R4
-Z121 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho
-Z122 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho
+Z121 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho
+Z122 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho
 l0
 L30
 VZzgPzi:DlnmBaLgmO]=S61
 R7
 32
-Z123 !s108 1380212891.749000
-Z124 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho|
-Z125 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho|
+Z123 !s108 1380749931.545000
+Z124 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho|
+Z125 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho|
 o-O0
 R11
 !s100 hlzPDQ361M[>dhd5[HDdD1
@@ -979,7 +979,7 @@ R11
 !s100 JA=8RnZ1B5LlAh=1H8k6Z3
 !i10b 1
 Efirst_nios2_system_jtag_uart
-Z126 w1380211203
+R52
 R69
 R70
 R21
@@ -987,16 +987,16 @@ R2
 R3
 R71
 R4
-Z127 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd
-Z128 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd
+Z126 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd
+Z127 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd
 l0
 L455
 V0[fHC[boU7>l^X777mVZP0
 R7
 32
-Z129 !s108 1380212895.305000
-Z130 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd|
-Z131 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd|
+Z128 !s108 1380749934.977000
+Z129 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd|
+Z130 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart.vhd|
 o-O0
 R11
 !s100 <V0:Ne2gQ:R7<zDG:51i73
@@ -1014,9 +1014,9 @@ L478
 VZe[`Y6BEQVoH1NMW2gm>h0
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 f7dNGBX;SjSbe<]>3ClWf0
@@ -1027,16 +1027,16 @@ R21
 R2
 R3
 R4
-Z132 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd
-Z133 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd
+Z131 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd
+Z132 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd
 l0
 L9
 VfOMnkPTCGPJiY@[0PEFWH2
 R7
 32
-Z134 !s108 1380212896.522000
-Z135 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd|
-Z136 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd|
+Z133 !s108 1380749936.069000
+Z134 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd|
+Z135 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd|
 o-O0
 R11
 !s100 _8JYT>JYjNRF^aDDPHFMV0
@@ -1051,15 +1051,15 @@ L78
 Vf4n:eAdjUH6c5_>?L<eF>0
 R7
 32
+R133
 R134
 R135
-R136
 o-O0
 R11
 !s100 g3KIQl?ha4`<RTRMfnOC<1
 !i10b 1
 Efirst_nios2_system_jtag_uart_scfifo_r
-R126
+R52
 R69
 R70
 R21
@@ -1067,16 +1067,16 @@ R2
 R3
 R71
 R4
+R126
 R127
-R128
 l0
 L313
 Ve7_@A<LhlkfRL[M;CL>mG2
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 KEGGMbC[6lER=_COWz;Rh0
@@ -1094,15 +1094,15 @@ L332
 V_[n4@HiB^LKTziN?B@YaK0
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 IjUIk>b@Fj79I5[RMX?JU0
 !i10b 1
 Efirst_nios2_system_jtag_uart_scfifo_w
-R126
+R52
 R69
 R70
 R21
@@ -1110,16 +1110,16 @@ R2
 R3
 R71
 R4
+R126
 R127
-R128
 l0
 L95
 ViS4oTMWBA6VMDf?EVYEfQ2
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 ?`5l=^aZa0AjDET4B<@UC3
@@ -1137,15 +1137,15 @@ L113
 VfM3zJ:<A=;@O@fnJI:hD=1
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 f0fda5[Sfib0WV0GLUoY61
 !i10b 1
 Efirst_nios2_system_jtag_uart_sim_scfifo_r
-R126
+R52
 R53
 R69
 R70
@@ -1154,16 +1154,16 @@ R2
 R3
 R71
 R4
+R126
 R127
-R128
 l0
 L233
 V@4]:RaSFT=]AD<lZ7SM:52
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 l?FkNR2Nglm^B4@ZF`oZ]3
@@ -1182,15 +1182,15 @@ L249
 VTgaPHbibROPAM>nB?o0;R2
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 UkIAe6eVgjjJRSK3IfACA2
 !i10b 1
 Efirst_nios2_system_jtag_uart_sim_scfifo_w
-R126
+R52
 R53
 R69
 R70
@@ -1199,16 +1199,16 @@ R2
 R3
 R71
 R4
+R126
 R127
-R128
 l0
 L32
 V0UO?OgoEA]6BjdQS8ndSF2
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 UhF7PMR8C][L3g8dZOB^W3
@@ -1227,94 +1227,12 @@ L48
 VFOTZMjkFhK69HL06IVhb21
 R7
 32
+R128
 R129
 R130
-R131
 o-O0
 R11
 !s100 b=5>oo0f?MGD;U4On2DNZ3
-!i10b 1
-Efirst_nios2_system_led_pio
-R126
-R53
-R69
-R70
-R21
-R2
-R3
-R71
-R4
-Z137 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd
-Z138 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd
-l0
-L29
-VEh4OcIioeM6^:?9Bkg31L1
-R7
-32
-Z139 !s108 1380212895.399000
-Z140 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd|
-Z141 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd|
-o-O0
-R11
-!s100 mDUfUPl3Mga4O45C55PKd2
-!i10b 1
-Aeuropa
-R53
-R69
-R70
-R21
-R2
-R3
-R71
-DEx4 work 26 first_nios2_system_led_pio 0 22 Eh4OcIioeM6^:?9Bkg31L1
-l51
-L46
-VCcEzLj?QO69Eg=a2SobZ`0
-R7
-32
-R139
-R140
-R141
-o-O0
-R11
-!s100 aH2XEX[IjWQ:YUnT06V>03
-!i10b 1
-Efirst_nios2_system_led_pio_s1_translator
-R1
-R21
-R2
-R3
-R4
-Z142 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd
-Z143 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd
-l0
-L9
-V4BQAXXg36<c;_:UBbDS3Q0
-R7
-32
-Z144 !s108 1380212896.475000
-Z145 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd|
-Z146 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd|
-o-O0
-R11
-!s100 oOQSBOM@eVcX_FQ]7Zd]23
-!i10b 1
-Artl
-R21
-R2
-R3
-DEx4 work 40 first_nios2_system_led_pio_s1_translator 0 22 4BQAXXg36<c;_:UBbDS3Q0
-l148
-L78
-VAU`C_K`l3b6>U]@k5H<NJ3
-R7
-32
-R144
-R145
-R146
-o-O0
-R11
-!s100 zn=k?8CF?9_^kd7P1d0c=1
 !i10b 1
 Efirst_nios2_system_onchip_mem
 R1
@@ -1326,16 +1244,16 @@ R2
 R3
 R71
 R4
-Z147 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd
-Z148 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd
+Z136 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd
+Z137 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd
 l0
 L29
 VYCUAZiWj[^]9?c1QB]c]A3
 R7
 32
-Z149 !s108 1380212896.132000
-Z150 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd|
-Z151 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd|
+Z138 !s108 1380749935.726000
+Z139 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd|
+Z140 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.vhd|
 o-O0
 R11
 !s100 fI>[jP7T>UiFBMeiC_SU90
@@ -1354,9 +1272,9 @@ L50
 V7O2kIWFOb=o]b<nfMoTLV0
 R7
 32
-R149
-R150
-R151
+R138
+R139
+R140
 o-O0
 R11
 !s100 ^oU_z44N7YgzaSlPH:^a?3
@@ -1367,16 +1285,16 @@ R21
 R2
 R3
 R4
-Z152 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd
-Z153 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd
+Z141 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd
+Z142 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd
 l0
 L9
 VhXD>N`XUU9CjY<5j<K8ok2
 R7
 32
-Z154 !s108 1380212896.429000
-Z155 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd|
-Z156 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd|
+Z143 !s108 1380749936.022000
+Z144 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd|
+Z145 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd|
 o-O0
 R11
 !s100 ehSW?2P7TnB;[GOL?TTAQ2
@@ -1391,9 +1309,9 @@ L78
 Vnh0JjEHM6LhA@h[lJLUI>3
 R7
 32
-R154
-R155
-R156
+R143
+R144
+R145
 o-O0
 R11
 !s100 Y4;6e2=i;XoWS8Gag_fR32
@@ -1404,16 +1322,16 @@ R21
 R2
 R3
 R4
-Z157 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd
-Z158 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd
+Z146 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd
+Z147 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd
 l0
 L9
 VTjZ7Pcm@fY6[mfCKHGKIF1
 R7
 32
-Z159 !s108 1380212896.647000
-Z160 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd|
-Z161 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd|
+Z148 !s108 1380749936.240000
+Z149 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd|
+Z150 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd|
 o-O0
 R11
 !s100 eKU4gCY04V6N@YdTckUAZ1
@@ -1428,28 +1346,28 @@ L78
 V_PA_5Z46dN?C0]TPA_Tc31
 R7
 32
-R159
-R160
-R161
+R148
+R149
+R150
 o-O0
 R11
 !s100 gcQQ_TS3PgGl0f?_Xhk[A1
 !i10b 1
 Efirst_nios2_system_rsp_xbar_demux
-Z162 w1380211227
+Z151 w1380749412
 R2
 R3
 R4
-Z163 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho
-Z164 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho
+Z152 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho
+Z153 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho
 l0
 L30
 V]UkUMNZD[2K[aVAJDH?V<2
 R7
 32
-Z165 !s108 1380212891.905000
-Z166 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho|
-Z167 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho|
+Z154 !s108 1380749931.701000
+Z155 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho|
+Z156 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho|
 o-O0
 R11
 !s100 dfM151;59ocDM2MjL`8A@2
@@ -1463,28 +1381,28 @@ L56
 Vj^ngN4fBBPmiCW0HKka3Q0
 R7
 32
-R165
-R166
-R167
+R154
+R155
+R156
 o-O0
 R11
 !s100 oB^KPIjAXg<_oEkIi8P^<0
 !i10b 1
 Efirst_nios2_system_rsp_xbar_mux
-Z168 w1380211230
+Z157 w1380749415
 R2
 R3
 R4
-Z169 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho
-Z170 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho
+Z158 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho
+Z159 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho
 l0
 L30
 VgOViaC:HWhZm7c54O3PCo0
 R7
 32
-Z171 !s108 1380212891.795000
-Z172 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho|
-Z173 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho|
+Z160 !s108 1380749931.592000
+Z161 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho|
+Z162 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho|
 o-O0
 R11
 !s100 f_EU42f2j95ZIinACeYPe0
@@ -1498,15 +1416,15 @@ L80
 V[S5<D^309^0lgWcCG2W=31
 R7
 32
-R171
-R172
-R173
+R160
+R161
+R162
 o-O0
 R11
 !s100 ECW3]]ShiBlMVzOZ1^m^z0
 !i10b 1
 Efirst_nios2_system_sys_clk_timer
-R126
+R52
 R53
 R69
 R70
@@ -1515,16 +1433,16 @@ R2
 R3
 R71
 R4
-Z174 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd
-Z175 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd
+Z163 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd
+Z164 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd
 l0
 L29
 VB^5[XZ>B_Dc9dVkLHYa?_2
 R7
 32
-Z176 !s108 1380212895.243000
-Z177 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd|
-Z178 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd|
+Z165 !s108 1380749934.914000
+Z166 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd|
+Z167 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd|
 o-O0
 R11
 !s100 _fM>`eb1eG?5IJTTK9zmb1
@@ -1543,9 +1461,9 @@ L46
 VX`ACF`ob=KO?LO`=H:RfE0
 R7
 32
-R176
-R177
-R178
+R165
+R166
+R167
 o-O0
 R11
 !s100 :90nX5lZgKbNaY<6:99fh3
@@ -1556,16 +1474,16 @@ R21
 R2
 R3
 R4
-Z179 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd
-Z180 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd
+Z168 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd
+Z169 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd
 l0
 L9
 VcPC9D@CP^QoMl^eV_@MNc3
 R7
 32
-Z181 !s108 1380212896.585000
-Z182 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd|
-Z183 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd|
+Z170 !s108 1380749936.147000
+Z171 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd|
+Z172 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd|
 o-O0
 R11
 !s100 e8XO;R4fVR?86]JG2]i[e0
@@ -1580,28 +1498,28 @@ L78
 Vfl43[N[hzNb05hcCG05FF2
 R7
 32
-R181
-R182
-R183
+R170
+R171
+R172
 o-O0
 R11
 !s100 InE>b=8XBzfbHko?UCVjV1
 !i10b 1
 Efirst_nios2_system_sysid
-Z184 w1380211206
+Z173 w1380749391
 R2
 R3
 R4
-Z185 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho
-Z186 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho
+Z174 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho
+Z175 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho
 l0
 L30
 Vo_4jjZRfWP2k7g7XaDdNh2
 R7
 32
-Z187 !s108 1380212895.165000
-Z188 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho|
-Z189 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho|
+Z176 !s108 1380749934.868000
+Z177 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho|
+Z178 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho|
 o-O0
 R11
 !s100 ZM4mb_F@0LIISJWS`[Mf42
@@ -1612,24 +1530,61 @@ R3
 DEx4 work 24 first_nios2_system_sysid 0 22 o_4jjZRfWP2k7g7XaDdNh2
 l44
 L40
-Vhzk^O?cU]TBjB<:I?BXHO0
+VhL<`o><RVCmV06EN7F;KW3
 R7
 32
-R187
-R188
-R189
+R176
+R177
+R178
 o-O0
 R11
-!s100 b`9XfFhT3:M6n@`9?U4@_2
+!s100 3:S8bgz><f9bc>6j>h?Fi0
 !i10b 1
-Efirst_nios2_system_tb
-Z190 w1380211179
+Efirst_nios2_system_sysid_control_slave_translator
+R1
 R21
 R2
 R3
 R4
-Z191 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd
-Z192 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd
+Z179 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd
+Z180 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd
+l0
+L9
+Vci?nck3Nj>K`zWZ1MPl?@0
+R7
+32
+Z181 !s108 1380749936.194000
+Z182 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd|
+Z183 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd|
+o-O0
+R11
+!s100 9MbPFTAWm>U=kLk_]KM8N1
+!i10b 1
+Artl
+R21
+R2
+R3
+DEx4 work 49 first_nios2_system_sysid_control_slave_translator 0 22 ci?nck3Nj>K`zWZ1MPl?@0
+l148
+L78
+VC=>f9Dd>OFA6na69]@FVU0
+R7
+32
+R181
+R182
+R183
+o-O0
+R11
+!s100 B7?mi>gQZglPUn[:fFkaL1
+!i10b 1
+Efirst_nios2_system_tb
+Z184 w1380749365
+R21
+R2
+R3
+R4
+Z185 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd
+Z186 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd
 l0
 L9
 ViKSD?Y<Z8l1?5Q;482cQ21
@@ -1637,9 +1592,9 @@ ViKSD?Y<Z8l1?5Q;482cQ21
 R7
 32
 !i10b 1
-Z193 !s108 1380212896.819000
-Z194 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd|
-Z195 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd|
+Z187 !s108 1380749936.396000
+Z188 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd|
+Z189 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd|
 o-O0
 R11
 Artl
@@ -1647,35 +1602,35 @@ R21
 R2
 R3
 DEx4 work 21 first_nios2_system_tb 0 22 iKSD?Y<Z8l1?5Q;482cQ21
-l108
+l100
 L12
-VBa7L=9Rz2el:69P;l^VQR0
-!s100 =CGM14OXN<72Q=OF36Fka2
+VC9TRD:E0bnm:fS;>8Ea]o3
+!s100 B;^<NbYL5F<@QPeOLb[C00
 R7
 32
 !i10b 1
-R193
-R194
-R195
+R187
+R188
+R189
 o-O0
 R11
 Eregfile
-Z196 w1380212185
+R173
 R69
 R70
 R2
 R3
 R4
-Z197 8C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd
-Z198 FC:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd
+Z190 8C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd
+Z191 FC:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd
 l0
 L11
 VOWe0Pe3IcHDNBRFm13Q1a2
 R7
 32
-Z199 !s108 1380212895.118000
-Z200 !s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd|
-Z201 !s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd|
+Z192 !s108 1380749934.821000
+Z193 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd|
+Z194 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd|
 o-O0
 R11
 !s100 cK[4MZj6o:DIVSA7g4n8`1
@@ -1688,13 +1643,13 @@ R3
 DEx4 work 7 regfile 0 22 OWe0Pe3IcHDNBRFm13Q1a2
 l60
 L41
-VZl1nTo3m29GL2Wi6DQNO52
+V1VWcQeQoS>7zCT6fe^Z<I2
 R7
 32
-R199
-R200
-R201
+R192
+R193
+R194
 o-O0
 R11
-!s100 Mb5_C9:IX0XC7;aD2bWad3
+!s100 @OD_=TdbC2dR2A]a_=m`71
 !i10b 1

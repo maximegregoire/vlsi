@@ -22,7 +22,6 @@ DEFINE regfile_0                                                                
 DEFINE sysid                                                                    ./libraries/sysid/                                                                   
 DEFINE sys_clk_timer                                                            ./libraries/sys_clk_timer/                                                           
 DEFINE jtag_uart                                                                ./libraries/jtag_uart/                                                               
-DEFINE led_pio                                                                  ./libraries/led_pio/                                                                 
 DEFINE cpu                                                                      ./libraries/cpu/                                                                     
 DEFINE onchip_mem                                                               ./libraries/onchip_mem/                                                              
 DEFINE first_nios2_system_inst_reset_bfm                                        ./libraries/first_nios2_system_inst_reset_bfm/                                       

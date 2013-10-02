@@ -2,9 +2,9 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\mgrego29\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
-vXpw3EviZIOMEpojgC4J9M3c5SoZx5HRQbxSkJb51/tw=
-IQVRMSGUUPcd:odMclm:jL3
+Z0 dC:\Users\pwhite8\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
+viRprQ+8KTOrJLXNKxqh17on1kQ/mukmIb/6mfkIYqbk=
+Ii>oCA_]Q>WCzbLkgdGSjV1
 V:mR1fj3Rf>NGziDN_:U030
 xsip
 d.
@@ -16,20 +16,20 @@ r1
 Z3 o-work rst_controller -O0
 nf2f26c2
 !i10b 0
-!s100 3D>LgUMBNQdR^R[<[gbCA2
-!i8a 2081101376
+!s100 QhDeAb20lG55:fd]l429d1
+!i8a 276595152
 !s85 0
-!s108 1380212839.952000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
-!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|-work|rst_controller|
+!s108 1380749769.490000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|-work|rst_controller|
 !s101 -O0
-vuAqaLRHY936AOxy3qckQk2JSy21fSyKR32UJWxzkbtg=
+vwTgNPOUYm5YuZwU1lIMVhMeH/guXaTmepZhXqtdio2s=
 !i10b 0
-!s100 MGZEBPh2fcK5U6Djn<_[X0
-IUW<<;zBk?7;iUMjKKgTn11
+!s100 Q1OX9zS^4ZdS2glZ?dgDZ2
+I^_k4V]J[@UF?k;8Ui6HhN1
 V3CjoOZCIEdzCJgPn8]D7`2
 xsip
-!i8a 387434064
+!i8a 1982193024
 d.
 R1
 L0 38
@@ -37,9 +37,9 @@ R2
 r1
 !s85 0
 31
-!s108 1380212840.264000
-!s107 C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
-!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|-work|rst_controller|
+!s108 1380749769.786000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|-work|rst_controller|
 !s101 -O0
 R3
 n15f2da2

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
  *
- * Generated: Tue Oct 01 20:11:40 EDT 2013
+ * Generated: Wed Oct 02 17:05:25 EDT 2013
  */
 
 /*
@@ -125,7 +125,6 @@
 
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
-#define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
@@ -194,33 +193,6 @@
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
 #define JTAG_UART_WRITE_DEPTH 64
 #define JTAG_UART_WRITE_THRESHOLD 8
-
-
-/*
- * led_pio configuration
- *
- */
-
-#define ALT_MODULE_CLASS_led_pio altera_avalon_pio
-#define LED_PIO_BASE 0x40
-#define LED_PIO_BIT_CLEARING_EDGE_REGISTER 0
-#define LED_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define LED_PIO_CAPTURE 0
-#define LED_PIO_DATA_WIDTH 8
-#define LED_PIO_DO_TEST_BENCH_WIRING 0
-#define LED_PIO_DRIVEN_SIM_VALUE 0
-#define LED_PIO_EDGE_TYPE "NONE"
-#define LED_PIO_FREQ 50000000
-#define LED_PIO_HAS_IN 0
-#define LED_PIO_HAS_OUT 1
-#define LED_PIO_HAS_TRI 0
-#define LED_PIO_IRQ -1
-#define LED_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LED_PIO_IRQ_TYPE "NONE"
-#define LED_PIO_NAME "/dev/led_pio"
-#define LED_PIO_RESET_VALUE 0
-#define LED_PIO_SPAN 16
-#define LED_PIO_TYPE "altera_avalon_pio"
 
 
 /*
@@ -304,7 +276,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1380672277
+#define SYSID_TIMESTAMP 1380747697
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

@@ -35,19 +35,19 @@
 	 ( 
 		 clk	:	IN  STD_LOGIC;
 		 reset	:	IN  STD_LOGIC;
-		 sink0_channel	:	IN  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 sink0_channel	:	IN  STD_LOGIC_VECTOR (5 DOWNTO 0);
 		 sink0_data	:	IN  STD_LOGIC_VECTOR (92 DOWNTO 0);
 		 sink0_endofpacket	:	IN  STD_LOGIC;
 		 sink0_ready	:	OUT  STD_LOGIC;
 		 sink0_startofpacket	:	IN  STD_LOGIC;
 		 sink0_valid	:	IN  STD_LOGIC;
-		 sink1_channel	:	IN  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 sink1_channel	:	IN  STD_LOGIC_VECTOR (5 DOWNTO 0);
 		 sink1_data	:	IN  STD_LOGIC_VECTOR (92 DOWNTO 0);
 		 sink1_endofpacket	:	IN  STD_LOGIC;
 		 sink1_ready	:	OUT  STD_LOGIC;
 		 sink1_startofpacket	:	IN  STD_LOGIC;
 		 sink1_valid	:	IN  STD_LOGIC;
-		 src_channel	:	OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 src_channel	:	OUT  STD_LOGIC_VECTOR (5 DOWNTO 0);
 		 src_data	:	OUT  STD_LOGIC_VECTOR (92 DOWNTO 0);
 		 src_endofpacket	:	OUT  STD_LOGIC;
 		 src_ready	:	IN  STD_LOGIC;
@@ -68,7 +68,6 @@
 	 SIGNAL  wire_ni_w612w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w618w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w624w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_ni_w630w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w39w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w100w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w106w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -167,7 +166,6 @@
 	 SIGNAL  wire_ni_w614w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w620w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w626w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_ni_w632w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w41w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w102w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w108w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -266,7 +264,6 @@
 	 SIGNAL  wire_ni_w_lg_w612w615w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w618w621w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w624w627w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_ni_w_lg_w630w633w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w39w42w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w100w103w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w106w109w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -359,18 +356,18 @@
 	 SIGNAL  wire_ni_w_lg_w581w584w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w587w590w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_ni_w_lg_w94w97w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL	first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q	:	STD_LOGIC := '0';
+	 SIGNAL	first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q	:	STD_LOGIC := '0';
 	 SIGNAL	first_nios2_system_cmd_xbar_mux_share_count_zero_flag_30q	:	STD_LOGIC := '0';
-	 SIGNAL	first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q	:	STD_LOGIC := '0';
+	 SIGNAL	first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q	:	STD_LOGIC := '0';
 	 SIGNAL	first_nios2_system_cmd_xbar_mux_locked_0_11q	:	STD_LOGIC := '0';
 	 SIGNAL	first_nios2_system_cmd_xbar_mux_locked_1_3q	:	STD_LOGIC := '0';
 	 SIGNAL	first_nios2_system_cmd_xbar_mux_packet_in_progress_21q	:	STD_LOGIC := '0';
 	 SIGNAL	first_nios2_system_cmd_xbar_mux_share_count_0_22q	:	STD_LOGIC := '0';
 	 SIGNAL  wire_nO_w22w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_682m_dataout	:	STD_LOGIC;
-	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_683m_dataout	:	STD_LOGIC;
-	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_684m_dataout	:	STD_LOGIC;
-	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_685m_dataout	:	STD_LOGIC;
+	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_676m_dataout	:	STD_LOGIC;
+	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_677m_dataout	:	STD_LOGIC;
+	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_678m_dataout	:	STD_LOGIC;
+	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_679m_dataout	:	STD_LOGIC;
 	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_p1_share_count_0_14m_dataout	:	STD_LOGIC;
 	 SIGNAL  wire_first_nios2_system_cmd_xbar_mux_p1_share_count_0_14m_w_lg_dataout21w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL	wire_first_nios2_system_cmd_xbar_mux_packet_in_progress_10m_dataout	:	STD_LOGIC;
@@ -385,34 +382,34 @@
 	 SIGNAL  wire_gnd	:	STD_LOGIC;
 	 SIGNAL  wire_first_nios2_system_cmd_xbar_mux_add0_13_o	:	STD_LOGIC_VECTOR (1 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w4w5w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w638w647w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w646w654w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w640w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w642w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w649w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w645w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w632w641w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w640w648w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w634w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w636w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w643w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w639w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w4w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_reset3w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w638w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w646w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w632w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w640w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w23w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w6w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w638w639w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w638w641w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w646w648w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w644w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_711_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_708_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_713_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_679_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_680_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_681_dataout :	STD_LOGIC;
+	 SIGNAL  wire_w_lg_w632w633w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w632w635w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w640w642w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w638w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_705_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_702_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_707_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_673_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_674_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_675_dataout :	STD_LOGIC;
 	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_last_cycle_8_dataout :	STD_LOGIC;
 	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout :	STD_LOGIC;
 	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_245_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_243_dataout :	STD_LOGIC;
 	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_src_payload_103_dataout :	STD_LOGIC;
-	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_src_payload_205_dataout :	STD_LOGIC;
+	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_src_payload_204_dataout :	STD_LOGIC;
 	 SIGNAL  s_wire_first_nios2_system_cmd_xbar_mux_wideor1_40_dataout :	STD_LOGIC;
 	 SIGNAL  s_wire_vcc :	STD_LOGIC;
 	 SIGNAL  wire_w_sink0_channel_range592w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -421,7 +418,6 @@
 	 SIGNAL  wire_w_sink0_channel_range611w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_channel_range617w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_channel_range623w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_sink0_channel_range629w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_data_range38w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_data_range99w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_data_range105w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -520,7 +516,6 @@
 	 SIGNAL  wire_w_sink1_channel_range613w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_channel_range619w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_channel_range625w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_sink1_channel_range631w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_data_range40w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_data_range101w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_data_range107w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -616,43 +611,43 @@
  BEGIN
 
 	wire_gnd <= '0';
-	wire_w_lg_w4w5w(0) <= wire_w4w(0) AND s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_245_dataout;
-	wire_w_lg_w638w647w(0) <= wire_w638w(0) AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_713_dataout;
-	wire_w_lg_w646w654w(0) <= wire_w646w(0) AND first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q;
-	wire_w640w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout AND wire_w_lg_w638w639w(0);
-	wire_w642w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout AND wire_w_lg_w638w641w(0);
-	wire_w649w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout AND wire_w_lg_w646w648w(0);
-	wire_w645w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout AND wire_w644w(0);
+	wire_w_lg_w4w5w(0) <= wire_w4w(0) AND s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_243_dataout;
+	wire_w_lg_w632w641w(0) <= wire_w632w(0) AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_707_dataout;
+	wire_w_lg_w640w648w(0) <= wire_w640w(0) AND first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q;
+	wire_w634w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout AND wire_w_lg_w632w633w(0);
+	wire_w636w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout AND wire_w_lg_w632w635w(0);
+	wire_w643w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout AND wire_w_lg_w640w642w(0);
+	wire_w639w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout AND wire_w638w(0);
 	wire_w4w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_wideor1_40_dataout AND src_ready;
 	wire_w_lg_reset3w(0) <= NOT reset;
-	wire_w638w(0) <= NOT s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout;
-	wire_w646w(0) <= NOT s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout;
+	wire_w632w(0) <= NOT s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout;
+	wire_w640w(0) <= NOT s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout;
 	wire_w23w(0) <= NOT s_wire_first_nios2_system_cmd_xbar_mux_wideor1_40_dataout;
-	wire_w6w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_src_payload_103_dataout OR s_wire_first_nios2_system_cmd_xbar_mux_src_payload_205_dataout;
-	wire_w_lg_w638w639w(0) <= wire_w638w(0) XOR first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q;
-	wire_w_lg_w638w641w(0) <= wire_w638w(0) XOR s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_713_dataout;
-	wire_w_lg_w646w648w(0) <= wire_w646w(0) XOR wire_w_lg_w638w647w(0);
-	wire_w644w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_708_dataout XOR s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_711_dataout;
-	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_711_dataout <= (wire_w646w(0) XOR first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q);
-	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_708_dataout <= (wire_w638w(0) AND first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q);
-	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_713_dataout <= (wire_w_lg_w646w654w(0) OR (s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_708_dataout AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_711_dataout));
-	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_679_dataout <= (wire_w640w(0) OR wire_w642w(0));
-	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_680_dataout <= (wire_w645w(0) OR wire_w649w(0));
-	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_681_dataout <= (s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout OR s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout);
+	wire_w6w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_src_payload_103_dataout OR s_wire_first_nios2_system_cmd_xbar_mux_src_payload_204_dataout;
+	wire_w_lg_w632w633w(0) <= wire_w632w(0) XOR first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q;
+	wire_w_lg_w632w635w(0) <= wire_w632w(0) XOR s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_707_dataout;
+	wire_w_lg_w640w642w(0) <= wire_w640w(0) XOR wire_w_lg_w632w641w(0);
+	wire_w638w(0) <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_702_dataout XOR s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_705_dataout;
+	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_705_dataout <= (wire_w640w(0) XOR first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q);
+	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_702_dataout <= (wire_w632w(0) AND first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q);
+	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_1_707_dataout <= (wire_w_lg_w640w648w(0) OR (s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_full_adder_cout_0_702_dataout AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_altera_merlin_arb_adder_adder_cout_705_dataout));
+	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_673_dataout <= (wire_w634w(0) OR wire_w636w(0));
+	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_674_dataout <= (wire_w639w(0) OR wire_w643w(0));
+	s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_675_dataout <= (s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout OR s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout);
 	s_wire_first_nios2_system_cmd_xbar_mux_last_cycle_8_dataout <= (wire_w_lg_w4w5w(0) AND (NOT wire_w6w(0)));
 	s_wire_first_nios2_system_cmd_xbar_mux_request_0_33_dataout <= (first_nios2_system_cmd_xbar_mux_locked_0_11q OR sink0_valid);
 	s_wire_first_nios2_system_cmd_xbar_mux_request_1_34_dataout <= (first_nios2_system_cmd_xbar_mux_locked_1_3q OR sink1_valid);
-	s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_245_dataout <= ((first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND sink0_endofpacket) OR (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND sink1_endofpacket));
+	s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_243_dataout <= ((first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND sink0_endofpacket) OR (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND sink1_endofpacket));
 	s_wire_first_nios2_system_cmd_xbar_mux_src_payload_103_dataout <= (first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND sink0_data(60));
-	s_wire_first_nios2_system_cmd_xbar_mux_src_payload_205_dataout <= (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND sink1_data(60));
+	s_wire_first_nios2_system_cmd_xbar_mux_src_payload_204_dataout <= (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND sink1_data(60));
 	s_wire_first_nios2_system_cmd_xbar_mux_wideor1_40_dataout <= ((first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND sink0_valid) OR (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND sink1_valid));
 	s_wire_vcc <= '1';
 	sink0_ready <= (first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND src_ready);
 	sink1_ready <= (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND src_ready);
-	src_channel <= ( wire_ni_w_lg_w630w633w & wire_ni_w_lg_w624w627w & wire_ni_w_lg_w618w621w & wire_ni_w_lg_w612w615w & wire_ni_w_lg_w606w609w & wire_ni_w_lg_w600w603w & wire_ni_w_lg_w593w596w);
+	src_channel <= ( wire_ni_w_lg_w624w627w & wire_ni_w_lg_w618w621w & wire_ni_w_lg_w612w615w & wire_ni_w_lg_w606w609w & wire_ni_w_lg_w600w603w & wire_ni_w_lg_w593w596w);
 	src_data <= ( wire_ni_w_lg_w587w590w & wire_ni_w_lg_w581w584w & wire_ni_w_lg_w575w578w & wire_ni_w_lg_w569w572w & wire_ni_w_lg_w563w566w & wire_ni_w_lg_w557w560w & wire_ni_w_lg_w551w554w & wire_ni_w_lg_w545w548w & wire_ni_w_lg_w539w542w & wire_ni_w_lg_w533w536w & wire_ni_w_lg_w527w530w & wire_ni_w_lg_w521w524w & wire_ni_w_lg_w515w518w & wire_ni_w_lg_w509w512w & wire_ni_w_lg_w503w506w & wire_ni_w_lg_w497w500w & wire_ni_w_lg_w491w494w & wire_ni_w_lg_w485w488w & wire_ni_w_lg_w479w482w & wire_ni_w_lg_w473w476w & wire_ni_w_lg_w467w470w & wire_ni_w_lg_w461w464w & wire_ni_w_lg_w455w458w & wire_ni_w_lg_w449w452w & wire_ni_w_lg_w443w446w & wire_ni_w_lg_w437w440w & wire_ni_w_lg_w431w434w & wire_ni_w_lg_w425w428w & wire_ni_w_lg_w419w422w & wire_ni_w_lg_w413w416w & wire_ni_w_lg_w407w410w & wire_ni_w_lg_w401w404w & wire_w6w & wire_ni_w_lg_w394w397w & wire_ni_w_lg_w388w391w & wire_ni_w_lg_w382w385w & wire_ni_w_lg_w376w379w & wire_ni_w_lg_w370w373w & wire_ni_w_lg_w364w367w & wire_ni_w_lg_w358w361w & wire_ni_w_lg_w352w355w & wire_ni_w_lg_w346w349w & wire_ni_w_lg_w340w343w & wire_ni_w_lg_w334w337w & wire_ni_w_lg_w328w331w & wire_ni_w_lg_w322w325w & wire_ni_w_lg_w316w319w & wire_ni_w_lg_w310w313w & wire_ni_w_lg_w304w307w & wire_ni_w_lg_w298w301w & wire_ni_w_lg_w292w295w & wire_ni_w_lg_w286w289w & wire_ni_w_lg_w280w283w & wire_ni_w_lg_w274w277w & wire_ni_w_lg_w268w271w & wire_ni_w_lg_w262w265w & wire_ni_w_lg_w256w259w & wire_ni_w_lg_w250w253w & wire_ni_w_lg_w244w247w & wire_ni_w_lg_w238w241w & wire_ni_w_lg_w232w235w & wire_ni_w_lg_w226w229w & wire_ni_w_lg_w220w223w & wire_ni_w_lg_w214w217w & wire_ni_w_lg_w208w211w & wire_ni_w_lg_w202w205w & wire_ni_w_lg_w196w199w & wire_ni_w_lg_w190w193w & wire_ni_w_lg_w184w187w & wire_ni_w_lg_w178w181w & wire_ni_w_lg_w172w175w & wire_ni_w_lg_w166w169w & wire_ni_w_lg_w160w163w & wire_ni_w_lg_w154w157w & wire_ni_w_lg_w148w151w & wire_ni_w_lg_w142w145w & wire_ni_w_lg_w136w139w & wire_ni_w_lg_w130w133w & wire_ni_w_lg_w124w127w & wire_ni_w_lg_w118w121w & wire_ni_w_lg_w112w115w & wire_ni_w_lg_w106w109w
  & wire_ni_w_lg_w100w103w & wire_ni_w_lg_w94w97w & wire_ni_w_lg_w88w91w & wire_ni_w_lg_w82w85w & wire_ni_w_lg_w76w79w & wire_ni_w_lg_w70w73w & wire_ni_w_lg_w64w67w & wire_ni_w_lg_w58w61w & wire_ni_w_lg_w52w55w & wire_ni_w_lg_w46w49w & wire_ni_w_lg_w39w42w);
-	src_endofpacket <= s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_245_dataout;
+	src_endofpacket <= s_wire_first_nios2_system_cmd_xbar_mux_src_payload_0_243_dataout;
 	src_startofpacket <= ((first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND sink0_startofpacket) OR (first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND sink1_startofpacket));
 	src_valid <= s_wire_first_nios2_system_cmd_xbar_mux_wideor1_40_dataout;
 	wire_w_sink0_channel_range592w(0) <= sink0_channel(0);
@@ -661,7 +656,6 @@
 	wire_w_sink0_channel_range611w(0) <= sink0_channel(3);
 	wire_w_sink0_channel_range617w(0) <= sink0_channel(4);
 	wire_w_sink0_channel_range623w(0) <= sink0_channel(5);
-	wire_w_sink0_channel_range629w(0) <= sink0_channel(6);
 	wire_w_sink0_data_range38w(0) <= sink0_data(0);
 	wire_w_sink0_data_range99w(0) <= sink0_data(10);
 	wire_w_sink0_data_range105w(0) <= sink0_data(11);
@@ -760,7 +754,6 @@
 	wire_w_sink1_channel_range613w(0) <= sink1_channel(3);
 	wire_w_sink1_channel_range619w(0) <= sink1_channel(4);
 	wire_w_sink1_channel_range625w(0) <= sink1_channel(5);
-	wire_w_sink1_channel_range631w(0) <= sink1_channel(6);
 	wire_w_sink1_data_range40w(0) <= sink1_data(0);
 	wire_w_sink1_data_range101w(0) <= sink1_data(10);
 	wire_w_sink1_data_range107w(0) <= sink1_data(11);
@@ -860,8 +853,8 @@
 				first_nios2_system_cmd_xbar_mux_saved_grant_1_31q <= '0';
 		ELSIF (clk = '1' AND clk'event) THEN
 			IF (wire_first_nios2_system_cmd_xbar_mux_update_grant_27m_dataout = '1') THEN
-				first_nios2_system_cmd_xbar_mux_saved_grant_0_32q <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_679_dataout;
-				first_nios2_system_cmd_xbar_mux_saved_grant_1_31q <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_680_dataout;
+				first_nios2_system_cmd_xbar_mux_saved_grant_0_32q <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_673_dataout;
+				first_nios2_system_cmd_xbar_mux_saved_grant_1_31q <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_674_dataout;
 			END IF;
 		END IF;
 	END PROCESS;
@@ -871,7 +864,6 @@
 	wire_ni_w612w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_channel_range611w(0);
 	wire_ni_w618w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_channel_range617w(0);
 	wire_ni_w624w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_channel_range623w(0);
-	wire_ni_w630w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_channel_range629w(0);
 	wire_ni_w39w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_data_range38w(0);
 	wire_ni_w100w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_data_range99w(0);
 	wire_ni_w106w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_0_32q AND wire_w_sink0_data_range105w(0);
@@ -970,7 +962,6 @@
 	wire_ni_w614w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_channel_range613w(0);
 	wire_ni_w620w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_channel_range619w(0);
 	wire_ni_w626w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_channel_range625w(0);
-	wire_ni_w632w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_channel_range631w(0);
 	wire_ni_w41w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_data_range40w(0);
 	wire_ni_w102w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_data_range101w(0);
 	wire_ni_w108w(0) <= first_nios2_system_cmd_xbar_mux_saved_grant_1_31q AND wire_w_sink1_data_range107w(0);
@@ -1069,7 +1060,6 @@
 	wire_ni_w_lg_w612w615w(0) <= wire_ni_w612w(0) OR wire_ni_w614w(0);
 	wire_ni_w_lg_w618w621w(0) <= wire_ni_w618w(0) OR wire_ni_w620w(0);
 	wire_ni_w_lg_w624w627w(0) <= wire_ni_w624w(0) OR wire_ni_w626w(0);
-	wire_ni_w_lg_w630w633w(0) <= wire_ni_w630w(0) OR wire_ni_w632w(0);
 	wire_ni_w_lg_w39w42w(0) <= wire_ni_w39w(0) OR wire_ni_w41w(0);
 	wire_ni_w_lg_w100w103w(0) <= wire_ni_w100w(0) OR wire_ni_w102w(0);
 	wire_ni_w_lg_w106w109w(0) <= wire_ni_w106w(0) OR wire_ni_w108w(0);
@@ -1165,34 +1155,34 @@
 	PROCESS (clk, reset)
 	BEGIN
 		IF (reset = '1') THEN
-				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q <= '1';
+				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q <= '1';
 				first_nios2_system_cmd_xbar_mux_share_count_zero_flag_30q <= '1';
 		ELSIF (clk = '1' AND clk'event) THEN
-				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_685m_dataout;
+				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_679m_dataout;
 				first_nios2_system_cmd_xbar_mux_share_count_zero_flag_30q <= wire_first_nios2_system_cmd_xbar_mux_share_count_zero_flag_20m_dataout;
 		END IF;
 	END PROCESS;
 	PROCESS (clk, reset)
 	BEGIN
 		IF (reset = '1') THEN
-				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q <= '0';
+				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q <= '0';
 				first_nios2_system_cmd_xbar_mux_locked_0_11q <= '0';
 				first_nios2_system_cmd_xbar_mux_locked_1_3q <= '0';
 				first_nios2_system_cmd_xbar_mux_packet_in_progress_21q <= '0';
 				first_nios2_system_cmd_xbar_mux_share_count_0_22q <= '0';
 		ELSIF (clk = '1' AND clk'event) THEN
-				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_684m_dataout;
-				first_nios2_system_cmd_xbar_mux_locked_0_11q <= (sink0_data(60) AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_679_dataout);
-				first_nios2_system_cmd_xbar_mux_locked_1_3q <= (sink1_data(60) AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_680_dataout);
+				first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_678m_dataout;
+				first_nios2_system_cmd_xbar_mux_locked_0_11q <= (sink0_data(60) AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_673_dataout);
+				first_nios2_system_cmd_xbar_mux_locked_1_3q <= (sink1_data(60) AND s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_674_dataout);
 				first_nios2_system_cmd_xbar_mux_packet_in_progress_21q <= wire_first_nios2_system_cmd_xbar_mux_packet_in_progress_10m_dataout;
 				first_nios2_system_cmd_xbar_mux_share_count_0_22q <= wire_first_nios2_system_cmd_xbar_mux_share_count_19m_dataout;
 		END IF;
 	END PROCESS;
 	wire_nO_w22w(0) <= NOT first_nios2_system_cmd_xbar_mux_packet_in_progress_21q;
-	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_682m_dataout <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_679_dataout WHEN s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_681_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q;
-	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_683m_dataout <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_680_dataout WHEN s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_681_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q;
-	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_684m_dataout <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_682m_dataout WHEN wire_first_nios2_system_cmd_xbar_mux_update_grant_27m_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_687q;
-	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_685m_dataout <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_683m_dataout WHEN wire_first_nios2_system_cmd_xbar_mux_update_grant_27m_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_688q;
+	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_676m_dataout <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_0_673_dataout WHEN s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_675_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q;
+	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_677m_dataout <= s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_grant_1_674_dataout WHEN s_wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_wideor0_675_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q;
+	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_678m_dataout <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_676m_dataout WHEN wire_first_nios2_system_cmd_xbar_mux_update_grant_27m_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_1_681q;
+	wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_679m_dataout <= wire_first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_677m_dataout WHEN wire_first_nios2_system_cmd_xbar_mux_update_grant_27m_dataout = '1'  ELSE first_nios2_system_cmd_xbar_mux_altera_merlin_arbitrator_arb_top_priority_reg_0_682q;
 	wire_first_nios2_system_cmd_xbar_mux_p1_share_count_0_14m_dataout <= wire_first_nios2_system_cmd_xbar_mux_add0_13_o(1) AND NOT(first_nios2_system_cmd_xbar_mux_share_count_zero_flag_30q);
 	wire_first_nios2_system_cmd_xbar_mux_p1_share_count_0_14m_w_lg_dataout21w(0) <= NOT wire_first_nios2_system_cmd_xbar_mux_p1_share_count_0_14m_dataout;
 	wire_first_nios2_system_cmd_xbar_mux_packet_in_progress_10m_dataout <= wire_first_nios2_system_cmd_xbar_mux_packet_in_progress_9m_dataout AND NOT(s_wire_first_nios2_system_cmd_xbar_mux_last_cycle_8_dataout);

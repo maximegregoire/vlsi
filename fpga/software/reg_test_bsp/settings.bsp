@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2013-09-26 12:02:07</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1380211327451</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\mgrego29\vlsi\fpga\software\reg_test_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2-Oct-2013 5:35:40 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1380749740196</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\pwhite8\vlsi\fpga\software\reg_test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\Users\mgrego29\vlsi\fpga\first_nios2_system.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\Users\pwhite8\vlsi\fpga\first_nios2_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -869,12 +869,6 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led_pio</slaveDescriptor>
-                <addressRange>0x00000040 - 0x0000004F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
                 <addressRange>0x00000050 - 0x00000057</addressRange>
                 <addressSpan>8</addressSpan>
@@ -885,6 +879,12 @@
                 <addressRange>0x00000060 - 0x0000007F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sysid</slaveDescriptor>
+                <addressRange>0x00000080 - 0x00000087</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>onchip_mem</slaveDescriptor>

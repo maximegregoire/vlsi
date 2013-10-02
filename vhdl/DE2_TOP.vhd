@@ -155,10 +155,9 @@ architecture Structural_Basic of DE2_TOP is
 	 component first_nios2_system is
         port (
             clk_clk                          : in  std_logic                     := 'X'; -- clk
-            pio_0_external_connection_export : out std_logic_vector(7 downto 0);         -- export
             reset_reset_n                    : in  std_logic                     := 'X'; -- reset_n
             regfile_0_conduit_end_AVINTDIS   : out std_logic;                            -- AVINTDIS
-            regfile_0_conduit_end_T1INTOVR   : out std_logic;                            -- T1INTOVR
+            regfile_0_conduit_end_T1INTOVR   : out std_logic;                           -- T1INTOVR
             regfile_0_conduit_end_T1INTSTS   : out std_logic;                            -- T1INTSTS
             regfile_0_conduit_end_T0INTSTS   : out std_logic;                            -- T0INTSTS
             regfile_0_conduit_end_T1INTEN    : out std_logic;                            -- T1INTEN
@@ -286,16 +285,6 @@ GPIO_1   <= (Others => 'Z'); -- inout std_logic_vector(35 downto 0)   --  GPIO C
 -- Simple test circuit: use the red LEDs to display a slow counter.
 count : process(CLOCK_50, KEY(0))
 begin
-if KEY(0)='0' then
-	counter_r <= 0;
-	slowcounter_r <= 0;
-elsif rising_edge(CLOCK_50) then
-	counter_r <= counter_r + 1;
-	if counter_r = 5000000 then
-		slowcounter_r <= slowcounter_r + 1;
-		counter_r <= 0;
-	end if;
-end if;
 end process count;
 
 LEDR <= conv_std_logic_vector(slowcounter_r, 18);
@@ -324,7 +313,6 @@ LEDR <= conv_std_logic_vector(slowcounter_r, 18);
 xfirst_nios2_system : component first_nios2_system
         port map (
             clk_clk                          => CLOCK_50,                          					--                       clk.clk
-            pio_0_external_connection_export => LEDG(7 downto 0), 										-- pio_0_external_connection.export
             reset_reset_n                    => SW(0),                    								--                     reset.reset_n
             regfile_0_conduit_end_AVINTDIS   => open,   --     regfile_0_conduit_end.AVINTDIS
             regfile_0_conduit_end_T1INTOVR   => open,   --                          .T1INTOVR

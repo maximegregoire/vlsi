@@ -15,7 +15,6 @@ regfile_0:                                                                ./libr
 sysid:                                                                    ./libraries/sysid/                                                                   
 sys_clk_timer:                                                            ./libraries/sys_clk_timer/                                                           
 jtag_uart:                                                                ./libraries/jtag_uart/                                                               
-led_pio:                                                                  ./libraries/led_pio/                                                                 
 cpu:                                                                      ./libraries/cpu/                                                                     
 onchip_mem:                                                               ./libraries/onchip_mem/                                                              
 altera:                                                                   ./libraries/altera/                                                                  

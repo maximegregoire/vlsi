@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
 # SOPC Builder design path: C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
 #
-# Generated: Tue Oct 01 20:11:40 EDT 2013
+# Generated: Wed Oct 02 17:05:25 EDT 2013
 
 # DO NOT MODIFY THIS FILE
 #

@@ -143,10 +143,6 @@
    type="VHDL"
    library="jtag_uart" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio.vhd"
-   type="VHDL"
-   library="led_pio" />
- <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu.ocp"
    type="OTHER"
    library="cpu" />
@@ -267,10 +263,6 @@
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_led_pio_s1_translator.vhd"
-   type="VHDL"
-   library="first_nios2_system_inst" />
- <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
@@ -279,11 +271,11 @@
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
  <file

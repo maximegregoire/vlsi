@@ -13,32 +13,16 @@
  * "small_hello_world" template.
  *
  */
+#include "system.h"
+#include "io.h"
+
 
 #include <stdio.h>
-#include <system.h>
-#include <io.h>
-
-#define REGFILE_0_BASE 0x0
 
 int main()
 {
-	  printf("Hello from Nios II!\n");
 
-	  int REG_ADDR;
-	  int *readData;
+  IOWR_32DIRECT(REGFILE_0_BASE, 0, 0xDEADBEEF);
 
-	  // Read address 0
-	  REG_ADDR = 0;
-
-	  readData = IORD_32DIRECT(REGFILE_0_BASE, REG_ADDR);
-
-	  REG_ADDR = 2;
-	  IOWR_32DIRECT(REGFILE_0_BASE, REG_ADDR, 0xDEADBEEF);
-
-	  printf("Reading at %d :", REGFILE_0_BASE + REG_ADDR);
-	  printf(readData);
-	  printf("\n");
-	  printf("DONE READING\n");
-
-	  return 0;
+  return 0;
 }
