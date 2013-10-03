@@ -1,0 +1,23 @@
+	component nios_test is
+		port (
+			clk_clk                : in  std_logic                     := 'X'; -- clk
+			reset_reset_n          : in  std_logic                     := 'X'; -- reset_n
+			reg_0_conduit_AVINTDIS : out std_logic;                            -- AVINTDIS
+			reg_0_conduit_T1INTOVR : out std_logic;                            -- T1INTOVR
+			reg_0_conduit_T1INTSTS : out std_logic;                            -- T1INTSTS
+			reg_0_conduit_T0INTSTS : out std_logic;                            -- T0INTSTS
+			reg_0_conduit_T1INTEN  : out std_logic;                            -- T1INTEN
+			reg_0_conduit_T0INTEN  : out std_logic;                            -- T0INTEN
+			reg_0_conduit_T1CNTEN  : out std_logic;                            -- T1CNTEN
+			reg_0_conduit_T0CNTEN  : out std_logic;                            -- T0CNTEN
+			reg_0_conduit_T1RST    : out std_logic;                            -- T1RST
+			reg_0_conduit_T0RST    : out std_logic;                            -- T0RST
+			reg_0_conduit_T0CNT    : out std_logic_vector(31 downto 0);        -- T0CNT
+			reg_0_conduit_T1CNT    : out std_logic_vector(31 downto 0);        -- T1CNT
+			reg_0_conduit_T0CMP    : out std_logic_vector(31 downto 0);        -- T0CMP
+			reg_0_conduit_T1CMP    : out std_logic_vector(31 downto 0);        -- T1CMP
+			reg_0_conduit_GP0      : out std_logic_vector(31 downto 0);        -- GP0
+			reg_0_conduit_GP1      : out std_logic_vector(31 downto 0)         -- GP1
+		);
+	end component nios_test;
+

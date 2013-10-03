@@ -1,0 +1,1151 @@
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do msim_setup.tcl 
+# nios_test_tb
+# ./../
+# C:/altera/13.0/quartus/
+# Modifying modelsim.ini
+# Modifying modelsim.ini
+# [exec] file_copy 
+# List Of Command Line Aliases 
+# 
+# file_copy                     -- Copy ROM/RAM files to simulation directory 
+# 
+# dev_com                       -- Compile device library files 
+# 
+# com                           -- Compile the design files in correct order 
+# 
+# elab                          -- Elaborate top level design 
+# 
+# elab_debug                    -- Elaborate the top level design with novopt option 
+# 
+# ld                            -- Compile all the design files and elaborate the top level design 
+# 
+# ld_debug                      -- Compile all the design files and elaborate the top level design with -novopt 
+# 
+# 
+# 
+# List Of Variables 
+# 
+# TOP_LEVEL_NAME                -- Top level module name. 
+# 
+# SYSTEM_INSTANCE_NAME          -- Instantiated system module name inside top level module. 
+# 
+# QSYS_SIMDIR                   -- Qsys base simulation directory. 
+# 
+# QUARTUS_INSTALL_DIR           -- Quartus installation directory. 
+#  ld 
+# [exec] dev_com 
+# [exec] com 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_irq_mapper
+# -- Compiling architecture RTL of nios_test_irq_mapper
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_rsp_xbar_mux
+# -- Compiling architecture RTL of nios_test_rsp_xbar_mux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_rsp_xbar_demux
+# -- Compiling architecture RTL of nios_test_rsp_xbar_demux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity nios_test_cmd_xbar_mux
+# -- Compiling architecture RTL of nios_test_cmd_xbar_mux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_cmd_xbar_demux
+# -- Compiling architecture RTL of nios_test_cmd_xbar_demux
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_id_router
+# -- Compiling architecture RTL of nios_test_id_router
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_addr_router
+# -- Compiling architecture RTL of nios_test_addr_router
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nios_test_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+# -- Compiling architecture RTL of nios_test_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity regfile
+# -- Compiling architecture arch of regfile
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity nios_test_onchip_memory2_0
+# -- Compiling architecture europa of nios_test_onchip_memory2_0
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package sgate_pack
+# -- Compiling entity nios_test_nios2_qsys_0
+# -- Compiling architecture RTL of nios_test_nios2_qsys_0
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# -- Compiling architecture europa of nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity nios_test_nios2_qsys_0_jtag_debug_module_tck
+# -- Compiling architecture europa of nios_test_nios2_qsys_0_jtag_debug_module_tck
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity nios_test_nios2_qsys_0_jtag_debug_module_wrapper
+# -- Compiling architecture europa of nios_test_nios2_qsys_0_jtag_debug_module_wrapper
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_lnsim_components
+# -- Compiling entity nios_test_nios2_qsys_0_mult_cell
+# -- Compiling architecture europa of nios_test_nios2_qsys_0_mult_cell
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity nios_test_nios2_qsys_0_oci_test_bench
+# -- Compiling architecture europa of nios_test_nios2_qsys_0_oci_test_bench
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity nios_test_nios2_qsys_0_test_bench
+# -- Compiling architecture europa of nios_test_nios2_qsys_0_test_bench
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_avalon_reset_source
+# -- Compiling architecture behavioral of altera_avalon_reset_source
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_avalon_clock_source
+# -- Compiling architecture behavioral of altera_avalon_clock_source
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test
+# -- Compiling architecture rtl of nios_test
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test_nios2_qsys_0_jtag_debug_module_translator
+# -- Compiling architecture rtl of nios_test_nios2_qsys_0_jtag_debug_module_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test_onchip_memory2_0_s1_translator
+# -- Compiling architecture rtl of nios_test_onchip_memory2_0_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test_reg_0_avalon_slave_0_translator
+# -- Compiling architecture rtl of nios_test_reg_0_avalon_slave_0_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test_nios2_qsys_0_instruction_master_translator
+# -- Compiling architecture rtl of nios_test_nios2_qsys_0_instruction_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test_nios2_qsys_0_data_master_translator
+# -- Compiling architecture rtl of nios_test_nios2_qsys_0_data_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nios_test_tb
+# -- Compiling architecture rtl of nios_test_tb
+# [exec] elab 
+# vsim -L work -L work_lib -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -t ps nios_test_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.nios_test_tb(rtl)
+# Loading work.nios_test(rtl)
+# Loading altera_mf.altera_mf_components
+# Loading sgate.sgate_pack(body)
+# Loading work.nios_test_nios2_qsys_0(rtl)
+# Loading altera_mf.altera_std_synchronizer(behavioral)
+# Loading altera_mf.altshift_taps(behavioural)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading altera.altera_europa_support_lib(body)
+# Loading work.nios_test_nios2_qsys_0_jtag_debug_module_wrapper(europa)
+# Loading work.nios_test_nios2_qsys_0_jtag_debug_module_tck(europa)
+# Loading work.nios_test_nios2_qsys_0_jtag_debug_module_sysclk(europa)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading work.nios_test_nios2_qsys_0_mult_cell(europa)
+# Loading sv_std.std
+# Loading work.nios_test_nios2_qsys_0_oci_test_bench(europa)
+# Loading work.nios_test_nios2_qsys_0_test_bench(europa)
+# Loading ieee.std_logic_signed(body)
+# Loading sgate.oper_add(sim_arch)
+# Loading sgate.oper_less_than(sim_arch)
+# Loading work.nios_test_onchip_memory2_0(europa)
+# Loading work.regfile(arch)
+# Loading work.nios_test_nios2_qsys_0_instruction_master_translator(rtl)
+# Loading work.nios_test_nios2_qsys_0_data_master_translator(rtl)
+# Loading work.nios_test_nios2_qsys_0_jtag_debug_module_translator(rtl)
+# Loading work.nios_test_onchip_memory2_0_s1_translator(rtl)
+# Loading work.nios_test_reg_0_avalon_slave_0_translator(rtl)
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# 
+# Loading work.nios_test_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo(rtl)
+# Loading work.nios_test_addr_router(rtl)
+# Loading work.nios_test_id_router(rtl)
+# Loading work.nios_test_cmd_xbar_demux(rtl)
+# Loading work.nios_test_cmd_xbar_mux(rtl)
+# Loading work.nios_test_rsp_xbar_demux(rtl)
+# Loading work.nios_test_rsp_xbar_mux(rtl)
+# Loading work.nios_test_irq_mapper(rtl)
+# Loading work.altera_avalon_clock_source(behavioral)
+# Loading work.altera_avalon_reset_source(behavioral)
+# ** Warning: (vsim-3473) Component instance "nios_test_inst_reg_0_conduit_bfm : altera_conduit_bfm" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb File: C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/nios_test_tb.vhd
+# ** Warning: Design size of 71 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+#   
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/clk
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_address
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_byteenable
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_irq
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_read
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_readdata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_readdatavalid
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_waitrequest
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_write
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/d_writedata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/i_address
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/i_read
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/i_readdata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/i_readdatavalid
+add wave -position end  sim:/nios_test_tb/nios_test_inst/nios2_qsys_0/i_waitrequest
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/INIT_FILE
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/address
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/byteenable
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/chipselect
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/clk
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/clken
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/reset
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/write
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/writedata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/readdata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/internal_readdata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/onchip_memory2_0/wren
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/address
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/readdata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/write_n
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/writedata
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/rst
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/clk
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/AVINTDIS
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1INTOVR
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1INTSTS
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0INTSTS
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1INTEN
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0INTEN
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1CNTEN
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0CNTEN
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1RST
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0RST
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0CNT
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1CNT
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0CMP
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1CMP
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/GP0
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/GP1
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/AVINTDIS_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1INTOVR_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1INTSTS_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0INTSTS_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1INTEN_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0INTEN_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1CNTEN_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0CNTEN_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1RST_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0RST_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0CNT_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1CNT_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T0CMP_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/T1CMP_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/GP0_sig
+add wave -position end  sim:/nios_test_tb/nios_test_inst/reg_0/GP1_sig
+run 1000us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1ll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1ll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1ll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1ll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1il/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1il/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1il/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll1il/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll10l/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll10l/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll10l/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nll10l/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOll/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOiO/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOiO/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOiO/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOiO/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOii/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOii/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOii/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nliOii/g2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/the_nios_test_nios2_qsys_0_test_bench
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0O1O0O
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0O1O0O
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0O1O0i
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0O1lOi
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_002/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux_001/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/cmd_xbar_mux/nios_test_cmd_xbar_mux_add0_13/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n01lil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1iO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0i1Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iliO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0iOi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0l0l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0liO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n0Oi0ii/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1i00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iiOO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1iO1l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/n1l11l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOl00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOll/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/niOO01l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1Oi/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nllO1i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00i/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlllil/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nlOO00l/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl0Ol/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Region: /nios_test_tb/nios_test_inst/nios2_qsys_0/nl1lO/g1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /nios_test_tb/nios_test_inst/nios2_qsys_0/ni1lOii/the_nios_test_nios2_qsys_0_jtag_debug_module_sysclk

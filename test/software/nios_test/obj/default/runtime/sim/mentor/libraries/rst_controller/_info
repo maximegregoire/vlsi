@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\mgrego29\vlsi\test\software\nios_test\obj\default\runtime\sim\mentor
+viTPykDUGFl03j28/SWAO7VD3epzX4/Jn35muUgf6wo0=
+ICYE4knMF5IJHeC>PC4C7e0
+V:mR1fj3Rf>NGziDN_:U030
+xsip
+d.
+Z1 Fnofile
+L0 38
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-work rst_controller -O0
+nf2f26c2
+!i10b 0
+!s100 dXe[0lD>68HMcc4zPoQA03
+!i8a 2089556896
+!s85 0
+!s108 1380806203.660000
+!s107 C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_reset_controller.v|
+!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_reset_controller.v|-work|rst_controller|
+!s101 -O0
+vAb2JJLCnZ1vbjliyNTwlwFvcRIOUx7Xxw2gz8I4z9E8=
+!i10b 0
+!s100 7Im63`kG<JPi?Wb:=CZ^j3
+Im:`1GWbQV8XETIQ4Bj>hg3
+V3CjoOZCIEdzCJgPn8]D7`2
+xsip
+!i8a 661785984
+d.
+R1
+L0 38
+R2
+r1
+!s85 0
+31
+!s108 1380806203.972000
+!s107 C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/test/nios_test/testbench/nios_test_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|-work|rst_controller|
+!s101 -O0
+R3
+n15f2da2

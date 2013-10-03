@@ -1,0 +1,12 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\mgrego29\vlsi\test\software\nios_test\obj\default\runtime\sim\mentor
+Enios_test_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+o-work nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -O0
+Z1 tExplicit 1
+Z2 dC:\Users\mgrego29\vlsi\test\software\nios_test\obj\default\runtime\sim\mentor
+!s108 1380805610.745000
+!s90 -reportprogress|300|C:/Users/mgrego29/vlsi/test/nios_test/simulation/submodules/nios_test_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|-work|nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo|
+!s107 C:/Users/mgrego29/vlsi/test/nios_test/simulation/submodules/nios_test_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho|
