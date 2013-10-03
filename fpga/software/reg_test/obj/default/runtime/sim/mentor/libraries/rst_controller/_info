@@ -3,41 +3,41 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\pwhite8\vlsi\fpga\software\reg_test\obj\default\runtime\sim\mentor
-viRprQ+8KTOrJLXNKxqh17on1kQ/mukmIb/6mfkIYqbk=
-Ii>oCA_]Q>WCzbLkgdGSjV1
+vI63D0I0om0/ybQAWfujIQBwxuvufmrniAW77E0nXLmE=
+IH;flUEM<@Ia`I[3C6]WL=0
 V:mR1fj3Rf>NGziDN_:U030
 xsip
 d.
 Z1 Fnofile
-L0 38
+L0 37
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-work rst_controller -O0
 nf2f26c2
 !i10b 0
-!s100 QhDeAb20lG55:fd]l429d1
-!i8a 276595152
+!s100 :ob0zhz8z76lQLojc]72Q3
+!i8a 860413168
 !s85 0
-!s108 1380749769.490000
+!s108 1380807681.556000
 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|-work|rst_controller|
 !s101 -O0
-vwTgNPOUYm5YuZwU1lIMVhMeH/guXaTmepZhXqtdio2s=
+vRMH1NRf46v56OB2BcWMRv/49Gb99wKgq4GUitTzeRPY=
 !i10b 0
-!s100 Q1OX9zS^4ZdS2glZ?dgDZ2
-I^_k4V]J[@UF?k;8Ui6HhN1
+!s100 aPh]ZVlnFU^OnDBC]`GkG2
+IFV4JRXNO404ZIm`Af];>_1
 V3CjoOZCIEdzCJgPn8]D7`2
 xsip
-!i8a 1982193024
+!i8a 1434630816
 d.
 R1
-L0 38
+L0 37
 R2
 r1
 !s85 0
 31
-!s108 1380749769.786000
+!s108 1380807681.868000
 !s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
 !s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|-work|rst_controller|
 !s101 -O0

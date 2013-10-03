@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.02.17:38:01
+# ACDS 13.0 156 win32 2013.10.03.09:43:26
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -55,6 +55,8 @@ alias file_copy {
   file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
   file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
   file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/software/reg_test/mem_init/hdl_sim/first_nios2_system_onchip_mem.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/software/reg_test/mem_init/first_nios2_system_onchip_mem.hex ./
 }
 
 # ----------------------------------------

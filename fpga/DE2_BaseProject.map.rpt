@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_BaseProject
-Wed Oct 02 17:31:11 2013
+Thu Oct 03 11:15:38 2013
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -139,13 +139,14 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 131. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu_data_master_translator:cpu_data_master_translator"
 132. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu_instruction_master_translator:cpu_instruction_master_translator|altera_merlin_master_translator:cpu_instruction_master_translator"
 133. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu_instruction_master_translator:cpu_instruction_master_translator"
-134. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic"
-135. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart:jtag_uart"
-136. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu"
-137. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system"
-138. Elapsed Time Per Partition
-139. Analysis & Synthesis Messages
-140. Analysis & Synthesis Suppressed Messages
+134. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|regfile:regfile_0"
+135. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic"
+136. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart:jtag_uart"
+137. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu"
+138. Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system"
+139. Elapsed Time Per Partition
+140. Analysis & Synthesis Messages
+141. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -171,13 +172,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 02 17:31:11 2013       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 03 11:15:38 2013       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DE2_BaseProject                             ;
 ; Top-level Entity Name              ; DE2_TOP                                     ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 3,245                                       ;
-;     Total combinational functions  ; 2,744                                       ;
+; Total logic elements               ; 3,244                                       ;
+;     Total combinational functions  ; 2,743                                       ;
 ;     Dedicated logic registers      ; 1,883                                       ;
 ; Total registers                    ; 1883                                        ;
 ; Total pins                         ; 425                                         ;
@@ -396,16 +397,16 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 3,245    ;
+; Estimated Total logic elements              ; 3,244    ;
 ;                                             ;          ;
-; Total combinational functions               ; 2744     ;
+; Total combinational functions               ; 2743     ;
 ; Logic element usage by number of LUT inputs ;          ;
 ;     -- 4 input functions                    ; 1387     ;
-;     -- 3 input functions                    ; 925      ;
-;     -- <=2 input functions                  ; 432      ;
+;     -- 3 input functions                    ; 923      ;
+;     -- <=2 input functions                  ; 433      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 2505     ;
+;     -- normal mode                          ; 2504     ;
 ;     -- arithmetic mode                      ; 239      ;
 ;                                             ;          ;
 ; Total registers                             ; 1883     ;
@@ -417,7 +418,7 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 4        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 1925     ;
-; Total fan-out                               ; 19646    ;
+; Total fan-out                               ; 19642    ;
 ; Average fan-out                             ; 3.72     ;
 +---------------------------------------------+----------+
 
@@ -427,7 +428,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                             ; Library Name ;
 +----------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_TOP                                                                                                             ; 2744 (1)          ; 1883 (0)     ; 192576      ; 4            ; 0       ; 2         ; 425  ; 0            ; |DE2_TOP                                                                                                                                                                                                                                                                                                                                                                                                        ;              ;
+; |DE2_TOP                                                                                                             ; 2743 (1)          ; 1883 (0)     ; 192576      ; 4            ; 0       ; 2         ; 425  ; 0            ; |DE2_TOP                                                                                                                                                                                                                                                                                                                                                                                                        ;              ;
 ;    |first_nios2_system:xfirst_nios2_system|                                                                          ; 2580 (0)          ; 1786 (0)     ; 192576      ; 4            ; 0       ; 2         ; 0    ; 0            ; |DE2_TOP|first_nios2_system:xfirst_nios2_system                                                                                                                                                                                                                                                                                                                                                                 ;              ;
 ;       |altera_avalon_sc_fifo:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo|               ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                                                                  ;              ;
 ;       |altera_avalon_sc_fifo:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                                                            ;              ;
@@ -559,8 +560,8 @@ applicable agreement for further details.
 ;       |first_nios2_system_sysid_control_slave_translator:sysid_control_slave_translator|                             ; 7 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|first_nios2_system:xfirst_nios2_system|first_nios2_system_sysid_control_slave_translator:sysid_control_slave_translator                                                                                                                                                                                                                                                                                ;              ;
 ;          |altera_merlin_slave_translator:sysid_control_slave_translator|                                             ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|first_nios2_system:xfirst_nios2_system|first_nios2_system_sysid_control_slave_translator:sysid_control_slave_translator|altera_merlin_slave_translator:sysid_control_slave_translator                                                                                                                                                                                                                  ;              ;
 ;       |regfile:regfile_0|                                                                                            ; 142 (142)         ; 135 (135)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|first_nios2_system:xfirst_nios2_system|regfile:regfile_0                                                                                                                                                                                                                                                                                                                                               ;              ;
-;    |sld_hub:auto_hub|                                                                                                ; 163 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                                                       ;              ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                                 ; 162 (121)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                                                                                          ;              ;
+;    |sld_hub:auto_hub|                                                                                                ; 162 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                                                       ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                                 ; 161 (120)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                                                                                          ;              ;
 ;          |sld_rom_sr:hub_info_reg|                                                                                   ; 24 (24)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                                                                                  ;              ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                                 ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_TOP|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                                                                                                ;              ;
 +----------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -777,6 +778,8 @@ Encoding Type:  One-Hot
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart_avalon_jtag_slave_translator:jtag_uart_avalon_jtag_slave_translator|altera_merlin_slave_translator:jtag_uart_avalon_jtag_slave_translator|av_readdata_pre[11,23..31]             ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart_avalon_jtag_slave_translator:jtag_uart_avalon_jtag_slave_translator|altera_merlin_slave_translator:jtag_uart_avalon_jtag_slave_translator|av_chipselect_pre                      ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_onchip_mem_s1_translator:onchip_mem_s1_translator|altera_merlin_slave_translator:onchip_mem_s1_translator|av_chipselect_pre                                                                ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
+; first_nios2_system:xfirst_nios2_system|regfile:regfile_0|T1CNT_sig[13..31]                                                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
+; first_nios2_system:xfirst_nios2_system|regfile:regfile_0|T0CNT_sig[0..31]                                                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|E_control_reg_rddata[2..15,17..31]                                                                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|E_ctrl_br_always_pred_taken                                                                                                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_nios2_oci:the_first_nios2_system_cpu_nios2_oci|first_nios2_system_cpu_nios2_oci_im:the_first_nios2_system_cpu_nios2_oci_im|trc_im_addr[0..6]                ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
@@ -787,6 +790,7 @@ Encoding Type:  One-Hot
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_nios2_oci:the_first_nios2_system_cpu_nios2_oci|first_nios2_system_cpu_nios2_oci_xbrk:the_first_nios2_system_cpu_nios2_oci_xbrk|xbrk_break                   ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_nios2_oci:the_first_nios2_system_cpu_nios2_oci|first_nios2_system_cpu_nios2_oci_xbrk:the_first_nios2_system_cpu_nios2_oci_xbrk|E_xbrk_goto0                 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_nios2_oci:the_first_nios2_system_cpu_nios2_oci|first_nios2_system_cpu_nios2_oci_xbrk:the_first_nios2_system_cpu_nios2_oci_xbrk|E_xbrk_goto1                 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
+; first_nios2_system:xfirst_nios2_system|regfile:regfile_0|T1CNT_sig[0..12]                                                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                  ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|rst1                                                                                                  ; Merged with first_nios2_system:xfirst_nios2_system|altera_merlin_master_agent:cpu_data_master_translator_avalon_universal_master_0_agent|hold_waitrequest                                                                                               ;
 ; first_nios2_system:xfirst_nios2_system|altera_merlin_master_agent:cpu_data_master_translator_avalon_universal_master_0_agent|hold_waitrequest                                                                                                        ; Merged with first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|clr_break_line                                                                                                                                                            ;
 ; first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|clr_break_line                                                                                                                                                                     ; Merged with first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu_jtag_debug_module_translator:cpu_jtag_debug_module_translator|altera_merlin_slave_translator:cpu_jtag_debug_module_translator|waitrequest_reset_override                      ;
@@ -863,10 +867,7 @@ Encoding Type:  One-Hot
 ; first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:regfile_0_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][79]                                                                                                  ; Merged with first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:regfile_0_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][56]                                                                                         ;
 ; first_nios2_system:xfirst_nios2_system|altera_merlin_slave_agent:regfile_0_avalon_slave_0_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[1]                                   ; Merged with first_nios2_system:xfirst_nios2_system|altera_merlin_slave_agent:regfile_0_avalon_slave_0_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[0]                          ;
 ; first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][94]                                                                                                       ; Merged with first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][64]                                                                                              ;
-; first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][62]                                                                                                       ; Merged with first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][56]                                                                                              ;
-; first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][63]                                                                                                       ; Merged with first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][56]                                                                                              ;
-; first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][78]                                                                                                       ; Merged with first_nios2_system:xfirst_nios2_system|altera_avalon_sc_fifo:sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][56]                                                                                              ;
-; Total Number of Removed Registers = 272                                                                                                                                                                                                              ;                                                                                                                                                                                                                                                         ;
+; Total Number of Removed Registers = 336                                                                                                                                                                                                              ;                                                                                                                                                                                                                                                         ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -3532,6 +3533,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------+--------+----------+------------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|regfile:regfile_0"                                                                                          ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; avalon_int ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; t0int_set  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; t1int_set  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; t0cnt_in   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; t1cnt_in   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "first_nios2_system:xfirst_nios2_system|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic"        ;
 +----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -3605,7 +3619,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:05     ;
+; Top              ; 00:00:06     ;
 ; sld_hub:auto_hub ; 00:00:00     ;
 +------------------+--------------+
 
@@ -3616,7 +3630,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed Oct 02 17:30:53 2013
+    Info: Processing started: Thu Oct 03 11:15:20 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_BaseProject -c DE2_BaseProject
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file first_nios2_system/synthesis/first_nios2_system.vhd
@@ -4519,7 +4533,11 @@ Info (12133): Instantiated megafunction "first_nios2_system:xfirst_nios2_system|
 Info (12128): Elaborating entity "first_nios2_system_sys_clk_timer" for hierarchy "first_nios2_system:xfirst_nios2_system|first_nios2_system_sys_clk_timer:sys_clk_timer"
 Info (12128): Elaborating entity "first_nios2_system_sysid" for hierarchy "first_nios2_system:xfirst_nios2_system|first_nios2_system_sysid:sysid"
 Info (12128): Elaborating entity "regfile" for hierarchy "first_nios2_system:xfirst_nios2_system|regfile:regfile_0"
-Warning (10492): VHDL Process Statement warning at regfile.vhd(136): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10541): VHDL Signal Declaration warning at regfile.vhd(40): used implicit default value for signal "T0CNT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at regfile.vhd(41): used implicit default value for signal "T1CNT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at regfile.vhd(174): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at regfile.vhd(192): signal "T0CNT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at regfile.vhd(194): signal "T1CNT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "first_nios2_system_cpu_instruction_master_translator" for hierarchy "first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu_instruction_master_translator:cpu_instruction_master_translator"
 Warning (10541): VHDL Signal Declaration warning at first_nios2_system_cpu_instruction_master_translator.vhd(62): used implicit default value for signal "av_response" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at first_nios2_system_cpu_instruction_master_translator.vhd(66): used implicit default value for signal "av_writeresponsevalid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
@@ -4683,7 +4701,7 @@ Info (12133): Instantiated megafunction "first_nios2_system:xfirst_nios2_system|
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_1l01.tdf
     Info (12023): Found entity 1: mult_1l01
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -4958,16 +4976,16 @@ Warning (21074): Design contains 46 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "TD_DATA[7]"
     Warning (15610): No output dependent on input pin "TD_HS"
     Warning (15610): No output dependent on input pin "TD_VS"
-Info (21057): Implemented 4207 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4206 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 51 input pins
     Info (21059): Implemented 219 output pins
     Info (21060): Implemented 159 bidirectional pins
-    Info (21061): Implemented 3548 logic cells
+    Info (21061): Implemented 3547 logic cells
     Info (21064): Implemented 225 RAM segments
     Info (21062): Implemented 4 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 363 warnings
-    Info: Peak virtual memory: 629 megabytes
-    Info: Processing ended: Wed Oct 02 17:31:11 2013
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 367 warnings
+    Info: Peak virtual memory: 610 megabytes
+    Info: Processing ended: Thu Oct 03 11:15:38 2013
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:14
 
