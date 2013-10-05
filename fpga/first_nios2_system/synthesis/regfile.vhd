@@ -31,18 +31,18 @@ port (
 	T1INTOVR 	: 	out std_logic;
 	T1INTSTS 	: 	out std_logic;
 	T0INTSTS 	: 	out std_logic;
-	T1INTEN 	: 	out std_logic;
-	T0INTEN 	: 	out std_logic;	
-	T1CNTEN 	: 	out std_logic;
-	T0CNTEN 	: 	out std_logic;
-	T1RST 	: 	out std_logic;
-	T0RST 	: 	out std_logic;	
-	T0CNT 	: 	out std_logic_vector(31 downto 0);	
-	T1CNT 	: 	out std_logic_vector(31 downto 0);	
-	T0CMP 	: 	out std_logic_vector(31 downto 0);	
-	T1CMP 	: 	out std_logic_vector(31 downto 0);	
-	GP0 		: 	out std_logic_vector(31 downto 0);	
-	GP1 		: 	out std_logic_vector(31 downto 0)
+	T1INTEN 		: 	out std_logic;
+	T0INTEN 		: 	out std_logic;	
+	T1CNTEN 		: 	out std_logic;
+	T0CNTEN 		: 	out std_logic;
+	T1RST 		: 	out std_logic;
+	T0RST 		: 	out std_logic;	
+	T0CNT 		: 	out std_logic_vector(31 downto 0);	
+	T1CNT 		: 	out std_logic_vector(31 downto 0);	
+	T0CMP 		: 	out std_logic_vector(31 downto 0);	
+	T1CMP 		: 	out std_logic_vector(31 downto 0);	
+	GP0 			: 	out std_logic_vector(31 downto 0);	
+	GP1 			: 	out std_logic_vector(31 downto 0)
 	  );
 end entity regfile;
 
@@ -167,7 +167,7 @@ end if;
 end process;
 
 process(T0INTEN_sig, T1INTEN_sig, T0INTSTS_sig, T1INTSTS_sig, T1INTOVR_sig, AVINTDIS_sig, T0RST_sig, T1RST_sig, T0CNTEN_sig, T1CNTEN_sig,
-T0CMP_sig, T1CMP_sig, GP0_sig, GP1_sig)
+T0CMP_sig, T1CMP_sig, GP0_sig, GP1_sig, T0CNT_sig, T1CNT_sig, address)
 begin
 -- Drive default value to readData output --
 	readdata <= (others	=> '0');

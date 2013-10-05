@@ -40,6 +40,8 @@ set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file jo
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/aldec/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/mentor/altera_merlin_master_translator.sv"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/aldec/altera_merlin_master_translator.sv"]
+set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/comparator.vhd"]
+set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/counter.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/regfile.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/first_nios2_system_sysid.vho"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/first_nios2_system_sys_clk_timer.vhd"]

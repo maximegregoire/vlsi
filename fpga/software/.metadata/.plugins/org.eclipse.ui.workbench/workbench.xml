@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="35" version="2.0">
 <workbenchAdvisor/>
-<window height="769" width="1024" x="622" y="51">
+<window height="769" maximized="true" width="1024" x="585" y="55">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -35,9 +35,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="reg_test_main.c" partName="reg_test_main.c" path="C:/Users/pwhite8/vlsi/fpga/software/reg_test/reg_test_main.c" title="reg_test_main.c" tooltip="reg_test/reg_test_main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/reg_test/reg_test_main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="722" selectionTopPixel="7"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="nios2_isr_test_main.c" partName="nios2_isr_test_main.c" path="C:/Users/pwhite8/vlsi/fpga/software/nios2_isr_test/nios2_isr_test_main.c" title="nios2_isr_test_main.c" tooltip="nios2_isr_test/nios2_isr_test_main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/nios2_isr_test/nios2_isr_test_main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="322" selectionTopPixel="90"/>
 </editor>
 </editors>
 <views>
@@ -49,7 +49,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Errors (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -68,7 +68,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -274,12 +274,47 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/reg_test/main_test.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/reg_test/reg_test_main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/nios2_isr/nios2_isr_main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/nios2_isr_bsp/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/nios2_isr_bsp/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/nios2_isr_test/nios2_isr_test_main.c"/>
 </editors>
 <item historyLabel="main_test.c" index="0">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="reg_test_main.c" index="1">
+<item historyLabel="reg_test_main.c" index="1">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="1385" y="0"/>
+</item>
+<item historyLabel="reg_test_main.c" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="600" y="0"/>
+</item>
+<item historyLabel="system.h" index="3">
+<position info="not_deleted" x="6884" y="14"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="600" y="0"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="898" y="0"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="1365" y="0"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="1270" y="0"/>
+</item>
+<item historyLabel="nios2_isr_main.c" index="2">
+<position info="not_deleted" x="926" y="0"/>
+</item>
+<item historyLabel="system.h" index="4"/>
+<item active="true" historyLabel="nios2_isr_test_main.c" index="5">
+<position info="not_deleted" x="208" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -299,6 +334,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nios2_isr_test_main.c" tooltip="nios2_isr_test/nios2_isr_test_main.c">
+<persistable path="/nios2_isr_test/nios2_isr_test_main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="nios2_isr_bsp/system.h">
+<persistable path="/nios2_isr_bsp/system.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="nios2_isr_main.c" tooltip="nios2_isr/nios2_isr_main.c">
+<persistable path="/nios2_isr/nios2_isr_main.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="reg_test_bsp/system.h">
 <persistable path="/reg_test_bsp/system.h"/>
 </file>

@@ -1,0 +1,21 @@
+/*
+ * nios2_isr_main.c
+ *
+ *  Created on: 2013-10-05
+ *      Author: pwhite8
+ */
+#include "system.h"
+#include "io.h"
+
+
+#include <stdio.h>
+
+int main()
+{
+
+  IOWR_32DIRECT(REGFILE_0_BASE, 0, 0xDEADBEEF);
+
+  return 0;
+}
+
+

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.02.17:30:19
+# ACDS 13.0 156 win32 2013.10.05.17:19:03
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -127,6 +127,10 @@ ensure_lib                                                                      
 vmap       cpu_jtag_debug_module_translator                                         ./libraries/cpu_jtag_debug_module_translator                                        
 ensure_lib                                                                          ./libraries/cpu_instruction_master_translator                                       
 vmap       cpu_instruction_master_translator                                        ./libraries/cpu_instruction_master_translator                                       
+ensure_lib                                                                          ./libraries/comparator_0                                                            
+vmap       comparator_0                                                             ./libraries/comparator_0                                                            
+ensure_lib                                                                          ./libraries/counter_0                                                               
+vmap       counter_0                                                                ./libraries/counter_0                                                               
 ensure_lib                                                                          ./libraries/regfile_0                                                               
 vmap       regfile_0                                                                ./libraries/regfile_0                                                               
 ensure_lib                                                                          ./libraries/sysid                                                                   
@@ -195,6 +199,8 @@ alias com {
   vlog  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_master_agent.sv"                                                             -work cpu_instruction_master_translator_avalon_universal_master_0_agent       
   vlog  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_slave_translator.sv"                                                         -work cpu_jtag_debug_module_translator                                        
   vlog  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_master_translator.sv"                                                        -work cpu_instruction_master_translator                                       
+  vcom  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/comparator.vhd"                                                                                  -work comparator_0                                                            
+  vcom  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/counter.vhd"                                                                                     -work counter_0                                                               
   vcom  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/regfile.vhd"                                                                                     -work regfile_0                                                               
   vcom  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                    -work sysid                                                                   
   vcom  "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                            -work sys_clk_timer                                                           
@@ -225,14 +231,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  vsim +access +r  -t ps -L work -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim +access +r  -t ps -L work -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L comparator_0 -L counter_0 -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  vsim -dbg -O2 +access +r -t ps -L work -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim -dbg -O2 +access +r -t ps -L work -L irq_mapper -L rsp_xbar_mux -L rsp_xbar_demux -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L limiter -L id_router -L addr_router -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_instruction_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_instruction_master_translator -L comparator_0 -L counter_0 -L regfile_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L first_nios2_system_inst_reset_bfm -L first_nios2_system_inst_clk_bfm -L first_nios2_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

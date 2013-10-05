@@ -146,34 +146,100 @@ architecture Structural_Basic of DE2_TOP is
 
 	signal counter_r     : integer;
 	signal slowcounter_r : integer;
+	
+	signal counter_0_en : std_logic;
+	signal counter_0_rst : std_logic;
+	signal count_0 : std_logic_vector(31 downto 0);
+	signal count_0_reg : std_logic_vector(31 downto 0);
+	
+	signal counter_1_en : std_logic;
+	signal counter_1_rst : std_logic;
+	signal count_1 : std_logic_vector(31 downto 0);
+	signal count_1_reg : std_logic_vector(31 downto 0);
+	
+	signal counter_0_cmp : std_logic_vector(31 downto 0);
+	signal counter_1_cmp : std_logic_vector(31 downto 0);
+	
+	signal counter_0_int : std_logic;
+	signal counter_1_int : std_logic;
+	
+	signal GPIO_0_sig : std_logic_vector(31 downto 0);
+	signal GPIO_1_sig : std_logic_vector(31 downto 0);
 
 --	signal ramaddr_s    : std_logic_vector(7 downto 0);
 --	signal ramdatain_s  : std_logic_vector(7 downto 0);
 --	signal ramdataout_s : std_logic_vector(7 downto 0);
 --	signal ramwren_s    : std_logic;
 
-	 component first_nios2_system is
+		component first_nios2_system is
         port (
-            clk_clk                          : in  std_logic                     := 'X'; -- clk
-            reset_reset_n                    : in  std_logic                     := 'X'; -- reset_n
-            regfile_0_conduit_end_AVINTDIS   : out std_logic;                            -- AVINTDIS
-            regfile_0_conduit_end_T1INTOVR   : out std_logic;                           -- T1INTOVR
-            regfile_0_conduit_end_T1INTSTS   : out std_logic;                            -- T1INTSTS
-            regfile_0_conduit_end_T0INTSTS   : out std_logic;                            -- T0INTSTS
-            regfile_0_conduit_end_T1INTEN    : out std_logic;                            -- T1INTEN
-            regfile_0_conduit_end_T0INTEN    : out std_logic;                            -- T0INTEN
-            regfile_0_conduit_end_T1CNTEN    : out std_logic;                            -- T1CNTEN
-            regfile_0_conduit_end_T0CNTEN    : out std_logic;                            -- T0CNTEN
-            regfile_0_conduit_end_T1RST      : out std_logic;                            -- T1RST
-            regfile_0_conduit_end_T0RST      : out std_logic;                            -- T0RST
-            regfile_0_conduit_end_T0CNT      : out std_logic_vector(31 downto 0);        -- T0CNT
-            regfile_0_conduit_end_T1CNT      : out std_logic_vector(31 downto 0);        -- T1CNT
-            regfile_0_conduit_end_T0CMP      : out std_logic_vector(31 downto 0);        -- T0CMP
-            regfile_0_conduit_end_T1CMP      : out std_logic_vector(31 downto 0);        -- T1CMP
-            regfile_0_conduit_end_GP0        : out std_logic_vector(31 downto 0);        -- GP0
-            regfile_0_conduit_end_GP1        : out std_logic_vector(31 downto 0)         -- GP1
+            clk_clk                              : in  std_logic                     := 'X';             -- clk
+            reset_reset_n                        : in  std_logic                     := 'X';             -- reset_n
+            regfile_0_conduit_end_AVINTDIS       : out std_logic;                                        -- AVINTDIS
+            regfile_0_conduit_end_T1INTOVR       : out std_logic;                                        -- T1INTOVR
+            regfile_0_conduit_end_T1INTSTS       : out std_logic;                                        -- T1INTSTS
+            regfile_0_conduit_end_T0INTSTS       : out std_logic;                                        -- T0INTSTS
+            regfile_0_conduit_end_T1INTEN        : out std_logic;                                        -- T1INTEN
+            regfile_0_conduit_end_T0INTEN        : out std_logic;                                        -- T0INTEN
+            regfile_0_conduit_end_T1CNTEN        : out std_logic;                                        -- T1CNTEN
+            regfile_0_conduit_end_T0CNTEN        : out std_logic;                                        -- T0CNTEN
+            regfile_0_conduit_end_T1RST          : out std_logic;                                        -- T1RST
+            regfile_0_conduit_end_T0RST          : out std_logic;                                        -- T0RST
+            regfile_0_conduit_end_T0CNT          : out std_logic_vector(31 downto 0);                    -- T0CNT
+            regfile_0_conduit_end_T1CNT          : out std_logic_vector(31 downto 0);                    -- T1CNT
+            regfile_0_conduit_end_T0CMP          : out std_logic_vector(31 downto 0);                    -- T0CMP
+            regfile_0_conduit_end_T1CMP          : out std_logic_vector(31 downto 0);                    -- T1CMP
+            regfile_0_conduit_end_GP0            : out std_logic_vector(31 downto 0);                    -- GP0
+            regfile_0_conduit_end_GP1            : out std_logic_vector(31 downto 0);                    -- GP1
+            regfile_0_conduit_end_avalon_int     : out std_logic;                                        -- avalon_int
+            regfile_0_conduit_end_T0INT_set      : in  std_logic                     := 'X';             -- T0INT_set
+            regfile_0_conduit_end_T1INT_set      : in  std_logic                     := 'X';             -- T1INT_set
+            regfile_0_conduit_end_T0CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
+            regfile_0_conduit_end_T1CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
+            counter_0_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
+            counter_0_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
+            counter_0_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
+            counter_1_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
+            counter_1_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
+            counter_1_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
+            comparator_0_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
+            comparator_0_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+            comparator_0_conduit_end_count_equal : out std_logic;                                        -- count_equal
+            comparator_0_conduit_end_clear       : in  std_logic                     := 'X';             -- clear
+            comparator_1_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
+            comparator_1_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+            comparator_1_conduit_end_count_equal : out std_logic;                                        -- count_equal
+            comparator_1_conduit_end_clear       : in  std_logic                     := 'X'              -- clear
         );
     end component first_nios2_system;
+	 
+--	 component counter_16 is
+--			port (
+--				-- Counter interface
+--				clk 			: in std_logic;
+--				rst 			: in std_logic;
+--				enable	 	: in std_logic;
+--				count 		: out std_logic_vector(31 downto 0)
+--				);
+--	end component counter_16;
+--	
+--	component comparator is
+--			port (	
+--				-- Counter interface
+--				clk 			: in std_logic;
+--				rst			: in std_logic;
+--				count 		: in std_logic_vector(31 downto 0);
+--				count_cmp	: in std_logic_vector(31 downto 0);
+--				count_equal : out std_logic
+--				);
+--	end component comparator;
+	
+	component hexconverter is
+			port (
+				bcd 		: in std_logic_vector(3 downto 0);  --BCD input
+				segment7 : out std_logic_vector(6 downto 0)  -- 7 bit decoded output.
+				);
+	end component hexconverter;
 	 
 begin 
 
@@ -181,14 +247,14 @@ begin
 -- TODO: Remove this code for outputs you want to use.
 
 --------------------  7-SEG Dispaly --------------------
-HEX0       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 0
-HEX1       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 1
-HEX2       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 2
-HEX3       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 3
-HEX4       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 4
-HEX5       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 5
-HEX6       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 6
-HEX7       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 7
+-- HEX0       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 0
+-- HEX1       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 1
+-- HEX2       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 2
+-- HEX3       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 3
+-- HEX4       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 4
+-- HEX5       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 5
+-- HEX6       <= (Others => '1'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 6
+-- HEX7       <= (Others => '0'); -- out std_logic_vector(6 downto 0);     --  Seven Segment Digit 7
 ------------------------  LED   ------------------------
 -- (These outputs are used in the example below)
 --LEDG       <= (Others => '1'); -- out std_logic_vector(8 downto 0);     --  LED Green[8:0]
@@ -287,7 +353,7 @@ count : process(CLOCK_50, KEY(0))
 begin
 end process count;
 
-LEDR <= conv_std_logic_vector(slowcounter_r, 18);
+-- LEDR <= conv_std_logic_vector(slowcounter_r, 18);
 
 ---- instantiate the test RAM block
 --xtestramblock : entity work.testramblock
@@ -308,28 +374,142 @@ LEDR <= conv_std_logic_vector(slowcounter_r, 18);
 -- send the RAM data output to the green LEDs
 --LEDG(7 downto 0) <= ramdataout_s;
 --LEDG(8) <= '0';
--- LEDG(8 downto 0) <= (others => '0');
+--LEDG(8 downto 0) <= (others => '0');
 
+xhexconverter_0: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(3 downto 0),  --BCD input
+				segment7 => HEX0  -- 7 bit decoded output.
+				);
+				
+xhexconverter_1: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(7 downto 4),  --BCD input
+				segment7 => HEX1  -- 7 bit decoded output.
+				);
+
+xhexconverter_2: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(11 downto 8),  --BCD input
+				segment7 => HEX2  -- 7 bit decoded output.
+				);	
+	
+xhexconverter_3: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(15 downto 12),  --BCD input
+				segment7 => HEX3  -- 7 bit decoded output.
+				);	
+				
+xhexconverter_4: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(19 downto 16),  --BCD input
+				segment7 => HEX4  -- 7 bit decoded output.
+				);
+				
+xhexconverter_5: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(23 downto 20),  --BCD input
+				segment7 => HEX5  -- 7 bit decoded output.
+				);
+				
+xhexconverter_6: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(27 downto 24),  --BCD input
+				segment7 => HEX6  -- 7 bit decoded output.
+				);
+				
+xhexconverter_7: component hexconverter
+			port map (
+				bcd 		=> GPIO_0_sig(31 downto 28),  --BCD input
+				segment7 => HEX7  -- 7 bit decoded output.
+				);
+				
+--xcounter_16_0 : component counter_16
+--			port map(
+--				-- Counter interface
+--				clk 			=> CLOCK_50,
+--				rst 			=> counter_0_rst,
+--				enable	 	=> counter_0_en,
+--				count 		=> count_0
+--				);
+--				
+--xcomparator_0 : component comparator
+--			port map (	
+--				-- Counter interface
+--				clk 			=> CLOCK_50,
+--				rst			=> counter_0_rst,
+--				count 		=> count_0_reg,
+--				count_cmp	=> counter_0_cmp,
+--				count_equal => counter_0_int
+--				);
+--
+--xcounter_16_1 : component counter_16
+--			port map(
+--				-- Counter interface
+--				clk 			=> CLOCK_50,
+--				rst 			=> counter_1_rst,
+--				enable	 	=> counter_1_en,
+--				count 		=> count_1
+--				);
+--				
+--xcomparator_1 : component comparator
+--			port map (	
+--				-- Counter interface
+--				clk 			=> CLOCK_50,
+--				rst			=> counter_1_rst,
+--				count 		=> count_1_reg,
+--				count_cmp	=> counter_1_cmp,
+--				count_equal => counter_1_int
+--				);
+
+-----------------------------------------------------------------
+-- LEDR0 - Interrupt 1 Overrun
+-- LEDR1 - Interrupt 0 Status
+-- LEDR2 - Interrupt 1 Status
+-- LEDR3 - Avalon Interrupt Enable 
+-- LEDR4 - Interrupt 0 Enable
+-- LEDR5 - Interrupt 1 Enable
+-- LEDR7 - Avalon Interface Interrupt
+-----------------------------------------------------------------		  
 xfirst_nios2_system : component first_nios2_system
         port map (
-            clk_clk                          => CLOCK_50,                          					--                       clk.clk
-            reset_reset_n                    => SW(0),                    								--                     reset.reset_n
-            regfile_0_conduit_end_AVINTDIS   => open,   --     regfile_0_conduit_end.AVINTDIS
-            regfile_0_conduit_end_T1INTOVR   => open,   --                          .T1INTOVR
-            regfile_0_conduit_end_T1INTSTS   => open,   --                          .T1INTSTS
-            regfile_0_conduit_end_T0INTSTS   => open,   --                          .T0INTSTS
-            regfile_0_conduit_end_T1INTEN    => open,    --                          .T1INTEN
-            regfile_0_conduit_end_T0INTEN    => open,    --                          .T0INTEN
-            regfile_0_conduit_end_T1CNTEN    => open,    --                          .T1CNTEN
-            regfile_0_conduit_end_T0CNTEN    => open,    --                          .T0CNTEN
-            regfile_0_conduit_end_T1RST      => open,      --                          .T1RST
-            regfile_0_conduit_end_T0RST      => open,      --                          .T0RST
-            regfile_0_conduit_end_T0CNT      => open,      --                          .T0CNT
-            regfile_0_conduit_end_T1CNT      => open,      --                          .T1CNT
-            regfile_0_conduit_end_T0CMP      => open,      --                          .T0CMP
-            regfile_0_conduit_end_T1CMP      => open,      --                          .T1CMP
-            regfile_0_conduit_end_GP0        => open,        --                          .GP0
-            regfile_0_conduit_end_GP1        => open         --                          .GP1
+            clk_clk                              	=> CLOCK_50,             --                      clk.clk
+            reset_reset_n                        	=> SW(0),                --                    reset.reset_n
+            regfile_0_conduit_end_AVINTDIS       	=> LEDR(3),   			  --    regfile_0_conduit_end.AVINTDIS
+            regfile_0_conduit_end_T1INTOVR       	=> LEDR(0),   --         --                         .T1INTOVR
+            regfile_0_conduit_end_T1INTSTS       	=> LEDR(2),   --         --                         .T1INTSTS
+            regfile_0_conduit_end_T0INTSTS       	=> LEDR(1),   --         --                         .T0INTSTS
+            regfile_0_conduit_end_T1INTEN        	=> LEDR(5),    --        --                         .T1INTEN
+            regfile_0_conduit_end_T0INTEN        	=> LEDR(4),    --        --                         .T0INTEN
+            regfile_0_conduit_end_T1CNTEN        	=> counter_1_en,    	   --                         .T1CNTEN
+            regfile_0_conduit_end_T0CNTEN        	=> counter_0_en,        	--                         .T0CNTEN
+            regfile_0_conduit_end_T1RST          	=> counter_1_rst,        --                         .T1RST
+            regfile_0_conduit_end_T0RST          	=> counter_0_rst,        --                         .T0RST
+            regfile_0_conduit_end_T0CNT          	=> count_0_reg,          --                         .T0CNT
+            regfile_0_conduit_end_T1CNT          	=> count_1_reg,          --                         .T1CNT
+            regfile_0_conduit_end_T0CMP          	=> counter_0_cmp,        --                         .T0CMP
+            regfile_0_conduit_end_T1CMP          	=> counter_1_cmp,        --                         .T1CMP
+            regfile_0_conduit_end_GP0            	=> GPIO_0_sig,           --                         .GP0
+            regfile_0_conduit_end_GP1            	=> GPIO_1_sig,           	--                         .GP1
+            regfile_0_conduit_end_avalon_int     	=> LEDR(7), 			    	--                         .avalon_int
+            regfile_0_conduit_end_T0INT_set      	=> counter_0_int,  		   --                         .T0INT_set
+            regfile_0_conduit_end_T1INT_set      	=> counter_1_int,      --                         .T1INT_set
+            regfile_0_conduit_end_T0CNT_in       	=> count_0,   			    --                         .T0CNT_in
+            regfile_0_conduit_end_T1CNT_in       	=> count_1,    			    --                         .T1CNT_in
+            counter_0_conduit_end_enable         	=> counter_0_en,         --    counter_0_conduit_end.enable
+            counter_0_conduit_end_count          	=> count_0,              --                    .count
+            counter_0_conduit_end_clear            => counter_0_rst,            --                         .rst
+            counter_1_conduit_end_enable         	=> counter_1_en,         --    counter_1_conduit_end.enable
+            counter_1_conduit_end_count          	=> count_1,          --                         .count
+            counter_1_conduit_end_clear            => counter_1_rst,            --                         .rst
+            comparator_0_conduit_end_count       	=> count_0_reg,       -- comparator_0_conduit_end.count
+            comparator_0_conduit_end_count_cmp   	=> counter_0_cmp,   --                         .count_cmp
+            comparator_0_conduit_end_count_equal 	=> counter_0_int, --                         .count_equal
+            comparator_0_conduit_end_clear         => counter_0_rst,         --                         .rst
+            comparator_1_conduit_end_count       	=> count_1_reg,       -- comparator_1_conduit_end.count
+            comparator_1_conduit_end_count_cmp   	=> counter_1_cmp,   --                         .count_cmp
+            comparator_1_conduit_end_count_equal 	=> counter_1_int, --                         .count_equal
+            comparator_1_conduit_end_clear         => counter_1_rst          --                         .rst
         );
 end Structural_Basic;
 

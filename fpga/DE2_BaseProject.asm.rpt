@@ -1,5 +1,5 @@
 Assembler report for DE2_BaseProject
-Thu Oct 03 10:55:22 2013
+Sat Oct 05 17:08:14 2013
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Oct 03 10:55:22 2013 ;
+; Assembler Status      ; Successful - Sat Oct 05 17:08:14 2013 ;
 ; Revision Name         ; DE2_BaseProject                       ;
 ; Top-level Entity Name ; DE2_TOP                               ;
 ; Family                ; Cyclone II                            ;
@@ -107,7 +107,7 @@ applicable agreement for further details.
 +----------------+---------------------------------------------------------+
 ; Device         ; EP2C35F672C6                                            ;
 ; JTAG usercode  ; 0xFFFFFFFF                                              ;
-; Checksum       ; 0x00633897                                              ;
+; Checksum       ; 0x0066D655                                              ;
 +----------------+---------------------------------------------------------+
 
 
@@ -118,7 +118,7 @@ applicable agreement for further details.
 +--------------------+-----------------------------------------------------+
 ; Device             ; EPCS16                                              ;
 ; JTAG usercode      ; 0x00000000                                          ;
-; Checksum           ; 0x1C21779E                                          ;
+; Checksum           ; 0x1C153C8F                                          ;
 ; Compression Ratio  ; 2                                                   ;
 +--------------------+-----------------------------------------------------+
 
@@ -129,14 +129,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Oct 03 10:55:16 2013
+    Info: Processing started: Sat Oct 05 17:08:10 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE2_BaseProject -c DE2_BaseProject
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 448 megabytes
-    Info: Processing ended: Thu Oct 03 10:55:22 2013
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 460 megabytes
+    Info: Processing ended: Sat Oct 05 17:08:15 2013
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 

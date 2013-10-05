@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project nios2_isr_test ****
+
+make all 
+Info: Building ../nios2_isr_test_bsp/
+make --no-print-directory -C ../nios2_isr_test_bsp/
+[BSP build complete]
+[nios2_isr_test build complete]
+
+**** Build Finished ****

@@ -127,6 +127,14 @@
    library="cpu_instruction_master_translator"
    simulator="riviera" />
  <file
+   path="first_nios2_system/simulation/submodules/comparator.vhd"
+   type="VHDL"
+   library="comparator_0" />
+ <file
+   path="first_nios2_system/simulation/submodules/counter.vhd"
+   type="VHDL"
+   library="counter_0" />
+ <file
    path="first_nios2_system/simulation/submodules/regfile.vhd"
    type="VHDL"
    library="regfile_0" />

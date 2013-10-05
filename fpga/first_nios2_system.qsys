@@ -20,6 +20,38 @@
          type = "int";
       }
    }
+   element comparator_0
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element comparator_1
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element counter_0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element counter_1
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
    element cpu
    {
       datum _sortIndex
@@ -91,7 +123,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1380749255372" />
+ <parameter name="timeStamp" value="1381006586492" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -99,6 +131,26 @@
  <interface
    name="regfile_0_conduit_end"
    internal="regfile_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="counter_0_conduit_end"
+   internal="counter_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="counter_1_conduit_end"
+   internal="counter_1.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="comparator_0_conduit_end"
+   internal="comparator_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="comparator_1_conduit_end"
+   internal="comparator_1.conduit_end"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
@@ -288,12 +340,22 @@
    version="13.0"
    enabled="1"
    name="sysid">
-  <parameter name="id" value="0" />
+  <parameter name="id" value="7" />
   <parameter name="timestamp" value="0" />
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
- <module kind="regfile" version="1.0" enabled="1" name="regfile_0" />
+ <module kind="regfile" version="1.0" enabled="1" name="regfile_0">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module kind="counter" version="1.0" enabled="1" name="counter_0">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module kind="counter" version="1.0" enabled="1" name="counter_1">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module kind="comparator" version="1.0" enabled="1" name="comparator_0" />
+ <module kind="comparator" version="1.0" enabled="1" name="comparator_1" />
  <connection
    kind="avalon"
    version="13.0"
@@ -418,11 +480,6 @@
  </connection>
  <connection kind="clock" version="13.0" start="clk_0.clk" end="regfile_0.clock" />
  <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="regfile_0.reset_sink" />
- <connection
    kind="avalon"
    version="13.0"
    start="cpu.data_master"
@@ -440,6 +497,43 @@
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="regfile_0.reset_sink" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="counter_0.clock" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="counter_1.clock" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="comparator_0.clock" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="comparator_1.clock" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="comparator_0.reset_sink" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="comparator_1.reset_sink" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="counter_1.reset_sink" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="counter_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

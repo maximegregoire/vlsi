@@ -1,0 +1,37 @@
+/*
+ * nios2_isr_main.c
+ *
+ *  Created on: 2013-10-05
+ *      Author: pwhite8
+ */
+#include "system.h"
+#include "io.h"
+
+
+#include <stdio.h>
+
+#define INTCTL 	0x0
+#define TCTL 	0x1
+#define T0CNT	0x2
+#define T1CNT	0x3
+#define T0CMP	0x4
+#define T1CMP	0x5
+#define GP0		0x6
+#define GP1		0x7
+
+int main()
+{
+
+  IOWR_32DIRECT(REGFILE_0_BASE, 0, 0x00000003);
+
+
+
+
+  // Set up Control registers
+  IOWR_32DIRECT(REGFILE_0_BASE + INTCTL, 0, )
+
+
+  return 0;
+}
+
+
