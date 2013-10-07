@@ -135,26 +135,26 @@ end if;
 -- Reset the counter if certain registers are set
 if (T0RST_sig = '1') then
 T0CNT_sig <= (others => '0');
-elsif (T0CNT_sig = T0CMP_sig) then
-T0CNT_sig <= (others => '0');
+-- elsif (T0CNT_sig = T0CMP_sig) then
+-- T0CNT_sig <= (others => '0');
 else
 T0CNT_sig <= T0CNT_in;
 end if;
 
 if (T1RST_sig = '1') then
 T1CNT_sig <= (others => '0');
-elsif (T1CNT_sig = T1CMP_sig) then
-T1CNT_sig <= (others => '0');
+-- elsif (T1CNT_sig = T1CMP_sig) then
+-- T1CNT_sig <= (others => '0');
 else
 T1CNT_sig <= T1CNT_in;
 end if;
 -- End of Counters --
 
 -- Interupts --
-if (T0INT_set = '1') then
+if (T0INT_set = '1' AND T0INTEN_sig = '1') then
 	T0INTSTS_sig <= '1';
 end if;
-if (T1INT_set = '1') then
+if (T1INT_set = '1' AND T1INTEN_sig = '1') then
 	if (T0INTSTS_sig = '1') then 	-- First interupt not yet handled, causes overun
 		T1INTOVR_sig <= '1';
 	else									-- Interupt is clear, set INTSTS for CNT 1
@@ -210,7 +210,7 @@ end process;
 	
 process(T0INTSTS_sig, T1INTSTS_sig, AVINTDIS_sig)
 	begin
-	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND AVINTDIS_sig; 	
+	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND AVINTDIS_sig;
 end process;
 
 	-- Assignment the signals to the outputs
@@ -226,6 +226,10 @@ end process;
 	T0RST				<= T0RST_sig;	
 	T0CMP				<= T0CMP_sig;	
 	T1CMP				<=	T1CMP_sig;	
+	
+	T0CNT				<= T0CNT_sig;
+	T1CNT				<= T1CNT_sig;
+	
 	GP0				<= GP0_sig;	
 	GP1				<= GP1_sig;
 end arch;

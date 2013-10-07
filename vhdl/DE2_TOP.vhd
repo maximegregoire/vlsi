@@ -163,8 +163,8 @@ architecture Structural_Basic of DE2_TOP is
 	signal counter_0_int : std_logic;
 	signal counter_1_int : std_logic;
 	
-	signal GPIO_0_sig : std_logic_vector(31 downto 0);
-	signal GPIO_1_sig : std_logic_vector(31 downto 0);
+	signal GP_0_sig : std_logic_vector(31 downto 0);
+	signal GP_1_sig : std_logic_vector(31 downto 0);
 
 --	signal ramaddr_s    : std_logic_vector(7 downto 0);
 --	signal ramdatain_s  : std_logic_vector(7 downto 0);
@@ -378,89 +378,51 @@ end process count;
 
 xhexconverter_0: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(3 downto 0),  --BCD input
+				bcd 		=> GP_0_sig(3 downto 0),  --BCD input
 				segment7 => HEX0  -- 7 bit decoded output.
 				);
 				
 xhexconverter_1: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(7 downto 4),  --BCD input
+				bcd 		=> GP_0_sig(7 downto 4),  --BCD input
 				segment7 => HEX1  -- 7 bit decoded output.
 				);
 
 xhexconverter_2: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(11 downto 8),  --BCD input
+				bcd 		=> GP_0_sig(11 downto 8),  --BCD input
 				segment7 => HEX2  -- 7 bit decoded output.
 				);	
 	
 xhexconverter_3: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(15 downto 12),  --BCD input
+				bcd 		=> GP_0_sig(15 downto 12),  --BCD input
 				segment7 => HEX3  -- 7 bit decoded output.
 				);	
 				
 xhexconverter_4: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(19 downto 16),  --BCD input
+				bcd 		=> GP_0_sig(19 downto 16),  --BCD input
 				segment7 => HEX4  -- 7 bit decoded output.
 				);
 				
 xhexconverter_5: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(23 downto 20),  --BCD input
+				bcd 		=> GP_0_sig(23 downto 20),  --BCD input
 				segment7 => HEX5  -- 7 bit decoded output.
 				);
 				
 xhexconverter_6: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(27 downto 24),  --BCD input
+				bcd 		=> GP_0_sig(27 downto 24),  --BCD input
 				segment7 => HEX6  -- 7 bit decoded output.
 				);
 				
 xhexconverter_7: component hexconverter
 			port map (
-				bcd 		=> GPIO_0_sig(31 downto 28),  --BCD input
+				bcd 		=> GP_0_sig(31 downto 28),  --BCD input
 				segment7 => HEX7  -- 7 bit decoded output.
 				);
-				
---xcounter_16_0 : component counter_16
---			port map(
---				-- Counter interface
---				clk 			=> CLOCK_50,
---				rst 			=> counter_0_rst,
---				enable	 	=> counter_0_en,
---				count 		=> count_0
---				);
---				
---xcomparator_0 : component comparator
---			port map (	
---				-- Counter interface
---				clk 			=> CLOCK_50,
---				rst			=> counter_0_rst,
---				count 		=> count_0_reg,
---				count_cmp	=> counter_0_cmp,
---				count_equal => counter_0_int
---				);
---
---xcounter_16_1 : component counter_16
---			port map(
---				-- Counter interface
---				clk 			=> CLOCK_50,
---				rst 			=> counter_1_rst,
---				enable	 	=> counter_1_en,
---				count 		=> count_1
---				);
---				
---xcomparator_1 : component comparator
---			port map (	
---				-- Counter interface
---				clk 			=> CLOCK_50,
---				rst			=> counter_1_rst,
---				count 		=> count_1_reg,
---				count_cmp	=> counter_1_cmp,
---				count_equal => counter_1_int
---				);
 
 -----------------------------------------------------------------
 -- LEDR0 - Interrupt 1 Overrun
@@ -469,7 +431,11 @@ xhexconverter_7: component hexconverter
 -- LEDR3 - Avalon Interrupt Enable 
 -- LEDR4 - Interrupt 0 Enable
 -- LEDR5 - Interrupt 1 Enable
+
 -- LEDR7 - Avalon Interface Interrupt
+
+-- LEDG0 - Counter 0 equals CMP value
+-- LEDG1 - Counter 1 equals CMP value
 -----------------------------------------------------------------		  
 xfirst_nios2_system : component first_nios2_system
         port map (
@@ -481,35 +447,35 @@ xfirst_nios2_system : component first_nios2_system
             regfile_0_conduit_end_T0INTSTS       	=> LEDR(1),   --         --                         .T0INTSTS
             regfile_0_conduit_end_T1INTEN        	=> LEDR(5),    --        --                         .T1INTEN
             regfile_0_conduit_end_T0INTEN        	=> LEDR(4),    --        --                         .T0INTEN
-            regfile_0_conduit_end_T1CNTEN        	=> counter_1_en,    	   --                         .T1CNTEN
-            regfile_0_conduit_end_T0CNTEN        	=> counter_0_en,        	--                         .T0CNTEN
-            regfile_0_conduit_end_T1RST          	=> counter_1_rst,        --                         .T1RST
-            regfile_0_conduit_end_T0RST          	=> counter_0_rst,        --                         .T0RST
-            regfile_0_conduit_end_T0CNT          	=> count_0_reg,          --                         .T0CNT
-            regfile_0_conduit_end_T1CNT          	=> count_1_reg,          --                         .T1CNT
-            regfile_0_conduit_end_T0CMP          	=> counter_0_cmp,        --                         .T0CMP
-            regfile_0_conduit_end_T1CMP          	=> counter_1_cmp,        --                         .T1CMP
-            regfile_0_conduit_end_GP0            	=> GPIO_0_sig,           --                         .GP0
-            regfile_0_conduit_end_GP1            	=> GPIO_1_sig,           	--                         .GP1
+            regfile_0_conduit_end_T1CNTEN        	=> open,    	   --                         .T1CNTEN
+            regfile_0_conduit_end_T0CNTEN        	=> open,        	--                         .T0CNTEN
+            regfile_0_conduit_end_T1RST          	=> open,        --                         .T1RST
+            regfile_0_conduit_end_T0RST          	=> open,        --                         .T0RST
+            regfile_0_conduit_end_T0CNT          	=> open,          --                         .T0CNT
+            regfile_0_conduit_end_T1CNT          	=> open,          --                         .T1CNT
+            regfile_0_conduit_end_T0CMP          	=> open,        --                         .T0CMP
+            regfile_0_conduit_end_T1CMP          	=> open,        --                         .T1CMP
+            regfile_0_conduit_end_GP0            	=> GP_0_sig,           --                         .GP0
+            regfile_0_conduit_end_GP1            	=> GP_1_sig,           	--                         .GP1
             regfile_0_conduit_end_avalon_int     	=> LEDR(7), 			    	--                         .avalon_int
-            regfile_0_conduit_end_T0INT_set      	=> counter_0_int,  		   --                         .T0INT_set
-            regfile_0_conduit_end_T1INT_set      	=> counter_1_int,      --                         .T1INT_set
-            regfile_0_conduit_end_T0CNT_in       	=> count_0,   			    --                         .T0CNT_in
-            regfile_0_conduit_end_T1CNT_in       	=> count_1,    			    --                         .T1CNT_in
-            counter_0_conduit_end_enable         	=> counter_0_en,         --    counter_0_conduit_end.enable
-            counter_0_conduit_end_count          	=> count_0,              --                    .count
-            counter_0_conduit_end_clear            => counter_0_rst,            --                         .rst
-            counter_1_conduit_end_enable         	=> counter_1_en,         --    counter_1_conduit_end.enable
-            counter_1_conduit_end_count          	=> count_1,          --                         .count
-            counter_1_conduit_end_clear            => counter_1_rst,            --                         .rst
-            comparator_0_conduit_end_count       	=> count_0_reg,       -- comparator_0_conduit_end.count
-            comparator_0_conduit_end_count_cmp   	=> counter_0_cmp,   --                         .count_cmp
-            comparator_0_conduit_end_count_equal 	=> counter_0_int, --                         .count_equal
-            comparator_0_conduit_end_clear         => counter_0_rst,         --                         .rst
-            comparator_1_conduit_end_count       	=> count_1_reg,       -- comparator_1_conduit_end.count
-            comparator_1_conduit_end_count_cmp   	=> counter_1_cmp,   --                         .count_cmp
-            comparator_1_conduit_end_count_equal 	=> counter_1_int, --                         .count_equal
-            comparator_1_conduit_end_clear         => counter_1_rst          --                         .rst
+            regfile_0_conduit_end_T0INT_set      	=> open,  		   --                         .T0INT_set
+            regfile_0_conduit_end_T1INT_set      	=> open,      --                         .T1INT_set
+            regfile_0_conduit_end_T0CNT_in       	=> open,   			    --                         .T0CNT_in
+            regfile_0_conduit_end_T1CNT_in       	=> open,    			    --                         .T1CNT_in
+            counter_0_conduit_end_enable         	=> open,         --    counter_0_conduit_end.enable
+            counter_0_conduit_end_count          	=> open,              --                    .count
+            counter_0_conduit_end_clear            => open,            --                         .rst
+            counter_1_conduit_end_enable         	=> open,         --    counter_1_conduit_end.enable
+            counter_1_conduit_end_count          	=> open,          --                         .count
+            counter_1_conduit_end_clear            => open,            --                         .rst
+            comparator_0_conduit_end_count       	=> open,       -- comparator_0_conduit_end.count
+            comparator_0_conduit_end_count_cmp   	=> open,   --                         .count_cmp
+            comparator_0_conduit_end_count_equal 	=> LEDG(0), --                         .count_equal
+            comparator_0_conduit_end_clear         => open,         --                         .rst
+            comparator_1_conduit_end_count       	=> open,       -- comparator_1_conduit_end.count
+            comparator_1_conduit_end_count_cmp   	=> open,   --                         .count_cmp
+            comparator_1_conduit_end_count_equal 	=> LEDG(1), --                         .count_equal
+            comparator_1_conduit_end_clear         => open          --                         .rst
         );
 end Structural_Basic;
 

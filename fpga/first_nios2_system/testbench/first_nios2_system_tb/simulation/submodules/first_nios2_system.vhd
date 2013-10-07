@@ -49,6 +49,25 @@ entity first_nios2_system is
 end entity first_nios2_system;
 
 architecture rtl of first_nios2_system is
+
+	signal counter_0_en		: std_logic;
+	signal counter_0_clear	: std_logic;
+
+	signal counter_1_en   	: std_logic;
+	signal counter_1_clear	: std_logic;
+	
+	signal count_0			: std_logic_vector(31 downto 0)	;			
+	signal count_1			: std_logic_vector(31 downto 0)	;			
+
+	signal count_0_reg		: std_logic_vector(31 downto 0);
+	signal count_1_reg		: std_logic_vector(31 downto 0);
+	
+	signal count_0_cmp		: std_logic_vector(31 downto 0);			
+	signal count_1_cmp		: std_logic_vector(31 downto 0);			
+	
+	signal count_0_equal	: std_logic;
+	signal count_1_equal	: std_logic;
+
 	component first_nios2_system_onchip_mem is
 		port (
 			clk        : in  std_logic                     := 'X';             -- clk
@@ -1839,59 +1858,69 @@ begin
 			T0INTSTS   => regfile_0_conduit_end_T0INTSTS,                                          --               .export
 			T1INTEN    => regfile_0_conduit_end_T1INTEN,                                           --               .export
 			T0INTEN    => regfile_0_conduit_end_T0INTEN,                                           --               .export
-			T1CNTEN    => regfile_0_conduit_end_T1CNTEN,                                           --               .export
-			T0CNTEN    => regfile_0_conduit_end_T0CNTEN,                                           --               .export
-			T1RST      => regfile_0_conduit_end_T1RST,                                             --               .export
-			T0RST      => regfile_0_conduit_end_T0RST,                                             --               .export
-			T0CNT      => regfile_0_conduit_end_T0CNT,                                             --               .export
-			T1CNT      => regfile_0_conduit_end_T1CNT,                                             --               .export
-			T0CMP      => regfile_0_conduit_end_T0CMP,                                             --               .export
-			T1CMP      => regfile_0_conduit_end_T1CMP,                                             --               .export
+			T1CNTEN    => counter_1_en,                                           --               .export
+			T0CNTEN    => counter_0_en,                                           --               .export
+			T1RST      => counter_1_clear,                                             --               .export
+			T0RST      => counter_0_clear,                                             --               .export
+			T0CNT      => count_0_reg,                                             --               .export
+			T1CNT      => count_1_reg,                                             --               .export
+			T0CMP      => count_0_cmp,                                             --               .export
+			T1CMP      => count_1_cmp,                                             --               .export
 			GP0        => regfile_0_conduit_end_GP0,                                               --               .export
 			GP1        => regfile_0_conduit_end_GP1,                                               --               .export
 			avalon_int => regfile_0_conduit_end_avalon_int,                                        --               .export
-			T0INT_set  => regfile_0_conduit_end_T0INT_set,                                         --               .export
-			T1INT_set  => regfile_0_conduit_end_T1INT_set,                                         --               .export
-			T0CNT_in   => regfile_0_conduit_end_T0CNT_in,                                          --               .export
-			T1CNT_in   => regfile_0_conduit_end_T1CNT_in                                           --               .export
+			T0INT_set  => count_0_equal,                                         --               .export
+			T1INT_set  => count_1_equal,                                         --               .export
+			T0CNT_in   => count_0,                                          --               .export
+			T1CNT_in   => count_1                                           --               .export
 		);
+		
+		
+		regfile_0_conduit_end_T0CNTEN <= counter_0_en;
+		regfile_0_conduit_end_T1CNTEN <= counter_1_en;
+		regfile_0_conduit_end_T1RST <= counter_1_clear;
+		regfile_0_conduit_end_T0RST <= counter_0_clear;
+		regfile_0_conduit_end_T0CNT <= count_0_reg;
+		regfile_0_conduit_end_T1CNT <= count_1_reg;
+		regfile_0_conduit_end_T0CMP <= count_0_cmp;
+		regfile_0_conduit_end_T1CMP <= count_1_cmp;
 
 	counter_0 : component counter_16
 		port map (
 			clk    => clk_clk,                        --       clock.clk
 			rst    => rst_controller_reset_out_reset, --  reset_sink.reset
-			enable => counter_0_conduit_end_enable,   -- conduit_end.export
-			count  => counter_0_conduit_end_count,    --            .export
-			clear  => counter_0_conduit_end_clear     --            .export
+			enable => counter_0_en,   -- conduit_end.export
+			count  => count_0,    --            .export
+			clear  => counter_0_clear     --            .export
 		);
 
 	counter_1 : component counter_16
 		port map (
 			clk    => clk_clk,                        --       clock.clk
 			rst    => rst_controller_reset_out_reset, --  reset_sink.reset
-			enable => counter_1_conduit_end_enable,   -- conduit_end.export
-			count  => counter_1_conduit_end_count,    --            .export
-			clear  => counter_1_conduit_end_clear     --            .export
+			enable => counter_1_en,   -- conduit_end.export
+			count  => count_1,    --            .export
+			clear  => counter_1_clear     --            .export
 		);
 
 	comparator_0 : component comparator
 		port map (
 			clk         => clk_clk,                              --       clock.clk
 			rst         => rst_controller_reset_out_reset,       --  reset_sink.reset
-			count       => comparator_0_conduit_end_count,       -- conduit_end.export
-			count_cmp   => comparator_0_conduit_end_count_cmp,   --            .export
-			count_equal => comparator_0_conduit_end_count_equal, --            .export
-			clear       => comparator_0_conduit_end_clear        --            .export
+			count       => count_0,       -- conduit_end.export
+			count_cmp   => count_0_cmp,   --            .export
+			count_equal => count_0_equal, --            .export
+			clear       => counter_0_clear        --            .export
 		);
 
 	comparator_1 : component comparator
 		port map (
 			clk         => clk_clk,                              --       clock.clk
 			rst         => rst_controller_reset_out_reset,       --  reset_sink.reset
-			count       => comparator_1_conduit_end_count,       -- conduit_end.export
-			count_cmp   => comparator_1_conduit_end_count_cmp,   --            .export
-			count_equal => comparator_1_conduit_end_count_equal, --            .export
-			clear       => comparator_1_conduit_end_clear        --            .export
+			count       => count_1,       -- conduit_end.export
+			count_cmp   => count_1_cmp,   --            .export
+			count_equal => count_1_equal, --            .export
+			clear       => counter_1_clear        --            .export
 		);
 
 	cpu_instruction_master_translator : component first_nios2_system_cpu_instruction_master_translator

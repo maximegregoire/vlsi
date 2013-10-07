@@ -1,33 +1,5 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/clk
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/rst
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/clear
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/enable
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/count
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/count_sig
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_0/clock_pulses
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/clk
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/rst
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/clear
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/enable
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/count
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/count_sig
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/counter_1/clock_pulses
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/clk
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/rst
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/clear
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/count
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/count_cmp
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/count_equal
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_0/count_equal_sig
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/clk
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/rst
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/clear
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/count
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/count_cmp
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/count_equal
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/comparator_1/count_equal_sig
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/address
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/readdata
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/write_n
@@ -37,8 +9,8 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/clk
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/avalon_int
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0INT_set
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1INT_set
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CNT_in
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CNT_in
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CNT_in
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CNT_in
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/AVINTDIS
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1INTOVR
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1INTSTS
@@ -49,10 +21,10 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CN
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CNTEN
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1RST
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0RST
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CNT
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CNT
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CMP
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CMP
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CNT
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CNT
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T0CMP
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/regfile_0/T1CMP
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/GP0
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/GP1
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_0/AVINTDIS_sig
@@ -86,8 +58,8 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/cpu/i_readdata
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/cpu/i_readdatavalid
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/cpu/i_waitrequest
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
-quietly wave cursor active 0
+WaveRestoreCursors {{Cursor 1} {349230000 ps} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -102,4 +74,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {1 ns}
+WaveRestoreZoom {347575758 ps} {357272727 ps}

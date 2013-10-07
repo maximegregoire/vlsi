@@ -28,9 +28,8 @@ architecture arch of comparator is
 signal count_equal_sig : std_logic;
 
 begin
-process(clk)
+process(rst, clear, count, count_cmp)
 begin
-if clk'event and clk='1' then
 if rst='1' or clear = '1' then
 count_equal_sig <= '0';
 else
@@ -38,7 +37,6 @@ if (count = count_cmp) then
 count_equal_sig <= '1';
 else
 count_equal_sig <= '0';
-end if;
 end if;
 end if;
 end process;
