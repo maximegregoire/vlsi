@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project isr_demo ****
+
+make all 
+Info: Building ../isr_demo_bsp/
+make --no-print-directory -C ../isr_demo_bsp/
+[BSP build complete]
+[isr_demo build complete]
+
+**** Build Finished ****

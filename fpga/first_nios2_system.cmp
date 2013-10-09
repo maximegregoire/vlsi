@@ -18,25 +18,24 @@
 			regfile_0_conduit_end_T1CMP          : out std_logic_vector(31 downto 0);                    -- T1CMP
 			regfile_0_conduit_end_GP0            : out std_logic_vector(31 downto 0);                    -- GP0
 			regfile_0_conduit_end_GP1            : out std_logic_vector(31 downto 0);                    -- GP1
-			regfile_0_conduit_end_avalon_int     : out std_logic;                                        -- avalon_int
 			regfile_0_conduit_end_T0INT_set      : in  std_logic                     := 'X';             -- T0INT_set
 			regfile_0_conduit_end_T1INT_set      : in  std_logic                     := 'X';             -- T1INT_set
 			regfile_0_conduit_end_T0CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
 			regfile_0_conduit_end_T1CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
-			counter_0_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
-			counter_0_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
-			counter_0_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
-			counter_1_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
-			counter_1_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
-			counter_1_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
+			comparator_1_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
+			comparator_1_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+			comparator_1_conduit_end_count_equal : out std_logic;                                        -- count_equal
+			comparator_1_conduit_end_clear       : in  std_logic                     := 'X';             -- clear
 			comparator_0_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
 			comparator_0_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
 			comparator_0_conduit_end_count_equal : out std_logic;                                        -- count_equal
 			comparator_0_conduit_end_clear       : in  std_logic                     := 'X';             -- clear
-			comparator_1_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
-			comparator_1_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-			comparator_1_conduit_end_count_equal : out std_logic;                                        -- count_equal
-			comparator_1_conduit_end_clear       : in  std_logic                     := 'X'              -- clear
+			counter_1_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
+			counter_1_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
+			counter_1_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
+			counter_0_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
+			counter_0_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
+			counter_0_conduit_end_clear          : in  std_logic                     := 'X'              -- clear
 		);
 	end component first_nios2_system;
 

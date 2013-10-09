@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.05.17:19:03
+# ACDS 13.0 156 win32 2013.10.08.18:32:43
 
 # ----------------------------------------
 # Auto-generated simulation script

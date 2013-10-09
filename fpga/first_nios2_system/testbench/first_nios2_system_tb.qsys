@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -37,7 +37,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "4";
          type = "int";
       }
    }
@@ -45,7 +45,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "7";
          type = "int";
       }
    }
@@ -53,7 +53,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "6";
          type = "int";
       }
    }
@@ -88,7 +88,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1381007877350" />
+ <parameter name="timeStamp" value="1381271483830" />
  <parameter name="useTestBenchNamingPattern" value="true" />
  <instanceScript></instanceScript>
  <module
@@ -127,31 +127,20 @@
    name="first_nios2_system_inst_regfile_0_conduit_end_bfm">
   <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="true" />
-  <parameter name="SIGNAL_ROLES">AVINTDIS,T1INTOVR,T1INTSTS,T0INTSTS,T1INTEN,T0INTEN,T1CNTEN,T0CNTEN,T1RST,T0RST,T0CNT,T1CNT,T0CMP,T1CMP,GP0,GP1,avalon_int,T0INT_set,T1INT_set,T0CNT_in,T1CNT_in</parameter>
-  <parameter name="SIGNAL_WIDTHS">1,1,1,1,1,1,1,1,1,1,32,32,32,32,32,32,1,1,1,32,32</parameter>
-  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,output,output</parameter>
+  <parameter name="SIGNAL_ROLES">AVINTDIS,T1INTOVR,T1INTSTS,T0INTSTS,T1INTEN,T0INTEN,T1CNTEN,T0CNTEN,T1RST,T0RST,T0CNT,T1CNT,T0CMP,T1CMP,GP0,GP1,T0INT_set,T1INT_set,T0CNT_in,T1CNT_in</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,1,1,1,1,1,1,1,1,32,32,32,32,32,32,1,1,32,32</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,output,output</parameter>
  </module>
  <module
    kind="altera_conduit_bfm"
    version="13.0"
    enabled="1"
-   name="first_nios2_system_inst_counter_0_conduit_end_bfm">
+   name="first_nios2_system_inst_comparator_1_conduit_end_bfm">
   <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="true" />
-  <parameter name="SIGNAL_ROLES" value="enable,count,clear" />
-  <parameter name="SIGNAL_WIDTHS" value="1,32,1" />
-  <parameter name="SIGNAL_DIRECTIONS" value="output,input,output" />
- </module>
- <module
-   kind="altera_conduit_bfm"
-   version="13.0"
-   enabled="1"
-   name="first_nios2_system_inst_counter_1_conduit_end_bfm">
-  <parameter name="CLOCKED_SIGNAL" value="true" />
-  <parameter name="ENABLE_RESET" value="true" />
-  <parameter name="SIGNAL_ROLES" value="enable,count,clear" />
-  <parameter name="SIGNAL_WIDTHS" value="1,32,1" />
-  <parameter name="SIGNAL_DIRECTIONS" value="output,input,output" />
+  <parameter name="SIGNAL_ROLES">count,count_cmp,count_equal,clear</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="32,32,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,output,input,output</parameter>
  </module>
  <module
    kind="altera_conduit_bfm"
@@ -168,12 +157,23 @@
    kind="altera_conduit_bfm"
    version="13.0"
    enabled="1"
-   name="first_nios2_system_inst_comparator_1_conduit_end_bfm">
+   name="first_nios2_system_inst_counter_1_conduit_end_bfm">
   <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="true" />
-  <parameter name="SIGNAL_ROLES">count,count_cmp,count_equal,clear</parameter>
-  <parameter name="SIGNAL_WIDTHS" value="32,32,1,1" />
-  <parameter name="SIGNAL_DIRECTIONS">output,output,input,output</parameter>
+  <parameter name="SIGNAL_ROLES" value="enable,count,clear" />
+  <parameter name="SIGNAL_WIDTHS" value="1,32,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output,input,output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_counter_0_conduit_end_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_ROLES" value="enable,count,clear" />
+  <parameter name="SIGNAL_WIDTHS" value="1,32,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output,input,output" />
  </module>
  <connection
    kind="clock"
@@ -215,38 +215,17 @@
    kind="clock"
    version="13.0"
    start="first_nios2_system_inst_clk_bfm.clk"
-   end="first_nios2_system_inst_counter_0_conduit_end_bfm.clk" />
+   end="first_nios2_system_inst_comparator_1_conduit_end_bfm.clk" />
  <connection
    kind="reset"
    version="13.0"
    start="first_nios2_system_inst_reset_bfm.reset"
-   end="first_nios2_system_inst_counter_0_conduit_end_bfm.reset" />
+   end="first_nios2_system_inst_comparator_1_conduit_end_bfm.reset" />
  <connection
    kind="conduit"
    version="13.0"
-   start="first_nios2_system_inst_counter_0_conduit_end_bfm.conduit"
-   end="first_nios2_system_inst.counter_0_conduit_end">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="clock"
-   version="13.0"
-   start="first_nios2_system_inst_clk_bfm.clk"
-   end="first_nios2_system_inst_counter_1_conduit_end_bfm.clk" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="first_nios2_system_inst_reset_bfm.reset"
-   end="first_nios2_system_inst_counter_1_conduit_end_bfm.reset" />
- <connection
-   kind="conduit"
-   version="13.0"
-   start="first_nios2_system_inst_counter_1_conduit_end_bfm.conduit"
-   end="first_nios2_system_inst.counter_1_conduit_end">
+   start="first_nios2_system_inst_comparator_1_conduit_end_bfm.conduit"
+   end="first_nios2_system_inst.comparator_1_conduit_end">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -278,17 +257,38 @@
    kind="clock"
    version="13.0"
    start="first_nios2_system_inst_clk_bfm.clk"
-   end="first_nios2_system_inst_comparator_1_conduit_end_bfm.clk" />
+   end="first_nios2_system_inst_counter_1_conduit_end_bfm.clk" />
  <connection
    kind="reset"
    version="13.0"
    start="first_nios2_system_inst_reset_bfm.reset"
-   end="first_nios2_system_inst_comparator_1_conduit_end_bfm.reset" />
+   end="first_nios2_system_inst_counter_1_conduit_end_bfm.reset" />
  <connection
    kind="conduit"
    version="13.0"
-   start="first_nios2_system_inst_comparator_1_conduit_end_bfm.conduit"
-   end="first_nios2_system_inst.comparator_1_conduit_end">
+   start="first_nios2_system_inst_counter_1_conduit_end_bfm.conduit"
+   end="first_nios2_system_inst.counter_1_conduit_end">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst_counter_0_conduit_end_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="first_nios2_system_inst_reset_bfm.reset"
+   end="first_nios2_system_inst_counter_0_conduit_end_bfm.reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="first_nios2_system_inst_counter_0_conduit_end_bfm.conduit"
+   end="first_nios2_system_inst.counter_0_conduit_end">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

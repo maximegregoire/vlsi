@@ -155,7 +155,7 @@ if (T0INT_set = '1' AND T0INTEN_sig = '1') then
 	T0INTSTS_sig <= '1';
 end if;
 if (T1INT_set = '1' AND T1INTEN_sig = '1') then
-	if (T0INTSTS_sig = '1') then 	-- First interupt not yet handled, causes overun
+	if (T1INTSTS_sig = '1') then 	-- First interupt not yet handled, causes overun
 		T1INTOVR_sig <= '1';
 	else									-- Interupt is clear, set INTSTS for CNT 1
 		T1INTSTS_sig <= '1';
@@ -210,7 +210,7 @@ end process;
 	
 process(T0INTSTS_sig, T1INTSTS_sig, AVINTDIS_sig)
 	begin
-	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND AVINTDIS_sig; 	
+	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND AVINTDIS_sig;
 end process;
 
 	-- Assignment the signals to the outputs
@@ -220,8 +220,8 @@ end process;
 	T0INTSTS			<=	T0INTSTS_sig;
 	T1INTEN 			<=	T1INTEN_sig;
 	T0INTEN 			<=	T0INTEN_sig;	
-	T1CNTEN				<= T1CNTEN_sig;
-	T0CNTEN				<= T0CNTEN_sig;
+	T1CNTEN			<= T1CNTEN_sig;
+	T0CNTEN			<= T0CNTEN_sig;
 	T1RST				<= T1RST_sig;
 	T0RST				<= T0RST_sig;	
 	T0CMP				<= T0CMP_sig;	

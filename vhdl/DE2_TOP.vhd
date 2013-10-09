@@ -191,7 +191,6 @@ architecture Structural_Basic of DE2_TOP is
             regfile_0_conduit_end_T1CMP          : out std_logic_vector(31 downto 0);                    -- T1CMP
             regfile_0_conduit_end_GP0            : out std_logic_vector(31 downto 0);                    -- GP0
             regfile_0_conduit_end_GP1            : out std_logic_vector(31 downto 0);                    -- GP1
-            regfile_0_conduit_end_avalon_int     : out std_logic;                                        -- avalon_int
             regfile_0_conduit_end_T0INT_set      : in  std_logic                     := 'X';             -- T0INT_set
             regfile_0_conduit_end_T1INT_set      : in  std_logic                     := 'X';             -- T1INT_set
             regfile_0_conduit_end_T0CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
@@ -209,7 +208,9 @@ architecture Structural_Basic of DE2_TOP is
             comparator_1_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
             comparator_1_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
             comparator_1_conduit_end_count_equal : out std_logic;                                        -- count_equal
-            comparator_1_conduit_end_clear       : in  std_logic                     := 'X'              -- clear
+            comparator_1_conduit_end_clear       : in  std_logic                     := 'X' ;             -- clear
+				avalon_interrupt							 : out std_logic                     := 'X';
+				avalon_interrupt_en						: in std_logic							:= 'X'
         );
     end component first_nios2_system;
 	 
@@ -456,8 +457,7 @@ xfirst_nios2_system : component first_nios2_system
             regfile_0_conduit_end_T0CMP          	=> open,        --                         .T0CMP
             regfile_0_conduit_end_T1CMP          	=> open,        --                         .T1CMP
             regfile_0_conduit_end_GP0            	=> GP_0_sig,           --                         .GP0
-            regfile_0_conduit_end_GP1            	=> GP_1_sig,           	--                         .GP1
-            regfile_0_conduit_end_avalon_int     	=> LEDR(7), 			    	--                         .avalon_int
+            regfile_0_conduit_end_GP1            	=> GP_1_sig,           	--                         .GP1 
             regfile_0_conduit_end_T0INT_set      	=> open,  		   --                         .T0INT_set
             regfile_0_conduit_end_T1INT_set      	=> open,      --                         .T1INT_set
             regfile_0_conduit_end_T0CNT_in       	=> open,   			    --                         .T0CNT_in
@@ -475,7 +475,9 @@ xfirst_nios2_system : component first_nios2_system
             comparator_1_conduit_end_count       	=> open,       -- comparator_1_conduit_end.count
             comparator_1_conduit_end_count_cmp   	=> open,   --                         .count_cmp
             comparator_1_conduit_end_count_equal 	=> LEDG(1), --                         .count_equal
-            comparator_1_conduit_end_clear         => open          --                         .rst
+            comparator_1_conduit_end_clear         => open,
+				avalon_interrupt								=> LEDR(7),   --                         .rst\
+				avalon_interrupt_en							=> SW(3)
         );
 end Structural_Basic;
 

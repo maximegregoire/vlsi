@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pwhite8\vlsi\fpga\software\isr_final_demo\obj\default\runtime\sim\mentor
+vSXUjhe0o9xUQkHcGyKUuKDXRSxVuHxNtn8RB3oQrCZc=
+Ii>oCA_]Q>WCzbLkgdGSjV1
+V:mR1fj3Rf>NGziDN_:U030
+xsip
+d.
+Z1 Fnofile
+L0 38
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-work rst_controller -O0
+nf2f26c2
+!i10b 0
+!s100 QhDeAb20lG55:fd]l429d1
+!i8a 201922448
+!s85 0
+!s108 1381281071.238000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_controller.v|-work|rst_controller|
+!s101 -O0
+v87/DfmttphQm8cPeFTOE0FT7zb/fkao0z3oOUZ5PEh0=
+!i10b 0
+!s100 Q1OX9zS^4ZdS2glZ?dgDZ2
+I^_k4V]J[@UF?k;8Ui6HhN1
+V3CjoOZCIEdzCJgPn8]D7`2
+xsip
+!i8a 1631908304
+d.
+R1
+L0 38
+R2
+r1
+!s85 0
+31
+!s108 1381281071.559000
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_reset_synchronizer.v|-work|rst_controller|
+!s101 -O0
+R3
+n15f2da2
