@@ -99,12 +99,12 @@
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_agent.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="cpu_instruction_master_translator_avalon_universal_master_0_agent"
+   library="cpu_data_master_translator_avalon_universal_master_0_agent"
    simulator="modelsim" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_master_agent.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="cpu_instruction_master_translator_avalon_universal_master_0_agent"
+   library="cpu_data_master_translator_avalon_universal_master_0_agent"
    simulator="riviera" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_translator.sv"
@@ -119,17 +119,13 @@
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="cpu_instruction_master_translator"
+   library="cpu_data_master_translator"
    simulator="modelsim" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/aldec/altera_merlin_master_translator.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="cpu_instruction_master_translator"
+   library="cpu_data_master_translator"
    simulator="riviera" />
- <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/comparator.vhd"
-   type="VHDL"
-   library="comparator_0" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/counter.vhd"
    type="VHDL"
@@ -287,11 +283,11 @@
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
  <file

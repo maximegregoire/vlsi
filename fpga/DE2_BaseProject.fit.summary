@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Oct 08 22:08:29 2013
+Fitter Status : Successful - Wed Oct 09 16:54:42 2013
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : DE2_BaseProject
 Top-level Entity Name : DE2_TOP
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 3,204 / 33,216 ( 10 % )
-    Total combinational functions : 3,008 / 33,216 ( 9 % )
-    Dedicated logic registers : 1,977 / 33,216 ( 6 % )
-Total registers : 1977
+Total logic elements : 3,219 / 33,216 ( 10 % )
+    Total combinational functions : 3,026 / 33,216 ( 9 % )
+    Dedicated logic registers : 1,979 / 33,216 ( 6 % )
+Total registers : 1979
 Total pins : 425 / 475 ( 89 % )
 Total virtual pins : 0
 Total memory bits : 192,576 / 483,840 ( 40 % )

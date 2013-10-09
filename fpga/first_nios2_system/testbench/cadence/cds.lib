@@ -18,7 +18,6 @@ DEFINE cmd_xbar_demux                                                           
 DEFINE id_router                                                                ./libraries/id_router/                                                               
 DEFINE addr_router                                                              ./libraries/addr_router/                                                             
 DEFINE cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
-DEFINE comparator_0                                                             ./libraries/comparator_0/                                                            
 DEFINE counter_0                                                                ./libraries/counter_0/                                                               
 DEFINE regfile_0                                                                ./libraries/regfile_0/                                                               
 DEFINE sysid                                                                    ./libraries/sysid/                                                                   

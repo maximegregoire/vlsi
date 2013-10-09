@@ -43,7 +43,7 @@ port (
 	T1CMP 		: 	out std_logic_vector(31 downto 0);	
 	GP0 			: 	out std_logic_vector(31 downto 0);	
 	GP1 			: 	out std_logic_vector(31 downto 0);
-	avalon_inten : in std_logic
+	avalon_inten 	: in std_logic
 	  );
 end entity regfile;
 
@@ -72,7 +72,7 @@ begin
 if clk'event and clk='1' then
 -- RESET PROCEDURE
 if rst='1' then
-AVINTDIS_sig 	<=		'0';
+AVINTDIS_sig 	<=		NOT(avalon_inten);
 T1INTOVR_sig 	<=		'0';
 T1INTSTS_sig 	<=		'0';
 T0INTSTS_sig 	<=		'0';
@@ -109,7 +109,7 @@ case address is
 			T1INTOVR_sig <= '0';
 		end if;
 		-- RW
-		AVINTDIS_sig <= writedata(5);
+		AVINTDIS_sig <= NOT(avalon_inten);
 	when "0001" 	=>
 		-- RW
 		T0RST_sig 	<= writedata(0);
@@ -136,16 +136,12 @@ end if;
 -- Reset the counter if certain registers are set
 if (T0RST_sig = '1') then
 T0CNT_sig <= (others => '0');
--- elsif (T0CNT_sig = T0CMP_sig) then
--- T0CNT_sig <= (others => '0');
 else
 T0CNT_sig <= T0CNT_in;
 end if;
 
 if (T1RST_sig = '1') then
 T1CNT_sig <= (others => '0');
--- elsif (T1CNT_sig = T1CMP_sig) then
--- T1CNT_sig <= (others => '0');
 else
 T1CNT_sig <= T1CNT_in;
 end if;
@@ -156,7 +152,7 @@ if (T0INT_set = '1' AND T0INTEN_sig = '1') then
 	T0INTSTS_sig <= '1';
 end if;
 if (T1INT_set = '1' AND T1INTEN_sig = '1') then
-	if (T0INTSTS_sig = '1') then 	-- First interupt not yet handled, causes overun
+	if (T1INTSTS_sig = '1') then 	-- First interupt not yet handled, causes overun
 		T1INTOVR_sig <= '1';
 	else									-- Interupt is clear, set INTSTS for CNT 1
 		T1INTSTS_sig <= '1';
@@ -182,7 +178,7 @@ begin
 			readdata(3)	<= T1INTSTS_sig;
 			readdata(4)	<= T1INTOVR_sig;
 			-- RW
-			readdata(5)	<=	avalon_inten;
+			readdata(5)	<=	NOT(avalon_inten);
 		when "0001" 	=>
 			-- RW
 			readdata(0)	<=	T0RST_sig;
@@ -215,7 +211,7 @@ process(T0INTSTS_sig, T1INTSTS_sig, avalon_inten)
 end process;
 
 	-- Assignment the signals to the outputs
-	AVINTDIS			<=	avalon_inten;
+	AVINTDIS			<=	NOT(avalon_inten);
 	T1INTOVR			<=	T1INTOVR_sig;
 	T1INTSTS			<=	T1INTSTS_sig;
 	T0INTSTS			<=	T0INTSTS_sig;

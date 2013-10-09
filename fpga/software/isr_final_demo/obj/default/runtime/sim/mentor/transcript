@@ -142,8 +142,7 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
 # -- Compiling entity regfile
 # -- Compiling architecture arch of regfile
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -424,12 +423,8 @@
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 #   
-add wave -position insertpoint sim:/first_nios2_system_tb/first_nios2_system_inst/regfile_0/*
-add wave -position insertpoint  \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_irq
-run 4s
-# Invalid time value: 4s
-run 4000 ms
+do C:/Users/pwhite8/vlsi/fpga/wave.do
+run 400 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_005/first_nios2_system_cmd_xbar_mux_add0_13/g1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -1218,5 +1213,25 @@ run 4000 ms
 #    Time: 70 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/cpu/niO0ill/the_first_nios2_system_cpu_jtag_debug_module_sysclk
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 70 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/cpu/niO0ill/the_first_nios2_system_cpu_jtag_debug_module_sysclk
-# Break key hit 
-# Break at C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd line 308
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 224410 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 238470 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 238530 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 251170 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 272870 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 272930 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 284590 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 304010 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 304070 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 315730 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+# ** Warning: Address pointed at port A is out of bound! 
+#    Time: 339290 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram

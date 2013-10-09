@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\isr_final_demo
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\isr_demo_final
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\pwhite8\\vlsi\\fpga\\first_nios2_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\isr_final_demo_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\isr_demo_final_bsp

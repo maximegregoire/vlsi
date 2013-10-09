@@ -42,7 +42,8 @@ port (
 	T0CMP 		: 	out std_logic_vector(31 downto 0);	
 	T1CMP 		: 	out std_logic_vector(31 downto 0);	
 	GP0 			: 	out std_logic_vector(31 downto 0);	
-	GP1 			: 	out std_logic_vector(31 downto 0)
+	GP1 			: 	out std_logic_vector(31 downto 0);
+	avalon_inten : in std_logic
 	  );
 end entity regfile;
 
@@ -71,7 +72,7 @@ begin
 if clk'event and clk='1' then
 -- RESET PROCEDURE
 if rst='1' then
-AVINTDIS_sig 	<=		'0';
+AVINTDIS_sig 	<=		NOT(avalon_inten);
 T1INTOVR_sig 	<=		'0';
 T1INTSTS_sig 	<=		'0';
 T0INTSTS_sig 	<=		'0';
@@ -166,7 +167,7 @@ end if;
 end if;
 end process;
 
-process(T0INTEN_sig, T1INTEN_sig, T0INTSTS_sig, T1INTSTS_sig, T1INTOVR_sig, AVINTDIS_sig, T0RST_sig, T1RST_sig, T0CNTEN_sig, T1CNTEN_sig,
+process(T0INTEN_sig, T1INTEN_sig, T0INTSTS_sig, T1INTSTS_sig, T1INTOVR_sig, avalon_inten, T0RST_sig, T1RST_sig, T0CNTEN_sig, T1CNTEN_sig,
 T0CMP_sig, T1CMP_sig, GP0_sig, GP1_sig, T0CNT_sig, T1CNT_sig, address)
 begin
 -- Drive default value to readData output --
@@ -181,7 +182,7 @@ begin
 			readdata(3)	<= T1INTSTS_sig;
 			readdata(4)	<= T1INTOVR_sig;
 			-- RW
-			readdata(5)	<=	AVINTDIS_sig;
+			readdata(5)	<=	NOT(avalon_inten);
 		when "0001" 	=>
 			-- RW
 			readdata(0)	<=	T0RST_sig;
@@ -208,13 +209,13 @@ begin
 		end case;
 end process;
 	
-process(T0INTSTS_sig, T1INTSTS_sig, AVINTDIS_sig)
+process(T0INTSTS_sig, T1INTSTS_sig, avalon_inten)
 	begin
-	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND AVINTDIS_sig;
+	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND avalon_inten;
 end process;
 
 	-- Assignment the signals to the outputs
-	AVINTDIS			<=	AVINTDIS_sig;
+	AVINTDIS			<=	NOT(avalon_inten);
 	T1INTOVR			<=	T1INTOVR_sig;
 	T1INTSTS			<=	T1INTSTS_sig;
 	T0INTSTS			<=	T0INTSTS_sig;

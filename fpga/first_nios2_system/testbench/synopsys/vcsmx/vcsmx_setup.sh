@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.08.18:32:43
+# ACDS 13.0 156 win32 2013.10.09.16:05:06
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -55,7 +55,6 @@ mkdir -p ./libraries/cmd_xbar_demux/
 mkdir -p ./libraries/id_router/
 mkdir -p ./libraries/addr_router/
 mkdir -p ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
-mkdir -p ./libraries/comparator_0/
 mkdir -p ./libraries/counter_0/
 mkdir -p ./libraries/regfile_0/
 mkdir -p ./libraries/sysid/
@@ -124,7 +123,6 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router.vho"                                                                -work id_router                                                               
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_addr_router.vho"                                                              -work addr_router                                                             
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/comparator.vhd"                                                                                  -work comparator_0                                                            
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/counter.vhd"                                                                                     -work counter_0                                                               
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/regfile.vhd"                                                                                     -work regfile_0                                                               
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                    -work sysid                                                                   
@@ -147,8 +145,8 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                              -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"                                           -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                      -work first_nios2_system_inst                                                 
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                        -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                               -work first_nios2_system_inst                                                 
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                        -work first_nios2_system_inst                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                                                                                                
 fi
 

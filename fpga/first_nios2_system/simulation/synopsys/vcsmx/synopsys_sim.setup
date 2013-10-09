@@ -11,7 +11,6 @@ cmd_xbar_demux:                                                           ./libr
 id_router:                                                                ./libraries/id_router/                                                               
 addr_router:                                                              ./libraries/addr_router/                                                             
 cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
-comparator_0:                                                             ./libraries/comparator_0/                                                            
 counter_0:                                                                ./libraries/counter_0/                                                               
 regfile_0:                                                                ./libraries/regfile_0/                                                               
 sysid:                                                                    ./libraries/sysid/                                                                   

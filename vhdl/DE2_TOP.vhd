@@ -147,22 +147,6 @@ architecture Structural_Basic of DE2_TOP is
 	signal counter_r     : integer;
 	signal slowcounter_r : integer;
 	
-	signal counter_0_en : std_logic;
-	signal counter_0_rst : std_logic;
-	signal count_0 : std_logic_vector(31 downto 0);
-	signal count_0_reg : std_logic_vector(31 downto 0);
-	
-	signal counter_1_en : std_logic;
-	signal counter_1_rst : std_logic;
-	signal count_1 : std_logic_vector(31 downto 0);
-	signal count_1_reg : std_logic_vector(31 downto 0);
-	
-	signal counter_0_cmp : std_logic_vector(31 downto 0);
-	signal counter_1_cmp : std_logic_vector(31 downto 0);
-	
-	signal counter_0_int : std_logic;
-	signal counter_1_int : std_logic;
-	
 	signal GP_0_sig : std_logic_vector(31 downto 0);
 	signal GP_1_sig : std_logic_vector(31 downto 0);
 
@@ -171,46 +155,53 @@ architecture Structural_Basic of DE2_TOP is
 --	signal ramdataout_s : std_logic_vector(7 downto 0);
 --	signal ramwren_s    : std_logic;
 
+	signal count_0 : std_logic_vector(31 downto 0);
+	signal count_0_cmp : std_logic_vector(31 downto 0);
+	signal count_0_equal : std_logic;
+	signal count_0_clear : std_logic;
+	signal count_0_en : std_logic;
+	
+	signal count_1 : std_logic_vector(31 downto 0);
+	signal count_1_cmp : std_logic_vector(31 downto 0);
+	signal count_1_equal : std_logic;
+	signal count_1_clear : std_logic;
+	signal count_1_en : std_logic;
+
 		component first_nios2_system is
         port (
-            clk_clk                              : in  std_logic                     := 'X';             -- clk
-            reset_reset_n                        : in  std_logic                     := 'X';             -- reset_n
-            regfile_0_conduit_end_AVINTDIS       : out std_logic;                                        -- AVINTDIS
-            regfile_0_conduit_end_T1INTOVR       : out std_logic;                                        -- T1INTOVR
-            regfile_0_conduit_end_T1INTSTS       : out std_logic;                                        -- T1INTSTS
-            regfile_0_conduit_end_T0INTSTS       : out std_logic;                                        -- T0INTSTS
-            regfile_0_conduit_end_T1INTEN        : out std_logic;                                        -- T1INTEN
-            regfile_0_conduit_end_T0INTEN        : out std_logic;                                        -- T0INTEN
-            regfile_0_conduit_end_T1CNTEN        : out std_logic;                                        -- T1CNTEN
-            regfile_0_conduit_end_T0CNTEN        : out std_logic;                                        -- T0CNTEN
-            regfile_0_conduit_end_T1RST          : out std_logic;                                        -- T1RST
-            regfile_0_conduit_end_T0RST          : out std_logic;                                        -- T0RST
-            regfile_0_conduit_end_T0CNT          : out std_logic_vector(31 downto 0);                    -- T0CNT
-            regfile_0_conduit_end_T1CNT          : out std_logic_vector(31 downto 0);                    -- T1CNT
-            regfile_0_conduit_end_T0CMP          : out std_logic_vector(31 downto 0);                    -- T0CMP
-            regfile_0_conduit_end_T1CMP          : out std_logic_vector(31 downto 0);                    -- T1CMP
-            regfile_0_conduit_end_GP0            : out std_logic_vector(31 downto 0);                    -- GP0
-            regfile_0_conduit_end_GP1            : out std_logic_vector(31 downto 0);                    -- GP1
-            regfile_0_conduit_end_T0INT_set      : in  std_logic                     := 'X';             -- T0INT_set
-            regfile_0_conduit_end_T1INT_set      : in  std_logic                     := 'X';             -- T1INT_set
-            regfile_0_conduit_end_T0CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
-            regfile_0_conduit_end_T1CNT_in       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
-            counter_0_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
-            counter_0_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
-            counter_0_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
-            counter_1_conduit_end_enable         : in  std_logic                     := 'X';             -- enable
-            counter_1_conduit_end_count          : out std_logic_vector(31 downto 0);                    -- count
-            counter_1_conduit_end_clear          : in  std_logic                     := 'X';             -- clear
-            comparator_0_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
-            comparator_0_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-            comparator_0_conduit_end_count_equal : out std_logic;                                        -- count_equal
-            comparator_0_conduit_end_clear       : in  std_logic                     := 'X';             -- clear
-            comparator_1_conduit_end_count       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count
-            comparator_1_conduit_end_count_cmp   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-            comparator_1_conduit_end_count_equal : out std_logic;                                        -- count_equal
-            comparator_1_conduit_end_clear       : in  std_logic                     := 'X' ;             -- clear
-				avalon_interrupt							 : out std_logic                     := 'X';
-				avalon_interrupt_en						: in std_logic							:= 'X'
+            clk_clk                            : in  std_logic                     := 'X';             -- clk
+            reset_reset_n                      : in  std_logic                     := 'X';             -- reset_n
+            regfile_0_conduit_end_AVINTDIS     : out std_logic;                                        -- AVINTDIS
+            regfile_0_conduit_end_T1INTOVR     : out std_logic;                                        -- T1INTOVR
+            regfile_0_conduit_end_T1INTSTS     : out std_logic;                                        -- T1INTSTS
+            regfile_0_conduit_end_T0INTSTS     : out std_logic;                                        -- T0INTSTS
+            regfile_0_conduit_end_T1INTEN      : out std_logic;                                        -- T1INTEN
+            regfile_0_conduit_end_T0INTEN      : out std_logic;                                        -- T0INTEN
+            regfile_0_conduit_end_T1CNTEN      : out std_logic;                                        -- T1CNTEN
+            regfile_0_conduit_end_T0CNTEN      : out std_logic;                                        -- T0CNTEN
+            regfile_0_conduit_end_T1RST        : out std_logic;                                        -- T1RST
+            regfile_0_conduit_end_T0RST        : out std_logic;                                        -- T0RST
+            regfile_0_conduit_end_T0CNT        : out std_logic_vector(31 downto 0);                    -- T0CNT
+            regfile_0_conduit_end_T1CNT        : out std_logic_vector(31 downto 0);                    -- T1CNT
+            regfile_0_conduit_end_T0CMP        : out std_logic_vector(31 downto 0);                    -- T0CMP
+            regfile_0_conduit_end_T1CMP        : out std_logic_vector(31 downto 0);                    -- T1CMP
+            regfile_0_conduit_end_GP0          : out std_logic_vector(31 downto 0);                    -- GP0
+            regfile_0_conduit_end_GP1          : out std_logic_vector(31 downto 0);                    -- GP1
+            regfile_0_conduit_end_T0INT_set    : in  std_logic                     := 'X';             -- T0INT_set
+            regfile_0_conduit_end_T1INT_set    : in  std_logic                     := 'X';             -- T1INT_set
+            regfile_0_conduit_end_T0CNT_in     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
+            regfile_0_conduit_end_T1CNT_in     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
+            regfile_0_conduit_end_avalon_inten : in  std_logic                     := 'X';             -- avalon_inten
+            counter_0_conduit_end_count        : out std_logic_vector(31 downto 0);                    -- count
+            counter_0_conduit_end_clear        : in  std_logic                     := 'X';             -- clear
+            counter_0_conduit_end_count_cmp    : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+            counter_0_conduit_end_count_equal  : out std_logic;                                        -- count_equal
+            counter_0_conduit_end_enable       : in  std_logic                     := 'X';             -- enable
+            counter_1_conduit_end_count        : out std_logic_vector(31 downto 0);                    -- count
+            counter_1_conduit_end_clear        : in  std_logic                     := 'X';             -- clear
+            counter_1_conduit_end_count_cmp    : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+            counter_1_conduit_end_count_equal  : out std_logic;                                        -- count_equal
+            counter_1_conduit_end_enable       : in  std_logic                     := 'X'              -- enable
         );
     end component first_nios2_system;
 	 
@@ -437,10 +428,10 @@ xhexconverter_7: component hexconverter
 
 -- LEDG0 - Counter 0 equals CMP value
 -- LEDG1 - Counter 1 equals CMP value
------------------------------------------------------------------		  
-xfirst_nios2_system : component first_nios2_system
+-----------------------------------------------------------------		    		  
+		  xfirst_nios2_system : component first_nios2_system
         port map (
-            clk_clk                              	=> CLOCK_50,             --                      clk.clk
+				clk_clk                              	=> CLOCK_50,             --                      clk.clk
             reset_reset_n                        	=> SW(0),                --                    reset.reset_n
             regfile_0_conduit_end_AVINTDIS       	=> LEDR(3),   			  --    regfile_0_conduit_end.AVINTDIS
             regfile_0_conduit_end_T1INTOVR       	=> LEDR(0),   --         --                         .T1INTOVR
@@ -448,36 +439,31 @@ xfirst_nios2_system : component first_nios2_system
             regfile_0_conduit_end_T0INTSTS       	=> LEDR(1),   --         --                         .T0INTSTS
             regfile_0_conduit_end_T1INTEN        	=> LEDR(5),    --        --                         .T1INTEN
             regfile_0_conduit_end_T0INTEN        	=> LEDR(4),    --        --                         .T0INTEN
-            regfile_0_conduit_end_T1CNTEN        	=> open,    	   --                         .T1CNTEN
-            regfile_0_conduit_end_T0CNTEN        	=> open,        	--                         .T0CNTEN
-            regfile_0_conduit_end_T1RST          	=> open,        --                         .T1RST
-            regfile_0_conduit_end_T0RST          	=> open,        --                         .T0RST
+            regfile_0_conduit_end_T1CNTEN        	=> count_1_en,    	   --                         .T1CNTEN
+            regfile_0_conduit_end_T0CNTEN        	=> count_0_en,        	--                         .T0CNTEN
+            regfile_0_conduit_end_T1RST          	=> count_1_clear,        --                         .T1RST
+            regfile_0_conduit_end_T0RST          	=> count_0_clear,        --                         .T0RST
             regfile_0_conduit_end_T0CNT          	=> open,          --                         .T0CNT
             regfile_0_conduit_end_T1CNT          	=> open,          --                         .T1CNT
-            regfile_0_conduit_end_T0CMP          	=> open,        --                         .T0CMP
-            regfile_0_conduit_end_T1CMP          	=> open,        --                         .T1CMP
+            regfile_0_conduit_end_T0CMP          	=> count_0_cmp,        --                         .T0CMP
+            regfile_0_conduit_end_T1CMP          	=> count_1_cmp,        --                         .T1CMP
             regfile_0_conduit_end_GP0            	=> GP_0_sig,           --                         .GP0
             regfile_0_conduit_end_GP1            	=> GP_1_sig,           	--                         .GP1 
-            regfile_0_conduit_end_T0INT_set      	=> open,  		   --                         .T0INT_set
-            regfile_0_conduit_end_T1INT_set      	=> open,      --                         .T1INT_set
-            regfile_0_conduit_end_T0CNT_in       	=> open,   			    --                         .T0CNT_in
-            regfile_0_conduit_end_T1CNT_in       	=> open,    			    --                         .T1CNT_in
-            counter_0_conduit_end_enable         	=> open,         --    counter_0_conduit_end.enable
-            counter_0_conduit_end_count          	=> open,              --                    .count
-            counter_0_conduit_end_clear            => open,            --                         .rst
-            counter_1_conduit_end_enable         	=> open,         --    counter_1_conduit_end.enable
-            counter_1_conduit_end_count          	=> open,          --                         .count
-            counter_1_conduit_end_clear            => open,            --                         .rst
-            comparator_0_conduit_end_count       	=> open,       -- comparator_0_conduit_end.count
-            comparator_0_conduit_end_count_cmp   	=> open,   --                         .count_cmp
-            comparator_0_conduit_end_count_equal 	=> LEDG(0), --                         .count_equal
-            comparator_0_conduit_end_clear         => open,         --                         .rst
-            comparator_1_conduit_end_count       	=> open,       -- comparator_1_conduit_end.count
-            comparator_1_conduit_end_count_cmp   	=> open,   --                         .count_cmp
-            comparator_1_conduit_end_count_equal 	=> LEDG(1), --                         .count_equal
-            comparator_1_conduit_end_clear         => open,
-				avalon_interrupt								=> LEDR(7),   --                         .rst\
-				avalon_interrupt_en							=> SW(3)
+            regfile_0_conduit_end_T0INT_set      	=> count_0_equal,  		   --                         .T0INT_set
+            regfile_0_conduit_end_T1INT_set      	=> count_1_equal,      --                         .T1INT_set
+            regfile_0_conduit_end_T0CNT_in       	=> count_0,   			    --                         .T0CNT_in
+            regfile_0_conduit_end_T1CNT_in       	=> count_1,    			    --                         .T1CNT_in
+            regfile_0_conduit_end_avalon_inten 		=> SW(3), --                      .avalon_inten
+            counter_0_conduit_end_count        		=> count_0,        -- counter_0_conduit_end.count
+            counter_0_conduit_end_clear        		=> count_0_clear,        --                      .clear
+            counter_0_conduit_end_count_cmp    		=> count_0_cmp,    --                      .count_cmp
+            counter_0_conduit_end_count_equal  		=> count_0_equal,  --                      .count_equal
+            counter_0_conduit_end_enable       		=> count_0_en,       --                      .enable
+            counter_1_conduit_end_count        		=> count_1,       -- counter_1_conduit_end.count
+            counter_1_conduit_end_clear        		=> count_1_clear, --                      .clear
+            counter_1_conduit_end_count_cmp    		=> count_1_cmp,   --                      .count_cmp
+            counter_1_conduit_end_count_equal  		=> count_1_equal, --                      .count_equal
+            counter_1_conduit_end_enable       		=> count_1_en    --                      .enable
         );
 end Structural_Basic;
 

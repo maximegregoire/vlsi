@@ -50,18 +50,26 @@
 
 	 ATTRIBUTE synthesis_clearbox : natural;
 	 ATTRIBUTE synthesis_clearbox OF RTL : ARCHITECTURE IS 1;
+	 SIGNAL  wire_w_lg_w_sink_data_range241w293w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w280w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w_sink_data_range244w292w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  s_wire_first_nios2_system_id_router_src_channel_1_292_dataout :	STD_LOGIC;
+	 SIGNAL  wire_w_sink_data_range241w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_sink_data_range244w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
  BEGIN
 
+	wire_w_lg_w_sink_data_range241w293w(0) <= wire_w_sink_data_range241w(0) AND wire_w_lg_w_sink_data_range244w292w(0);
 	wire_w280w(0) <= NOT s_wire_first_nios2_system_id_router_src_channel_1_292_dataout;
-	s_wire_first_nios2_system_id_router_src_channel_1_292_dataout <= (((NOT sink_data(80)) AND (NOT sink_data(81))) AND (NOT sink_data(82)));
+	wire_w_lg_w_sink_data_range244w292w(0) <= NOT wire_w_sink_data_range244w(0);
+	s_wire_first_nios2_system_id_router_src_channel_1_292_dataout <= (wire_w_lg_w_sink_data_range241w293w(0) AND (NOT sink_data(82)));
 	sink_ready <= src_ready;
 	src_channel <= ( "0" & "0" & "0" & "0" & s_wire_first_nios2_system_id_router_src_channel_1_292_dataout & wire_w280w);
 	src_data <= ( sink_data(92 DOWNTO 0));
 	src_endofpacket <= sink_endofpacket;
 	src_startofpacket <= sink_startofpacket;
 	src_valid <= sink_valid;
+	wire_w_sink_data_range241w(0) <= sink_data(80);
+	wire_w_sink_data_range244w(0) <= sink_data(81);
 
  END RTL; --first_nios2_system_id_router
 --synopsys translate_on
