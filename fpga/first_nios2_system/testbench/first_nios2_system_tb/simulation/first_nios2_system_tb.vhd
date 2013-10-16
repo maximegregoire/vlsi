@@ -158,7 +158,7 @@ architecture rtl of first_nios2_system_tb is
 	signal count_1_en : std_logic;
 	
 	-- 0 - POLL     1 - AVALON
-	signal avalon_int_en : std_logic := '1';
+	signal avalon_int_en : std_logic := '0';
 
 begin
 

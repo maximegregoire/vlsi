@@ -412,10 +412,8 @@
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 #   
-add wave -position insertpoint  \
-sim:/first_nios2_system_tb/first_nios2_system_inst/cpu/d_irq
-add wave -position insertpoint sim:/first_nios2_system_tb/first_nios2_system_inst/regfile_0/*
-run 400 us
+do C:/Users/pwhite8/vlsi/wave.do
+run 350 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Region: /first_nios2_system_tb/first_nios2_system_inst/cmd_xbar_mux_005/first_nios2_system_cmd_xbar_mux_add0_13/g1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -1205,26 +1203,18 @@ run 400 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 70 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/cpu/niO0ill/the_first_nios2_system_cpu_jtag_debug_module_sysclk
 # ** Warning: Address pointed at port A is out of bound! 
-#    Time: 225030 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+#    Time: 238970 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
 # ** Warning: Address pointed at port A is out of bound! 
-#    Time: 239010 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+#    Time: 239030 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
 # ** Warning: Address pointed at port A is out of bound! 
-#    Time: 239070 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+#    Time: 273310 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
 # ** Warning: Address pointed at port A is out of bound! 
-#    Time: 251790 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+#    Time: 273370 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
 # ** Warning: Address pointed at port A is out of bound! 
-#    Time: 272790 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+#    Time: 304250 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
 # ** Warning: Address pointed at port A is out of bound! 
-#    Time: 272850 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
-# ** Warning: Address pointed at port A is out of bound! 
-#    Time: 284250 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
-# ** Warning: Address pointed at port A is out of bound! 
-#    Time: 303570 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
-# ** Warning: Address pointed at port A is out of bound! 
-#    Time: 303630 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
-# ** Warning: Address pointed at port A is out of bound! 
-#    Time: 315030 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
-# ** Warning: Address pointed at port A is out of bound! 
-#    Time: 338690 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
-add wave -position insertpoint  \
-sim:/first_nios2_system_tb/first_nios2_system_inst/regfile_0/avalon_int
+#    Time: 304310 ns  Iteration: 2  Instance: /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/the_altsyncram
+run 50 us
+run 100 us
+add wave -position insertpoint sim:/first_nios2_system_tb/first_nios2_system_inst/regfile_0/*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/pwhite8/vlsi/wave.do

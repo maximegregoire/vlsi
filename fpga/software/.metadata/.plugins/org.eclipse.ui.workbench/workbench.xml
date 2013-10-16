@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="26" version="2.0">
+<workbench progressCount="34" version="2.0">
 <workbenchAdvisor/>
-<window height="769" maximized="true" width="1024" x="585" y="55">
+<window height="1010" width="1105" x="541" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -31,24 +31,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="nios2_isr_test_main.c" partName="nios2_isr_test_main.c" path="C:/Users/pwhite8/vlsi/fpga/software/nios2_isr_test/nios2_isr_test_main.c" title="nios2_isr_test_main.c" tooltip="nios2_isr_test/nios2_isr_test_main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/nios2_isr_test/nios2_isr_test_main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3692" selectionOffset="0" selectionTopPixel="810"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world.c" partName="hello_world.c" path="C:/Users/pwhite8/vlsi/fpga/software/isr_demo/hello_world.c" title="hello_world.c" tooltip="isr_demo/hello_world.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isr_demo/hello_world.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3913" selectionOffset="0" selectionTopPixel="1384"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world.c" partName="hello_world.c" path="C:/Users/pwhite8/vlsi/fpga/software/isr_demo_final/hello_world.c" title="hello_world.c" tooltip="isr_demo_final/hello_world.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isr_demo_final/hello_world.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="806" selectionTopPixel="209"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1226" selectionTopPixel="1196"/>
 </editor>
 </editors>
 <views>
@@ -61,7 +50,7 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (7 items)"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="143" org.eclipse.ui.ide.severityAndDescriptionField="407"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -264,12 +253,12 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74611974" ratioLeft="673" ratioRight="229" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="Nios II Console"/>
+<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:*" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -277,7 +266,6 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -303,9 +291,6 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/isr_final_demo/hello_world.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/isr_demo_final/hello_world.c"/>
 </editors>
-<item historyLabel="nios2_isr_main.c" index="0">
-<position info="not_deleted" x="898" y="0"/>
-</item>
 <item historyLabel="nios2_isr_main.c" index="0">
 <position info="not_deleted" x="1365" y="0"/>
 </item>
@@ -448,8 +433,11 @@
 <item historyLabel="hello_world.c" index="4">
 <position info="not_deleted" x="2908" y="0"/>
 </item>
-<item active="true" historyLabel="hello_world.c" index="5">
+<item historyLabel="hello_world.c" index="5">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="hello_world.c" index="5">
+<position info="not_deleted" x="1127" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
