@@ -95,7 +95,7 @@ int main()
 	// Enable T0INTEN(0) active high
 	// Enable T1INTEN(1) active high
 	// Enable AVINTDIS(5) active low
-	IOWR_32DIRECT(REGFILE_0_BASE, INTCTL, 0x00000003);
+	//IOWR_32DIRECT(REGFILE_0_BASE, INTCTL, 0x00000003);
 
 	// Register IRQ
 	alt_irq_register(0,0, interruptServiceRoutine);

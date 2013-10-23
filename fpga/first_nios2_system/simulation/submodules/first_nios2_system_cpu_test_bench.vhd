@@ -44,17 +44,17 @@ entity first_nios2_system_cpu_test_bench is
                  signal W_iw : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal W_iw_op : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
                  signal W_iw_opx : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
-                 signal W_pcb : IN STD_LOGIC_VECTOR (19 DOWNTO 0);
+                 signal W_pcb : IN STD_LOGIC_VECTOR (27 DOWNTO 0);
                  signal W_valid : IN STD_LOGIC;
                  signal W_vinst : IN STD_LOGIC_VECTOR (55 DOWNTO 0);
                  signal W_wr_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal W_wr_dst_reg : IN STD_LOGIC;
                  signal clk : IN STD_LOGIC;
-                 signal d_address : IN STD_LOGIC_VECTOR (19 DOWNTO 0);
+                 signal d_address : IN STD_LOGIC_VECTOR (27 DOWNTO 0);
                  signal d_byteenable : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
                  signal d_read : IN STD_LOGIC;
                  signal d_write : IN STD_LOGIC;
-                 signal i_address : IN STD_LOGIC_VECTOR (19 DOWNTO 0);
+                 signal i_address : IN STD_LOGIC_VECTOR (27 DOWNTO 0);
                  signal i_read : IN STD_LOGIC;
                  signal i_readdatavalid : IN STD_LOGIC;
                  signal reset_n : IN STD_LOGIC;
@@ -69,7 +69,7 @@ end entity first_nios2_system_cpu_test_bench;
 
 architecture europa of first_nios2_system_cpu_test_bench is
                 signal E_src1_src2_fast_cmp :  STD_LOGIC_VECTOR (32 DOWNTO 0);
-                signal M_target_pcb :  STD_LOGIC_VECTOR (19 DOWNTO 0);
+                signal M_target_pcb :  STD_LOGIC_VECTOR (27 DOWNTO 0);
                 signal M_wr_data_unfiltered_0_is_x :  STD_LOGIC;
                 signal M_wr_data_unfiltered_10_is_x :  STD_LOGIC;
                 signal M_wr_data_unfiltered_11_is_x :  STD_LOGIC;
@@ -364,10 +364,10 @@ begin
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      M_target_pcb <= std_logic_vector'("00000000000000000000");
+      M_target_pcb <= std_logic_vector'("0000000000000000000000000000");
     elsif clk'event and clk = '1' then
       if std_logic'(M_en) = '1' then 
-        M_target_pcb <= E_src1(19 DOWNTO 0);
+        M_target_pcb <= E_src1(27 DOWNTO 0);
       end if;
     end if;
 

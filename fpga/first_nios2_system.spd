@@ -5,17 +5,71 @@
    type="VHDL"
    library="irq_mapper" />
  <file
+   path="first_nios2_system/simulation/submodules/mentor/altera_merlin_width_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/simulation/submodules/mentor/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/simulation/submodules/aldec/altera_merlin_width_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/simulation/submodules/aldec/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_rsp_xbar_mux_002.vho"
+   type="VHDL"
+   library="rsp_xbar_mux_002" />
+ <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"
    type="VHDL"
    library="rsp_xbar_mux" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_rsp_xbar_demux_006.vho"
+   type="VHDL"
+   library="rsp_xbar_demux_006" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_rsp_xbar_demux_001.vho"
+   type="VHDL"
+   library="rsp_xbar_demux_001" />
  <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"
    type="VHDL"
    library="rsp_xbar_demux" />
  <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_cmd_xbar_mux_006.vho"
+   type="VHDL"
+   library="cmd_xbar_mux_006" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_cmd_xbar_mux_001.vho"
+   type="VHDL"
+   library="cmd_xbar_mux_001" />
+ <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_cmd_xbar_mux.vho"
    type="VHDL"
    library="cmd_xbar_mux" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_cmd_xbar_demux_002.vho"
+   type="VHDL"
+   library="cmd_xbar_demux_002" />
  <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_cmd_xbar_demux_001.vho"
    type="VHDL"
@@ -45,6 +99,26 @@
    library="rst_controller"
    simulator="riviera" />
  <file
+   path="first_nios2_system/simulation/submodules/mentor/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/simulation/submodules/mentor/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="modelsim" />
+ <file
+   path="first_nios2_system/simulation/submodules/aldec/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="riviera" />
+ <file
+   path="first_nios2_system/simulation/submodules/aldec/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="riviera" />
+ <file
    path="first_nios2_system/simulation/submodules/mentor/altera_merlin_traffic_limiter.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
    library="limiter"
@@ -65,13 +139,33 @@
    library="limiter"
    simulator="riviera" />
  <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_id_router_006.vho"
+   type="VHDL"
+   library="id_router_006" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_id_router_001.vho"
+   type="VHDL"
+   library="id_router_001" />
+ <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_id_router.vho"
    type="VHDL"
    library="id_router" />
  <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_addr_router_002.vho"
+   type="VHDL"
+   library="addr_router_002" />
+ <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_addr_router.vho"
    type="VHDL"
    library="addr_router" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"
+   type="VHDL"
+   library="new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   type="VHDL"
+   library="new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
  <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
    type="VHDL"
@@ -126,6 +220,14 @@
    type="SYSTEM_VERILOG_ENCRYPT"
    library="cpu_data_master_translator"
    simulator="riviera" />
+ <file
+   path="first_nios2_system/simulation/submodules/grab_if.vhd"
+   type="VHDL"
+   library="grab_if_0" />
+ <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_new_sdram_controller_0.vhd"
+   type="VHDL"
+   library="new_sdram_controller_0" />
  <file
    path="first_nios2_system/simulation/submodules/counter.vhd"
    type="VHDL"
@@ -250,6 +352,27 @@
    path="first_nios2_system/simulation/first_nios2_system.vhd"
    type="VHDL" />
  <file
+   path="first_nios2_system/simulation/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_width_adapter.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_width_adapter_002.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_cpu_data_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_cpu_instruction_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_grab_if_0_avalon_master_translator.vhd"
+   type="VHDL" />
+ <file
    path="first_nios2_system/simulation/first_nios2_system_cpu_jtag_debug_module_translator.vhd"
    type="VHDL" />
  <file
@@ -268,10 +391,13 @@
    path="first_nios2_system/simulation/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
    type="VHDL" />
  <file
-   path="first_nios2_system/simulation/first_nios2_system_cpu_data_master_translator.vhd"
+   path="first_nios2_system/simulation/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"
    type="VHDL" />
  <file
-   path="first_nios2_system/simulation/first_nios2_system_cpu_instruction_master_translator.vhd"
+   path="first_nios2_system/simulation/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"
    type="VHDL" />
  <topLevel name="first_nios2_system" />
  <deviceFamily name="cycloneii" />

@@ -49,22 +49,22 @@ end entity regfile;
 
 architecture arch of regfile is
 
-signal	AVINTDIS_sig 	: 	 std_logic;
-signal	T1INTOVR_sig 	: 	 std_logic;
-signal	T1INTSTS_sig 	: 	 std_logic;
-signal	T0INTSTS_sig 	: 	 std_logic;
-signal	T1INTEN_sig 	: 	 std_logic;
-signal	T0INTEN_sig 	: 	 std_logic;
+signal	AVINTDIS_sig 	: 	std_logic;
+signal	T1INTOVR_sig 	: 	std_logic;
+signal	T1INTSTS_sig 	: 	std_logic;
+signal	T0INTSTS_sig 	: 	std_logic;
+signal	T1INTEN_sig 	: 	std_logic;
+signal	T0INTEN_sig 	: 	std_logic;
 signal	T1CNTEN_sig 	: 	std_logic;
 signal	T0CNTEN_sig 	: 	std_logic;
 signal	T1RST_sig 		: 	std_logic;
 signal	T0RST_sig 		: 	std_logic;	
-signal	T0CNT_sig 		: 		 	std_logic_vector(31 downto 0);
-signal	T1CNT_sig 		: 		 	std_logic_vector(31 downto 0);
-signal	T0CMP_sig 		: 		 	std_logic_vector(31 downto 0);
-signal	T1CMP_sig 		: 		 	std_logic_vector(31 downto 0);
-signal	GP0_sig 			: 		std_logic_vector(31 downto 0);
-signal	GP1_sig 			: 		 	std_logic_vector(31 downto 0);
+signal	T0CNT_sig 		: 	std_logic_vector(31 downto 0);
+signal	T1CNT_sig 		: 	std_logic_vector(31 downto 0);
+signal	T0CMP_sig 		: 	std_logic_vector(31 downto 0);
+signal	T1CMP_sig 		: 	std_logic_vector(31 downto 0);
+signal	GP0_sig 		: 	std_logic_vector(31 downto 0);
+signal	GP1_sig 		: 	std_logic_vector(31 downto 0);
 
 begin
 process(clk)
@@ -84,8 +84,8 @@ T1RST_sig 		<=		'0';
 T0RST_sig 		<=		'0';
 T0CMP_sig 		<=		(others	=> '0');	
 T1CMP_sig 		<=		(others	=> '0');	
-GP0_sig 			<=		(others	=> '0');	
-GP1_sig 			<=		(others	=> '0');
+GP0_sig 		<=		(others	=> '0');	
+GP1_sig 		<=		(others	=> '0');
 
 -- READ AND WRITE PROCEDURE --
 else
@@ -98,7 +98,7 @@ case address is
 		-- RW
 		T0INTEN_sig <= writedata(0);
 		T1INTEN_sig <= writedata(1);
-		-- RW2C (TO DO!!!!)
+		-- RW2C
 		if (writedata(2) = '1' AND T0INT_set = '0') then
 			T0INTSTS_sig <= '0';
 		end if;
@@ -132,7 +132,7 @@ case address is
 end case;
 end if;
 
--- Counters --
+-- Counters Count Register --
 -- Reset the counter if certain registers are set
 if (T0RST_sig = '1') then
 T0CNT_sig <= (others => '0');
@@ -147,7 +147,7 @@ T1CNT_sig <= T1CNT_in;
 end if;
 -- End of Counters --
 
--- Interupts --
+-- Interupts Registers --
 if (T0INT_set = '1' AND T0INTEN_sig = '1') then
 	T0INTSTS_sig <= '1';
 end if;
@@ -159,6 +159,7 @@ if (T1INT_set = '1' AND T1INTEN_sig = '1') then
 	end if;
 end if;
 -- End of Interupts --
+
 end if;
 end if;
 end process;
@@ -211,21 +212,21 @@ process(T0INTSTS_sig, T1INTSTS_sig, avalon_inten)
 end process;
 
 	-- Assignment the signals to the outputs
-	AVINTDIS			<=	NOT(avalon_inten);
-	T1INTOVR			<=	T1INTOVR_sig;
-	T1INTSTS			<=	T1INTSTS_sig;
-	T0INTSTS			<=	T0INTSTS_sig;
-	T1INTEN 			<=	T1INTEN_sig;
-	T0INTEN 			<=	T0INTEN_sig;	
+	AVINTDIS		<=	NOT(avalon_inten);
+	T1INTOVR		<=	T1INTOVR_sig;
+	T1INTSTS		<=	T1INTSTS_sig;
+	T0INTSTS		<=	T0INTSTS_sig;
+	T1INTEN 		<=	T1INTEN_sig;
+	T0INTEN 		<=	T0INTEN_sig;	
 	T1CNTEN			<= T1CNTEN_sig;
 	T0CNTEN			<= T0CNTEN_sig;
-	T1RST				<= T1RST_sig;
-	T0RST				<= T0RST_sig;	
-	T0CMP				<= T0CMP_sig;	
-	T1CMP				<=	T1CMP_sig;	
+	T1RST			<= T1RST_sig;
+	T0RST			<= T0RST_sig;	
+	T0CMP			<= T0CMP_sig;	
+	T1CMP			<=	T1CMP_sig;	
 	
-	T0CNT				<= T0CNT_sig;
-	T1CNT				<= T1CNT_sig;
+	T0CNT			<= T0CNT_sig;
+	T1CNT			<= T1CNT_sig;
 	
 	GP0				<= GP0_sig;	
 	GP1				<= GP1_sig;

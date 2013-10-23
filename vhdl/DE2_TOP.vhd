@@ -10,6 +10,7 @@ Library ieee;
 use     ieee.std_logic_1164.all;
 use     ieee.std_logic_unsigned.all;
 use     ieee.std_logic_arith.all;
+use	  work.sdrampack.all;
         
 entity DE2_TOP is
 port (
@@ -166,42 +167,80 @@ architecture Structural_Basic of DE2_TOP is
 	signal count_1_equal : std_logic;
 	signal count_1_clear : std_logic;
 	signal count_1_en : std_logic;
+	
+	signal SDRAM_ADDR_sig : std_logic_vector(11 downto 0);
+	signal SDRAM_BA_sig 	: std_logic_vector(1 downto 0);
+	signal SDRAM_CAS_N_sig : std_logic;
+	signal SDRAM_CKE_sig : std_logic;
+	signal SDRAM_CLK_sig : std_logic;
+	signal SDRAM_CS_N_sig : std_logic;
+	signal SDRAM_DQM_sig : std_logic_vector(1 downto 0);
+	signal SDRAM_RAS_N_sig : std_logic;
+	signal SDRAM_WE_N_sig : std_logic;
+	signal SDRAM_SD_sig : std_logic_vector(15 downto 0);
 
-		component first_nios2_system is
+	signal dump : std_logic;
+	signal load : std_logic;
+	
+
+		 component first_nios2_system is
         port (
-            clk_clk                            : in  std_logic                     := 'X';             -- clk
-            reset_reset_n                      : in  std_logic                     := 'X';             -- reset_n
-            regfile_0_conduit_end_AVINTDIS     : out std_logic;                                        -- AVINTDIS
-            regfile_0_conduit_end_T1INTOVR     : out std_logic;                                        -- T1INTOVR
-            regfile_0_conduit_end_T1INTSTS     : out std_logic;                                        -- T1INTSTS
-            regfile_0_conduit_end_T0INTSTS     : out std_logic;                                        -- T0INTSTS
-            regfile_0_conduit_end_T1INTEN      : out std_logic;                                        -- T1INTEN
-            regfile_0_conduit_end_T0INTEN      : out std_logic;                                        -- T0INTEN
-            regfile_0_conduit_end_T1CNTEN      : out std_logic;                                        -- T1CNTEN
-            regfile_0_conduit_end_T0CNTEN      : out std_logic;                                        -- T0CNTEN
-            regfile_0_conduit_end_T1RST        : out std_logic;                                        -- T1RST
-            regfile_0_conduit_end_T0RST        : out std_logic;                                        -- T0RST
-            regfile_0_conduit_end_T0CNT        : out std_logic_vector(31 downto 0);                    -- T0CNT
-            regfile_0_conduit_end_T1CNT        : out std_logic_vector(31 downto 0);                    -- T1CNT
-            regfile_0_conduit_end_T0CMP        : out std_logic_vector(31 downto 0);                    -- T0CMP
-            regfile_0_conduit_end_T1CMP        : out std_logic_vector(31 downto 0);                    -- T1CMP
-            regfile_0_conduit_end_GP0          : out std_logic_vector(31 downto 0);                    -- GP0
-            regfile_0_conduit_end_GP1          : out std_logic_vector(31 downto 0);                    -- GP1
-            regfile_0_conduit_end_T0INT_set    : in  std_logic                     := 'X';             -- T0INT_set
-            regfile_0_conduit_end_T1INT_set    : in  std_logic                     := 'X';             -- T1INT_set
-            regfile_0_conduit_end_T0CNT_in     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
-            regfile_0_conduit_end_T1CNT_in     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
-            regfile_0_conduit_end_avalon_inten : in  std_logic                     := 'X';             -- avalon_inten
-            counter_0_conduit_end_count        : out std_logic_vector(31 downto 0);                    -- count
-            counter_0_conduit_end_clear        : in  std_logic                     := 'X';             -- clear
-            counter_0_conduit_end_count_cmp    : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-            counter_0_conduit_end_count_equal  : out std_logic;                                        -- count_equal
-            counter_0_conduit_end_enable       : in  std_logic                     := 'X';             -- enable
-            counter_1_conduit_end_count        : out std_logic_vector(31 downto 0);                    -- count
-            counter_1_conduit_end_clear        : in  std_logic                     := 'X';             -- clear
-            counter_1_conduit_end_count_cmp    : in  std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-            counter_1_conduit_end_count_equal  : out std_logic;                                        -- count_equal
-            counter_1_conduit_end_enable       : in  std_logic                     := 'X'              -- enable
+            clk_clk                             : in    std_logic                     := 'X';             -- clk
+            reset_reset_n                       : in    std_logic                     := 'X';             -- reset_n
+            regfile_0_conduit_end_AVINTDIS      : out   std_logic;                                        -- AVINTDIS
+            regfile_0_conduit_end_T1INTOVR      : out   std_logic;                                        -- T1INTOVR
+            regfile_0_conduit_end_T1INTSTS      : out   std_logic;                                        -- T1INTSTS
+            regfile_0_conduit_end_T0INTSTS      : out   std_logic;                                        -- T0INTSTS
+            regfile_0_conduit_end_T1INTEN       : out   std_logic;                                        -- T1INTEN
+            regfile_0_conduit_end_T0INTEN       : out   std_logic;                                        -- T0INTEN
+            regfile_0_conduit_end_T1CNTEN       : out   std_logic;                                        -- T1CNTEN
+            regfile_0_conduit_end_T0CNTEN       : out   std_logic;                                        -- T0CNTEN
+            regfile_0_conduit_end_T1RST         : out   std_logic;                                        -- T1RST
+            regfile_0_conduit_end_T0RST         : out   std_logic;                                        -- T0RST
+            regfile_0_conduit_end_T0CNT         : out   std_logic_vector(31 downto 0);                    -- T0CNT
+            regfile_0_conduit_end_T1CNT         : out   std_logic_vector(31 downto 0);                    -- T1CNT
+            regfile_0_conduit_end_T0CMP         : out   std_logic_vector(31 downto 0);                    -- T0CMP
+            regfile_0_conduit_end_T1CMP         : out   std_logic_vector(31 downto 0);                    -- T1CMP
+            regfile_0_conduit_end_GP0           : out   std_logic_vector(31 downto 0);                    -- GP0
+            regfile_0_conduit_end_GP1           : out   std_logic_vector(31 downto 0);                    -- GP1
+            regfile_0_conduit_end_T0INT_set     : in    std_logic                     := 'X';             -- T0INT_set
+            regfile_0_conduit_end_T1INT_set     : in    std_logic                     := 'X';             -- T1INT_set
+            regfile_0_conduit_end_T0CNT_in      : in    std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
+            regfile_0_conduit_end_T1CNT_in      : in    std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
+            regfile_0_conduit_end_avalon_inten  : in    std_logic                     := 'X';             -- avalon_inten
+            counter_0_conduit_end_count         : out   std_logic_vector(31 downto 0);                    -- count
+            counter_0_conduit_end_clear         : in    std_logic                     := 'X';             -- clear
+            counter_0_conduit_end_count_cmp     : in    std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+            counter_0_conduit_end_count_equal   : out   std_logic;                                        -- count_equal
+            counter_0_conduit_end_enable        : in    std_logic                     := 'X';             -- enable
+            counter_1_conduit_end_count         : out   std_logic_vector(31 downto 0);                    -- count
+            counter_1_conduit_end_clear         : in    std_logic                     := 'X';             -- clear
+            counter_1_conduit_end_count_cmp     : in    std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
+            counter_1_conduit_end_count_equal   : out   std_logic;                                        -- count_equal
+            counter_1_conduit_end_enable        : in    std_logic                     := 'X';             -- enable
+            new_sdram_controller_0_wire_addr    : out   std_logic_vector(11 downto 0);                    -- addr
+            new_sdram_controller_0_wire_ba      : out   std_logic_vector(1 downto 0);                     -- ba
+            new_sdram_controller_0_wire_cas_n   : out   std_logic;                                        -- cas_n
+            new_sdram_controller_0_wire_cke     : out   std_logic;                                        -- cke
+            new_sdram_controller_0_wire_cs_n    : out   std_logic;                                        -- cs_n
+            new_sdram_controller_0_wire_dq      : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+            new_sdram_controller_0_wire_dqm     : out   std_logic_vector(1 downto 0);                     -- dqm
+            new_sdram_controller_0_wire_ras_n   : out   std_logic;                                        -- ras_n
+            new_sdram_controller_0_wire_we_n    : out   std_logic;                                        -- we_n
+            grab_if_0_conduit_end_GSSHT         : in    std_logic                     := 'X';             -- GSSHT
+            grab_if_0_conduit_end_GMODE         : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- GMODE
+            grab_if_0_conduit_end_GCONT         : in    std_logic                     := 'X';             -- GCONT
+            grab_if_0_conduit_end_GFMT          : in    std_logic                     := 'X';             -- GFMT
+            grab_if_0_conduit_end_GFSTART       : in    std_logic_vector(22 downto 0) := (others => 'X'); -- GFSTART
+            grab_if_0_conduit_end_GLPITCH       : in    std_logic_vector(22 downto 0) := (others => 'X'); -- GLPITCH
+            grab_if_0_conduit_end_GYSS          : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- GYSS
+            grab_if_0_conduit_end_GXSS          : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- GXSS
+            grab_if_0_conduit_end_GACTIVE       : out   std_logic;                                        -- GACTIVE
+            grab_if_0_conduit_end_GSPDG         : out   std_logic;                                        -- GSPDG
+            grab_if_0_conduit_end_DEBUG_GRABIF1 : out   std_logic_vector(31 downto 0);                    -- DEBUG_GRABIF1
+            grab_if_0_conduit_end_DEBUG_GRABIF2 : out   std_logic_vector(31 downto 0);                    -- DEBUG_GRABIF2
+            grab_if_0_conduit_end_vdata         : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- vdata
+            grab_if_0_conduit_end_gclk          : in    std_logic                     := 'X'              -- gclk
         );
     end component first_nios2_system;
 	 
@@ -256,18 +295,18 @@ UART_TXD   <= '1'; -- out std_logic;      --  UART Transmitter
 ------------------------  IRDA  ------------------------
 IRDA_TXD   <= '0'; -- out std_logic;      --  IRDA Transmitter
 --------------------/ SDRAM Interface   ----------------
-DRAM_DQ    <= (Others => 'Z'); -- inout std_logic_vector(15 downto 0); -- SDRAM Data bus 16 Bits
-DRAM_ADDR  <= (Others => '0'); -- out std_logic_vector(11 downto 0);   -- SDRAM Address bus 12 Bits
-DRAM_LDQM  <= '0'; -- out std_logic;        --  SDRAM Low-byte Data Mask 
-DRAM_UDQM  <= '0'; -- out std_logic;        --  SDRAM High-byte Data Mask
-DRAM_WE_N  <= '1'; -- out std_logic;        --  SDRAM Write Enable
-DRAM_CAS_N <= '1'; -- out std_logic;        --  SDRAM Column Address Strobe
-DRAM_RAS_N <= '1'; -- out std_logic;        --  SDRAM Row Address Strobe
-DRAM_CS_N  <= '1'; -- out std_logic;        --  SDRAM Chip Select
-DRAM_BA_0  <= '0'; -- out std_logic;        --  SDRAM Bank Address 0
-DRAM_BA_1  <= '0'; -- out std_logic;        --  SDRAM Bank Address 0
-DRAM_CLK   <= '0'; -- out std_logic;        --  SDRAM Clock
-DRAM_CKE   <= '0'; -- out std_logic;        --  SDRAM Clock Enable
+--DRAM_DQ    <= (Others => 'Z'); -- inout std_logic_vector(15 downto 0); -- SDRAM Data bus 16 Bits
+--DRAM_ADDR  <= (Others => '0'); -- out std_logic_vector(11 downto 0);   -- SDRAM Address bus 12 Bits
+--DRAM_LDQM  <= '0'; -- out std_logic;        --  SDRAM Low-byte Data Mask 
+--DRAM_UDQM  <= '0'; -- out std_logic;        --  SDRAM High-byte Data Mask
+--DRAM_WE_N  <= '1'; -- out std_logic;        --  SDRAM Write Enable
+--DRAM_CAS_N <= '1'; -- out std_logic;        --  SDRAM Column Address Strobe
+--DRAM_RAS_N <= '1'; -- out std_logic;        --  SDRAM Row Address Strobe
+--DRAM_CS_N  <= '1'; -- out std_logic;        --  SDRAM Chip Select
+--DRAM_BA_0  <= '0'; -- out std_logic;        --  SDRAM Bank Address 0
+--DRAM_BA_1  <= '0'; -- out std_logic;        --  SDRAM Bank Address 0
+--DRAM_CLK   <= '0'; -- out std_logic;        --  SDRAM Clock
+--DRAM_CKE   <= '0'; -- out std_logic;        --  SDRAM Clock Enable
 --------------------  Flash Interface   ----------------
 FL_DQ      <= (Others => 'Z'); -- inout std_logic_vector( 7 downto 0);  --  FLASH Data bus 8 Bits
 FL_ADDR    <= (Others => '0') ; -- out std_logic_vector(21 downto 0);    --  FLASH Address bus 22 Bits
@@ -415,7 +454,7 @@ xhexconverter_7: component hexconverter
 				bcd 		=> GP_0_sig(31 downto 28),  --BCD input
 				segment7 => HEX7  -- 7 bit decoded output.
 				);
-
+				
 -----------------------------------------------------------------
 -- LEDR0 - Interrupt 1 Overrun
 -- LEDR1 - Interrupt 0 Status
@@ -463,7 +502,44 @@ xhexconverter_7: component hexconverter
             counter_1_conduit_end_clear        		=> count_1_clear, --                      .clear
             counter_1_conduit_end_count_cmp    		=> count_1_cmp,   --                      .count_cmp
             counter_1_conduit_end_count_equal  		=> count_1_equal, --                      .count_equal
-            counter_1_conduit_end_enable       		=> count_1_en    --                      .enable
+            counter_1_conduit_end_enable       		=> count_1_en,    --                      .enable
+				new_sdram_controller_0_wire_addr    	=> SDRAM_ADDR_sig,    -- new_sdram_controller_0_wire.addr
+            new_sdram_controller_0_wire_ba      	=> SDRAM_BA_sig,      --                            .ba
+            new_sdram_controller_0_wire_cas_n   	=> SDRAM_CAS_N_sig,   --                            .cas_n
+            new_sdram_controller_0_wire_cke     	=> SDRAM_CKE_sig,     --                            .cke
+            new_sdram_controller_0_wire_cs_n    	=> SDRAM_CS_N_sig,    --                            .cs_n
+            new_sdram_controller_0_wire_dq      	=> SDRAM_SD_sig,      --                            .dq
+            new_sdram_controller_0_wire_dqm     	=> SDRAM_DQM_sig,     --                            .dqm
+            new_sdram_controller_0_wire_ras_n   	=> SDRAM_RAS_N_sig,   --                            .ras_n
+            new_sdram_controller_0_wire_we_n    	=> SDRAM_WE_N_sig,    --                            .we_n
+            grab_if_0_conduit_end_GSSHT         	=> open,         		--       grab_if_0_conduit_end.GSSHT
+            grab_if_0_conduit_end_GMODE         	=> open,         --                            .GMODE
+            grab_if_0_conduit_end_GCONT         	=> open,         --                            .GCONT
+            grab_if_0_conduit_end_GFMT          	=> open,          --                            .GFMT
+            grab_if_0_conduit_end_GFSTART       	=> open,       --                            .GFSTART
+            grab_if_0_conduit_end_GLPITCH       	=> open,       --                            .GLPITCH
+            grab_if_0_conduit_end_GYSS          	=> open,          --                            .GYSS
+            grab_if_0_conduit_end_GXSS          	=> open,          --                            .GXSS
+            grab_if_0_conduit_end_GACTIVE       	=> open,       --                            .GACTIVE
+            grab_if_0_conduit_end_GSPDG         	=> open,         --                            .GSPDG
+            grab_if_0_conduit_end_DEBUG_GRABIF1 	=> open, --                            .DEBUG_GRABIF1
+            grab_if_0_conduit_end_DEBUG_GRABIF2 	=> open, --                            .DEBUG_GRABIF2
+            grab_if_0_conduit_end_vdata         	=> open,         --                            .vdata
+            grab_if_0_conduit_end_gclk          	=> open           --                            .gclk
         );
+		  
+			DRAM_ADDR <= SDRAM_ADDR_sig;
+			DRAM_BA_1 <= SDRAM_BA_sig(1);
+			DRAM_BA_0 <= SDRAM_BA_sig(0);
+			DRAM_CAS_N <= SDRAM_CAS_N_sig;
+			DRAM_CKE <= SDRAM_CKE_sig;
+			DRAM_CLK <= SDRAM_CLK_sig;
+			DRAM_CS_N <= SDRAM_CS_N_sig;
+			DRAM_UDQM <= SDRAM_DQM_sig(1);
+			DRAM_LDQM <= SDRAM_DQM_sig(0);
+			DRAM_RAS_N <= SDRAM_RAS_N_sig;
+			DRAM_WE_N <= SDRAM_WE_N_sig;
+			DRAM_DQ <= SDRAM_SD_sig;
+		  
 end Structural_Basic;
 
