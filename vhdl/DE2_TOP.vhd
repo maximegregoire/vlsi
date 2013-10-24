@@ -226,21 +226,7 @@ architecture Structural_Basic of DE2_TOP is
             new_sdram_controller_0_wire_dq      : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
             new_sdram_controller_0_wire_dqm     : out   std_logic_vector(1 downto 0);                     -- dqm
             new_sdram_controller_0_wire_ras_n   : out   std_logic;                                        -- ras_n
-            new_sdram_controller_0_wire_we_n    : out   std_logic;                                        -- we_n
-            grab_if_0_conduit_end_GSSHT         : in    std_logic                     := 'X';             -- GSSHT
-            grab_if_0_conduit_end_GMODE         : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- GMODE
-            grab_if_0_conduit_end_GCONT         : in    std_logic                     := 'X';             -- GCONT
-            grab_if_0_conduit_end_GFMT          : in    std_logic                     := 'X';             -- GFMT
-            grab_if_0_conduit_end_GFSTART       : in    std_logic_vector(22 downto 0) := (others => 'X'); -- GFSTART
-            grab_if_0_conduit_end_GLPITCH       : in    std_logic_vector(22 downto 0) := (others => 'X'); -- GLPITCH
-            grab_if_0_conduit_end_GYSS          : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- GYSS
-            grab_if_0_conduit_end_GXSS          : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- GXSS
-            grab_if_0_conduit_end_GACTIVE       : out   std_logic;                                        -- GACTIVE
-            grab_if_0_conduit_end_GSPDG         : out   std_logic;                                        -- GSPDG
-            grab_if_0_conduit_end_DEBUG_GRABIF1 : out   std_logic_vector(31 downto 0);                    -- DEBUG_GRABIF1
-            grab_if_0_conduit_end_DEBUG_GRABIF2 : out   std_logic_vector(31 downto 0);                    -- DEBUG_GRABIF2
-            grab_if_0_conduit_end_vdata         : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- vdata
-            grab_if_0_conduit_end_gclk          : in    std_logic                     := 'X'              -- gclk
+            new_sdram_controller_0_wire_we_n    : out   std_logic                                        -- we_n
         );
     end component first_nios2_system;
 	 
@@ -512,20 +498,6 @@ xhexconverter_7: component hexconverter
             new_sdram_controller_0_wire_dqm     	=> SDRAM_DQM_sig,     --                            .dqm
             new_sdram_controller_0_wire_ras_n   	=> SDRAM_RAS_N_sig,   --                            .ras_n
             new_sdram_controller_0_wire_we_n    	=> SDRAM_WE_N_sig,    --                            .we_n
-            grab_if_0_conduit_end_GSSHT         	=> open,         		--       grab_if_0_conduit_end.GSSHT
-            grab_if_0_conduit_end_GMODE         	=> open,         --                            .GMODE
-            grab_if_0_conduit_end_GCONT         	=> open,         --                            .GCONT
-            grab_if_0_conduit_end_GFMT          	=> open,          --                            .GFMT
-            grab_if_0_conduit_end_GFSTART       	=> open,       --                            .GFSTART
-            grab_if_0_conduit_end_GLPITCH       	=> open,       --                            .GLPITCH
-            grab_if_0_conduit_end_GYSS          	=> open,          --                            .GYSS
-            grab_if_0_conduit_end_GXSS          	=> open,          --                            .GXSS
-            grab_if_0_conduit_end_GACTIVE       	=> open,       --                            .GACTIVE
-            grab_if_0_conduit_end_GSPDG         	=> open,         --                            .GSPDG
-            grab_if_0_conduit_end_DEBUG_GRABIF1 	=> open, --                            .DEBUG_GRABIF1
-            grab_if_0_conduit_end_DEBUG_GRABIF2 	=> open, --                            .DEBUG_GRABIF2
-            grab_if_0_conduit_end_vdata         	=> open,         --                            .vdata
-            grab_if_0_conduit_end_gclk          	=> open           --                            .gclk
         );
 		  
 			DRAM_ADDR <= SDRAM_ADDR_sig;

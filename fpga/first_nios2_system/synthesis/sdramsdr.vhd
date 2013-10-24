@@ -147,7 +147,7 @@ architecture functional of sdramsdr is
 -- to be modified. A dynamic way (at run time) to modify them is recommanded.
 ------------------------------------------------------------------------------
   signal BURST_LENGTH      : integer := 1;
-  signal CAS_LATENCY       : integer := 2;
+  signal CAS_LATENCY       : integer := 3;
   signal CLK_PERIOD        : time    := 10 ns;
   signal DUMMY_REF_MIN     : integer := 2;          -- dummy refresh after MRS
   signal IRSA              : time;  -- Idle cycles between MRS and first refresh

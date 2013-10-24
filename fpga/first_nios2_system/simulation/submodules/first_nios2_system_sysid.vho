@@ -45,7 +45,7 @@
  BEGIN
 
 	wire_w_lg_address6w(0) <= NOT address;
-	readdata <= ( "0" & address & "0" & address & "0" & "0" & address & "0" & "0" & address & address & "0" & address & "0" & "0" & "0" & "0" & "0" & address & address & "0" & address & "0" & "0" & address & address & address & "0" & address & wire_w_lg_address6w & "1" & "1");
+	readdata <= ( "0" & address & "0" & address & "0" & "0" & address & "0" & "0" & address & address & "0" & address & "0" & "0" & address & "0" & "0" & "0" & address & address & "0" & "0" & address & address & address & address & address & "0" & wire_w_lg_address6w & "1" & "1");
 
  END RTL; --first_nios2_system_sysid
 --synopsys translate_on

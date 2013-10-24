@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project checkpoint_d_2 ****
+
+make all 
+Info: Building ../checkpoint_d_2_bsp/
+make --no-print-directory -C ../checkpoint_d_2_bsp/
+[BSP build complete]
+[checkpoint_d_2 build complete]
+
+**** Build Finished ****

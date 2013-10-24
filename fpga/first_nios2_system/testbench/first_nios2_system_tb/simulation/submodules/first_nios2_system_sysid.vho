@@ -41,11 +41,11 @@
 
 	 ATTRIBUTE synthesis_clearbox : natural;
 	 ATTRIBUTE synthesis_clearbox OF RTL : ARCHITECTURE IS 1;
-	 SIGNAL  wire_w_lg_address4w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_address1w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
  BEGIN
 
-	wire_w_lg_address4w(0) <= NOT address;
-	readdata <= ( "0" & address & "0" & address & "0" & "0" & address & "0" & "0" & address & address & "0" & address & "0" & "0" & "0" & "0" & "0" & address & address & "0" & address & "0" & address & "0" & address & address & "0" & "0" & wire_w_lg_address4w & wire_w_lg_address4w & "1");
+	wire_w_lg_address1w(0) <= NOT address;
+	readdata <= ( "0" & address & "0" & address & "0" & "0" & address & "0" & "0" & address & address & "0" & address & "0" & "0" & address & "0" & "0" & "0" & address & address & "0" & address & "0" & "0" & address & "0" & address & "0" & wire_w_lg_address1w & "1" & wire_w_lg_address1w);
 
  END RTL; --first_nios2_system_sysid
 --synopsys translate_on

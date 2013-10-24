@@ -44,14 +44,6 @@
          type = "int";
       }
    }
-   element grab_if_0
-   {
-      datum _sortIndex
-      {
-         value = "10";
-         type = "int";
-      }
-   }
    element cpu.jtag_debug_module
    {
       datum baseAddress
@@ -123,7 +115,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1382559728377" />
+ <parameter name="timeStamp" value="1382623852843" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -148,13 +140,8 @@
    internal="new_sdram_controller_0.wire"
    type="conduit"
    dir="end" />
- <interface
-   name="grab_if_0_conduit_end"
-   internal="grab_if_0.conduit_end"
-   type="conduit"
-   dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
-  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
@@ -288,7 +275,7 @@
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='regfile_0.avalon_slave_0' start='0x0' end='0x40' /><slave name='jtag_uart.avalon_jtag_slave' start='0x50' end='0x58' /><slave name='sys_clk_timer.s1' start='0x60' end='0x80' /><slave name='sysid.control_slave' start='0x80' end='0x88' /><slave name='cpu.jtag_debug_module' start='0x8000' end='0x8800' /><slave name='onchip_mem.s1' start='0x80000' end='0x85000' /><slave name='new_sdram_controller_0.s1' start='0x8000000' end='0x8800000' /></address-map>]]></parameter>
   <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='regfile_0.avalon_slave_0' start='0x0' end='0x40' /><slave name='jtag_uart.avalon_jtag_slave' start='0x50' end='0x58' /><slave name='sys_clk_timer.s1' start='0x60' end='0x80' /><slave name='sysid.control_slave' start='0x80' end='0x88' /><slave name='cpu.jtag_debug_module' start='0x8000' end='0x8800' /><slave name='onchip_mem.s1' start='0x80000' end='0x85000' /><slave name='new_sdram_controller_0.s1' start='0x8000000' end='0x8800000' /></address-map>]]></parameter>
-  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequency" value="100000000" />
   <parameter name="deviceFamilyName" value="Cyclone II" />
   <parameter name="internalIrqMaskSystemInfo" value="65539" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
@@ -333,7 +320,7 @@
   <parameter name="resetOutput" value="false" />
   <parameter name="snapshot" value="true" />
   <parameter name="timeoutPulseOutput" value="false" />
-  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="systemFrequency" value="100000000" />
  </module>
  <module
    kind="altera_avalon_sysid_qsys"
@@ -342,17 +329,17 @@
    name="sysid">
   <parameter name="id" value="7" />
   <parameter name="timestamp" value="0" />
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
  <module kind="regfile" version="1.0" enabled="1" name="regfile_0">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="100000000" />
  </module>
  <module kind="counter" version="1.0" enabled="1" name="counter_0">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="100000000" />
  </module>
  <module kind="counter" version="1.0" enabled="1" name="counter_1">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="100000000" />
  </module>
  <module
    kind="altera_avalon_new_sdram_controller"
@@ -380,14 +367,8 @@
   <parameter name="TMRD" value="3" />
   <parameter name="initNOPDelay" value="0.0" />
   <parameter name="registerDataIn" value="true" />
-  <parameter name="clockRate" value="50000000" />
+  <parameter name="clockRate" value="100000000" />
   <parameter name="componentName">$${FILENAME}_new_sdram_controller_0</parameter>
- </module>
- <module kind="grab_if" version="1.0" enabled="1" name="grab_if_0">
-  <parameter name="size_in" value="8" />
-  <parameter name="size_out" value="16" />
-  <parameter name="addrsize" value="23" />
-  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="50000000" />
  </module>
  <connection
    kind="avalon"
@@ -580,52 +561,6 @@
    end="new_sdram_controller_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x08000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="clock"
-   version="13.0"
-   start="clk_0.clk"
-   end="grab_if_0.clock_sink" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="grab_if_0.reset_sink" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="grab_if_0.avalon_master"
-   end="onchip_mem.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00080000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="grab_if_0.avalon_master"
-   end="new_sdram_controller_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="grab_if_0.avalon_master"
-   end="regfile_0.avalon_slave_0">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="grab_if_0.avalon_master"
-   end="sys_clk_timer.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
