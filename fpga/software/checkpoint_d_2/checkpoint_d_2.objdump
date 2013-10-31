@@ -631,7 +631,7 @@ int main()
 	int toggle = 0;
    80204:	e03ffd15 	stw	zero,-12(fp)
 
-	while (offset < (LINE_COUNT/8))
+	while (offset < 10)
    80208:	00001906 	br	80270 <main+0x80>
 	{
 		IOWR_8DIRECT(NEW_SDRAM_CONTROLLER_0_BASE, offset * LINE_PITCH, toggle);
@@ -677,9 +677,9 @@ int main()
 	int offset = 0;
 	int toggle = 0;
 
-	while (offset < (LINE_COUNT/8))
+	while (offset < 10)
    80270:	e0bffe17 	ldw	r2,-8(fp)
-   80274:	10810010 	cmplti	r2,r2,1024
+   80274:	10800290 	cmplti	r2,r2,10
    80278:	103fe41e 	bne	r2,zero,8020c <main+0x1c>
 		else
 		{

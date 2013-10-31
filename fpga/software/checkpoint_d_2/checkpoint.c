@@ -25,7 +25,7 @@
 #define GP0		0x18
 #define GP1		0x1C
 
-#define LINE_PITCH 0x10000
+#define LINE_PITCH 0x10
 
 #define LINE_COUNT 8192
 
@@ -43,11 +43,11 @@ int main()
 	int offset = 0;
 	int toggle = 0;
 
-	while (offset < (LINE_COUNT/8))
+	while (offset < 200)
 	{
-		IOWR_8DIRECT(NEW_SDRAM_CONTROLLER_0_BASE, offset * LINE_PITCH, toggle);
+		IOWR_16DIRECT(NEW_SDRAM_CONTROLLER_0_BASE, offset * LINE_PITCH, toggle);
 
-		readdata = IORD_8DIRECT(NEW_SDRAM_CONTROLLER_0_BASE, offset * LINE_PITCH);
+		readdata = IORD_16DIRECT(NEW_SDRAM_CONTROLLER_0_BASE, offset * LINE_PITCH);
 
 		offset++;
 

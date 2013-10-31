@@ -29,25 +29,3 @@ Post-processing to create mem_init/hdl_sim/first_nios2_system_onchip_mem.sym...
 nios2-elf-nm -n checkpoint_d_2.elf > mem_init/hdl_sim/first_nios2_system_onchip_mem.sym
 
 **** Build Finished ****
-
-**** Build of configuration Nios II for project checkpoint_d_2 ****
-
-make all 
-Info: Building ../checkpoint_d_2_bsp/
-make --no-print-directory -C ../checkpoint_d_2_bsp/
-[BSP build complete]
-Info: Creating checkpoint_d_2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source checkpoint_d_2.elf >checkpoint_d_2.objdump
-[checkpoint_d_2 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project checkpoint_d_2 ****
-
-make all 
-Info: Building ../checkpoint_d_2_bsp/
-make --no-print-directory -C ../checkpoint_d_2_bsp/
-[BSP build complete]
-[checkpoint_d_2 build complete]
-
-**** Build Finished ****

@@ -264,8 +264,8 @@ begin
 	  port map(
 		resetN => first_nios2_system_inst_reset_bfm_reset_reset,
 		sa     => first_nios2_system_inst_new_sdram_controller_0_wire_addr,
-		sbs(0)    => first_nios2_system_inst_new_sdram_controller_0_wire_ba(1),
-		sbs(1)    => first_nios2_system_inst_new_sdram_controller_0_wire_ba(0),
+		sbs(1)    => first_nios2_system_inst_new_sdram_controller_0_wire_ba(1),
+		sbs(0)    => first_nios2_system_inst_new_sdram_controller_0_wire_ba(0),
 		scasN  => first_nios2_system_inst_new_sdram_controller_0_wire_cas_n,
 		scke   => first_nios2_system_inst_new_sdram_controller_0_wire_cke,
 		sclk   => first_nios2_system_inst_clk_bfm_clk_clk,
