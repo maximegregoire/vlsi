@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\checkpoint_d_2
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\grab_interface
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\pwhite8\\vlsi\\fpga\\first_nios2_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\checkpoint_d_2_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\pwhite8\\vlsi\\fpga\\software\\grab_interface_bsp

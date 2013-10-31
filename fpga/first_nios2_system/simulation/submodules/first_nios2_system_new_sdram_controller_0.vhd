@@ -265,7 +265,7 @@ end component first_nios2_system_new_sdram_controller_0_input_efifo_module;
                 signal pending :  STD_LOGIC;
                 signal rd_strobe :  STD_LOGIC;
                 signal rd_valid :  STD_LOGIC_VECTOR (2 DOWNTO 0);
-                signal refresh_counter :  STD_LOGIC_VECTOR (9 DOWNTO 0);
+                signal refresh_counter :  STD_LOGIC_VECTOR (13 DOWNTO 0);
                 signal refresh_request :  STD_LOGIC;
                 signal rnw_match :  STD_LOGIC;
                 signal row_match :  STD_LOGIC;
@@ -317,12 +317,12 @@ begin
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      refresh_counter <= std_logic_vector'("0001100100");
+      refresh_counter <= std_logic_vector'("10011100010000");
     elsif clk'event and clk = '1' then
-      if (std_logic_vector'("0000000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000") then 
-        refresh_counter <= std_logic_vector'("1100001101");
+      if (std_logic_vector'("000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000") then 
+        refresh_counter <= std_logic_vector'("00011000011010");
       else
-        refresh_counter <= A_EXT (((std_logic_vector'("0") & (refresh_counter)) - (std_logic_vector'("0000000000") & (A_TOSTDLOGICVECTOR(std_logic'('1'))))), 10);
+        refresh_counter <= A_EXT (((std_logic_vector'("0") & (refresh_counter)) - (std_logic_vector'("00000000000000") & (A_TOSTDLOGICVECTOR(std_logic'('1'))))), 14);
       end if;
     end if;
 
@@ -335,7 +335,7 @@ begin
       refresh_request <= std_logic'('0');
     elsif clk'event and clk = '1' then
       if true then 
-        refresh_request <= (((to_std_logic((((std_logic_vector'("0000000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000")))) OR refresh_request)) AND NOT ack_refresh_request) AND init_done;
+        refresh_request <= (((to_std_logic((((std_logic_vector'("000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000")))) OR refresh_request)) AND NOT ack_refresh_request) AND init_done;
       end if;
     end if;
 
@@ -348,7 +348,7 @@ begin
       za_cannotrefresh <= std_logic'('0');
     elsif clk'event and clk = '1' then
       if true then 
-        za_cannotrefresh <= to_std_logic((((std_logic_vector'("0000000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000")))) AND refresh_request;
+        za_cannotrefresh <= to_std_logic((((std_logic_vector'("000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000")))) AND refresh_request;
       end if;
     end if;
 
@@ -383,7 +383,7 @@ begin
               i_cmd <= std_logic_vector'("1111");
               i_refs <= std_logic_vector'("000");
               --Wait for refresh count-down after reset
-              if (std_logic_vector'("0000000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000") then 
+              if (std_logic_vector'("000000000000000000") & (refresh_counter)) = std_logic_vector'("00000000000000000000000000000000") then 
                 i_state <= std_logic_vector'("001");
               end if;
           -- when std_logic_vector'("000") 
@@ -391,7 +391,7 @@ begin
           when std_logic_vector'("001") => 
               i_state <= std_logic_vector'("011");
               i_cmd <= Std_Logic_Vector'(A_ToStdLogicVector(std_logic'('0')) & std_logic_vector'("010"));
-              i_count <= std_logic_vector'("000");
+              i_count <= std_logic_vector'("001");
               i_next <= std_logic_vector'("010");
           -- when std_logic_vector'("001") 
       
@@ -399,9 +399,9 @@ begin
               i_cmd <= Std_Logic_Vector'(A_ToStdLogicVector(std_logic'('0')) & std_logic_vector'("001"));
               i_refs <= A_EXT (((std_logic_vector'("0") & (i_refs)) + (std_logic_vector'("000") & (A_TOSTDLOGICVECTOR(std_logic'('1'))))), 3);
               i_state <= std_logic_vector'("011");
-              i_count <= std_logic_vector'("011");
+              i_count <= std_logic_vector'("111");
               -- Count up init_refresh_commands
-              if i_refs = std_logic_vector'("111") then 
+              if i_refs = std_logic_vector'("001") then 
                 i_next <= std_logic_vector'("111");
               else
                 i_next <= std_logic_vector'("010");
@@ -479,7 +479,7 @@ begin
                 if std_logic'(refresh_request) = '1' then 
                   m_state <= std_logic_vector'("001000000");
                   m_next <= std_logic_vector'("010000000");
-                  m_count <= std_logic_vector'("000");
+                  m_count <= std_logic_vector'("001");
                   active_cs_n <= std_logic'('1');
                 elsif std_logic'(NOT(f_empty)) = '1' then 
                   f_pop <= std_logic'('1');
@@ -505,7 +505,7 @@ begin
               m_addr <= active_addr(20 DOWNTO 9);
               m_data <= active_data;
               m_dqm <= active_dqm;
-              m_count <= std_logic_vector'("001");
+              m_count <= std_logic_vector'("010");
               m_next <= A_WE_StdLogicVector((std_logic'(active_rnw) = '1'), std_logic_vector'("000001000"), std_logic_vector'("000010000"));
           -- when std_logic_vector'("000000010") 
       
@@ -566,7 +566,7 @@ begin
                 if std_logic'(refresh_request) = '1' then 
                   m_state <= std_logic_vector'("000000100");
                   m_next <= std_logic_vector'("000000001");
-                  m_count <= std_logic_vector'("001");
+                  m_count <= std_logic_vector'("010");
                 else
                   f_pop <= std_logic'('1');
                   active_cs_n <= f_cs_n;
@@ -592,7 +592,7 @@ begin
                 m_count <= A_EXT (((std_logic_vector'("0") & (m_count)) - (std_logic_vector'("000") & (A_TOSTDLOGICVECTOR(std_logic'('1'))))), 3);
               else
                 m_state <= std_logic_vector'("001000000");
-                m_count <= std_logic_vector'("000");
+                m_count <= std_logic_vector'("001");
               end if;
           -- when std_logic_vector'("000100000") 
       
@@ -611,7 +611,7 @@ begin
               ack_refresh_request <= std_logic'('1');
               m_state <= std_logic_vector'("000000100");
               m_cmd <= Std_Logic_Vector'(A_ToStdLogicVector(std_logic'('0')) & std_logic_vector'("001"));
-              m_count <= std_logic_vector'("011");
+              m_count <= std_logic_vector'("111");
               m_next <= std_logic_vector'("000000001");
           -- when std_logic_vector'("010000000") 
       

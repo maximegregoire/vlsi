@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="127" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <name preferredWidth="249" />
    <export preferredWidth="313" />
@@ -11,14 +11,14 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="465" />
-   <clocksource preferredWidth="462" />
-   <frequency preferredWidth="457" />
+   <clockname preferredWidth="460" />
+   <clocksource preferredWidth="456" />
+   <frequency preferredWidth="452" />
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library/Memories and Memory Controllers/External Memory Interfaces,Project,Library,Library/Memories and Memory Controllers,Library/Memories and Memory Controllers/External Memory Interfaces/SDRAM Interfaces" />
- <window width="1696" height="1026" x="-8" y="-8" />
+   expandedCategories="Library/Memories and Memory Controllers/External Memory Interfaces,Project,Library,Library/Memories and Memory Controllers" />
+ <window width="1680" height="1010" x="0" y="0" />
  <generation
    synthesis="VHDL"
    testbench_system="STANDARD"
