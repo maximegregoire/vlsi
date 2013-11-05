@@ -79,7 +79,7 @@ begin
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      internal_counter <= std_logic_vector'("00000000000000001100001101001111");
+      internal_counter <= std_logic_vector'("00000000000000011000011010011111");
     elsif clk'event and clk = '1' then
       if std_logic'((counter_is_running OR force_reload)) = '1' then 
         if std_logic'((counter_is_zero OR force_reload)) = '1' then 
@@ -174,7 +174,7 @@ begin
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      period_l_register <= std_logic_vector'("1100001101001111");
+      period_l_register <= std_logic_vector'("1000011010011111");
     elsif clk'event and clk = '1' then
       if std_logic'(period_l_wr_strobe) = '1' then 
         period_l_register <= writedata;
@@ -186,7 +186,7 @@ begin
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      period_h_register <= std_logic_vector'("0000000000000000");
+      period_h_register <= std_logic_vector'("0000000000000001");
     elsif clk'event and clk = '1' then
       if std_logic'(period_h_wr_strobe) = '1' then 
         period_h_register <= writedata;

@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2013.10.24.09:02:10</td>
+    <td class="l">2013.10.30.19:44:04</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -122,10 +122,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_first_nios2_system_inst_cpu"><b>first_nios2_system_inst_cpu</b>
      </a>
     </td>
+    <td class="mastermodule" colspan="1">
+     <a href="#module_first_nios2_system_inst_grab_if_0"><b>first_nios2_system_inst_grab_if_0</b>
+     </a>
+    </td>
    </tr>
    <tr>
     <td class="masterl">&#160;data_master</td>
     <td class="masterr">&#160;instruction_master</td>
+    <td class="masterlr">&#160;avalon_master</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -134,11 +139,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00080000</td>
     <td class="addr"><span style="color:#989898">0x</span>00080000</td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -147,11 +154,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">jtag_debug_module&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00008000</td>
     <td class="addr"><span style="color:#989898">0x</span>00008000</td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -160,11 +169,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_jtag_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00000050</td>
     <td class="addr"><span style="color:#989898">0x</span>00000050</td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -173,11 +184,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00000060</td>
     <td class="addr"><span style="color:#989898">0x</span>00000060</td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -186,11 +199,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">control_slave&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00000080</td>
     <td class="addr"><span style="color:#989898">0x</span>00000080</td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -199,9 +214,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">avalon_slave_0&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00000000</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
    </tr>
@@ -212,11 +229,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </td>
     <td class="empty"></td>
     <td class="empty"></td>
+    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>08000000</td>
-    <td class="addr"><span style="color:#989898">0x</span>08000000</td>
+    <td class="addr"><span style="color:#989898">0x</span>00800000</td>
+    <td class="addr"><span style="color:#989898">0x</span>00800000</td>
+    <td class="addr"><span style="color:#989898">0x</span>00800000</td>
    </tr>
   </table>
   <a name="module_first_nios2_system_inst"> </a>
@@ -233,7 +252,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1382619730</td>
+        <td class="parametervalue">1383176644</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -290,7 +309,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_bfm">first_nios2_system_inst_clk_bfm</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="49">first_nios2_system_inst_clk_0</td>
+      <td class="main" rowspan="54">first_nios2_system_inst_clk_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk_in</td>
@@ -538,6 +557,32 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="to">&#160;&#160;reset</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_first_nios2_system_inst_grab_if_0">first_nios2_system_inst_grab_if_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset_sink</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;clock_sink</td>
+     </tr>
     </table>
    </div>
    <br/>
@@ -549,7 +594,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">clockFrequency</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">clockFrequencyKnown</td>
@@ -956,20 +1001,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">d_irq&#160;&#160;</td>
+      <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="6">
        <a href="#module_first_nios2_system_inst_regfile_0">first_nios2_system_inst_regfile_0</a>
       </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;interrupt_sender</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">data_master&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
@@ -985,6 +1020,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">d_irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;interrupt_sender</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -1419,11 +1464,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instAddrWidth</td>
-        <td class="parametervalue">28</td>
+        <td class="parametervalue">24</td>
        </tr>
        <tr>
         <td class="parametername">dataAddrWidth</td>
-        <td class="parametervalue">28</td>
+        <td class="parametervalue">24</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0AddrWidth</td>
@@ -1459,15 +1504,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='regfile_0.avalon_slave_0' start='0x0' end='0x40' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x50' end='0x58' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x60' end='0x80' /&gt;&lt;slave name='sysid.control_slave' start='0x80' end='0x88' /&gt;&lt;slave name='cpu.jtag_debug_module' start='0x8000' end='0x8800' /&gt;&lt;slave name='onchip_mem.s1' start='0x80000' end='0x85000' /&gt;&lt;slave name='new_sdram_controller_0.s1' start='0x8000000' end='0x8800000' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='regfile_0.avalon_slave_0' start='0x0' end='0x40' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x50' end='0x58' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x60' end='0x80' /&gt;&lt;slave name='sysid.control_slave' start='0x80' end='0x88' /&gt;&lt;slave name='cpu.jtag_debug_module' start='0x8000' end='0x8800' /&gt;&lt;slave name='onchip_mem.s1' start='0x80000' end='0x85000' /&gt;&lt;slave name='new_sdram_controller_0.s1' start='0x800000' end='0x1000000' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='regfile_0.avalon_slave_0' start='0x0' end='0x40' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x50' end='0x58' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x60' end='0x80' /&gt;&lt;slave name='sysid.control_slave' start='0x80' end='0x88' /&gt;&lt;slave name='cpu.jtag_debug_module' start='0x8000' end='0x8800' /&gt;&lt;slave name='onchip_mem.s1' start='0x80000' end='0x85000' /&gt;&lt;slave name='new_sdram_controller_0.s1' start='0x8000000' end='0x8800000' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='regfile_0.avalon_slave_0' start='0x0' end='0x40' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x50' end='0x58' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x60' end='0x80' /&gt;&lt;slave name='sysid.control_slave' start='0x80' end='0x88' /&gt;&lt;slave name='cpu.jtag_debug_module' start='0x8000' end='0x8800' /&gt;&lt;slave name='onchip_mem.s1' start='0x80000' end='0x85000' /&gt;&lt;slave name='new_sdram_controller_0.s1' start='0x800000' end='0x1000000' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">clockFrequency</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamilyName</td>
@@ -1544,7 +1589,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">CPU_FREQ</td>
-        <td class="parametervalue">50000000u</td>
+        <td class="parametervalue">100000000u</td>
        </tr>
        <tr>
         <td class="parametername">CPU_ID_SIZE</td>
@@ -1560,7 +1605,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">DATA_ADDR_WIDTH</td>
-        <td class="parametervalue">28</td>
+        <td class="parametervalue">24</td>
        </tr>
        <tr>
         <td class="parametername">DCACHE_LINE_SIZE</td>
@@ -1620,7 +1665,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">INST_ADDR_WIDTH</td>
-        <td class="parametervalue">28</td>
+        <td class="parametervalue">24</td>
        </tr>
        <tr>
         <td class="parametername">RESET_ADDR</td>
@@ -1875,7 +1920,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">systemFrequency</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">timerPreset</td>
@@ -1891,7 +1936,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">loadValue</td>
-        <td class="parametervalue">49999</td>
+        <td class="parametervalue">99999</td>
        </tr>
        <tr>
         <td class="parametername">mult</td>
@@ -1936,11 +1981,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">FREQ</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">LOAD_VALUE</td>
-        <td class="parametervalue">49999</td>
+        <td class="parametervalue">99999</td>
        </tr>
        <tr>
         <td class="parametername">MULT</td>
@@ -2031,11 +2076,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1382619730</td>
+        <td class="parametervalue">1383176644</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_RATE</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_DEVICE_FAMILY</td>
@@ -2064,7 +2109,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1382619730</td>
+        <td class="parametervalue">1383176644</td>
        </tr>
       </table>
      </td>
@@ -2083,7 +2128,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_0">first_nios2_system_inst_clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="14">first_nios2_system_inst_regfile_0</td>
+      <td class="main" rowspan="17">first_nios2_system_inst_regfile_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -2101,12 +2146,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="neighbor" rowspan="6">
        <a href="#module_first_nios2_system_inst_cpu">first_nios2_system_inst_cpu</a>
       </td>
-      <td class="from">d_irq&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;interrupt_sender</td>
-     </tr>
-     <tr>
       <td class="from">data_master&#160;&#160;</td>
      </tr>
      <tr>
@@ -2114,6 +2153,24 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td class="from">d_irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;interrupt_sender</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_grab_if_0">first_nios2_system_inst_grab_if_0</a>
+      </td>
+      <td class="from">avalon_master&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_slave_0</td>
@@ -2141,7 +2198,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_CLOCK_CLOCK_RATE</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2208,7 +2265,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_CLOCK_CLOCK_RATE</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2275,7 +2332,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_CLOCK_CLOCK_RATE</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2308,7 +2365,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_0">first_nios2_system_inst_clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="12">first_nios2_system_inst_new_sdram_controller_0</td>
+      <td class="main" rowspan="15">first_nios2_system_inst_new_sdram_controller_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -2342,6 +2399,18 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_grab_if_0">first_nios2_system_inst_grab_if_0</a>
+      </td>
+      <td class="from">avalon_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
        <a
                href="#module_first_nios2_system_inst_new_sdram_controller_0_wire_bfm">first_nios2_system_inst_new_sdram_controller_0_wire_bfm</a>
       </td>
@@ -2361,7 +2430,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">TAC</td>
-        <td class="parametervalue">5.4</td>
+        <td class="parametervalue">5.5</td>
        </tr>
        <tr>
         <td class="parametername">TRCD</td>
@@ -2369,7 +2438,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TRFC</td>
-        <td class="parametervalue">67.5</td>
+        <td class="parametervalue">70.0</td>
        </tr>
        <tr>
         <td class="parametername">TRP</td>
@@ -2377,7 +2446,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TWR</td>
-        <td class="parametervalue">15.0</td>
+        <td class="parametervalue">14.0</td>
        </tr>
        <tr>
         <td class="parametername">casLatency</td>
@@ -2397,7 +2466,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">initRefreshCommands</td>
-        <td class="parametervalue">8</td>
+        <td class="parametervalue">2</td>
        </tr>
        <tr>
         <td class="parametername">model</td>
@@ -2417,7 +2486,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">powerUpDelay</td>
-        <td class="parametervalue">2.0</td>
+        <td class="parametervalue">100.0</td>
        </tr>
        <tr>
         <td class="parametername">refreshPeriod</td>
@@ -2445,7 +2514,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">clockRate</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">componentName</td>
@@ -2494,7 +2563,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">INIT_REFRESH_COMMANDS</td>
-        <td class="parametervalue">8</td>
+        <td class="parametervalue">2</td>
        </tr>
        <tr>
         <td class="parametername">IS_INITIALIZED</td>
@@ -2502,7 +2571,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">POWERUP_DELAY</td>
-        <td class="parametervalue">2.0</td>
+        <td class="parametervalue">100.0</td>
        </tr>
        <tr>
         <td class="parametername">REFRESH_PERIOD</td>
@@ -2558,7 +2627,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">T_AC</td>
-        <td class="parametervalue">5.4</td>
+        <td class="parametervalue">5.5</td>
        </tr>
        <tr>
         <td class="parametername">T_MRD</td>
@@ -2570,7 +2639,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">T_RFC</td>
-        <td class="parametervalue">67.5</td>
+        <td class="parametervalue">70.0</td>
        </tr>
        <tr>
         <td class="parametername">T_RP</td>
@@ -2578,10 +2647,118 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">T_WR</td>
-        <td class="parametervalue">15.0</td>
+        <td class="parametervalue">14.0</td>
        </tr>
       </table>
      </td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_first_nios2_system_inst_grab_if_0"> </a>
+  <div>
+   <hr/>
+   <h2>first_nios2_system_inst_grab_if_0</h2>grab_if v1.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_first_nios2_system_inst_clk_0">first_nios2_system_inst_clk_0</a>
+      </td>
+      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="main" rowspan="12">first_nios2_system_inst_grab_if_0</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset_sink</td>
+     </tr>
+     <tr>
+      <td class="from">clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clock_sink</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_grab_if_0_conduit_end_bfm">first_nios2_system_inst_grab_if_0_conduit_end_bfm</a>
+      </td>
+      <td class="from">conduit&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;conduit_end</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">avalon_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_new_sdram_controller_0">first_nios2_system_inst_new_sdram_controller_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">avalon_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_regfile_0">first_nios2_system_inst_regfile_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">size_in</td>
+        <td class="parametervalue">8</td>
+       </tr>
+       <tr>
+        <td class="parametername">size_out</td>
+        <td class="parametervalue">16</td>
+       </tr>
+       <tr>
+        <td class="parametername">addrsize</td>
+        <td class="parametervalue">23</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_CLOCK_SINK_CLOCK_RATE</td>
+        <td class="parametervalue">100000000</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
     </tr>
    </table>
   </div>
@@ -2599,7 +2776,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">CLOCK_RATE</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">100000000</td>
        </tr>
        <tr>
         <td class="parametername">CLOCK_UNIT</td>
@@ -2636,7 +2813,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_bfm">first_nios2_system_inst_clk_bfm</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="13">first_nios2_system_inst_reset_bfm</td>
+      <td class="main" rowspan="16">first_nios2_system_inst_reset_bfm</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -2662,7 +2839,23 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">reset&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_regfile_0_conduit_end_bfm">first_nios2_system_inst_regfile_0_conduit_end_bfm</a>
+       <a href="#module_first_nios2_system_inst_grab_if_0_conduit_end_bfm">first_nios2_system_inst_grab_if_0_conduit_end_bfm</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">reset&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_counter_1_conduit_end_bfm">first_nios2_system_inst_counter_1_conduit_end_bfm</a>
       </td>
      </tr>
      <tr>
@@ -2694,7 +2887,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">reset&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_counter_1_conduit_end_bfm">first_nios2_system_inst_counter_1_conduit_end_bfm</a>
+       <a href="#module_first_nios2_system_inst_regfile_0_conduit_end_bfm">first_nios2_system_inst_regfile_0_conduit_end_bfm</a>
       </td>
      </tr>
      <tr>
@@ -2738,10 +2931,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_first_nios2_system_inst_regfile_0_conduit_end_bfm"> </a>
+  <a name="module_first_nios2_system_inst_grab_if_0_conduit_end_bfm"> </a>
   <div>
    <hr/>
-   <h2>first_nios2_system_inst_regfile_0_conduit_end_bfm</h2>altera_conduit_bfm v13.0
+   <h2>first_nios2_system_inst_grab_if_0_conduit_end_bfm</h2>altera_conduit_bfm v13.0
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -2750,7 +2943,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_bfm">first_nios2_system_inst_clk_bfm</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="7">first_nios2_system_inst_regfile_0_conduit_end_bfm</td>
+      <td class="main" rowspan="7">first_nios2_system_inst_grab_if_0_conduit_end_bfm</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -2772,7 +2965,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">conduit&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_regfile_0">first_nios2_system_inst_regfile_0</a>
+       <a href="#module_first_nios2_system_inst_grab_if_0">first_nios2_system_inst_grab_if_0</a>
       </td>
      </tr>
      <tr>
@@ -2799,15 +2992,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">SIGNAL_ROLES</td>
-        <td class="parametervalue">AVINTDIS,T1INTOVR,T1INTSTS,T0INTSTS,T1INTEN,T0INTEN,T1CNTEN,T0CNTEN,T1RST,T0RST,T0CNT,T1CNT,T0CMP,T1CMP,GP0,GP1,T0INT_set,T1INT_set,T0CNT_in,T1CNT_in,avalon_inten</td>
+        <td class="parametervalue">GSSHT,GMODE,GCONT,GFMT,GFSTART,GLPITCH,GYSS,GXSS,GACTIVE,GSPDG,DEBUG_GRABIF1,DEBUG_GRABIF2,vdata,gclk</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_WIDTHS</td>
-        <td class="parametervalue">1,1,1,1,1,1,1,1,1,1,32,32,32,32,32,32,1,1,32,32,1</td>
+        <td class="parametervalue">1,2,1,1,23,23,2,2,1,1,32,32,8,1</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_DIRECTIONS</td>
-        <td class="parametervalue">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,output,output,output</td>
+        <td class="parametervalue">output,output,output,output,output,output,output,output,input,input,input,input,output,output</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2828,50 +3021,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_first_nios2_system_inst_counter_0_conduit_end_bfm"> </a>
+  <a name="module_first_nios2_system_inst_new_sdram_controller_0_wire_bfm"> </a>
   <div>
    <hr/>
-   <h2>first_nios2_system_inst_counter_0_conduit_end_bfm</h2>altera_conduit_bfm v13.0
+   <h2>first_nios2_system_inst_new_sdram_controller_0_wire_bfm</h2>altera_conduit_bfm v13.0
    <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_clk_bfm">first_nios2_system_inst_clk_bfm</a>
-      </td>
-      <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="7">first_nios2_system_inst_counter_0_conduit_end_bfm</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_reset_bfm">first_nios2_system_inst_reset_bfm</a>
-      </td>
-      <td class="from">reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">conduit&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_counter_0">first_nios2_system_inst_counter_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;conduit_end</td>
-     </tr>
-    </table>
-   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -2881,23 +3035,23 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">CLOCKED_SIGNAL</td>
-        <td class="parametervalue">true</td>
+        <td class="parametervalue">false</td>
        </tr>
        <tr>
         <td class="parametername">ENABLE_RESET</td>
-        <td class="parametervalue">true</td>
+        <td class="parametervalue">false</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_ROLES</td>
-        <td class="parametervalue">count,clear,count_cmp,count_equal,enable</td>
+        <td class="parametervalue">addr,ba,cas_n,cke,cs_n,dq,dqm,ras_n,we_n</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_WIDTHS</td>
-        <td class="parametervalue">32,1,32,1,1</td>
+        <td class="parametervalue">12,2,1,1,1,16,2,1,1</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_DIRECTIONS</td>
-        <td class="parametervalue">input,output,output,input,output</td>
+        <td class="parametervalue">input,input,input,input,input,bidir,input,input,input</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -3008,11 +3162,50 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_first_nios2_system_inst_new_sdram_controller_0_wire_bfm"> </a>
+  <a name="module_first_nios2_system_inst_counter_0_conduit_end_bfm"> </a>
   <div>
    <hr/>
-   <h2>first_nios2_system_inst_new_sdram_controller_0_wire_bfm</h2>altera_conduit_bfm v13.0
+   <h2>first_nios2_system_inst_counter_0_conduit_end_bfm</h2>altera_conduit_bfm v13.0
    <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_clk_bfm">first_nios2_system_inst_clk_bfm</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+      <td class="main" rowspan="7">first_nios2_system_inst_counter_0_conduit_end_bfm</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_reset_bfm">first_nios2_system_inst_reset_bfm</a>
+      </td>
+      <td class="from">reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">conduit&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_counter_0">first_nios2_system_inst_counter_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;conduit_end</td>
+     </tr>
+    </table>
+   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -3022,23 +3215,113 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">CLOCKED_SIGNAL</td>
-        <td class="parametervalue">false</td>
+        <td class="parametervalue">true</td>
        </tr>
        <tr>
         <td class="parametername">ENABLE_RESET</td>
-        <td class="parametervalue">false</td>
+        <td class="parametervalue">true</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_ROLES</td>
-        <td class="parametervalue">addr,ba,cas_n,cke,cs_n,dq,dqm,ras_n,we_n</td>
+        <td class="parametervalue">count,clear,count_cmp,count_equal,enable</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_WIDTHS</td>
-        <td class="parametervalue">12,2,1,1,1,16,2,1,1</td>
+        <td class="parametervalue">32,1,32,1,1</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_DIRECTIONS</td>
-        <td class="parametervalue">input,input,input,input,input,bidir,input,input,input</td>
+        <td class="parametervalue">input,output,output,input,output</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_first_nios2_system_inst_regfile_0_conduit_end_bfm"> </a>
+  <div>
+   <hr/>
+   <h2>first_nios2_system_inst_regfile_0_conduit_end_bfm</h2>altera_conduit_bfm v13.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_clk_bfm">first_nios2_system_inst_clk_bfm</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+      <td class="main" rowspan="7">first_nios2_system_inst_regfile_0_conduit_end_bfm</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_reset_bfm">first_nios2_system_inst_reset_bfm</a>
+      </td>
+      <td class="from">reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">conduit&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_first_nios2_system_inst_regfile_0">first_nios2_system_inst_regfile_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;conduit_end</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">CLOCKED_SIGNAL</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">ENABLE_RESET</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_ROLES</td>
+        <td class="parametervalue">AVINTDIS,T1INTOVR,T1INTSTS,T0INTSTS,T1INTEN,T0INTEN,T1CNTEN,T0CNTEN,T1RST,T0RST,T0CNT,T1CNT,T0CMP,T1CMP,GP0,GP1,T0INT_set,T1INT_set,T0CNT_in,T1CNT_in,avalon_inten</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_WIDTHS</td>
+        <td class="parametervalue">1,1,1,1,1,1,1,1,1,1,32,32,32,32,32,32,1,1,32,32,1</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_DIRECTIONS</td>
+        <td class="parametervalue">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,output,output,output</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>

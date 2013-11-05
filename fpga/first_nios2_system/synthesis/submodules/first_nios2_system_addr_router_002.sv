@@ -44,7 +44,7 @@
 
 module first_nios2_system_addr_router_002_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 3,
+     parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 2 
@@ -137,15 +137,13 @@ module first_nios2_system_addr_router_002
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h40 - 64'h0); 
-    localparam PAD1 = log2ceil(64'h80 - 64'h60); 
-    localparam PAD2 = log2ceil(64'h88000 - 64'h80000); 
-    localparam PAD3 = log2ceil(64'h8800000 - 64'h8000000); 
+    localparam PAD1 = log2ceil(64'h1000000 - 64'h800000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h8800000;
+    localparam ADDR_RANGE = 64'h1000000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -189,26 +187,14 @@ module first_nios2_system_addr_router_002
         // --------------------------------------------------
 
     // ( 0x0 .. 0x40 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 28'h0   ) begin
-            src_channel = 7'b0100;
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 24'h0   ) begin
+            src_channel = 7'b01;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
-    // ( 0x60 .. 0x80 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h60   ) begin
-            src_channel = 7'b0010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
-    end
-
-    // ( 0x80000 .. 0x88000 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h80000   ) begin
-            src_channel = 7'b0001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
-    end
-
-    // ( 0x8000000 .. 0x8800000 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 28'h8000000   ) begin
-            src_channel = 7'b1000;
+    // ( 0x800000 .. 0x1000000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 24'h800000   ) begin
+            src_channel = 7'b10;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 

@@ -186,8 +186,8 @@ alias com {
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"                                          
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                             
 
-  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdrampack.vhd" -87
-  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdramsdr.vhd" -87
+  vcom	   "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdrampack.vhd" -87
+  vcom	   "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdramsdr.vhd" -87
 }
 
 # ----------------------------------------
