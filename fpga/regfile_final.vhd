@@ -11,7 +11,7 @@ use     ieee.std_logic_unsigned.all;
 entity regfile_final is
 port (	
 	-- Avalon Interface
-	address 		: in std_logic_vector(3 downto 0);
+	address 		: in std_logic_vector(4 downto 0);
 	readdata 		: out std_logic_vector(31 downto 0);
 	write_n 		: in std_logic;
 	writedata 		: in std_logic_vector(31 downto 0);
@@ -109,7 +109,7 @@ signal	DMALPITCH_sig		: 	 std_logic_vector(22 downto 0);
 signal	DMAXSIZE_sig		: 	 std_logic_vector(15 downto 0);	
 signal	VGAHZOOM_sig		: 	 std_logic_vector(1 downto 0);
 signal	VGAVZOOM_sig		: 	 std_logic_vector(1 downto 0);
-signal	PFMT_sig_sig		: 	 std_logic_vector(1 downto 0);	
+signal	PFMT_sig		: 	 std_logic_vector(1 downto 0);	
 signal	HTOTAL_sig			: 	 std_logic_vector(15 downto 0);	
 signal	HSSYNC_sig			:	 std_logic_vector(15 downto 0);	
 signal	HESYNC_sig			:	 std_logic_vector(15 downto 0);	
@@ -148,7 +148,7 @@ DMALPITCH_sig		<=	(others	=> '0');
 DMAXSIZE_sig		<= (others	=> '0');	
 VGAHZOOM_sig		<= (others	=> '0');	
 VGAVZOOM_sig		<= (others	=> '0');	
-PFMT_sig_sig		<= (others	=> '0');	
+PFMT_sig			<= (others	=> '0');	
 HTOTAL_sig			<= (others	=> '0');		
 HSSYNC_sig			<=	(others	=> '0');	
 HESYNC_sig			<=	(others	=> '0');	
@@ -167,7 +167,7 @@ else
 -- WRITE PROCEDURE --
 if write_n='0' then
 case address is
-	when "addr" 	=>
+	when "00000" 	=>
 		-- RW
 		GYSS_sig 	<= writedata(11 downto 10);
 		GXSS_sig 	<= writedata(9 downto 8);
@@ -175,13 +175,13 @@ case address is
 		GFMT_sig		<= writedata(4);
 		--	WO
 		GSSHT_sig	<= writedata(0);
-	when "addr" 	=>
+	when "00001" 	=>
 		-- RW
 		GFSTART_sig(22 downto 1) 	<= writedata(22 downto 1);
-	when "addr" 	=>
+	when "00010" 	=>
 		-- RW
 		GLPITCH_sig(22 downto 1) 	<= writedata(22 downto 1);
-	when "addr" 	=>
+	when "00011" 	=>
 		-- RW
 		SOFIEN 	<= writedata(0);
 		EOFIEN	<= writedata(2)
@@ -192,52 +192,52 @@ case address is
 		if (writedata(3) = '1') then
 			EOFISTS_sig <= '0';
 		end if;
-	when "addr" 	=>
+	when "00100" 	=>
 		-- RW
 		DMAEN_sig	<= writedata(0);
 		DMALR_sig	<= writedata(1);
-	when "addr" 	=>
+	when "00101" 	=>
 		-- RW
 		DMAFSTART_sig(22 downto 1)	<= writedata(22 downto 1);	
-	when "addr"		=>
+	when "00110"		=>
 		-- RW
 		DMALPITCH_sig(22 downto 1) <= writedata(22 downto 1);
-	when "addr"		=>
+	when "00111"		=>
 		-- RW
 		DMAXSIZE(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01000"		=>
 		-- RW
 		VGAHZOOM_sig(1 downto 0) <= writedata(1 downto 0);
 		VGAVZOOM_sig(1 downto 0) <= writedata(3 downto 2);
 		PFMT_sig(1 downto 0) <= writedata(5 downto 4);
-	when "addr"		=>
+	when "01001"		=>
 		-- RW
 		HTOTAL_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01010"		=>
 		-- RW
 		HSSYNC_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01011"		=>
 		-- RW
 		HESYNC_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01100"		=>
 		-- RW
 		HSVALID_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01101"		=>
 		-- RW
 		HEVALID_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01110"		=>
 		-- RW
 		VTOTAL_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "01111"		=>
 		-- RW
 		VSSYNC_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "10000"		=>
 		-- RW
 		VESYNC_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "10001"		=>
 		-- RW
 		VSVALID_sig(15 downto 0) <= writedata(15 downto 0);
-	when "addr"		=>
+	when "10010"		=>
 		-- RW
 		VEVALID_sig(15 downto 0) <= writedata(15 downto 0);
 	when others	=> null;
@@ -247,72 +247,101 @@ end if;
 end if;
 end process;
 
-process(T0INTEN_sig, T1INTEN_sig, T0INTSTS_sig, T1INTSTS_sig, T1INTOVR_sig, avalon_inten, T0RST_sig, T1RST_sig, T0CNTEN_sig, T1CNTEN_sig,
-T0CMP_sig, T1CMP_sig, GP0_sig, GP1_sig, T0CNT_sig, T1CNT_sig, address)
+process(GSSHT_sig, GSPDG_sig, GACTIVE_sig, GFMT_sig, GMODE_sig, GXSS_sig, GYSS_sig,	GFSTART_sig, 	
+		GLPITCH_sig, SOFIEN_sig, SOFISTS_sig, EOFIEN_sig, EOFISTS_sig, DMAEN_sig, DMALR_sig, DMAFSTART_sig,	
+		DMALPITCH_sig, DMAXSIZE_sig, VGAHZOOM_sig, VGAVZOOM_sig, PFMT_sig, HTOTAL_sig, HSSYNC_sig,		
+		HESYNC_sig, HSVALID_sig, HEVALID_sig, VTOTAL_sig, VSSYNC_sig, VESYNC_sig, VSVALID_sig, VEVALID_sig, address)
 begin
 -- Drive default value to readData output --
 	readdata <= (others	=> '0');
 	case address is
-		when "addr" 	=>
-			-- RW
-			readdata(0)	<= T0INTEN_sig;
-			readdata(1)	<= T1INTEN_sig;
-			-- RW2C (TO DO!!!!)
-			readdata(2)	<= T0INTSTS_sig;
-			readdata(3)	<= T1INTSTS_sig;
-			readdata(4)	<= T1INTOVR_sig;
-			-- RW
-			readdata(5)	<=	NOT(avalon_inten);
-		when "0001" 	=>
-			-- RW
-			readdata(0)	<=	T0RST_sig;
-			readdata(1)	<=	T1RST_sig;
-			readdata(2)	<=	T0CNTEN_sig;
-			readdata(3)	<=	T1CNTEN_sig;
-		when "0010" 	=>	
-			readdata		<= T0CNT_sig;
-		when "0011" 	=> 
-			readdata		<= T1CNT_sig;
-		when "0100" 	=>
-			-- RW
-			readdata(31 downto 0)	<=	T0CMP_sig;
-		when "0101" 	=>
-			-- RW
-			readdata(31 downto 0)	<= T1CMP_sig;
-		when "0110" 	=>
-			-- RW
-			readdata(31 downto 0)	<=	GP0_sig;
-		when "0111" 	=>
-			-- RW
-			readdata(31 downto 0)	<=	GP1_sig;
+		when "00000" 	=>
+			readdata(0) <= GSSHT_sig; 	
+			readdata(1) <= GSPDG_sig;
+			readdata(3) <= GACTIVE_sig;
+			readdata(4) <= GFMT_sig;
+			readdata(6 downto 5) <= GMODE_sig;
+			readdata(9 downto 8) <= GXSS_sig;
+			readdata(11 downto 10) <= GYSS_sig;
+		when "00001" 	=>
+			readdata(22 downto 0) <= GFSTART_sig;
+		when "00010" 	=>	
+			readdata(22 downto 0) <= GLPITCH_sig;
+		when "00011" 	=> 
+			readdata(0) <= SOFIEN_sig;
+			readdata(1) <= SOFISTS_sig;
+			readdata(2) <= EOFIEN_sig;
+			readdata(3) <= EOFISTS_sig;
+		when "00100" 	=>
+			readdata(0) <= DMAEN_sig;
+			readdata(1) <= DMALR_sig;
+		when "00101" 	=>
+			readdata(22 downto 0) <= DMAFSTART_sig;
+		when "00110" 	=>
+			readdata(22 downto 0)	<= DMALPITCH_sig;
+		when "00111" 	=>
+			readdata(15 downto 0)	<= DMAXSIZE_sig;	
+		when "01000" 	=>
+			readdata(1 downto 0)	<= VGAHZOOM_sig;	
+			readdata(3 downto 2)	<= VGAVZOOM_sig;
+			readdata(5 downto 4)	<= PFMT_sig;		
+		when "01001" 	=>
+			readdata(15 downto 0)	<= HTOTAL_sig;	
+		when "01010" 	=>
+			readdata(15 downto 0)	<= HSSYNC_sig;	
+		when "01011" 	=>
+			readdata(15 downto 0)	<= HESYNC_sig;
+		when "01100" 	=>
+			readdata(15 downto 0)	<= HSVALID_sig;
+		when "01101" 	=>
+			readdata(15 downto 0)	<= HEVALID_sig;
+		when "01110" 	=>
+			readdata(15 downto 0)	<= VTOTAL_sig;
+		when "01111" 	=>
+			readdata(15 downto 0)	<= VSSYNC_sig;
+		when "10000" 	=>
+			readdata(15 downto 0)	<= VESYNC_sig;
+		when "10001" 	=>
+			readdata(15 downto 0)	<= VSVALIS_sig;
+		when "10010"	=>
+			readdata(15 downto 0)	<= VEVALID_sig;
 		when others	=> 
 		end case;
 end process;
-	
-process(T0INTSTS_sig, T1INTSTS_sig, avalon_inten)
-	begin
-	avalon_int <= (T0INTSTS_sig OR T1INTSTS_sig) AND avalon_inten;
-end process;
 
 	-- Assignment the signals to the outputs
-	AVINTDIS		<=	NOT(avalon_inten);
-	T1INTOVR		<=	T1INTOVR_sig;
-	T1INTSTS		<=	T1INTSTS_sig;
-	T0INTSTS		<=	T0INTSTS_sig;
-	T1INTEN 		<=	T1INTEN_sig;
-	T0INTEN 		<=	T0INTEN_sig;	
-	T1CNTEN			<= T1CNTEN_sig;
-	T0CNTEN			<= T0CNTEN_sig;
-	T1RST			<= T1RST_sig;
-	T0RST			<= T0RST_sig;	
-	T0CMP			<= T0CMP_sig;	
-	T1CMP			<=	T1CMP_sig;	
-	
-	T0CNT			<= T0CNT_sig;
-	T1CNT			<= T1CNT_sig;
-	
-	GP0				<= GP0_sig;	
-	GP1				<= GP1_sig;
+	GSSHT 		<= GSSHT_sig 		
+	GSPDG		<= GSPDG_sig 		
+	GACTIVE		<= GACTIVE_sig 	
+	GFMT		<= GFMT_sig 		
+	GMODE		<= GMODE_sig 		
+	GXSS		<= GXSS_sig 		
+	GYSS		<= GYSS_sig		
+	GFSTART 	<= GFSTART_sig 	
+	GLPITCH		<= GLPITCH_sig		
+	SOFIEN		<= SOFIEN_sig 		
+	SOFISTS		<= SOFISTS_sig 	
+	EOFIEN		<= EOFIEN_sig 		
+	EOFISTS		<= EOFISTS_sig 	
+	DMAEN 		<= DMAEN_sig 		
+	DMALR 		<= DMALR_sig 		
+	DMAFSTART	<= DMAFSTART_sig	
+	DMALPITCH	<= DMALPITCH_sig	
+	DMAXSIZE	<= DMAXSIZE_sig	
+	VGAHZOOM	<= VGAHZOOM_sig	
+	VGAVZOOM	<= VGAVZOOM_sig	
+	PFMT		<= PFMT_sig		
+	HTOTAL		<= HTOTAL_sig		
+	HSSYNC		<= HSSYNC_sig		
+	HESYNC		<= HESYNC_sig		
+	HSVALID		<= HSVALID_sig		
+	HEVALID		<= HEVALID_sig		
+	VTOTAL		<= VTOTAL_sig		
+	VSSYNC		<= VSSYNC_sig		
+	VESYNC		<= VESYNC_sig		
+	VSVALID		<= VSVALID_sig		
+	VEVALID		<= VEVALID_sig		
+
 end arch;
 	
 	
