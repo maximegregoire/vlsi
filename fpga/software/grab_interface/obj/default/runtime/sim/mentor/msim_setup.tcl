@@ -132,6 +132,14 @@ alias com {
   vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdrampack.vhd" -87
   vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdramsdr.vhd" -87
   
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/adv7181b.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/linebuffer.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/vga.vhd"
+  
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/itu656_behavioral.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/fpga_vga.vhd"
+  
+  
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"                                                                    
   vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_width_adapter.sv"                                                                
   vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_address_alignment.sv"                                                            

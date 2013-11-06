@@ -71,6 +71,9 @@ architecture rtl of first_nios2_system_tb is
 		);
 	end component first_nios2_system;
 	
+	-- THING WE ADDED TO THE TB (COMPONENT DECLARATION)
+	
+	-- SDRAM component
 	component sdramsdr is
 	  generic(
 		DUMPFILE : string := "/dev/null";
@@ -92,6 +95,40 @@ architecture rtl of first_nios2_system_tb is
 		sd     : inout std_logic_vector(15 downto 0)
 		);
 	end component sdramsdr;
+	
+	-- Decoder
+	component adv7181b is
+		port (
+			  -- Avalon signals
+			  dclk        : buffer     std_logic:='0'; -- decoder output clock
+			  dpix        : buffer     std_logic_vector(7 downto 0) -- decoder pixel output
+			 );
+	end component adv7181b;
+	
+	-- Contains VGA and ITU
+	component fpga_vga is
+	   port (
+		  -- video decoder
+		  CLOCK_27   : in         std_logic; -- decoder output clock
+		  TD_DATA     : in         std_logic_vector(7 downto 0); -- decoder pixel output
+		  TD_RESET       : buffer     std_logic; -- decoder reset input
+		  -- VGA connector
+		  VGA_HS      : buffer std_logic;
+		  VGA_VS      : buffer std_logic;
+		  -- DAC
+		  VGA_CLK     : buffer     std_logic;
+		  VGA_SYNC    : buffer     std_logic;
+		  VGA_BLANK   : buffer     std_logic;
+		  VGA_R       : buffer     std_logic_vector(9 downto 0);
+		  VGA_G       : buffer     std_logic_vector(9 downto 0);
+		  VGA_B       : buffer     std_logic_vector(9 downto 0);
+		  -- board general
+		  SW        :  in     std_logic_vector(17 downto 0); -- global reset
+		  LEDG      :  buffer std_logic_vector(7 downto 0);
+		  LEDR      :  buffer std_logic_vector(7 downto 0)
+	   );
+	end component fpga_vga;	
+	-- END OF THING WE ADDED TO THE TB
 
 	component altera_avalon_clock_source is
 		generic (
@@ -189,10 +226,17 @@ architecture rtl of first_nios2_system_tb is
 		);
 	end component altera_conduit_bfm_0004;
 
+	
+-- THINGS WE ADDED (SIGNAL DECLARATION)
 	signal dump	: std_logic;
 	signal load : std_logic;
 	
 	signal first_nios2_system_inst_clk_bfm_clk_clk_clk : std_logic;
+	
+	
+	signal vclk : std_logic;
+-- END OF THINGS WE ADDED
+	
 	
 	signal first_nios2_system_inst_clk_bfm_clk_clk                                : std_logic;                     -- first_nios2_system_inst_clk_bfm:clk -> [first_nios2_system_inst:clk_clk, first_nios2_system_inst_counter_0_conduit_end_bfm:clk, first_nios2_system_inst_counter_1_conduit_end_bfm:clk, first_nios2_system_inst_grab_if_0_conduit_end_bfm:clk, first_nios2_system_inst_regfile_0_conduit_end_bfm:clk, first_nios2_system_inst_reset_bfm:clk]
 	signal first_nios2_system_inst_reset_bfm_reset_reset                          : std_logic;                     -- first_nios2_system_inst_reset_bfm:reset -> [first_nios2_system_inst:reset_reset_n, first_nios2_system_inst_reset_bfm_reset_reset:in]
@@ -254,14 +298,16 @@ architecture rtl of first_nios2_system_tb is
 
 begin
 
+-- THINGS WE ADDED TO TB (SIGNALS)
 	dump <= '0';
 	load <= '0';
 
-	first_nios2_system_inst_clk_bfm_clk_clk_clk <= first_nios2_system_inst_clk_bfm_clk_clk;
+	first_nios2_system_inst_clk_bfm_clk_clk_clk <= first_nios2_system_inst_clk_bfm_clk_clk; -- Don't forget to make this the clock of the FPGA
+-- END OF THING WE ADDED TO TB
 
 	first_nios2_system_inst : component first_nios2_system
 		port map (
-			clk_clk                             => first_nios2_system_inst_clk_bfm_clk_clk_clk,                                --                         clk.clk
+			clk_clk                             => first_nios2_system_inst_clk_bfm_clk_clk_clk,                            --                         clk.clk
 			reset_reset_n                       => first_nios2_system_inst_reset_bfm_reset_reset,                          --                       reset.reset_n
 			grab_if_0_conduit_end_GSSHT         => first_nios2_system_inst_grab_if_0_conduit_end_bfm_conduit_gssht,        --       grab_if_0_conduit_end.GSSHT
 			grab_if_0_conduit_end_GMODE         => first_nios2_system_inst_grab_if_0_conduit_end_bfm_conduit_gmode,        --                            .GMODE
@@ -318,7 +364,8 @@ begin
 			regfile_0_conduit_end_T1CNT_in      => first_nios2_system_inst_regfile_0_conduit_end_bfm_conduit_t1cnt_in,     --                            .T1CNT_in
 			regfile_0_conduit_end_avalon_inten  => first_nios2_system_inst_regfile_0_conduit_end_bfm_conduit_avalon_inten  --                            .avalon_inten
 		);
-		
+
+-- THINGS WE ADDED TO TB (COMPONENTS INSTATIATION)
 	xsdramsdr : component sdramsdr
 	  generic map(
 		DUMPFILE => "./dump",
@@ -340,6 +387,38 @@ begin
 		sweN   => first_nios2_system_inst_new_sdram_controller_0_wire_we_n,
 		sd     => first_nios2_system_inst_new_sdram_controller_0_wire_dq
 		);
+		
+	xadv7181b : component adv7181b
+		port map (
+		  -- Avalon signals
+		  dclk      => vclk, -- : buffer     std_logic:='0'; -- decoder output clock
+		  dpix      => open -- : buffer     std_logic_vector(7 downto 0) -- decoder pixel output
+		 );
+		 
+	xfpga_vga : component fpga_vga
+	   port map (
+		  -- video decoder
+		  CLOCK_27   	=> vclk, 		--: in         std_logic; -- decoder output clock
+		  TD_DATA     	=> open, 		--: in         std_logic_vector(7 downto 0); -- decoder pixel output
+		  TD_RESET      => open, 		--: buffer     std_logic; -- decoder reset input
+		  -- VGA connector
+		  VGA_HS      	=> open, 		--: buffer std_logic;
+		  VGA_VS      	=> open, 		--: buffer std_logic;
+		  -- DAC        => open, 		--
+		  VGA_CLK     	=> open, 		--: buffer     std_logic;
+		  VGA_SYNC    	=> open, 		--: buffer     std_logic;
+		  VGA_BLANK   	=> open, 		--: buffer     std_logic;
+		  VGA_R       	=> open, 		--: buffer     std_logic_vector(9 downto 0);
+		  VGA_G       	=> open, 		--: buffer     std_logic_vector(9 downto 0);
+		  VGA_B       	=> open, 		--: buffer     std_logic_vector(9 downto 0);
+		  -- board general
+		  SW        	=> open, 		--:  in     std_logic_vector(17 downto 0); -- global reset
+		  LEDG      	=> open, 		--:  buffer std_logic_vector(7 downto 0);
+		  LEDR      	=> open, 		--:  buffer std_logic_vector(7 downto 0)
+	   );
+	end component fpga_vga;	
+		 
+-- END OF THINGS WE ADDED TO TB
 
 	first_nios2_system_inst_clk_bfm : component altera_avalon_clock_source
 		generic map (
