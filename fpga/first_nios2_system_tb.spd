@@ -35,17 +35,9 @@
    library="width_adapter"
    simulator="riviera" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux_002.vho"
-   type="VHDL"
-   library="rsp_xbar_mux_002" />
- <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"
    type="VHDL"
    library="rsp_xbar_mux" />
- <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux_006.vho"
-   type="VHDL"
-   library="rsp_xbar_demux_006" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux_005.vho"
    type="VHDL"
@@ -54,10 +46,6 @@
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"
    type="VHDL"
    library="rsp_xbar_demux" />
- <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux_006.vho"
-   type="VHDL"
-   library="cmd_xbar_mux_006" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cmd_xbar_mux_005.vho"
    type="VHDL"
@@ -138,10 +126,6 @@
    type="SYSTEM_VERILOG_ENCRYPT"
    library="limiter"
    simulator="riviera" />
- <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router_006.vho"
-   type="VHDL"
-   library="id_router_006" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_id_router_005.vho"
    type="VHDL"
@@ -225,17 +209,13 @@
    type="VHDL"
    library="grab_if_0" />
  <file
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile_final.vhd"
+   type="VHDL"
+   library="regfile_final_0" />
+ <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0.vhd"
    type="VHDL"
    library="new_sdram_controller_0" />
- <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/counter.vhd"
-   type="VHDL"
-   library="counter_0" />
- <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile.vhd"
-   type="VHDL"
-   library="regfile_0" />
  <file
    path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"
    type="VHDL"
@@ -409,11 +389,11 @@
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
  <file
-   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"
+   path="first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"
    type="VHDL"
    library="first_nios2_system_inst" />
  <file

@@ -44,7 +44,7 @@
 
 module first_nios2_system_addr_router_002_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 1,
+     parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 2 
@@ -136,8 +136,7 @@ module first_nios2_system_addr_router_002
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h40 - 64'h0); 
-    localparam PAD1 = log2ceil(64'h1000000 - 64'h800000); 
+    localparam PAD0 = log2ceil(64'h1000000 - 64'h800000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
@@ -150,9 +149,8 @@ module first_nios2_system_addr_router_002
                                         PKT_ADDR_H :
                                         PKT_ADDR_L + RANGE_ADDR_WIDTH - 1;
 
-    localparam RG = RANGE_ADDR_WIDTH-1;
+    localparam RG = RANGE_ADDR_WIDTH;
 
-      wire [PKT_ADDR_W-1 : 0] address = sink_data[OPTIMIZED_ADDR_H : PKT_ADDR_L];
 
     // -------------------------------------------------------
     // Pass almost everything through, untouched
@@ -185,18 +183,13 @@ module first_nios2_system_addr_router_002
         // Address Decoder
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
-
-    // ( 0x0 .. 0x40 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 24'h0   ) begin
-            src_channel = 7'b01;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
-    end
-
-    // ( 0x800000 .. 0x1000000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 24'h800000   ) begin
-            src_channel = 7'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
-    end
+           
+         
+          // ( 800000 .. 1000000 )
+          src_channel = 7'b1;
+          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+	     
+        
 
 end
 

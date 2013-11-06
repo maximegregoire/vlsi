@@ -43,13 +43,7 @@
 		 src0_endofpacket	:	OUT  STD_LOGIC;
 		 src0_ready	:	IN  STD_LOGIC;
 		 src0_startofpacket	:	OUT  STD_LOGIC;
-		 src0_valid	:	OUT  STD_LOGIC;
-		 src1_channel	:	OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
-		 src1_data	:	OUT  STD_LOGIC_VECTOR (86 DOWNTO 0);
-		 src1_endofpacket	:	OUT  STD_LOGIC;
-		 src1_ready	:	IN  STD_LOGIC;
-		 src1_startofpacket	:	OUT  STD_LOGIC;
-		 src1_valid	:	OUT  STD_LOGIC
+		 src0_valid	:	OUT  STD_LOGIC
 	 ); 
  END first_nios2_system_cmd_xbar_demux_002;
 
@@ -57,27 +51,14 @@
 
 	 ATTRIBUTE synthesis_clearbox : natural;
 	 ATTRIBUTE synthesis_clearbox OF RTL : ARCHITECTURE IS 1;
-	 SIGNAL  wire_w_lg_w_sink_channel_range1w2w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w_sink_channel_range3w4w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_sink_channel_range1w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_w_sink_channel_range3w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
  BEGIN
 
-	wire_w_lg_w_sink_channel_range1w2w(0) <= wire_w_sink_channel_range1w(0) AND src0_ready;
-	wire_w_lg_w_sink_channel_range3w4w(0) <= wire_w_sink_channel_range3w(0) AND src1_ready;
-	sink_ready <= (wire_w_lg_w_sink_channel_range1w2w(0) OR wire_w_lg_w_sink_channel_range3w4w(0));
-	src0_channel <= ( "0" & "0" & sink_channel(6 DOWNTO 2));
+	sink_ready <= (sink_channel(0) AND src0_ready);
+	src0_channel <= ( "0" & sink_channel(6 DOWNTO 1));
 	src0_data <= ( sink_data(86 DOWNTO 0));
 	src0_endofpacket <= sink_endofpacket;
 	src0_startofpacket <= sink_startofpacket;
 	src0_valid <= (sink_valid(0) AND sink_channel(0));
-	src1_channel <= ( "0" & "0" & sink_channel(6 DOWNTO 2));
-	src1_data <= ( sink_data(86 DOWNTO 0));
-	src1_endofpacket <= sink_endofpacket;
-	src1_startofpacket <= sink_startofpacket;
-	src1_valid <= (sink_valid(0) AND sink_channel(1));
-	wire_w_sink_channel_range1w(0) <= sink_channel(0);
-	wire_w_sink_channel_range3w(0) <= sink_channel(1);
 
  END RTL; --first_nios2_system_cmd_xbar_demux_002
 --synopsys translate_on

@@ -34,7 +34,17 @@ constant HTOTAL  : std_logic_vector(15 downto 0):=x"06B3"; -- 1716-1
 constant VTOTAL  : std_logic_vector(15 downto 0):=x"020C"; -- 525-1
 constant HSAV    : std_logic_vector(15 downto 0):=x"010F"; -- 4+268-1
 
+--constant F0_VSVALiD : integer := 28;
+--constant F0_VEVALiD : integer := 268;
+--constant F1_VSVALiD : integer := 281;
+--constant F1_VEVALiD : integer := 521;
+--constant FIELD_LINE : integer := 261;
 
+constant F0_VSVALiD : integer := 1;
+constant F0_VEVALiD : integer := 5;
+constant F1_VSVALiD : integer := 9;
+constant F1_VEVALiD : integer := 13;
+constant FIELD_LINE : integer := 6;
 
 signal    resetN       : std_logic:='0';
 
@@ -59,9 +69,11 @@ begin
 
 -- Orphan processes --
 dclk   <= not dclk after 18518 ps; -- 27 MHz
-resetN <= '1' after 100 ns;
-NXTstart_EAV_FF <= '1' when hcounter=HTOTAL or start_EAV='1' or start_EAV1p = '1' else '0';
-NXTstart_SAV_FF <= '1' when hcounter=HSAV   or start_SAV='1' or start_SAV1p = '1' else '0';
+resetN <= '1' after 140 us;
+--NXTstart_EAV_FF <= '1' when hcounter=HTOTAL or start_EAV='1' or start_EAV1p = '1' else '0';
+--NXTstart_SAV_FF <= '1' when hcounter=HSAV   or start_SAV='1' or start_SAV1p = '1' else '0';
+NXTstart_EAV_FF <= '1' when hcounter=HTOTAL else '0';
+NXTstart_SAV_FF <= '1' when hcounter=HSAV   else '0';
 
 
 -------------------------------------------------------------------------------
@@ -89,7 +101,7 @@ elsif (dclk'event and dclk='1') then
       else
          vcounter <= vcounter + '1';
       end if;
-      if (vcounter = 261) then
+      if (vcounter = FIELD_LINE) then
          field <= not field;
       end if;
    end if;
@@ -119,16 +131,16 @@ elsif (dclk'event and dclk='1') then
       start_EAV <= '1'; 
       hvalid    <= '0';
       if (field = '0') then
-         if (vcounter = 18) then 
+         if (vcounter = F0_VSVALID) then 
             vvalid <= '1';
-         elsif (vcounter = 248) then
+         elsif (vcounter = F0_VEVALID) then
             vvalid <= '0';
          end if;
       end if;
       if (field = '1') then
-         if (vcounter = 281) then
+         if (vcounter = F1_VSVALID) then
             vvalid <= '1';
-         elsif (vcounter = 521) then
+         elsif (vcounter = F1_VEVALID) then
             vvalid <= '0';
          end if;
       end if;
@@ -162,6 +174,8 @@ if (resetN <= '0') then
 elsif (dclk'event and dclk='1') then
    if (NXTstart_EAV_FF='1' or NXTstart_SAV_FF='1') then
       dpix <= (others => '1');
+   elsif (start_EAV='1' or start_SAV='1' or start_EAV1p='1' or start_SAV1p='1') then
+      dpix <= (others => '0');
    elsif (start_EAV2p='1' or start_SAV2p='1') then
       dpix(7) <= '1';
       dpix(6) <= field;

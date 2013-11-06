@@ -16,8 +16,7 @@
    <frequency preferredWidth="452" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/Memories and Memory Controllers/External Memory Interfaces,Project,Library,Library/Memories and Memory Controllers" />
+ <library expandedCategories="Project,Library" />
  <window width="1680" height="1010" x="0" y="0" />
  <generation
    synthesis="VHDL"

@@ -1,0 +1,11 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pwhite8\vlsi\fpga\software\nameless\obj\default\runtime\sim\mentor
+Efirst_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+!s108 1383705497.528000
+!s90 -reportprogress|300|C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho|-work|new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo|
+!s107 C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho|
+o-work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -O0
+Z1 tExplicit 1

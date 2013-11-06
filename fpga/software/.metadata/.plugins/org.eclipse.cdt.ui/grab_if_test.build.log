@@ -1,0 +1,7 @@
+
+**** Clean-only build of configuration Nios II for project grab_if_test ****
+
+make clean 
+[grab_if_test clean complete]
+
+**** Build Finished ****

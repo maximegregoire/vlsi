@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.10.30.19:43:33
+# ACDS 13.0 156 win32 2013.11.05.21:33:59
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -47,18 +47,14 @@ done
 # create compilation libraries
 mkdir -p ./libraries/work/
 mkdir -p ./libraries/irq_mapper/
-mkdir -p ./libraries/rsp_xbar_mux_002/
 mkdir -p ./libraries/rsp_xbar_mux/
-mkdir -p ./libraries/rsp_xbar_demux_006/
 mkdir -p ./libraries/rsp_xbar_demux_005/
 mkdir -p ./libraries/rsp_xbar_demux/
-mkdir -p ./libraries/cmd_xbar_mux_006/
 mkdir -p ./libraries/cmd_xbar_mux_005/
 mkdir -p ./libraries/cmd_xbar_mux/
 mkdir -p ./libraries/cmd_xbar_demux_002/
 mkdir -p ./libraries/cmd_xbar_demux_001/
 mkdir -p ./libraries/cmd_xbar_demux/
-mkdir -p ./libraries/id_router_006/
 mkdir -p ./libraries/id_router_005/
 mkdir -p ./libraries/id_router/
 mkdir -p ./libraries/addr_router_002/
@@ -67,9 +63,8 @@ mkdir -p ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave
 mkdir -p ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
 mkdir -p ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
 mkdir -p ./libraries/grab_if_0/
+mkdir -p ./libraries/regfile_final_0/
 mkdir -p ./libraries/new_sdram_controller_0/
-mkdir -p ./libraries/counter_0/
-mkdir -p ./libraries/regfile_0/
 mkdir -p ./libraries/sysid/
 mkdir -p ./libraries/sys_clk_timer/
 mkdir -p ./libraries/jtag_uart/
@@ -125,18 +120,14 @@ fi
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_irq_mapper.vho"                                                                     -work irq_mapper                                                                    
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_mux_002.vho"                                                               -work rsp_xbar_mux_002                                                              
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                                   -work rsp_xbar_mux                                                                  
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux_006.vho"                                                             -work rsp_xbar_demux_006                                                            
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux_005.vho"                                                             -work rsp_xbar_demux_005                                                            
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                                 -work rsp_xbar_demux                                                                
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux_006.vho"                                                               -work cmd_xbar_mux_006                                                              
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux_005.vho"                                                               -work cmd_xbar_mux_005                                                              
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                                   -work cmd_xbar_mux                                                                  
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux_002.vho"                                                             -work cmd_xbar_demux_002                                                            
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                             -work cmd_xbar_demux_001                                                            
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                                 -work cmd_xbar_demux                                                                
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_id_router_006.vho"                                                                  -work id_router_006                                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_id_router_005.vho"                                                                  -work id_router_005                                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_id_router.vho"                                                                      -work id_router                                                                     
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_addr_router_002.vho"                                                                -work addr_router_002                                                               
@@ -145,9 +136,8 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_if.vhd"                                                                                           -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/regfile_final.vhd"                                                                                     -work regfile_final_0                                                               
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0.vhd"                                                         -work new_sdram_controller_0                                                        
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/counter.vhd"                                                                                           -work counter_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/regfile.vhd"                                                                                           -work regfile_0                                                                     
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_sysid.vho"                                                                          -work sysid                                                                         
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_sys_clk_timer.vhd"                                                                  -work sys_clk_timer                                                                 
   vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_jtag_uart.vhd"                                                                      -work jtag_uart                                                                     
@@ -172,8 +162,8 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                        
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                                                                                                                                   
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                                
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_regfile_0_avalon_slave_0_translator.vhd"                                                                                                                                           
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"                                                                                                                                          
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
 fi
