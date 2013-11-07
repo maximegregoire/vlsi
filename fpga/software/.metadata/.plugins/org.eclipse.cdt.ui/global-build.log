@@ -1,17 +1,31 @@
 
-**** Build of configuration Nios II for project nameless ****
+**** Build of configuration Nios II for project nameless_4 ****
+
+make mem_init_generate 
+Info: Building ../nameless_4_bsp/
+make --no-print-directory -C ../nameless_4_bsp/
+[BSP build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project nameless_4 ****
 
 make all 
-Info: Building ../nameless_bsp/
-make --no-print-directory -C ../nameless_bsp/
+Info: Building ../nameless_4_bsp/
+make --no-print-directory -C ../nameless_4_bsp/
 [BSP build complete]
-Info: Linking nameless.elf
-nios2-elf-g++  -T'../nameless_bsp//linker.x' -msys-crt0='../nameless_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nameless_bsp/   -Wl,-Map=nameless.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o nameless.elf obj/default/name.o -lm 
-c:/altera/13.0/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/bin/ld.exe: address 0x855a8 of nameless.elf section `.bss' is not within region `onchip_mem'
-c:/altera/13.0/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/bin/ld.exe: address 0x855a8 of nameless.elf section `.onchip_mem' is not within region `onchip_mem'
-c:/altera/13.0/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/bin/ld.exe: address 0x855a8 of nameless.elf section `.bss' is not within region `onchip_mem'
-c:/altera/13.0/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/bin/ld.exe: address 0x855a8 of nameless.elf section `.onchip_mem' is not within region `onchip_mem'
-collect2: ld returned 1 exit status
-make: *** [nameless.elf] Error 1
+Info: Creating nameless_4.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
+[nameless_4 build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project nameless_4 ****
+
+make all 
+Info: Building ../nameless_4_bsp/
+make --no-print-directory -C ../nameless_4_bsp/
+[BSP build complete]
+[nameless_4 build complete]
 
 **** Build Finished ****

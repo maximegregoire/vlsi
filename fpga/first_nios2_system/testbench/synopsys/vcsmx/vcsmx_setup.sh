@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.11.05.21:35:42
+# ACDS 13.0 156 win32 2013.11.07.11:15:15
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -62,8 +62,8 @@ mkdir -p ./libraries/addr_router/
 mkdir -p ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
 mkdir -p ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
 mkdir -p ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
-mkdir -p ./libraries/grab_if_0/
 mkdir -p ./libraries/regfile_final_0/
+mkdir -p ./libraries/grab_if_0/
 mkdir -p ./libraries/new_sdram_controller_0/
 mkdir -p ./libraries/sysid/
 mkdir -p ./libraries/sys_clk_timer/
@@ -138,8 +138,13 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_if.vhd"                                                                                           -work grab_if_0                                                                     
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/regfile_final.vhd"                                                                                     -work regfile_final_0                                                               
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_if.vhd"                                                                                           -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_addressing.vhd"                                                                                   -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_avdetect.vhd"                                                                                     -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_buffer.vhd"                                                                                       -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_rcontrol.vhd"                                                                                     -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_wcontrol.vhd"                                                                                     -work grab_if_0                                                                     
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0.vhd"                                                         -work new_sdram_controller_0                                                        
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                          -work sysid                                                                         
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                                  -work sys_clk_timer                                                                 
@@ -169,6 +174,8 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid_control_slave_translator.vhd"                                                 -work first_nios2_system_inst                                                       
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"                                           -work first_nios2_system_inst                                                       
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"                                      -work first_nios2_system_inst                                                       
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_rst_controller.vhd"                                                                 -work first_nios2_system_inst                                                       
+  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_rst_controller_001.vhd"                                                             -work first_nios2_system_inst                                                       
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                     -work first_nios2_system_inst                                                       
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"             -work first_nios2_system_inst                                                       
   vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd"                                                                                                                                                                            

@@ -22,7 +22,7 @@ port (
 	GSPDG_IN		: in std_logic;
 	
 	-- Registers
-	-- GSSHT 		: 	out std_logic;
+	GSSHT 		: 	out std_logic;
 	GSPDG 		: 	out std_logic;
 	GACTIVE 		: 	out std_logic;
 	GFMT 			: 	out std_logic;
@@ -167,13 +167,11 @@ case address is
 		GYSS_sig 	<= writedata(11 downto 10);
 		GXSS_sig 	<= writedata(9 downto 8);
 		GMODE_sig 	<= writedata(6 downto 5);
-		GFMT_sig		<= writedata(4);
+		GFMT_sig	<= writedata(4);
 		--	WO
-		
 		if (GSSHT_sig = '0') then
 		GSSHT_sig	<= writedata(0);
-		end if;
-		
+		end if;		
 	when "00001" 	=>
 		-- RW
 		GFSTART_sig(22 downto 1) 	<= writedata(22 downto 1);
@@ -182,8 +180,8 @@ case address is
 		GLPITCH_sig(22 downto 1) 	<= writedata(22 downto 1);
 	when "00011" 	=>
 		-- RW
-		SOFIEN 	<= writedata(0);
-		EOFIEN	<= writedata(2);
+		SOFIEN_sig 	<= writedata(0);
+		EOFIEN_sig	<= writedata(2);
 		-- RW2C
 		if (writedata(1) = '1') then
 			SOFISTS_sig <= '0';
@@ -309,7 +307,7 @@ begin
 end process;
 
 	-- Assignment the signals to the outputs
-	-- GSSHT 		<= GSSHT_sig;
+	GSSHT 		<= GSSHT_sig;
 	GSPDG		<= GSPDG_sig; 		
 	GACTIVE		<= GACTIVE_sig; 	
 	GFMT		<= GFMT_sig; 		

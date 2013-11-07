@@ -1,0 +1,1030 @@
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do msim_setup.tcl 
+# first_nios2_system_tb
+# ./../
+# C:/altera/13.0/quartus/
+# Modifying modelsim.ini
+# Modifying modelsim.ini
+# [exec] file_copy 
+# List Of Command Line Aliases 
+# 
+# file_copy                     -- Copy ROM/RAM files to simulation directory 
+# 
+# dev_com                       -- Compile device library files 
+# 
+# com                           -- Compile the design files in correct order 
+# 
+# elab                          -- Elaborate top level design 
+# 
+# elab_debug                    -- Elaborate the top level design with novopt option 
+# 
+# ld                            -- Compile all the design files and elaborate the top level design 
+# 
+# ld_debug                      -- Compile all the design files and elaborate the top level design with -novopt 
+# 
+# 
+# 
+# List Of Variables 
+# 
+# TOP_LEVEL_NAME                -- Top level module name. 
+# 
+# SYSTEM_INSTANCE_NAME          -- Instantiated system module name inside top level module. 
+# 
+# QSYS_SIMDIR                   -- Qsys base simulation directory. 
+# 
+# QUARTUS_INSTALL_DIR           -- Quartus installation directory. 
+#  ld 
+# [exec] dev_com 
+# [exec] com 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package sdrampack
+# -- Compiling package body sdrampack
+# -- Loading package sdrampack
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package sdrampack
+# -- Compiling entity sdramsdr
+# -- Compiling architecture functional of sdramsdr
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity adv7181b
+# -- Compiling architecture functional of adv7181b
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity linebuffer
+# -- Compiling architecture SYN of linebuffer
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity vga
+# -- Compiling architecture functional of vga
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity itu656_behavioral
+# -- Compiling architecture functional of itu656_behavioral
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity fpga_vga
+# -- Compiling architecture functional of fpga_vga
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_irq_mapper
+# -- Compiling architecture RTL of first_nios2_system_irq_mapper
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_rsp_xbar_mux
+# -- Compiling architecture RTL of first_nios2_system_rsp_xbar_mux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_rsp_xbar_demux_005
+# -- Compiling architecture RTL of first_nios2_system_rsp_xbar_demux_005
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_rsp_xbar_demux
+# -- Compiling architecture RTL of first_nios2_system_rsp_xbar_demux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_cmd_xbar_mux_005
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_mux_005
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_cmd_xbar_mux
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_mux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cmd_xbar_demux_002
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_demux_002
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cmd_xbar_demux_001
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_demux_001
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cmd_xbar_demux
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_demux
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_id_router_005
+# -- Compiling architecture RTL of first_nios2_system_id_router_005
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_id_router
+# -- Compiling architecture RTL of first_nios2_system_id_router
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_addr_router_002
+# -- Compiling architecture RTL of first_nios2_system_addr_router_002
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_addr_router
+# -- Compiling architecture RTL of first_nios2_system_addr_router
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+# -- Compiling architecture RTL of first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+# -- Compiling architecture RTL of first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+# -- Compiling architecture RTL of first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity grab_if
+# -- Compiling architecture functional of grab_if
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity regfile_final
+# -- Compiling architecture arch of regfile_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_input_efifo_module
+# -- Compiling architecture europa of first_nios2_system_new_sdram_controller_0_input_efifo_module
+# -- Compiling entity first_nios2_system_new_sdram_controller_0
+# -- Compiling architecture europa of first_nios2_system_new_sdram_controller_0
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_sysid
+# -- Compiling architecture RTL of first_nios2_system_sysid
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_sys_clk_timer
+# -- Compiling architecture europa of first_nios2_system_sys_clk_timer
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_jtag_uart_sim_scfifo_w
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_sim_scfifo_w
+# -- Compiling entity first_nios2_system_jtag_uart_scfifo_w
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_scfifo_w
+# -- Compiling entity first_nios2_system_jtag_uart_sim_scfifo_r
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_sim_scfifo_r
+# -- Compiling entity first_nios2_system_jtag_uart_scfifo_r
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_scfifo_r
+# -- Compiling entity first_nios2_system_jtag_uart
+# -- Compiling architecture europa of first_nios2_system_jtag_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_cpu
+# -- Compiling architecture RTL of first_nios2_system_cpu
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_sysclk
+# -- Compiling architecture europa of first_nios2_system_cpu_jtag_debug_module_sysclk
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_tck
+# -- Compiling architecture europa of first_nios2_system_cpu_jtag_debug_module_tck
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_wrapper
+# -- Compiling architecture europa of first_nios2_system_cpu_jtag_debug_module_wrapper
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_lnsim_components
+# -- Compiling entity first_nios2_system_cpu_mult_cell
+# -- Compiling architecture europa of first_nios2_system_cpu_mult_cell
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_oci_test_bench
+# -- Compiling architecture europa of first_nios2_system_cpu_oci_test_bench
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_test_bench
+# -- Compiling architecture europa of first_nios2_system_cpu_test_bench
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_onchip_mem
+# -- Compiling architecture europa of first_nios2_system_onchip_mem
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_avalon_reset_source
+# -- Compiling architecture behavioral of altera_avalon_reset_source
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_avalon_clock_source
+# -- Compiling architecture behavioral of altera_avalon_clock_source
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system
+# -- Compiling architecture rtl of first_nios2_system
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent
+# -- Compiling architecture rtl of first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent
+# -- Compiling architecture rtl of first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_width_adapter
+# -- Compiling architecture rtl of first_nios2_system_width_adapter
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_width_adapter_002
+# -- Compiling architecture rtl of first_nios2_system_width_adapter_002
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_data_master_translator
+# -- Compiling architecture rtl of first_nios2_system_cpu_data_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_instruction_master_translator
+# -- Compiling architecture rtl of first_nios2_system_cpu_instruction_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_grab_if_0_avalon_master_translator
+# -- Compiling architecture rtl of first_nios2_system_grab_if_0_avalon_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_translator
+# -- Compiling architecture rtl of first_nios2_system_cpu_jtag_debug_module_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_onchip_mem_s1_translator
+# -- Compiling architecture rtl of first_nios2_system_onchip_mem_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_jtag_uart_avalon_jtag_slave_translator
+# -- Compiling architecture rtl of first_nios2_system_jtag_uart_avalon_jtag_slave_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_sys_clk_timer_s1_translator
+# -- Compiling architecture rtl of first_nios2_system_sys_clk_timer_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_sysid_control_slave_translator
+# -- Compiling architecture rtl of first_nios2_system_sysid_control_slave_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator
+# -- Compiling architecture rtl of first_nios2_system_new_sdram_controller_0_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_regfile_final_0_avalon_slave_0_translator
+# -- Compiling architecture rtl of first_nios2_system_regfile_final_0_avalon_slave_0_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent
+# -- Compiling architecture rtl of first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent
+# -- Compiling architecture rtl of first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_tb
+# -- Compiling architecture rtl of first_nios2_system_tb
+# ** Error: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd(289): (vcom-1136) Unknown identifier "first_nios2_system_inst_regfile_final_0_conduit_end_gssht".
+# 
+# ** Error: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd(296): near "first_nios2_system_i": expecting ';'
+# ** Error: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd(493): VHDL Compiler exiting
+# C:/altera/13.0/modelsim_ase/win32aloem/vcom failed.
+#   
+com
+# [exec] com 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package sdrampack
+# -- Compiling package body sdrampack
+# -- Loading package sdrampack
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package sdrampack
+# -- Compiling entity sdramsdr
+# -- Compiling architecture functional of sdramsdr
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity adv7181b
+# -- Compiling architecture functional of adv7181b
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity linebuffer
+# -- Compiling architecture SYN of linebuffer
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity vga
+# -- Compiling architecture functional of vga
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity itu656_behavioral
+# -- Compiling architecture functional of itu656_behavioral
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity fpga_vga
+# -- Compiling architecture functional of fpga_vga
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_irq_mapper
+# -- Compiling architecture RTL of first_nios2_system_irq_mapper
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_rsp_xbar_mux
+# -- Compiling architecture RTL of first_nios2_system_rsp_xbar_mux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_rsp_xbar_demux_005
+# -- Compiling architecture RTL of first_nios2_system_rsp_xbar_demux_005
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_rsp_xbar_demux
+# -- Compiling architecture RTL of first_nios2_system_rsp_xbar_demux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_cmd_xbar_mux_005
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_mux_005
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_cmd_xbar_mux
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_mux
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cmd_xbar_demux_002
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_demux_002
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cmd_xbar_demux_001
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_demux_001
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cmd_xbar_demux
+# -- Compiling architecture RTL of first_nios2_system_cmd_xbar_demux
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_id_router_005
+# -- Compiling architecture RTL of first_nios2_system_id_router_005
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_id_router
+# -- Compiling architecture RTL of first_nios2_system_id_router
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_addr_router_002
+# -- Compiling architecture RTL of first_nios2_system_addr_router_002
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_addr_router
+# -- Compiling architecture RTL of first_nios2_system_addr_router
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+# -- Compiling architecture RTL of first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+# -- Compiling architecture RTL of first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+# -- Compiling architecture RTL of first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# ** Warning: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_slave_agent.sv(38): in protected region.
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Top level modules:
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity grab_if
+# -- Compiling architecture functional of grab_if
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity regfile_final
+# -- Compiling architecture arch of regfile_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_input_efifo_module
+# -- Compiling architecture europa of first_nios2_system_new_sdram_controller_0_input_efifo_module
+# -- Compiling entity first_nios2_system_new_sdram_controller_0
+# -- Compiling architecture europa of first_nios2_system_new_sdram_controller_0
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity first_nios2_system_sysid
+# -- Compiling architecture RTL of first_nios2_system_sysid
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_sys_clk_timer
+# -- Compiling architecture europa of first_nios2_system_sys_clk_timer
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_jtag_uart_sim_scfifo_w
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_sim_scfifo_w
+# -- Compiling entity first_nios2_system_jtag_uart_scfifo_w
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_scfifo_w
+# -- Compiling entity first_nios2_system_jtag_uart_sim_scfifo_r
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_sim_scfifo_r
+# -- Compiling entity first_nios2_system_jtag_uart_scfifo_r
+# -- Compiling architecture europa of first_nios2_system_jtag_uart_scfifo_r
+# -- Compiling entity first_nios2_system_jtag_uart
+# -- Compiling architecture europa of first_nios2_system_jtag_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package sgate_pack
+# -- Compiling entity first_nios2_system_cpu
+# -- Compiling architecture RTL of first_nios2_system_cpu
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_sysclk
+# -- Compiling architecture europa of first_nios2_system_cpu_jtag_debug_module_sysclk
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_tck
+# -- Compiling architecture europa of first_nios2_system_cpu_jtag_debug_module_tck
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_wrapper
+# -- Compiling architecture europa of first_nios2_system_cpu_jtag_debug_module_wrapper
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_lnsim_components
+# -- Compiling entity first_nios2_system_cpu_mult_cell
+# -- Compiling architecture europa of first_nios2_system_cpu_mult_cell
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_oci_test_bench
+# -- Compiling architecture europa of first_nios2_system_cpu_oci_test_bench
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_cpu_test_bench
+# -- Compiling architecture europa of first_nios2_system_cpu_test_bench
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package altera_europa_support_lib
+# -- Loading package altera_mf_components
+# -- Compiling entity first_nios2_system_onchip_mem
+# -- Compiling architecture europa of first_nios2_system_onchip_mem
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_avalon_reset_source
+# -- Compiling architecture behavioral of altera_avalon_reset_source
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_avalon_clock_source
+# -- Compiling architecture behavioral of altera_avalon_clock_source
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system
+# -- Compiling architecture rtl of first_nios2_system
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent
+# -- Compiling architecture rtl of first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent
+# -- Compiling architecture rtl of first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_width_adapter
+# -- Compiling architecture rtl of first_nios2_system_width_adapter
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_width_adapter_002
+# -- Compiling architecture rtl of first_nios2_system_width_adapter_002
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_data_master_translator
+# -- Compiling architecture rtl of first_nios2_system_cpu_data_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_instruction_master_translator
+# -- Compiling architecture rtl of first_nios2_system_cpu_instruction_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_grab_if_0_avalon_master_translator
+# -- Compiling architecture rtl of first_nios2_system_grab_if_0_avalon_master_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_jtag_debug_module_translator
+# -- Compiling architecture rtl of first_nios2_system_cpu_jtag_debug_module_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_onchip_mem_s1_translator
+# -- Compiling architecture rtl of first_nios2_system_onchip_mem_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_jtag_uart_avalon_jtag_slave_translator
+# -- Compiling architecture rtl of first_nios2_system_jtag_uart_avalon_jtag_slave_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_sys_clk_timer_s1_translator
+# -- Compiling architecture rtl of first_nios2_system_sys_clk_timer_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_sysid_control_slave_translator
+# -- Compiling architecture rtl of first_nios2_system_sysid_control_slave_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_new_sdram_controller_0_s1_translator
+# -- Compiling architecture rtl of first_nios2_system_new_sdram_controller_0_s1_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_regfile_final_0_avalon_slave_0_translator
+# -- Compiling architecture rtl of first_nios2_system_regfile_final_0_avalon_slave_0_translator
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent
+# -- Compiling architecture rtl of first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent
+# -- Compiling architecture rtl of first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity first_nios2_system_tb
+# -- Compiling architecture rtl of first_nios2_system_tb
+# ** Error: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd(289): (vcom-1136) Unknown identifier "first_nios2_system_inst_regfile_final_0_conduit_end_gssht".
+# 
+# ** Error: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd(296): near "first_nios2_system_i": expecting ';'
+# ** Error: C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/first_nios2_system_tb.vhd(493): VHDL Compiler exiting
+# C:/altera/13.0/modelsim_ase/win32aloem/vcom failed.

@@ -205,13 +205,33 @@
    library="cpu_data_master_translator"
    simulator="riviera" />
  <file
+   path="first_nios2_system/simulation/submodules/regfile_final.vhd"
+   type="VHDL"
+   library="regfile_final_0" />
+ <file
    path="first_nios2_system/simulation/submodules/grab_if.vhd"
    type="VHDL"
    library="grab_if_0" />
  <file
-   path="first_nios2_system/simulation/submodules/regfile_final.vhd"
+   path="first_nios2_system/simulation/submodules/grab_addressing.vhd"
    type="VHDL"
-   library="regfile_final_0" />
+   library="grab_if_0" />
+ <file
+   path="first_nios2_system/simulation/submodules/grab_avdetect.vhd"
+   type="VHDL"
+   library="grab_if_0" />
+ <file
+   path="first_nios2_system/simulation/submodules/grab_buffer.vhd"
+   type="VHDL"
+   library="grab_if_0" />
+ <file
+   path="first_nios2_system/simulation/submodules/grab_rcontrol.vhd"
+   type="VHDL"
+   library="grab_if_0" />
+ <file
+   path="first_nios2_system/simulation/submodules/grab_wcontrol.vhd"
+   type="VHDL"
+   library="grab_if_0" />
  <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_new_sdram_controller_0.vhd"
    type="VHDL"
@@ -372,6 +392,12 @@
    type="VHDL" />
  <file
    path="first_nios2_system/simulation/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_rst_controller.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_rst_controller_001.vhd"
    type="VHDL" />
  <file
    path="first_nios2_system/simulation/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"

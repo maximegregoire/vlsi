@@ -18,8 +18,8 @@ addr_router:                                                                    
 new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo: ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
 new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo:   ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/  
 cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo:       ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/      
-grab_if_0:                                                                      ./libraries/grab_if_0/                                                                     
 regfile_final_0:                                                                ./libraries/regfile_final_0/                                                               
+grab_if_0:                                                                      ./libraries/grab_if_0/                                                                     
 new_sdram_controller_0:                                                         ./libraries/new_sdram_controller_0/                                                        
 sysid:                                                                          ./libraries/sysid/                                                                         
 sys_clk_timer:                                                                  ./libraries/sys_clk_timer/                                                                 

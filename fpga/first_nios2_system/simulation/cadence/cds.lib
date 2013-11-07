@@ -25,8 +25,8 @@ DEFINE addr_router                                                              
 DEFINE new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
 DEFINE new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo   ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/  
 DEFINE cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo       ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/      
-DEFINE grab_if_0                                                                      ./libraries/grab_if_0/                                                                     
 DEFINE regfile_final_0                                                                ./libraries/regfile_final_0/                                                               
+DEFINE grab_if_0                                                                      ./libraries/grab_if_0/                                                                     
 DEFINE new_sdram_controller_0                                                         ./libraries/new_sdram_controller_0/                                                        
 DEFINE sysid                                                                          ./libraries/sysid/                                                                         
 DEFINE sys_clk_timer                                                                  ./libraries/sys_clk_timer/                                                                 

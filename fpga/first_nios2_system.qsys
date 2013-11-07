@@ -32,7 +32,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "7";
          type = "int";
       }
    }
@@ -72,7 +72,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "8";
          type = "int";
       }
    }
@@ -107,7 +107,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1383705082631" />
+ <parameter name="timeStamp" value="1383840578926" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -118,13 +118,13 @@
    type="conduit"
    dir="end" />
  <interface
-   name="regfile_final_0_conduit_end"
-   internal="regfile_final_0.conduit_end"
+   name="grab_if_0_conduit_end"
+   internal="grab_if_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface
-   name="grab_if_0_conduit_end"
-   internal="grab_if_0.conduit_end"
+   name="regfile_final_0_conduit_end"
+   internal="regfile_final_0.conduit_end"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
@@ -348,15 +348,12 @@
   <parameter name="clockRate" value="100000000" />
   <parameter name="componentName">$${FILENAME}_new_sdram_controller_0</parameter>
  </module>
- <module kind="regfile_final" version="1.0" enabled="1" name="regfile_final_0">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="100000000" />
- </module>
  <module kind="grab_if" version="1.0" enabled="1" name="grab_if_0">
   <parameter name="size_in" value="8" />
   <parameter name="size_out" value="16" />
   <parameter name="addrsize" value="23" />
-  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="100000000" />
  </module>
+ <module kind="regfile_final" version="1.0" enabled="1" name="regfile_final_0" />
  <connection
    kind="avalon"
    version="13.0"
@@ -508,6 +505,25 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="grab_if_0.reset_sink" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="cpu.jtag_debug_module_reset"
+   end="grab_if_0.reset_sink" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="grab_if_0.avalon_master"
+   end="new_sdram_controller_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00800000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
    kind="clock"
    version="13.0"
    start="clk_0.clk"
@@ -540,20 +556,6 @@
    version="13.0"
    start="clk_0.clk"
    end="grab_if_0.clock_sink" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="grab_if_0.reset_sink" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="grab_if_0.avalon_master"
-   end="new_sdram_controller_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00800000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

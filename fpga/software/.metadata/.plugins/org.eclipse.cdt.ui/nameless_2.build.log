@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project nameless_2 ****
+
+make all 
+Info: Building ../nameless_2_bsp/
+make --no-print-directory -C ../nameless_2_bsp/
+[BSP build complete]
+[nameless_2 build complete]
+
+**** Build Finished ****

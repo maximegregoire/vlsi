@@ -1,96 +1,248 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider REGFILE
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_addr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_ba
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_cas_n
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_cke
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_cs_n
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_dq
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_dqm
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_ras_n
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/new_sdram_controller_0_wire_we_n
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GMODE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GCONT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GFMT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GFSTART
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GYSS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GXSS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_DEBUG_GRABIF1
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_DEBUG_GRABIF2
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_vdata
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_gclk
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GSPDG
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GACTIVE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GFMT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GMODE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GXSS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GYSS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GFSTART
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GLPITCH
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_SOFIEN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_SOFISTS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_EOFIEN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_EOFISTS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_DMAEN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_DMALR
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_DMAFSTART
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_DMALPITCH
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_DMAXSIZE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VGAHZOOM
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VGAVZOOM
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_PFMT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_HTOTAL
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_HSSYNC
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_HESYNC
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_HSVALID
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_HEVALID
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VTOTAL
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VSSYNC
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VESYNC
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VSVALID
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_VEVALID
+add wave -noupdate -divider {New Divider}
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GLPITCH
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GACTIVE_IN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GSPDG_IN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0_conduit_end_GSSHT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GSSHT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GACTIVE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GSPDG
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0/GSSHT_sig
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0/GSPDG_sig
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0/GACTIVE_sig
+add wave -noupdate -divider GRAB_IF
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/size_in
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/size_out
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/addrsize
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/gclk
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/vdata
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/resetN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/sclk
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/writedata
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/waitrequest
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/writeen
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/byteenable
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/address
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSSHT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSPDG
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GMODE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GCONT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GFMT
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GACTIVE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GFSTART
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GLPITCH
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GYSS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GXSS
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/DEBUG_GRABIF1
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/DEBUG_GRABIF2
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/DEBUG_GRABIF1_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/DEBUG_GRABIF2_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/rdone
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/wdone
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/rdone1
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/rdone2
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/wdone1
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/wdone2
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/av
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/field
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/waddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/wen
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/raddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/reset_memaddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/next_memaddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GACTIVE_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GACTIVE_int1
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GACTIVE_int2
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSPDG_s
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSPDG_r
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSPDG_2r
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/gssht_gclk
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/gssht_flag
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/q
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/small_address
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/incr_memaddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/old_reset_memaddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/y_toggle
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/vdata_delayed
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/av_count
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/s1_av_count
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/s_av_count
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/vdata_debug
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/dbg_linecnt
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/last_av
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/overrun_count
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/cnt_GACTIVE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/debug_reg
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/LINESIZE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/LINESIZELOG
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/BRADDRSIZE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/BWADDRSIZE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/BUFFERLEN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/WORDSIZE
 add wave -noupdate -divider SDRAM
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/resetN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/scke
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/dump
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/load
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sclk
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/DUMPFILE
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/LOADFILE
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/resetN
 add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sa
 add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sbs
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/scsN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/srasN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/scasN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sweN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sd
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sdqm
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/MSG69_inhibit
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/action
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/bankState
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/burstBank
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/burstEnd
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/checkReWRite
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/colAdr
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/firstWrite
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/mode
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/powOnState
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/readMem
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/refresh
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/reset1N
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/rfhViolation
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/rowsAdr
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/scasNI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/scsNI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sdqmD1
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sdqmD2
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sdqmI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/dumpI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/loadI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/setSclkPeriod
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/setupTiming
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/setupTiming1
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/srasNI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/sweNI
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/trigMe
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/writeMem
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/BURST_LENGTH
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/CAS_LATENCY
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/CLK_PERIOD
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/DUMMY_REF_MIN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/IRSA
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/IRSA_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/RFH_PERIOD
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TAC
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TDPL
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TDPL_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/THZ
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TLZ
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TOH
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRAS_CAS2_MIN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRAS_CAS2_MIN_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRAS_CAS3_MIN
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRAS_CAS3_MIN_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRAS_MAX
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRC
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRCD
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRCD_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRC_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRP
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRP_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRRD
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/TRRD_PER
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/colVec
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/rowVec
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/autoPre
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xsdramsdr/preSel
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/scasN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/scke
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sclk
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/scsN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sdqm
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/dump
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/load
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/srasN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sweN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sd
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/MSG69_inhibit
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/action
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/bankState
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/burstBank
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/burstEnd
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/checkReWRite
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/colAdr
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/firstWrite
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/mode
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/powOnState
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/readMem
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/refresh
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/reset1N
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/rfhViolation
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/rowsAdr
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/scasNI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/scsNI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sdqmD1
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sdqmD2
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sdqmI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/dumpI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/loadI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/setSclkPeriod
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/setupTiming
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/setupTiming1
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/srasNI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/sweNI
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/trigMe
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/writeMem
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/BURST_LENGTH
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/CAS_LATENCY
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/CLK_PERIOD
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/DUMMY_REF_MIN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/IRSA
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/IRSA_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/RFH_PERIOD
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TAC
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TDPL
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TDPL_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/THZ
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TLZ
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TOH
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRAS_CAS2_MIN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRAS_CAS2_MIN_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRAS_CAS3_MIN
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRAS_CAS3_MIN_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRAS_MAX
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRC
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRCD
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRCD_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRC_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRP
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRP_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRRD
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/TRRD_PER
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/colVec
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/rowVec
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/autoPre
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/preSel
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/modele
+add wave -noupdate /first_nios2_system_tb/xsdramsdr/allXs
+add wave -noupdate -divider ONCHIP_MEM
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/INIT_FILE
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/address
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/byteenable
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/chipselect
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/clk
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/clken
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/reset
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/write
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/writedata
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/readdata
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/internal_readdata
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/onchip_mem/wren
+add wave -noupdate -divider {Video Decoder}
+add wave -noupdate /first_nios2_system_tb/xadv7181b/dclk
+add wave -noupdate /first_nios2_system_tb/xadv7181b/dpix
+add wave -noupdate /first_nios2_system_tb/xadv7181b/resetN
+add wave -noupdate /first_nios2_system_tb/xadv7181b/hcounter
+add wave -noupdate /first_nios2_system_tb/xadv7181b/vcounter
+add wave -noupdate /first_nios2_system_tb/xadv7181b/field
+add wave -noupdate /first_nios2_system_tb/xadv7181b/hvalid
+add wave -noupdate /first_nios2_system_tb/xadv7181b/vvalid
+add wave -noupdate /first_nios2_system_tb/xadv7181b/ramp
+add wave -noupdate /first_nios2_system_tb/xadv7181b/NXTstart_EAV_FF
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_EAV
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_EAV1p
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_EAV2p
+add wave -noupdate /first_nios2_system_tb/xadv7181b/NXTstart_SAV_FF
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV1p
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV2p
+add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV3p
 TreeUpdate [SetDefaultTree]
-quietly WaveActivateNextPane
-add wave -noupdate -divider {SDRAM CONTROLLER}
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_cs_n
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_ba
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_dqm
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_cke
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_addr
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_we_n
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_ras_n
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_dq
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst_new_sdram_controller_0_wire_cas_n
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/dump
-add wave -noupdate -radix hexadecimal /first_nios2_system_tb/load
-TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3390000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {172891642 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 150
+configure wave -namecolwidth 287
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -104,4 +256,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {3009597 ps} {3706222 ps}
+WaveRestoreZoom {90759413 ps} {311012663 ps}
