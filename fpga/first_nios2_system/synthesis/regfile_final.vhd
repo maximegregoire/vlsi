@@ -96,7 +96,7 @@ signal	DMALPITCH_sig		: 	 std_logic_vector(22 downto 0);
 signal	DMAXSIZE_sig		: 	 std_logic_vector(15 downto 0);	
 signal	VGAHZOOM_sig		: 	 std_logic_vector(1 downto 0);
 signal	VGAVZOOM_sig		: 	 std_logic_vector(1 downto 0);
-signal	PFMT_sig		: 	 std_logic_vector(1 downto 0);	
+signal	PFMT_sig			: 	 std_logic_vector(1 downto 0);	
 signal	HTOTAL_sig			: 	 std_logic_vector(15 downto 0);	
 signal	HSSYNC_sig			:	 std_logic_vector(15 downto 0);	
 signal	HESYNC_sig			:	 std_logic_vector(15 downto 0);	
@@ -108,20 +108,85 @@ signal	VESYNC_sig			:	 std_logic_vector(15 downto 0);
 signal	VSVALID_sig			:	 std_logic_vector(15 downto 0);
 signal	VEVALID_sig			:	 std_logic_vector(15 downto 0);
 
+signal SOFISTS_set			: 		std_logic;
+signal EOFISTS_set			: 		std_logic;
+
+signal GACTIVE_1P			: 		std_logic;
+
+
 begin
 
 GACTIVE_sig <= GACTIVE_IN;
 GSPDG_sig <= GSPDG_IN;
+
+
+process(clk, rst, GACTIVE_sig, GACTIVE_1P)
+begin
+if rst = '1' then
+   SOFISTS_set <= '0';
+   EOFISTS_set <= '0';
+   GACTIVE_1P <= '0';
+elsif clk'event and clk ='1' then
+
+	GACTIVE_1P <= GACTIVE_sig;
+	
+if GACTIVE_1P = '0' and GACTIVE_sig = '1' then -- rising edge detection
+   SOFISTS_set <= '1';
+else
+   SOFISTS_set <= '0';
+end if;
+
+if GACTIVE_1P = '1' and GACTIVE_sig = '0' then -- falling edge detection
+   EOFISTS_set <= '1';
+else
+   EOFISTS_set <= '0';
+end if;
+
+end if;
+end process;
+
+process(clk, rst, SOFISTS_set, SOFISTS_sig)
+begin
+
+if rst = '1' then
+   SOFISTS_sig <= '0';
+elsif clk'event and clk='1' then
+
+	SOFISTS_sig <= SOFISTS_sig;
+	
+if SOFISTS_set = '1' then
+   SOFISTS_sig <= '1';
+-- elsif SOFISTS_set = '0' then -- handled by write to clear
+   --SOFISTS_sig <= '0';
+end if;
+
+end if;
+end process;
+
+process(clk, rst, EOFISTS_set, EOFISTS_sig)
+begin
+if rst = '1' then
+   EOFISTS_sig <= '0';
+elsif clk'event and clk='1' then
+
+	EOFISTS_sig <= EOFISTS_sig;
+	
+if EOFISTS_set = '1' then
+   EOFISTS_sig <= '1';
+-- elsif EOFISTS_set = '0' then -- handled by write to clear
+   --EOFISTS_sig <= '0';
+end if;
+
+end if;
+end process;
+
 
 process(clk)
 begin
 if clk'event and clk='1' then
 -- RESET PROCEDURE
 if rst='1' then
-
 GSSHT_sig 			<=  '0';
--- GSPDG_sig 			<=  '0';
--- GACTIVE_sig 		<=  '0';
 GFMT_sig 			<=  '0';
 GMODE_sig 			<= (others	=> '0');	
 GXSS_sig 			<= (others	=> '0');	
@@ -129,9 +194,9 @@ GYSS_sig				<= (others	=> '0');
 GFSTART_sig 		<= (others	=> '0');	
 GLPITCH_sig			<= (others	=> '0');	
 SOFIEN_sig 			<= '0';
-SOFISTS_sig 		<= '0';
+--SOFISTS_sig 		<= '0';
 EOFIEN_sig 			<= '0';
-EOFISTS_sig 		<= '0';
+--EOFISTS_sig 		<= '0';
 DMAEN_sig 			<= '0';
 DMALR_sig 			<= '0';
 DMAFSTART_sig		<= (others	=> '0');		

@@ -257,7 +257,7 @@ Disassembly of section .entry:
    80014:	08406d14 	ori	at,at,436
     jmp r1
    80018:	0800683a 	jmp	at
-   8001c:	00000000 	call	0 <__reset-0x80000>
+   8001c:	00000000 	call	0 <__alt_mem_onchip_mem-0x80000>
 
 Disassembly of section .exceptions:
 
@@ -634,16 +634,14 @@ int main()
 	int data = 0xDEAD;
    80208:	00b7ab54 	movui	r2,57005
    8020c:	e0bffc15 	stw	r2,-16(fp)
-	// IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GINT, 0x05);
 
-	// IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMACTRL, 0x03);
-
-	// Enable a snapshot!
-	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL, 0x11);
+	// Enable a snapshot and write 10 to GMODE
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL, 0x51);
    80210:	0007883a 	mov	r3,zero
-   80214:	00800444 	movi	r2,17
+   80214:	00801444 	movi	r2,81
    80218:	18800035 	stwio	r2,0(r3)
 
+	// Write the line pitch
 	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GLPITCH, LINE_PITCH);
    8021c:	00c00204 	movi	r3,8
    80220:	00800084 	movi	r2,2
@@ -3126,9 +3124,9 @@ void alt_icache_flush (void* start, alt_u32 len)
    81854:	b9000015 	stw	r4,0(r23)
    81858:	90000226 	beq	r18,zero,81864 <__call_exitprocs+0x194>
    8185c:	9009883a 	mov	r4,r18
-   81860:	00000000 	call	0 <__reset-0x80000>
+   81860:	00000000 	call	0 <__alt_mem_onchip_mem-0x80000>
    81864:	8809883a 	mov	r4,r17
-   81868:	00000000 	call	0 <__reset-0x80000>
+   81868:	00000000 	call	0 <__alt_mem_onchip_mem-0x80000>
    8186c:	bc400017 	ldw	r17,0(r23)
    81870:	883fb11e 	bne	r17,zero,81738 <__call_exitprocs+0x68>
    81874:	003fc106 	br	8177c <__call_exitprocs+0xac>

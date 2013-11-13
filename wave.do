@@ -239,8 +239,35 @@ add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV
 add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV1p
 add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV2p
 add wave -noupdate /first_nios2_system_tb/xadv7181b/start_SAV3p
+add wave -noupdate -divider Grab_wcontrol
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gclk
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/resetN
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/av
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/field
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gmode
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gfmt
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gssht
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gcont
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gspdg
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gactive
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/regdebug
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/waddr
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/wen
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/rdone
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/wdone
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/state
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/linecount
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/curbuf
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/multiplegrab
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/waddr_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/wdone_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gactive_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/gspdg_int
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/validfield
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/lastlineindex
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/grab_wcontrol_1/overrun_count
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {172891642 ps} 0}
+WaveRestoreCursors {{Cursor 1} {310603627 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 287
 configure wave -valuecolwidth 100
@@ -256,4 +283,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {90759413 ps} {311012663 ps}
+WaveRestoreZoom {20815025 ps} {367325525 ps}

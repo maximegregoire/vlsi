@@ -35,18 +35,10 @@ int main()
 
 	int data = 0xDEAD;
 
+	// Enable a snapshot and write 10 to GMODE
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL, 0x51);
 
-	// Write the LINE PITCH
-	// IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GLPITCH, LINE_PITCH);
-
-	// Enable Start-Of-Frame interrupt and End-Of-Frame interrupt
-	// IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GINT, 0x05);
-
-	// IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMACTRL, 0x03);
-
-	// Enable a snapshot!
-	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL, 0x11);
-
+	// Write the line pitch
 	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GLPITCH, LINE_PITCH);
 
 	while (1)
