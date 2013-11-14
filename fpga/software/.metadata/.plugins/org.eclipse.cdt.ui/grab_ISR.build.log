@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project grab_ISR ****
+
+make all 
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
+[BSP build complete]
+[grab_ISR build complete]
+
+**** Build Finished ****

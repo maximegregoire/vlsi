@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2013.11.07.11:13:50</td>
+    <td class="l">2013.11.14.09:42:06</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -252,7 +252,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1383840830</td>
+        <td class="parametervalue">1384440126</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -485,7 +485,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="from">clk&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
        <a href="#module_first_nios2_system_inst_grab_if_0">first_nios2_system_inst_grab_if_0</a>
       </td>
@@ -493,17 +493,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;reset_sink</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">clk&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
       <td class="to">&#160;&#160;clock_sink</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset_sink</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -811,7 +811,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_0">first_nios2_system_inst_clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="40">first_nios2_system_inst_cpu</td>
+      <td class="main" rowspan="39">first_nios2_system_inst_cpu</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -975,24 +975,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_grab_if_0">first_nios2_system_inst_grab_if_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset_sink</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="6">
        <a href="#module_first_nios2_system_inst_regfile_final_0">first_nios2_system_inst_regfile_final_0</a>
       </td>
      </tr>
@@ -1010,6 +994,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">d_irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;interrupt_sender</td>
      </tr>
     </table>
    </div>
@@ -1474,7 +1468,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">internalIrqMaskSystemInfo</td>
-        <td class="parametervalue">65538</td>
+        <td class="parametervalue">65539</td>
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
@@ -2030,7 +2024,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1383840830</td>
+        <td class="parametervalue">1384440126</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_RATE</td>
@@ -2063,7 +2057,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1383840830</td>
+        <td class="parametervalue">1384440126</td>
        </tr>
       </table>
      </td>
@@ -2382,26 +2376,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="neighbor" rowspan="4">
        <a href="#module_first_nios2_system_inst_clk_0">first_nios2_system_inst_clk_0</a>
       </td>
-      <td class="from">clk_reset&#160;&#160;</td>
-      <td class="main" rowspan="12">first_nios2_system_inst_grab_if_0</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset_sink</td>
-     </tr>
-     <tr>
       <td class="from">clk&#160;&#160;</td>
+      <td class="main" rowspan="9">first_nios2_system_inst_grab_if_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock_sink</td>
      </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
      <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_first_nios2_system_inst_cpu">first_nios2_system_inst_cpu</a>
-      </td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
+      <td class="from">clk_reset&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_sink</td>
@@ -2487,7 +2469,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_first_nios2_system_inst_clk_0">first_nios2_system_inst_clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="12">first_nios2_system_inst_regfile_final_0</td>
+      <td class="main" rowspan="14">first_nios2_system_inst_regfile_final_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -2502,7 +2484,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
      </tr>
      <tr>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="6">
        <a href="#module_first_nios2_system_inst_cpu">first_nios2_system_inst_cpu</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
@@ -2515,6 +2497,12 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td class="from">d_irq&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;interrupt_sender</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -2901,15 +2889,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">SIGNAL_ROLES</td>
-        <td class="parametervalue">GSPDG,GACTIVE,GFMT,GMODE,GXSS,GYSS,GFSTART,GLPITCH,SOFIEN,SOFISTS,EOFIEN,EOFISTS,DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,VGAHZOOM,VGAVZOOM,PFMT,HTOTAL,HSSYNC,HESYNC,HSVALID,HEVALID,VTOTAL,VSSYNC,VESYNC,VSVALID,VEVALID,GACTIVE_IN,GSPDG_IN,GSSHT</td>
+        <td class="parametervalue">GSPDG,GACTIVE,GFMT,GMODE,GXSS,GYSS,GFSTART,GLPITCH,SOFIEN,DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,VGAHZOOM,VGAVZOOM,PFMT,HTOTAL,HSSYNC,HESYNC,HSVALID,HEVALID,VTOTAL,VSSYNC,VESYNC,VSVALID,VEVALID,GACTIVE_IN,GSPDG_IN,GSSHT,SOFISTS,EOFIEN</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_WIDTHS</td>
-        <td class="parametervalue">1,1,1,2,2,2,23,23,1,1,1,1,1,1,23,23,16,2,2,2,16,16,16,16,16,16,16,16,16,16,1,1,1</td>
+        <td class="parametervalue">1,1,1,2,2,2,23,23,1,1,1,23,23,16,2,2,2,16,16,16,16,16,16,16,16,16,16,1,1,1,1,1</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_DIRECTIONS</td>
-        <td class="parametervalue">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,input</td>
+        <td class="parametervalue">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,input,input,input</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>

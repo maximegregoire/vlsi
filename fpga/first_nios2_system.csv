@@ -1,12 +1,12 @@
-# system info first_nios2_system on 2013.11.07.11:13:28
+# system info first_nios2_system on 2013.11.14.09:41:42
 system_info:
 name,value
 DEVICE,EP2C35F672C6
 DEVICE_FAMILY,Cyclone II
-GENERATION_ID,1383840729
+GENERATION_ID,1384440010
 #
 #
-# Files generated for first_nios2_system on 2013.11.07.11:13:28
+# Files generated for first_nios2_system on 2013.11.14.09:41:42
 files:
 filepath,kind,attributes,module,is_top
 first_nios2_system/simulation/first_nios2_system.vhd,VHDL,,first_nios2_system,true
@@ -24,8 +24,6 @@ first_nios2_system/simulation/first_nios2_system_sys_clk_timer_s1_translator.vhd
 first_nios2_system/simulation/first_nios2_system_sysid_control_slave_translator.vhd,VHDL,,first_nios2_system,false
 first_nios2_system/simulation/first_nios2_system_new_sdram_controller_0_s1_translator.vhd,VHDL,,first_nios2_system,false
 first_nios2_system/simulation/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd,VHDL,,first_nios2_system,false
-first_nios2_system/simulation/first_nios2_system_rst_controller.vhd,VHDL,,first_nios2_system,false
-first_nios2_system/simulation/first_nios2_system_rst_controller_001.vhd,VHDL,,first_nios2_system,false
 first_nios2_system/simulation/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd,VHDL,,first_nios2_system,false
 first_nios2_system/simulation/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd,VHDL,,first_nios2_system,false
 first_nios2_system/simulation/submodules/first_nios2_system_onchip_mem.hex,HEX,,first_nios2_system_onchip_mem,false
@@ -175,9 +173,6 @@ first_nios2_system.id_router_005,first_nios2_system_id_router_005
 first_nios2_system.limiter,altera_merlin_traffic_limiter
 first_nios2_system.burst_adapter,altera_merlin_burst_adapter
 first_nios2_system.rst_controller,altera_reset_controller
-first_nios2_system.rst_controller_001,altera_reset_controller
-first_nios2_system.rst_controller,altera_reset_controller
-first_nios2_system.rst_controller_001,altera_reset_controller
 first_nios2_system.cmd_xbar_demux,first_nios2_system_cmd_xbar_demux
 first_nios2_system.cmd_xbar_demux_001,first_nios2_system_cmd_xbar_demux_001
 first_nios2_system.cmd_xbar_demux_002,first_nios2_system_cmd_xbar_demux_002

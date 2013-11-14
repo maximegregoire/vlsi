@@ -58,8 +58,8 @@ architecture a0 of grab_wcontrol is
   -- constants
   -- index of last line containing image pixels
   -- (odd and even fields have a different number of lines)
-  constant cst_lastlineindexO : std_logic_vector(8 downto 0) :=  conv_std_logic_vector(240-1, 9);    -- was 244-1
-  constant cst_lastlineindexE : std_logic_vector(8 downto 0) :=  conv_std_logic_vector(240-1, 9);    -- was 243-1
+  constant cst_lastlineindexO : std_logic_vector(8 downto 0) :=  conv_std_logic_vector(4-1, 9);    -- was 244-1 	-- was 240-1
+  constant cst_lastlineindexE : std_logic_vector(8 downto 0) :=  conv_std_logic_vector(4-1, 9);    -- was 243-1   -- was 240-1
   
   type   state_signal is (WAITING, ACTIVEWAIT, ACTIVE);
   signal state : state_signal;

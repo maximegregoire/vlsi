@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.11.07.11:13:29
+# ACDS 13.0 156 win32 2013.11.14.09:41:42
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -257,8 +257,6 @@ alias com {
   vcom  "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                                
   vcom  "$QSYS_SIMDIR/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"                                                                                                                                          
   vcom  "$QSYS_SIMDIR/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
-  vcom  "$QSYS_SIMDIR/first_nios2_system_rst_controller.vhd"                                                                                                                                                                
-  vcom  "$QSYS_SIMDIR/first_nios2_system_rst_controller_001.vhd"                                                                                                                                                            
   vcom  "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
   vcom  "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
 }

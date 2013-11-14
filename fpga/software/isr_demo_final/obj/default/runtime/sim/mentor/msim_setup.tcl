@@ -55,8 +55,9 @@ alias file_copy {
   file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
   file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
   file copy -force C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem.hex ./
-  file copy -force C:/Users/pwhite8/vlsi/fpga/software/isr_demo_final/mem_init/hdl_sim/first_nios2_system_onchip_mem.dat ./
-  file copy -force C:/Users/pwhite8/vlsi/fpga/software/isr_demo_final/mem_init/first_nios2_system_onchip_mem.hex ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/software/grab_ISR/mem_init/hdl_sim/new_sdram_controller_0.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/software/grab_ISR/mem_init/hdl_sim/first_nios2_system_onchip_mem.dat ./
+  file copy -force C:/Users/pwhite8/vlsi/fpga/software/grab_ISR/mem_init/first_nios2_system_onchip_mem.hex ./
 }
 
 # ----------------------------------------
@@ -127,6 +128,17 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
+  
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdrampack.vhd" -87
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdramsdr.vhd" -87
+  
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/adv7181b.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/linebuffer.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/vga.vhd"
+  
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/itu656_behavioral.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/fpga_vga.vhd"
+  
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_irq_mapper.vho"                                                              
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                            
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                          

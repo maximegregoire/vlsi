@@ -34,9 +34,6 @@
 			regfile_final_0_conduit_end_GFSTART    : out   std_logic_vector(22 downto 0);                    -- GFSTART
 			regfile_final_0_conduit_end_GLPITCH    : out   std_logic_vector(22 downto 0);                    -- GLPITCH
 			regfile_final_0_conduit_end_SOFIEN     : out   std_logic;                                        -- SOFIEN
-			regfile_final_0_conduit_end_SOFISTS    : out   std_logic;                                        -- SOFISTS
-			regfile_final_0_conduit_end_EOFIEN     : out   std_logic;                                        -- EOFIEN
-			regfile_final_0_conduit_end_EOFISTS    : out   std_logic;                                        -- EOFISTS
 			regfile_final_0_conduit_end_DMAEN      : out   std_logic;                                        -- DMAEN
 			regfile_final_0_conduit_end_DMALR      : out   std_logic;                                        -- DMALR
 			regfile_final_0_conduit_end_DMAFSTART  : out   std_logic_vector(22 downto 0);                    -- DMAFSTART
@@ -57,7 +54,9 @@
 			regfile_final_0_conduit_end_VEVALID    : out   std_logic_vector(15 downto 0);                    -- VEVALID
 			regfile_final_0_conduit_end_GACTIVE_IN : in    std_logic                     := 'X';             -- GACTIVE_IN
 			regfile_final_0_conduit_end_GSPDG_IN   : in    std_logic                     := 'X';             -- GSPDG_IN
-			regfile_final_0_conduit_end_GSSHT      : out   std_logic                                         -- GSSHT
+			regfile_final_0_conduit_end_GSSHT      : out   std_logic;                                        -- GSSHT
+			regfile_final_0_conduit_end_SOFISTS    : out   std_logic;                                        -- SOFISTS
+			regfile_final_0_conduit_end_EOFIEN     : out   std_logic                                         -- EOFIEN
 		);
 	end component first_nios2_system;
 

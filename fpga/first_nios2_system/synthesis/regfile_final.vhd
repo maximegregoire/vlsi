@@ -35,9 +35,9 @@ port (
 	GLPITCH		: 	out std_logic_vector(22 downto 0);
 	
 	SOFIEN 		: 	out std_logic;
-	SOFISTS 		: 	out std_logic;	
+	SOFISTS 	: 	out std_logic;	
 	EOFIEN 		: 	out std_logic;	
-	EOFISTS 		: 	out std_logic;	
+	EOFISTS 	: 	out std_logic;	
 	
 	DMAEN 		: 	out std_logic;	
 	DMALR 		: 	out std_logic;	
@@ -110,6 +110,8 @@ signal	VEVALID_sig			:	 std_logic_vector(15 downto 0);
 
 signal SOFISTS_set			: 		std_logic;
 signal EOFISTS_set			: 		std_logic;
+signal SOFISTS_rst			: std_logic;
+signal EOFISTS_rst			: std_logic;
 
 signal GACTIVE_1P			: 		std_logic;
 
@@ -127,54 +129,45 @@ if rst = '1' then
    EOFISTS_set <= '0';
    GACTIVE_1P <= '0';
 elsif clk'event and clk ='1' then
-
 	GACTIVE_1P <= GACTIVE_sig;
-	
 if GACTIVE_1P = '0' and GACTIVE_sig = '1' then -- rising edge detection
    SOFISTS_set <= '1';
 else
    SOFISTS_set <= '0';
 end if;
-
 if GACTIVE_1P = '1' and GACTIVE_sig = '0' then -- falling edge detection
    EOFISTS_set <= '1';
 else
    EOFISTS_set <= '0';
 end if;
-
 end if;
 end process;
 
-process(clk, rst, SOFISTS_set, SOFISTS_sig)
+process(clk, rst)
 begin
-
 if rst = '1' then
    SOFISTS_sig <= '0';
 elsif clk'event and clk='1' then
-
 	SOFISTS_sig <= SOFISTS_sig;
-	
 if SOFISTS_set = '1' then
    SOFISTS_sig <= '1';
--- elsif SOFISTS_set = '0' then -- handled by write to clear
-   --SOFISTS_sig <= '0';
+elsif SOFISTS_rst = '1' then -- handled by write to clear
+   SOFISTS_sig <= '0';
 end if;
 
 end if;
 end process;
 
-process(clk, rst, EOFISTS_set, EOFISTS_sig)
+process(clk, rst)
 begin
 if rst = '1' then
    EOFISTS_sig <= '0';
 elsif clk'event and clk='1' then
-
 	EOFISTS_sig <= EOFISTS_sig;
-	
 if EOFISTS_set = '1' then
    EOFISTS_sig <= '1';
--- elsif EOFISTS_set = '0' then -- handled by write to clear
-   --EOFISTS_sig <= '0';
+elsif EOFISTS_rst = '1' then -- handled by write to clear
+   EOFISTS_sig <= '0';
 end if;
 
 end if;
@@ -190,13 +183,11 @@ GSSHT_sig 			<=  '0';
 GFMT_sig 			<=  '0';
 GMODE_sig 			<= (others	=> '0');	
 GXSS_sig 			<= (others	=> '0');	
-GYSS_sig				<= (others	=> '0');	
+GYSS_sig			<= (others	=> '0');	
 GFSTART_sig 		<= (others	=> '0');	
 GLPITCH_sig			<= (others	=> '0');	
 SOFIEN_sig 			<= '0';
---SOFISTS_sig 		<= '0';
 EOFIEN_sig 			<= '0';
---EOFISTS_sig 		<= '0';
 DMAEN_sig 			<= '0';
 DMALR_sig 			<= '0';
 DMAFSTART_sig		<= (others	=> '0');		
@@ -219,6 +210,9 @@ VEVALID_sig			<=	(others	=> '0');
 -- READ AND WRITE PROCEDURE --
 else
 -- If not in reset, force counters count onto count signal
+
+SOFISTS_rst <= '0';
+EOFISTS_rst <= '0';
 
 if (GSSHT_sig = '1') then
 GSSHT_sig <= '0';
@@ -249,10 +243,10 @@ case address is
 		EOFIEN_sig	<= writedata(2);
 		-- RW2C
 		if (writedata(1) = '1') then
-			SOFISTS_sig <= '0';
+			SOFISTS_rst <= '1';
 		end if;
 		if (writedata(3) = '1') then
-			EOFISTS_sig <= '0';
+			EOFISTS_rst <= '1';
 		end if;
 	when "00100" 	=>
 		-- RW

@@ -41,6 +41,7 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GSSHT
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GACTIVE
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0_conduit_end_GSPDG
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0/rst
 add wave -noupdate -divider GRAB_IF
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/gclk
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/address
@@ -62,7 +63,7 @@ add wave -noupdate -divider {Video Decoder}
 add wave -noupdate /first_nios2_system_tb/xadv7181b/dclk
 add wave -noupdate /first_nios2_system_tb/xadv7181b/dpix
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {221281825 ps} 0}
+WaveRestoreCursors {{Cursor 1} {14987 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 287
 configure wave -valuecolwidth 100
@@ -78,4 +79,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {430500 ns}
+WaveRestoreZoom {0 ps} {98006 ps}

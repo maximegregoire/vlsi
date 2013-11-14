@@ -196,19 +196,20 @@ begin
         current_half <= '0';
       end if;
 
-      if waitrequest = '0' then         -- bug fix 2007: ensure that writeen
+     -- if waitrequest = '0' then         -- bug fix 2007: ensure that writeen
                                         -- doesnt change during waitrequest
         -- write enable (follows data and address)
         if state = WAITING and nextstate = BURST then
           writeen <= '1';
-        elsif state = MEMWAIT and nextstate = BURST then
+        --elsif state = MEMWAIT and nextstate = BURST then
+		elsif state = WAITING and nextstate = MEMWAIT then
           writeen <= '1';        -- in case we went from WAITING->MEMWAIT
         elsif state = LASTWRITE then
           writeen <= '0';
         elsif state = DONE then
           writeen <= '0';
         end if;
-      end if;
+     -- end if;
       
     end if;  -- end rising_edge(sclk)
   end process regs;

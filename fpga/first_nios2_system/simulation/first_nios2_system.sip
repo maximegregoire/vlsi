@@ -19,8 +19,6 @@ set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file jo
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_sysid_control_slave_translator.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_new_sdram_controller_0_s1_translator.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"]
-set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_rst_controller.vhd"]
-set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_rst_controller_001.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"]
 set_global_assignment -library "lib_first_nios2_system" -name MISC_FILE [file join $::quartus(sip_path) "submodules/first_nios2_system_irq_mapper.vho"]

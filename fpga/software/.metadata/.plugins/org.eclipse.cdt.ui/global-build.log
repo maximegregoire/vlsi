@@ -1,108 +1,18 @@
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make mem_init_generate 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-Info: Creating nameless_4.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-Info: Compiling program.c to obj/default/program.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nameless_4_bsp//HAL/inc -I../nameless_4_bsp/ -I../nameless_4_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/program.o program.c
-program.c: In function 'main':
-Info: Linking nameless_4.elf
-program.c:36: warning: unused variable 'data'
-nios2-elf-g++  -T'../nameless_4_bsp//linker.x' -msys-crt0='../nameless_4_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nameless_4_bsp/  -msmallc  -Wl,-Map=nameless_4.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o nameless_4.elf obj/default/program.o -lm 
-program.c:34: warning: unused variable 'toggle'
-nios2-elf-insert nameless_4.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1383840915 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
-program.c:33: warning: unused variable 'offset'
-program.c:32: warning: unused variable 'readdata'
-Info: (nameless_4.elf) 7448 Bytes program size (code + initialized data).
-Info:                  12 KBytes free for stack + heap.
-Info: Creating nameless_4.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-Info: Compiling program.c to obj/default/program.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nameless_4_bsp//HAL/inc -I../nameless_4_bsp/ -I../nameless_4_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/program.o program.c
-program.c: In function 'main':
-Info: Linking nameless_4.elf
-program.c:36: warning: unused variable 'data'
-nios2-elf-g++  -T'../nameless_4_bsp//linker.x' -msys-crt0='../nameless_4_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nameless_4_bsp/  -msmallc  -Wl,-Map=nameless_4.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o nameless_4.elf obj/default/program.o -lm 
-program.c:34: warning: unused variable 'toggle'
-nios2-elf-insert nameless_4.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1383840915 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
-program.c:33: warning: unused variable 'offset'
-program.c:32: warning: unused variable 'readdata'
-Info: (nameless_4.elf) 7448 Bytes program size (code + initialized data).
-Info:                  12 KBytes free for stack + heap.
-Info: Creating nameless_4.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 Compiling alt_alarm_start.c...
 nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall  -EL -mno-hw-div -mhw-mul -mno-hw-mulx   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
 Compiling alt_busy_sleep.c...
@@ -221,182 +131,210 @@ Compiling altera_avalon_timer_ts.c...
 nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall  -EL -mno-hw-div -mhw-mul -mno-hw-mulx   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
 Compiling altera_avalon_timer_vars.c...
 nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall  -EL -mno-hw-div -mhw-mul -mno-hw-mulx   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
-program.c: In function 'main':
 Creating libhal_bsp.a...
-program.c:36: warning: unused variable 'data'
 rm -f -f libhal_bsp.a
-program.c:34: warning: unused variable 'toggle'
 nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_qsys_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
-program.c:33: warning: unused variable 'offset'
 [BSP build complete]
-program.c:32: warning: unused variable 'readdata'
-Info: Compiling program.c to obj/default/program.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nameless_4_bsp//HAL/inc -I../nameless_4_bsp/ -I../nameless_4_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/program.o program.c
-Info: Linking nameless_4.elf
-nios2-elf-g++  -T'../nameless_4_bsp//linker.x' -msys-crt0='../nameless_4_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nameless_4_bsp/  -msmallc  -Wl,-Map=nameless_4.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o nameless_4.elf obj/default/program.o -lm 
-nios2-elf-insert nameless_4.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1383840915 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
-Info: (nameless_4.elf) 7448 Bytes program size (code + initialized data).
-Info:                  12 KBytes free for stack + heap.
-Info: Creating nameless_4.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
-[nameless_4 build complete]
+Info: Compiling grab.c to obj/default/grab.o
+nios2-elf-gcc -xc -MP -MMD -c -I../grab_ISR_bsp//HAL/inc -I../grab_ISR_bsp/ -I../grab_ISR_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/grab.o grab.c
+grab.c: In function 'main':
+Info: Linking grab_ISR.elf
+grab.c:41: warning: implicit declaration of function 'alt_irq_register'
+nios2-elf-g++  -T'../grab_ISR_bsp//linker.x' -msys-crt0='../grab_ISR_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../grab_ISR_bsp/  -msmallc  -Wl,-Map=grab_ISR.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o grab_ISR.elf obj/default/grab.o -lm 
+grab.c:38: warning: unused variable 'data'
+nios2-elf-insert grab_ISR.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1384440210 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+grab.c:36: warning: unused variable 'toggle'
+grab.c:35: warning: unused variable 'offset'
+grab.c:34: warning: unused variable 'readdata'
+Info: (grab_ISR.elf) 8044 Bytes program size (code + initialized data).
+Info:                11 KBytes free for stack + heap.
+Info: Creating grab_ISR.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source grab_ISR.elf >grab_ISR.objdump
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+Info: Compiling grab.c to obj/default/grab.o
+nios2-elf-gcc -xc -MP -MMD -c -I../grab_ISR_bsp//HAL/inc -I../grab_ISR_bsp/ -I../grab_ISR_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/grab.o grab.c
+grab.c: In function 'main':
+Info: Linking grab_ISR.elf
+grab.c:43: warning: implicit declaration of function 'alt_irq_register'
+nios2-elf-g++  -T'../grab_ISR_bsp//linker.x' -msys-crt0='../grab_ISR_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../grab_ISR_bsp/  -msmallc  -Wl,-Map=grab_ISR.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o grab_ISR.elf obj/default/grab.o -lm 
+grab.c:40: warning: unused variable 'data'
+nios2-elf-insert grab_ISR.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1384440210 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+grab.c:38: warning: unused variable 'toggle'
+grab.c:37: warning: unused variable 'offset'
+grab.c:36: warning: unused variable 'readdata'
+Info: (grab_ISR.elf) 8116 Bytes program size (code + initialized data).
+Info:                11 KBytes free for stack + heap.
+Info: Creating grab_ISR.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source grab_ISR.elf >grab_ISR.objdump
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-Info: Compiling program.c to obj/default/program.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nameless_4_bsp//HAL/inc -I../nameless_4_bsp/ -I../nameless_4_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/program.o program.c
-program.c: In function 'main':
-Info: Linking nameless_4.elf
-program.c:36: warning: unused variable 'data'
-nios2-elf-g++  -T'../nameless_4_bsp//linker.x' -msys-crt0='../nameless_4_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nameless_4_bsp/  -msmallc  -Wl,-Map=nameless_4.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o nameless_4.elf obj/default/program.o -lm 
-program.c:34: warning: unused variable 'toggle'
-nios2-elf-insert nameless_4.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1383840915 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
-program.c:33: warning: unused variable 'offset'
-program.c:32: warning: unused variable 'readdata'
-Info: (nameless_4.elf) 7448 Bytes program size (code + initialized data).
-Info:                  12 KBytes free for stack + heap.
-Info: Creating nameless_4.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
-[nameless_4 build complete]
+Info: Compiling grab.c to obj/default/grab.o
+nios2-elf-gcc -xc -MP -MMD -c -I../grab_ISR_bsp//HAL/inc -I../grab_ISR_bsp/ -I../grab_ISR_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/grab.o grab.c
+grab.c: In function 'main':
+Info: Linking grab_ISR.elf
+grab.c:43: warning: implicit declaration of function 'alt_irq_register'
+nios2-elf-g++  -T'../grab_ISR_bsp//linker.x' -msys-crt0='../grab_ISR_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../grab_ISR_bsp/  -msmallc  -Wl,-Map=grab_ISR.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o grab_ISR.elf obj/default/grab.o -lm 
+grab.c:40: warning: unused variable 'data'
+nios2-elf-insert grab_ISR.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1384440210 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+grab.c:38: warning: unused variable 'toggle'
+grab.c:37: warning: unused variable 'offset'
+grab.c:36: warning: unused variable 'readdata'
+Info: (grab_ISR.elf) 8116 Bytes program size (code + initialized data).
+Info:                11 KBytes free for stack + heap.
+Info: Creating grab_ISR.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source grab_ISR.elf >grab_ISR.objdump
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-Info: Compiling program.c to obj/default/program.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nameless_4_bsp//HAL/inc -I../nameless_4_bsp/ -I../nameless_4_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/program.o program.c
-program.c: In function 'main':
-Info: Linking nameless_4.elf
-program.c:36: warning: unused variable 'data'
-nios2-elf-g++  -T'../nameless_4_bsp//linker.x' -msys-crt0='../nameless_4_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nameless_4_bsp/  -msmallc  -Wl,-Map=nameless_4.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o nameless_4.elf obj/default/program.o -lm 
-program.c:34: warning: unused variable 'toggle'
-nios2-elf-insert nameless_4.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1383840915 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
-program.c:33: warning: unused variable 'offset'
-program.c:32: warning: unused variable 'readdata'
-Info: (nameless_4.elf) 7448 Bytes program size (code + initialized data).
-Info:                  12 KBytes free for stack + heap.
-Info: Creating nameless_4.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nameless_4.elf >nameless_4.objdump
-[nameless_4 build complete]
+Info: Compiling grab.c to obj/default/grab.o
+nios2-elf-gcc -xc -MP -MMD -c -I../grab_ISR_bsp//HAL/inc -I../grab_ISR_bsp/ -I../grab_ISR_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/grab.o grab.c
+grab.c: In function 'main':
+Info: Linking grab_ISR.elf
+grab.c:43: warning: implicit declaration of function 'alt_irq_register'
+nios2-elf-g++  -T'../grab_ISR_bsp//linker.x' -msys-crt0='../grab_ISR_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../grab_ISR_bsp/  -msmallc  -Wl,-Map=grab_ISR.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o grab_ISR.elf obj/default/grab.o -lm 
+grab.c:40: warning: unused variable 'data'
+nios2-elf-insert grab_ISR.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1384440210 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+grab.c:38: warning: unused variable 'toggle'
+grab.c:37: warning: unused variable 'offset'
+grab.c:36: warning: unused variable 'readdata'
+Info: (grab_ISR.elf) 8116 Bytes program size (code + initialized data).
+Info:                11 KBytes free for stack + heap.
+Info: Creating grab_ISR.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source grab_ISR.elf >grab_ISR.objdump
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+Info: Compiling grab.c to obj/default/grab.o
+nios2-elf-gcc -xc -MP -MMD -c -I../grab_ISR_bsp//HAL/inc -I../grab_ISR_bsp/ -I../grab_ISR_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/grab.o grab.c
+grab.c: In function 'main':
+grab.c:41: warning: implicit declaration of function 'alt_irq_register'
+Info: Linking grab_ISR.elf
+grab.c:38: warning: unused variable 'data'
+nios2-elf-g++  -T'../grab_ISR_bsp//linker.x' -msys-crt0='../grab_ISR_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../grab_ISR_bsp/  -msmallc  -Wl,-Map=grab_ISR.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o grab_ISR.elf obj/default/grab.o -lm 
+grab.c:36: warning: unused variable 'toggle'
+nios2-elf-insert grab_ISR.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1384440210 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+grab.c:35: warning: unused variable 'offset'
+grab.c:34: warning: unused variable 'readdata'
+Info: (grab_ISR.elf) 8116 Bytes program size (code + initialized data).
+Info:                11 KBytes free for stack + heap.
+Info: Creating grab_ISR.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source grab_ISR.elf >grab_ISR.objdump
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
+Info: Compiling grab.c to obj/default/grab.o
+nios2-elf-gcc -xc -MP -MMD -c -I../grab_ISR_bsp//HAL/inc -I../grab_ISR_bsp/ -I../grab_ISR_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/grab.o grab.c
+grab.c: In function 'main':
+Info: Linking grab_ISR.elf
+grab.c:43: warning: implicit declaration of function 'alt_irq_register'
+nios2-elf-g++  -T'../grab_ISR_bsp//linker.x' -msys-crt0='../grab_ISR_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../grab_ISR_bsp/  -msmallc  -Wl,-Map=grab_ISR.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o grab_ISR.elf obj/default/grab.o -lm 
+grab.c:40: warning: unused variable 'data'
+nios2-elf-insert grab_ISR.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 7 --sidp 0x80 --timestamp 1384440210 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/pwhite8/vlsi/fpga" --jdi C:/Users/pwhite8/vlsi/fpga/DE2_BaseProject.jdi --sopcinfo C:/Users/pwhite8/vlsi/fpga/first_nios2_system.sopcinfo
+grab.c:38: warning: unused variable 'toggle'
+grab.c:37: warning: unused variable 'offset'
+grab.c:36: warning: unused variable 'readdata'
+Info: (grab_ISR.elf) 8116 Bytes program size (code + initialized data).
+Info:                11 KBytes free for stack + heap.
+Info: Creating grab_ISR.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source grab_ISR.elf >grab_ISR.objdump
+[grab_ISR build complete]
 
 **** Build Finished ****
 
-**** Build of configuration Nios II for project nameless_4 ****
+**** Build of configuration Nios II for project grab_ISR ****
 
 make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
+Info: Building ../grab_ISR_bsp/
+make --no-print-directory -C ../grab_ISR_bsp/
 [BSP build complete]
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-[nameless_4 build complete]
-
-**** Build Finished ****
-
-**** Build of configuration Nios II for project nameless_4 ****
-
-make all 
-Info: Building ../nameless_4_bsp/
-make --no-print-directory -C ../nameless_4_bsp/
-[BSP build complete]
-[nameless_4 build complete]
+[grab_ISR build complete]
 
 **** Build Finished ****

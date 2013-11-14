@@ -72,7 +72,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1383840811409" />
+ <parameter name="timeStamp" value="1384440105147" />
  <parameter name="useTestBenchNamingPattern" value="true" />
  <instanceScript></instanceScript>
  <module
@@ -133,9 +133,9 @@
    name="first_nios2_system_inst_regfile_final_0_conduit_end_bfm">
   <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="true" />
-  <parameter name="SIGNAL_ROLES">GSPDG,GACTIVE,GFMT,GMODE,GXSS,GYSS,GFSTART,GLPITCH,SOFIEN,SOFISTS,EOFIEN,EOFISTS,DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,VGAHZOOM,VGAVZOOM,PFMT,HTOTAL,HSSYNC,HESYNC,HSVALID,HEVALID,VTOTAL,VSSYNC,VESYNC,VSVALID,VEVALID,GACTIVE_IN,GSPDG_IN,GSSHT</parameter>
-  <parameter name="SIGNAL_WIDTHS">1,1,1,2,2,2,23,23,1,1,1,1,1,1,23,23,16,2,2,2,16,16,16,16,16,16,16,16,16,16,1,1,1</parameter>
-  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,input</parameter>
+  <parameter name="SIGNAL_ROLES">GSPDG,GACTIVE,GFMT,GMODE,GXSS,GYSS,GFSTART,GLPITCH,SOFIEN,DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,VGAHZOOM,VGAVZOOM,PFMT,HTOTAL,HSSYNC,HESYNC,HSVALID,HEVALID,VTOTAL,VSSYNC,VESYNC,VSVALID,VEVALID,GACTIVE_IN,GSPDG_IN,GSSHT,SOFISTS,EOFIEN</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,1,2,2,2,23,23,1,1,1,23,23,16,2,2,2,16,16,16,16,16,16,16,16,16,16,1,1,1,1,1</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,input,input,input</parameter>
  </module>
  <connection
    kind="clock"
