@@ -205,6 +205,10 @@
    library="cpu_data_master_translator"
    simulator="riviera" />
  <file
+   path="first_nios2_system/simulation/submodules/dma_engine.vhd"
+   type="VHDL"
+   library="dma_engine_0" />
+ <file
    path="first_nios2_system/simulation/submodules/regfile_final.vhd"
    type="VHDL"
    library="regfile_final_0" />
@@ -371,6 +375,9 @@
    type="VHDL" />
  <file
    path="first_nios2_system/simulation/first_nios2_system_grab_if_0_avalon_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_dma_engine_0_avalon_master_translator.vhd"
    type="VHDL" />
  <file
    path="first_nios2_system/simulation/first_nios2_system_cpu_jtag_debug_module_translator.vhd"

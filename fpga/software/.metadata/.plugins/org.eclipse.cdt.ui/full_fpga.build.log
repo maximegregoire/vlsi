@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project full_fpga ****
+
+make all 
+Info: Building ../full_fpga_bsp/
+make --no-print-directory -C ../full_fpga_bsp/
+[BSP build complete]
+[full_fpga build complete]
+
+**** Build Finished ****

@@ -56,7 +56,17 @@
 			regfile_final_0_conduit_end_GSPDG_IN   : in    std_logic                     := 'X';             -- GSPDG_IN
 			regfile_final_0_conduit_end_GSSHT      : out   std_logic;                                        -- GSSHT
 			regfile_final_0_conduit_end_SOFISTS    : out   std_logic;                                        -- SOFISTS
-			regfile_final_0_conduit_end_EOFIEN     : out   std_logic                                         -- EOFIEN
+			regfile_final_0_conduit_end_EOFIEN     : out   std_logic;                                        -- EOFIEN
+			dma_engine_0_conduit_end_DMAEN         : in    std_logic                     := 'X';             -- DMAEN
+			dma_engine_0_conduit_end_DMALR         : in    std_logic                     := 'X';             -- DMALR
+			dma_engine_0_conduit_end_DMAFSTART     : in    std_logic_vector(22 downto 0) := (others => 'X'); -- DMAFSTART
+			dma_engine_0_conduit_end_DMALPITCH     : in    std_logic_vector(22 downto 0) := (others => 'X'); -- DMALPITCH
+			dma_engine_0_conduit_end_DMAXSIZE      : in    std_logic_vector(22 downto 0) := (others => 'X'); -- DMAXSIZE
+			dma_engine_0_conduit_end_data          : out   std_logic_vector(31 downto 0);                    -- data
+			dma_engine_0_conduit_end_read_address  : in    std_logic_vector(10 downto 0) := (others => 'X'); -- read_address
+			dma_engine_0_conduit_end_write_address : out   std_logic_vector(10 downto 0);                    -- write_address
+			dma_engine_0_conduit_end_write_enable  : out   std_logic;                                        -- write_enable
+			dma_engine_0_conduit_end_read_enable   : in    std_logic                     := 'X'              -- read_enable
 		);
 	end component first_nios2_system;
 

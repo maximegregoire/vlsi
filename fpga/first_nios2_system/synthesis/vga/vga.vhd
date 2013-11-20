@@ -56,9 +56,11 @@ constant HSVALID : std_logic_vector(15 downto 0):=x"0084"; -- 132
 --constant HEVALID : std_logic_vector(15 downto 0):=x"0340"; -- 832
 constant HEVALID : std_logic_vector(15 downto 0):=x"0354"; -- 852
 constant HESYNC  : std_logic_vector(15 downto 0):=x"0060"; -- 96
-constant VTOTAL  : std_logic_vector(15 downto 0):=x"020C"; -- 525-1
-constant VSVALID : std_logic_vector(15 downto 0):=x"0026"; -- 38 
-constant VEVALID : std_logic_vector(15 downto 0):=x"0206"; -- 518
+
+
+constant VTOTAL  : std_logic_vector(15 downto 0):=x"0010";						--:=x"020C"; -- 525-1
+constant VSVALID : std_logic_vector(15 downto 0):=x"0002";							--:=x"0026"; -- 38 
+constant VEVALID : std_logic_vector(15 downto 0):=x"0008";							--:=x"0206"; -- 518
 constant VESYNC  : std_logic_vector(15 downto 0):=x"0003"; -- 3
 
 
@@ -78,7 +80,7 @@ blankN        <= vvalid and hvalid; -- FIXME (pipeline missing)
 rden          <= vvalid and hvalid; 
 rdaddress(10) <= not lineOddEven; 
 
-   -- monochrome
+ -- monochrome
 P_DATAOUT : process (SW,linebufout)
 begin
 if (SW(2) = '0') then

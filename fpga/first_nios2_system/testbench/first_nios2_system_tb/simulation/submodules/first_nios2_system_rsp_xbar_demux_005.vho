@@ -55,7 +55,13 @@
 		 src2_endofpacket	:	OUT  STD_LOGIC;
 		 src2_ready	:	IN  STD_LOGIC;
 		 src2_startofpacket	:	OUT  STD_LOGIC;
-		 src2_valid	:	OUT  STD_LOGIC
+		 src2_valid	:	OUT  STD_LOGIC;
+		 src3_channel	:	OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 src3_data	:	OUT  STD_LOGIC_VECTOR (86 DOWNTO 0);
+		 src3_endofpacket	:	OUT  STD_LOGIC;
+		 src3_ready	:	IN  STD_LOGIC;
+		 src3_startofpacket	:	OUT  STD_LOGIC;
+		 src3_valid	:	OUT  STD_LOGIC
 	 ); 
  END first_nios2_system_rsp_xbar_demux_005;
 
@@ -66,33 +72,42 @@
 	 SIGNAL  wire_w_lg_w_sink_channel_range1w2w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_sink_channel_range3w4w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_sink_channel_range6w7w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w_sink_channel_range9w10w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink_channel_range1w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink_channel_range3w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink_channel_range6w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_sink_channel_range9w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
  BEGIN
 
 	wire_w_lg_w_sink_channel_range1w2w(0) <= wire_w_sink_channel_range1w(0) AND src0_ready;
 	wire_w_lg_w_sink_channel_range3w4w(0) <= wire_w_sink_channel_range3w(0) AND src1_ready;
 	wire_w_lg_w_sink_channel_range6w7w(0) <= wire_w_sink_channel_range6w(0) AND src2_ready;
-	sink_ready <= ((wire_w_lg_w_sink_channel_range1w2w(0) OR wire_w_lg_w_sink_channel_range3w4w(0)) OR wire_w_lg_w_sink_channel_range6w7w(0));
-	src0_channel <= ( "0" & "0" & "0" & sink_channel(6 DOWNTO 3));
+	wire_w_lg_w_sink_channel_range9w10w(0) <= wire_w_sink_channel_range9w(0) AND src3_ready;
+	sink_ready <= (((wire_w_lg_w_sink_channel_range1w2w(0) OR wire_w_lg_w_sink_channel_range3w4w(0)) OR wire_w_lg_w_sink_channel_range6w7w(0)) OR wire_w_lg_w_sink_channel_range9w10w(0));
+	src0_channel <= ( "0" & "0" & "0" & "0" & sink_channel(6 DOWNTO 4));
 	src0_data <= ( sink_data(86 DOWNTO 0));
 	src0_endofpacket <= sink_endofpacket;
 	src0_startofpacket <= sink_startofpacket;
 	src0_valid <= (sink_valid(0) AND sink_channel(0));
-	src1_channel <= ( "0" & "0" & "0" & sink_channel(6 DOWNTO 3));
+	src1_channel <= ( "0" & "0" & "0" & "0" & sink_channel(6 DOWNTO 4));
 	src1_data <= ( sink_data(86 DOWNTO 0));
 	src1_endofpacket <= sink_endofpacket;
 	src1_startofpacket <= sink_startofpacket;
 	src1_valid <= (sink_valid(0) AND sink_channel(1));
-	src2_channel <= ( "0" & "0" & "0" & sink_channel(6 DOWNTO 3));
+	src2_channel <= ( "0" & "0" & "0" & "0" & sink_channel(6 DOWNTO 4));
 	src2_data <= ( sink_data(86 DOWNTO 0));
 	src2_endofpacket <= sink_endofpacket;
 	src2_startofpacket <= sink_startofpacket;
 	src2_valid <= (sink_valid(0) AND sink_channel(2));
+	src3_channel <= ( "0" & "0" & "0" & "0" & sink_channel(6 DOWNTO 4));
+	src3_data <= ( sink_data(86 DOWNTO 0));
+	src3_endofpacket <= sink_endofpacket;
+	src3_startofpacket <= sink_startofpacket;
+	src3_valid <= (sink_valid(0) AND sink_channel(3));
 	wire_w_sink_channel_range1w(0) <= sink_channel(0);
 	wire_w_sink_channel_range3w(0) <= sink_channel(1);
 	wire_w_sink_channel_range6w(0) <= sink_channel(2);
+	wire_w_sink_channel_range9w(0) <= sink_channel(3);
 
  END RTL; --first_nios2_system_rsp_xbar_demux_005
 --synopsys translate_on

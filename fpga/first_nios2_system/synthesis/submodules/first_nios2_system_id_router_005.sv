@@ -187,15 +187,19 @@ module first_nios2_system_id_router_005
 
 
         if (destid == 0 ) begin
-            src_channel = 7'b001;
+            src_channel = 7'b0001;
         end
 
         if (destid == 1 ) begin
-            src_channel = 7'b010;
+            src_channel = 7'b0010;
+        end
+
+        if (destid == 3 ) begin
+            src_channel = 7'b0100;
         end
 
         if (destid == 2 ) begin
-            src_channel = 7'b100;
+            src_channel = 7'b1000;
         end
 
 

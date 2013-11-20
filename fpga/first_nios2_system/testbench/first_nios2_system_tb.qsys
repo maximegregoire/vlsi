@@ -25,6 +25,14 @@
          type = "int";
       }
    }
+   element first_nios2_system_inst_dma_engine_0_conduit_end_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
    element first_nios2_system_inst_grab_if_0_conduit_end_bfm
    {
       datum _sortIndex
@@ -72,7 +80,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1384440105147" />
+ <parameter name="timeStamp" value="1384977305391" />
  <parameter name="useTestBenchNamingPattern" value="true" />
  <instanceScript></instanceScript>
  <module
@@ -137,6 +145,17 @@
   <parameter name="SIGNAL_WIDTHS">1,1,1,2,2,2,23,23,1,1,1,23,23,16,2,2,2,16,16,16,16,16,16,16,16,16,16,1,1,1,1,1</parameter>
   <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,input,input,input</parameter>
  </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_dma_engine_0_conduit_end_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_ROLES">DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,data,read_address,write_address,write_enable,read_enable</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,23,23,23,32,11,11,1,1</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">output,output,output,output,output,input,output,input,input,output</parameter>
+ </module>
  <connection
    kind="clock"
    version="13.0"
@@ -199,6 +218,27 @@
    version="13.0"
    start="first_nios2_system_inst_regfile_final_0_conduit_end_bfm.conduit"
    end="first_nios2_system_inst.regfile_final_0_conduit_end">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst_dma_engine_0_conduit_end_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="first_nios2_system_inst_reset_bfm.reset"
+   end="first_nios2_system_inst_dma_engine_0_conduit_end_bfm.reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="first_nios2_system_inst_dma_engine_0_conduit_end_bfm.conduit"
+   end="first_nios2_system_inst.dma_engine_0_conduit_end">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

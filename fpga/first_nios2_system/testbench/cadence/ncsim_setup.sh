@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.11.14.09:43:29
+# ACDS 13.0 156 win32 2013.11.20.14:57:01
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -62,6 +62,7 @@ mkdir -p ./libraries/addr_router/
 mkdir -p ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
 mkdir -p ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
 mkdir -p ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
+mkdir -p ./libraries/dma_engine_0/
 mkdir -p ./libraries/regfile_final_0/
 mkdir -p ./libraries/grab_if_0/
 mkdir -p ./libraries/new_sdram_controller_0/
@@ -138,6 +139,7 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -cdslib ./cds_libs/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.cds.lib
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo   -cdslib ./cds_libs/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib  
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo       -cdslib ./cds_libs/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib      
+  ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/dma_engine.vhd"                                                                                        -work dma_engine_0                                                                   -cdslib ./cds_libs/dma_engine_0.cds.lib                                                                  
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/regfile_final.vhd"                                                                                     -work regfile_final_0                                                                -cdslib ./cds_libs/regfile_final_0.cds.lib                                                               
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_if.vhd"                                                                                           -work grab_if_0                                                                      -cdslib ./cds_libs/grab_if_0.cds.lib                                                                     
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/grab_addressing.vhd"                                                                                   -work grab_if_0                                                                      -cdslib ./cds_libs/grab_if_0.cds.lib                                                                     
@@ -167,6 +169,7 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_data_master_translator.vhd"                                                     -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_instruction_master_translator.vhd"                                              -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_grab_if_0_avalon_master_translator.vhd"                                             -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
+  ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_dma_engine_0_avalon_master_translator.vhd"                                          -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                               -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_onchip_mem_s1_translator.vhd"                                                       -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
   ncvhdl -v93 "$QSYS_SIMDIR/first_nios2_system_tb/simulation/submodules/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                         -work first_nios2_system_inst                                                        -cdslib ./cds_libs/first_nios2_system_inst.cds.lib                                                       
