@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.11.20.14:55:03
+# ACDS 13.0 156 win32 2013.11.21.09:03:57
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -135,6 +135,8 @@ ensure_lib                                                                      
 vmap       new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
 ensure_lib                                                                                ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
 vmap       new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo   ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
+ensure_lib                                                                                ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
+vmap       cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo     ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
 ensure_lib                                                                                ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
 vmap       cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo       ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
 ensure_lib                                                                                ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
@@ -219,6 +221,7 @@ alias com {
   vcom  "$QSYS_SIMDIR/submodules/first_nios2_system_addr_router.vho"                                                                    -work addr_router                                                                   
   vcom  "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
   vcom  "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
+  vcom  "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"     -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
   vcom  "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
   vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_slave_agent.sv"                                                                    -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
   vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_burst_uncompressor.sv"                                                             -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
@@ -263,20 +266,21 @@ alias com {
   vcom  "$QSYS_SIMDIR/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
   vcom  "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
   vcom  "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
+  vcom  "$QSYS_SIMDIR/first_nios2_system_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                         
 }
 
 # ----------------------------------------
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  vsim +access +r  -t ps -L work -L irq_mapper -L width_adapter -L rsp_xbar_mux -L rsp_xbar_demux_005 -L rsp_xbar_demux -L cmd_xbar_mux_005 -L cmd_xbar_mux -L cmd_xbar_demux_002 -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L burst_adapter -L limiter -L id_router_005 -L id_router -L addr_router_002 -L addr_router -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_data_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_data_master_translator -L dma_engine_0 -L regfile_final_0 -L grab_if_0 -L new_sdram_controller_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim +access +r  -t ps -L work -L irq_mapper -L width_adapter -L rsp_xbar_mux -L rsp_xbar_demux_005 -L rsp_xbar_demux -L cmd_xbar_mux_005 -L cmd_xbar_mux -L cmd_xbar_demux_002 -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L burst_adapter -L limiter -L id_router_005 -L id_router -L addr_router_002 -L addr_router -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_data_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_data_master_translator -L dma_engine_0 -L regfile_final_0 -L grab_if_0 -L new_sdram_controller_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  vsim -dbg -O2 +access +r -t ps -L work -L irq_mapper -L width_adapter -L rsp_xbar_mux -L rsp_xbar_demux_005 -L rsp_xbar_demux -L cmd_xbar_mux_005 -L cmd_xbar_mux -L cmd_xbar_demux_002 -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L burst_adapter -L limiter -L id_router_005 -L id_router -L addr_router_002 -L addr_router -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_data_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_data_master_translator -L dma_engine_0 -L regfile_final_0 -L grab_if_0 -L new_sdram_controller_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim -dbg -O2 +access +r -t ps -L work -L irq_mapper -L width_adapter -L rsp_xbar_mux -L rsp_xbar_demux_005 -L rsp_xbar_demux -L cmd_xbar_mux_005 -L cmd_xbar_mux -L cmd_xbar_demux_002 -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L burst_adapter -L limiter -L id_router_005 -L id_router -L addr_router_002 -L addr_router -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -L new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -L cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent -L cpu_data_master_translator_avalon_universal_master_0_agent -L cpu_jtag_debug_module_translator -L cpu_data_master_translator -L dma_engine_0 -L regfile_final_0 -L grab_if_0 -L new_sdram_controller_0 -L sysid -L sys_clk_timer -L jtag_uart -L cpu -L onchip_mem -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

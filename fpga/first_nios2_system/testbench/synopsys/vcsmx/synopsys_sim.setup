@@ -17,6 +17,7 @@ addr_router_002:                                                                
 addr_router:                                                                    ./libraries/addr_router/                                                                   
 new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo: ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
 new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo:   ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/  
+cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo:     ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo/    
 cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo:       ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/      
 dma_engine_0:                                                                   ./libraries/dma_engine_0/                                                                  
 regfile_final_0:                                                                ./libraries/regfile_final_0/                                                               

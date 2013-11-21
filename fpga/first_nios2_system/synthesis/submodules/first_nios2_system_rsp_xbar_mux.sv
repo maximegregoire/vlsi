@@ -31,7 +31,7 @@
 //   ARBITRATION_SCHEME   "no-arb"
 //   PIPELINE_ARB:        0
 //   PKT_TRANS_LOCK:      72 (arbitration locking enabled)
-//   ST_DATA_W:           105
+//   ST_DATA_W:           111
 //   ST_CHANNEL_W:        7
 // ------------------------------------------
 
@@ -41,49 +41,49 @@ module first_nios2_system_rsp_xbar_mux
     // Sinks
     // ----------------------
     input                       sink0_valid,
-    input [105-1   : 0]  sink0_data,
+    input [111-1   : 0]  sink0_data,
     input [7-1: 0]  sink0_channel,
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
-    input [105-1   : 0]  sink1_data,
+    input [111-1   : 0]  sink1_data,
     input [7-1: 0]  sink1_channel,
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
     output                      sink1_ready,
 
     input                       sink2_valid,
-    input [105-1   : 0]  sink2_data,
+    input [111-1   : 0]  sink2_data,
     input [7-1: 0]  sink2_channel,
     input                       sink2_startofpacket,
     input                       sink2_endofpacket,
     output                      sink2_ready,
 
     input                       sink3_valid,
-    input [105-1   : 0]  sink3_data,
+    input [111-1   : 0]  sink3_data,
     input [7-1: 0]  sink3_channel,
     input                       sink3_startofpacket,
     input                       sink3_endofpacket,
     output                      sink3_ready,
 
     input                       sink4_valid,
-    input [105-1   : 0]  sink4_data,
+    input [111-1   : 0]  sink4_data,
     input [7-1: 0]  sink4_channel,
     input                       sink4_startofpacket,
     input                       sink4_endofpacket,
     output                      sink4_ready,
 
     input                       sink5_valid,
-    input [105-1   : 0]  sink5_data,
+    input [111-1   : 0]  sink5_data,
     input [7-1: 0]  sink5_channel,
     input                       sink5_startofpacket,
     input                       sink5_endofpacket,
     output                      sink5_ready,
 
     input                       sink6_valid,
-    input [105-1   : 0]  sink6_data,
+    input [111-1   : 0]  sink6_data,
     input [7-1: 0]  sink6_channel,
     input                       sink6_startofpacket,
     input                       sink6_endofpacket,
@@ -94,7 +94,7 @@ module first_nios2_system_rsp_xbar_mux
     // Source
     // ----------------------
     output                      src_valid,
-    output [105-1    : 0] src_data,
+    output [111-1    : 0] src_data,
     output [7-1 : 0] src_channel,
     output                      src_startofpacket,
     output                      src_endofpacket,
@@ -106,11 +106,11 @@ module first_nios2_system_rsp_xbar_mux
     input clk,
     input reset
 );
-    localparam PAYLOAD_W        = 105 + 7 + 2;
+    localparam PAYLOAD_W        = 111 + 7 + 2;
     localparam NUM_INPUTS       = 7;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 0;
-    localparam ST_DATA_W        = 105;
+    localparam ST_DATA_W        = 111;
     localparam ST_CHANNEL_W     = 7;
     localparam PKT_TRANS_LOCK   = 72;
 

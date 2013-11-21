@@ -32,13 +32,13 @@
 	 ( 
 		 clk	:	IN  STD_LOGIC;
 		 reset	:	IN  STD_LOGIC;
-		 sink_data	:	IN  STD_LOGIC_VECTOR (86 DOWNTO 0);
+		 sink_data	:	IN  STD_LOGIC_VECTOR (92 DOWNTO 0);
 		 sink_endofpacket	:	IN  STD_LOGIC;
 		 sink_ready	:	OUT  STD_LOGIC;
 		 sink_startofpacket	:	IN  STD_LOGIC;
 		 sink_valid	:	IN  STD_LOGIC;
 		 src_channel	:	OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
-		 src_data	:	OUT  STD_LOGIC_VECTOR (86 DOWNTO 0);
+		 src_data	:	OUT  STD_LOGIC_VECTOR (92 DOWNTO 0);
 		 src_endofpacket	:	OUT  STD_LOGIC;
 		 src_ready	:	IN  STD_LOGIC;
 		 src_startofpacket	:	OUT  STD_LOGIC;
@@ -54,7 +54,7 @@
 
 	sink_ready <= src_ready;
 	src_channel <= ( "0" & "0" & "0" & "0" & "0" & "0" & "1");
-	src_data <= ( sink_data(86 DOWNTO 77) & "0" & "1" & "0" & sink_data(73 DOWNTO 0));
+	src_data <= ( sink_data(92 DOWNTO 83) & "0" & "1" & "0" & sink_data(79 DOWNTO 0));
 	src_endofpacket <= sink_endofpacket;
 	src_startofpacket <= sink_startofpacket;
 	src_valid <= sink_valid;

@@ -115,7 +115,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1384976566702" />
+ <parameter name="timeStamp" value="1385010265481" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -580,6 +580,15 @@
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
+   kind="avalon"
+   version="13.0"
+   start="dma_engine_0.avalon_master"
+   end="new_sdram_controller_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00800000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
    kind="clock"
    version="13.0"
    start="clk_0.clk"
@@ -589,15 +598,6 @@
    version="13.0"
    start="clk_0.clk_reset"
    end="dma_engine_0.reset_sink" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="dma_engine_0.avalon_master"
-   end="new_sdram_controller_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00800000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

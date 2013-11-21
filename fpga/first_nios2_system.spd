@@ -151,6 +151,10 @@
    type="VHDL"
    library="new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
  <file
+   path="first_nios2_system/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"
+   type="VHDL"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo" />
+ <file
    path="first_nios2_system/simulation/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
    type="VHDL"
    library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo" />
@@ -405,6 +409,9 @@
    type="VHDL" />
  <file
    path="first_nios2_system/simulation/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="first_nios2_system/simulation/first_nios2_system_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"
    type="VHDL" />
  <topLevel name="first_nios2_system" />
  <deviceFamily name="cycloneii" />

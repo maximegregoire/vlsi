@@ -80,7 +80,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1384977305391" />
+ <parameter name="timeStamp" value="1385042640534" />
  <parameter name="useTestBenchNamingPattern" value="true" />
  <instanceScript></instanceScript>
  <module
@@ -153,7 +153,7 @@
   <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="true" />
   <parameter name="SIGNAL_ROLES">DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,data,read_address,write_address,write_enable,read_enable</parameter>
-  <parameter name="SIGNAL_WIDTHS">1,1,23,23,23,32,11,11,1,1</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,23,23,16,32,11,11,1,1</parameter>
   <parameter name="SIGNAL_DIRECTIONS">output,output,output,output,output,input,output,input,input,output</parameter>
  </module>
  <connection

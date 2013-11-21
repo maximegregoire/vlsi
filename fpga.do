@@ -62,6 +62,9 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/d
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readen
 add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/write_address
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/write_enable
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/read_count
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readdata_valid_count
+add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/burstcount
 add wave -noupdate -divider GRAB_IF
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GCONT
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GFMT

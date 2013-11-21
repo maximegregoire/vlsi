@@ -152,8 +152,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 1168)
 		(input)
-		(text "dma_engine_0_conduit_end_DMAXSIZE[22..0]" (rect 0 0 194 12)(font "Arial" (font_size 8)))
-		(text "dma_engine_0_conduit_end_DMAXSIZE[22..0]" (rect 4 1157 244 1168)(font "Arial" (font_size 8)))
+		(text "dma_engine_0_conduit_end_DMAXSIZE[15..0]" (rect 0 0 193 12)(font "Arial" (font_size 8)))
+		(text "dma_engine_0_conduit_end_DMAXSIZE[15..0]" (rect 4 1157 244 1168)(font "Arial" (font_size 8)))
 		(line (pt 0 1168)(pt 256 1168)(line_width 3))
 	)
 	(port

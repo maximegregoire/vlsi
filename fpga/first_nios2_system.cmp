@@ -61,7 +61,7 @@
 			dma_engine_0_conduit_end_DMALR         : in    std_logic                     := 'X';             -- DMALR
 			dma_engine_0_conduit_end_DMAFSTART     : in    std_logic_vector(22 downto 0) := (others => 'X'); -- DMAFSTART
 			dma_engine_0_conduit_end_DMALPITCH     : in    std_logic_vector(22 downto 0) := (others => 'X'); -- DMALPITCH
-			dma_engine_0_conduit_end_DMAXSIZE      : in    std_logic_vector(22 downto 0) := (others => 'X'); -- DMAXSIZE
+			dma_engine_0_conduit_end_DMAXSIZE      : in    std_logic_vector(15 downto 0) := (others => 'X'); -- DMAXSIZE
 			dma_engine_0_conduit_end_data          : out   std_logic_vector(31 downto 0);                    -- data
 			dma_engine_0_conduit_end_read_address  : in    std_logic_vector(10 downto 0) := (others => 'X'); -- read_address
 			dma_engine_0_conduit_end_write_address : out   std_logic_vector(10 downto 0);                    -- write_address
