@@ -13,19 +13,36 @@
 #define HARDWARE 0
 #define SOFTWARE 1
 
-#define LINE_PITCH 0x100
+// #define LINE_PITCH 		1440
+#define LINE_PITCH			256
 
-#define GFSTART_increment 0x1000
+//#define DMA_LINE_PTICH	1440
+#define DMA_LINE_PTICH	256
 
+#define DMA_LINE_SIZE	1440
+
+#define GFSTART_increment 512
+
+// Register Map
 #define GCTRL		0x00
 #define GFSTART		0x04
 #define GLPITCH 	0x08
 #define GINT	 	0x0C
-
-
 #define DMACTRL		0x10
 #define DMAFSTART	0x14
 #define DMALPITCH	0x18
+#define DMASIZE		0x1C
+#define VGACTRL		0x20
+#define HTOTAL		0x24
+#define HSSYNC		0x28
+#define HESNC		0x2C
+#define HSVALID		0x30
+#define HEVALID		0x34
+#define	VTOTAL		0x38
+#define VSSYNC		0x3C
+#define VESYNC		0x40
+#define VSVALID		0x44
+#define VEVALID		0x48
 
 #define CHECK_BIT(var,pos) 	((var) & (1<<(pos)))
 #define SET_BIT(var,pos) 	(var |= (1U << pos))
@@ -51,7 +68,10 @@ int main()
 	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMAFSTART, 0);
 
 	// Write DMA line pitch
-	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMALPITCH, LINE_PITCH);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMALPITCH, DMA_LINE_PTICH);
+
+	// Define DMA line size
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMASIZE, DMA_LINE_SIZE);
 
 	// Set Grab start address to 0
 	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GFSTART, 0);

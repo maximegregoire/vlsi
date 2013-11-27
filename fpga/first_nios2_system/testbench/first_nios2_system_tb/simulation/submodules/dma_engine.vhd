@@ -9,7 +9,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
 
 entity dma_engine is
 
@@ -46,35 +45,31 @@ entity dma_engine is
 
 architecture functional of dma_engine is
   
-  --LINEBUF SIGNALS
-  signal data_sig 			: std_logic_vector(31 downto 0);
-  signal write_enable_sig 	: std_logic;
-  signal write_address_sig 	: std_logic_vector(10 downto 0);
-  
-  -- AVALON SIGNALS
-  signal address_sig 		: std_logic_vector(31 downto 0);
-  signal readen_sig 		: std_logic;
-  signal byteenable_sig		: std_logic_vector(1 downto 0);
-  signal burstcount_sig 	: std_logic_vector(7 downto 0);
-  
-  -- STATE MACHINE SIGNALS
-  signal readen_set 		: std_logic;
-  signal read_enable_sig 	: std_logic;
-  signal readen_rst 		: std_logic;
-  signal address_set 		: std_logic;
-  signal address_rst		: std_logic;
-  
-  signal readdata_valid_sig : std_logic;
-  
-  -- COUNTERS
-  signal readdata_valid_count : std_logic_vector(7 downto 0);
-  signal read_count : std_logic_vector(3 downto 0);
-  
-  signal increment_readdatavalid_count : std_logic;
-  signal increment_read_count : std_logic;
-  
-  signal reset_read_count : std_logic;
-  signal reset_readdata_valid_count : std_logic;
+	--LINEBUF SIGNALS
+	signal data_sig 			: std_logic_vector(31 downto 0);
+	signal write_enable_sig 	: std_logic;
+	signal write_address_sig 	: std_logic_vector(10 downto 0);
+	
+	-- AVALON SIGNALS
+	signal address_sig 		: std_logic_vector(31 downto 0);
+	signal readen_sig 		: std_logic;
+	signal byteenable_sig		: std_logic_vector(1 downto 0);
+	signal burstcount_sig 	: std_logic_vector(7 downto 0);
+	
+	-- STATE MACHINE SIGNALS
+	signal readen_set 		: std_logic;
+	signal read_enable_sig 	: std_logic;
+	signal readen_rst 		: std_logic;
+	signal address_set 		: std_logic;
+	signal address_rst		: std_logic;
+	
+	signal readdata_valid_sig : std_logic;
+	
+	-- COUNTERS
+	signal read_count : std_logic_vector(3 downto 0);
+	signal readdata_valid_clk_count : std_logic_vector(9 downto 0);
+	
+	signal line_toggle : std_logic;
 	
 begin
  
@@ -82,31 +77,25 @@ begin
   
   -- COUNTERS
   
-	-- Increments or resets readdata_valid_count
-	process(sclk, resetN, readdata_valid_sig, increment_readdatavalid_count, readdata_valid_count, reset_readdata_valid_count)
+	-- Count the number of clock pulses while data_valid is high
+	process(sclk, resetN)
 	begin
 	if resetN = '0' then
-	   readdata_valid_count <= (others => '0');
+	   readdata_valid_clk_count <= (others => '0');
+	   line_toggle = '0';
 	elsif sclk'event and sclk ='1' then
-	if increment_readdatavalid_count = '1' then
-		readdata_valid_count <= UNSIGNED(readdata_valid_count) + 1;
-	elsif reset_readdata_valid_count = '1' then
-		readdata_valid_count <= (others => '0');
-	end if;
-	end if;
-	end process;
-	
-	-- Increments or resets read_count
-	process(sclk, resetN, increment_read_count, read_count)
-	begin
-	if resetN = '0' then
-	   read_count <= (others => '0');
-	elsif sclk'event and sclk ='1' then
-	if increment_read_count = '1' then
-		read_count <= UNSIGNED(read_count) + 1;
-	elsif reset_read_count = '1' then
-		read_count <= (others => '0');
-	end if;
+		if readdata_valid_sig = '1' then
+			readdata_valid_clk_count <= UNSIGNED(readdata_valid_clk_count) + 1;
+		elsif readdata_valid_clk_count = "1011010000" then
+			readdata_valid_clk_count <= (others => '0');
+			
+			if line_toggle = '0' then
+				line_toggle = '1';
+			elsif line_toggle = '1' then
+				line_toggle = '0';
+			end if;
+			
+		end if;
 	end if;
 	end process;
 	
@@ -114,59 +103,46 @@ begin
 	process(sclk, resetN)
 	begin
 	if resetN = '0' then
-	   increment_read_count <= '0';
+	   read_count <= "0000";
 	elsif sclk'event and sclk ='1' then
-		reset_readdata_valid_count <= '0';
-		increment_read_count <= '0';
-	if readdata_valid_count = "00010000" then 
-		if increment_read_count = '0' then
-		increment_read_count <= '1';
-		end if;
-	   reset_readdata_valid_count <= '1';
-	elsif read_count = "0101" and readdata_valid_count = "00001010" then
-		if increment_read_count = '0' then
-			increment_read_count <= '1';
-		end if;
-	   reset_readdata_valid_count <= '1';
+	case conv_integer(UNSIGNED(readdata_valid_clk_count)) is
+		when 0 to 127 => read_count <= "0000";
+		when 128 to 255 => read_count <= "0001";
+		when 256 to 383 => read_count <= "0010";
+		when 384 to 511 => read_count <= "0011";
+		when 512 to 639 => read_count <= "0100";
+		when 640 to 720 => read_count <= "0101";
+		when others => read_count <= "0000";
+	end case;
 	end if;
+	end process;
+	
+	-- Register readdata_valid_sig
+	process(sclk, resetN)
+	begin
+	if resetN = '0' then
+		readdata_valid_sig <= '0';
+	elsif sclk'event and sclk ='1' then
+		readdata_valid_sig <= readdata_valid;
 	end if;
 	end process;
 	
 	-- Resets read_count and sets burstcount signal
-	process(sclk, resetN, read_count, reset_read_count)
+	process(sclk, resetN)
 	begin
 	if resetN = '0' then
-	   reset_read_count <= '0';
 	   burstcount_sig <= "10000000";
 	elsif sclk'event and sclk ='1' then
-		reset_read_count <= '0';
 	if read_count = "0101" then 
 	   burstcount_sig <= "01010000";
-	elsif read_count = "0110" then
-		burstcount_sig <= "10000000";
-		reset_read_count <= '1';
 	else
 		burstcount_sig <= "10000000";
 	end if;
 	end if;
 	end process;
 	
-	-- Sets increment readdata_valid_count signal
-	process(sclk, resetN, readdata_valid_sig, readdata_valid, increment_readdatavalid_count)
-	begin
-	if resetN = '0' then
-	   increment_readdatavalid_count <= '0';
-	elsif sclk'event and sclk ='1' then
-		readdata_valid_sig <= readdata_valid;
-		increment_readdatavalid_count <= '0';
-	if readdata_valid = '0' and readdata_valid_sig = '1' then -- rising edge detection
-	   increment_readdatavalid_count <= '1';
-	end if;
-	end if;
-	end process;
-	
   -- READEN_SET and ADDRESS_SET process
-	process(sclk, resetN, read_enable_sig, read_enable)
+	process(sclk, resetN)
 	begin
 	if resetN = '0' then
 	   readen_set <= '0';
@@ -198,7 +174,7 @@ begin
 	end if;
 	end process;
 
-	
+	-- SET THE ADDRESS OF THE NEXT BURST
 	process(sclk, resetN, readen_rst)
 	begin
 	if resetN = '0' then
@@ -237,10 +213,11 @@ begin
 		data_sig <= (others => '0');
 		write_enable_sig <= '0';
 		write_address_sig <= (others => '0');
-	elsif sclk'event and sclk = '1' then			
+	elsif sclk'event and sclk = '1' then
+			write_enable_sig <= '0';
 		  if readdata_valid = '1' then
 			write_address_sig  <= address_sig(10 downto 0);
-			data_sig(15 downto 0) <= readdata;
+			data_sig(31 downto 16) <= readdata;
 			write_enable_sig <= '1';
 		  end if;
 	end if;
@@ -251,7 +228,8 @@ begin
 	address <= address_sig;
 	readen <= readen_sig;
 	write_enable <= write_enable_sig;
-	write_address <= write_address_sig;
+	write_address(10) <= toggle_line;
+	write_address(9 downto 0) <= readdata_valid_clk_count;
 	byteenable <= byteenable_sig;
 	burstcount <= burstcount_sig;
 

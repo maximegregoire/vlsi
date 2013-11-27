@@ -107,13 +107,27 @@ architecture rtl of first_nios2_system_tb is
 		);
 	end component sdramsdr;
 	
-	-- Decoder
+	
+	-- OLD Decoder
+	-- component adv7181b is
+	-- 	port (
+	-- 		  -- Avalon signals
+	-- 		  dclk        : buffer     std_logic:='0'; -- decoder output clock
+	-- 		  dpix        : buffer     std_logic_vector(7 downto 0) -- decoder pixel output
+	-- 		 );
+	-- end component adv7181b;
+	
+	-- NEW DECODER MODEL
 	component adv7181b is
 		port (
-			  -- Avalon signals
-			  dclk        : buffer     std_logic:='0'; -- decoder output clock
-			  dpix        : buffer     std_logic_vector(7 downto 0) -- decoder pixel output
-			 );
+		  -- Avalon signals
+		  dclk        : buffer     std_logic:='0'; -- decoder output clock
+		  dpix        : buffer     std_logic_vector(7 downto 0); -- decoder pixel output
+		  GYSIZE      : in         std_logic_vector(8 downto 0); -- valid line per field
+		  GXSIZE      : in         std_logic_vector(10 downto 0); -- valid pixel per line
+		  GVTOTAL     : in         std_logic_vector(9 downto 0); -- total lines per FRAME (including vertical blanking)
+		  GHTOTAL     : in         std_logic_vector(10 downto 0) -- total pixel per line (including horizontal blanking 
+		 );
 	end component adv7181b;
 	
 	component vga is
@@ -377,9 +391,14 @@ architecture rtl of first_nios2_system_tb is
 	
 	signal SW_sig		: std_logic_vector(17 downto 0);
 	
+	signal GYSIZE  : std_logic_vector(8 downto 0):="000000100"; -- 4 valid lines per field
+	signal GVTOTAL : std_logic_vector(9 downto 0):="0000001111"; -- 15 lines per frame (odd + even fields)
+	--signal      GXSIZE  : std_logic_vector(10 downto 0):="10110100000"; --1440
+	signal GXSIZE  : std_logic_vector(10 downto 0):="00100000000";-- 256
+	--signal      GHTOTAL : std_logic_vector(10 downto 0):="11010110100"; -- 1716
+	signal GHTOTAL : std_logic_vector(10 downto 0):="00100011111"; -- 288-1
+	
 	-- END OF THINGS WE ADDED
-	
-	
 	
 begin
 
@@ -538,11 +557,23 @@ begin
 		sd     => first_nios2_system_inst_new_sdram_controller_0_wire_dq
 		);
 		
+	-- OLD DECODER
+	--xadv7181b : component adv7181b
+	--	port map (
+	--	  -- Avalon signals
+	--	  dclk      => vclk, -- : buffer     std_logic:='0'; -- decoder output clock
+	--	  dpix      => vdata -- : buffer     std_logic_vector(7 downto 0) -- decoder pixel output
+	--	 );
+		 
 	xadv7181b : component adv7181b
 		port map (
 		  -- Avalon signals
-		  dclk      => vclk, -- : buffer     std_logic:='0'; -- decoder output clock
-		  dpix      => vdata -- : buffer     std_logic_vector(7 downto 0) -- decoder pixel output
+		  dclk        => vclk,		--: buffer     std_logic:='0'; -- decoder output clock
+		  dpix        => vdata,		--: buffer     std_logic_vector(7 downto 0); -- decoder pixel output
+		  GYSIZE      => GYSIZE,		--: in         std_logic_vector(8 downto 0); -- valid line per field
+		  GXSIZE      => GXSIZE,		--: in         std_logic_vector(10 downto 0); -- valid pixel per line
+		  GVTOTAL     => GVTOTAL,		--: in         std_logic_vector(9 downto 0); -- total lines per FRAME (including vertical blanking)
+		  GHTOTAL     => GHTOTAL		--: in         std_logic_vector(10 downto 0) -- total pixel per line (including horizontal blanking 
 		 );
 		 
 	xvga : component vga

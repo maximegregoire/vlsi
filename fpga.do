@@ -5,11 +5,11 @@ add wave -noupdate /first_nios2_system_tb/xvga/dclk
 add wave -noupdate /first_nios2_system_tb/xvga/rstN
 add wave -noupdate /first_nios2_system_tb/xvga/SW
 add wave -noupdate /first_nios2_system_tb/xvga/rden
-add wave -noupdate /first_nios2_system_tb/xvga/rdaddress
+add wave -noupdate -radix unsigned /first_nios2_system_tb/xvga/rdaddress
 add wave -noupdate /first_nios2_system_tb/xvga/lineOddEven
 add wave -noupdate /first_nios2_system_tb/xvga/hrst
 add wave -noupdate /first_nios2_system_tb/xvga/vrst
-add wave -noupdate /first_nios2_system_tb/xvga/linebufout
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xvga/linebufout
 add wave -noupdate /first_nios2_system_tb/xvga/HESYNC
 add wave -noupdate /first_nios2_system_tb/xvga/HEVALID
 add wave -noupdate /first_nios2_system_tb/xvga/HSVALID
@@ -24,9 +24,9 @@ add wave -noupdate -radix unsigned /first_nios2_system_tb/xvga/vcounter
 add wave -noupdate /first_nios2_system_tb/xvga/clockdac
 add wave -noupdate /first_nios2_system_tb/xvga/blankN
 add wave -noupdate /first_nios2_system_tb/xvga/syncN
-add wave -noupdate /first_nios2_system_tb/xvga/red
-add wave -noupdate /first_nios2_system_tb/xvga/green
-add wave -noupdate /first_nios2_system_tb/xvga/blue
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xvga/red
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xvga/green
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xvga/blue
 add wave -noupdate -radix unsigned /first_nios2_system_tb/xvga/HTOTAL
 add wave -noupdate /first_nios2_system_tb/xvga/count4
 add wave -noupdate /first_nios2_system_tb/xvga/framecnt
@@ -35,11 +35,11 @@ add wave -noupdate /first_nios2_system_tb/xvga/hvalid1p
 add wave -noupdate /first_nios2_system_tb/xvga/vvalid
 add wave -noupdate -divider {LINE BUF}
 add wave -noupdate /first_nios2_system_tb/xlinebuffer/clock
-add wave -noupdate /first_nios2_system_tb/xlinebuffer/data
-add wave -noupdate /first_nios2_system_tb/xlinebuffer/rdaddress
-add wave -noupdate /first_nios2_system_tb/xlinebuffer/wraddress
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xlinebuffer/data
+add wave -noupdate -radix unsigned /first_nios2_system_tb/xlinebuffer/rdaddress
+add wave -noupdate -radix unsigned /first_nios2_system_tb/xlinebuffer/wraddress
 add wave -noupdate /first_nios2_system_tb/xlinebuffer/wren
-add wave -noupdate /first_nios2_system_tb/xlinebuffer/q
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/xlinebuffer/q
 add wave -noupdate -divider DMA
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/DMAEN
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/DMAFSTART
@@ -49,7 +49,7 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/D
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/addrsize
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/read_address
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/read_enable
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readdata
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readdata
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readdata_valid
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/resetN
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/sclk
@@ -58,18 +58,18 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/s
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/waitrequest
 add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/address
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/byteenable
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/data
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/data
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readen
 add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/write_address
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/write_enable
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/read_count
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readdata_valid_count
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/burstcount
+add wave -noupdate -radix unsigned /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/read_count
+add wave -noupdate -radix unsigned /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/burstcount
+add wave -noupdate -radix unsigned /first_nios2_system_tb/first_nios2_system_inst/dma_engine_0/readdata_valid_clk_count
 add wave -noupdate -divider GRAB_IF
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GCONT
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GFMT
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GFSTART
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GLPITCH
+add wave -noupdate -radix unsigned /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GFSTART
+add wave -noupdate -radix unsigned /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GLPITCH
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GMODE
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSSHT
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GXSS
@@ -86,9 +86,9 @@ add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/DEBU
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/DEBUG_GRABIF2
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GACTIVE
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/GSPDG
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/address
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/address
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/byteenable
-add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/writedata
+add wave -noupdate -radix hexadecimal /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/writedata
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/grab_if_0/writeen
 add wave -noupdate -divider REGFILE
 add wave -noupdate /first_nios2_system_tb/first_nios2_system_inst/regfile_final_0/GACTIVE_IN
@@ -150,7 +150,7 @@ add wave -noupdate /first_nios2_system_tb/xsdramsdr/srasN
 add wave -noupdate /first_nios2_system_tb/xsdramsdr/sweN
 add wave -noupdate /first_nios2_system_tb/xsdramsdr/sd
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {378522606 ps} 0}
+WaveRestoreCursors {{Cursor 1} {765002946 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -166,4 +166,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {377425334 ps} {401188141 ps}
+WaveRestoreZoom {0 ps} {955500 ns}

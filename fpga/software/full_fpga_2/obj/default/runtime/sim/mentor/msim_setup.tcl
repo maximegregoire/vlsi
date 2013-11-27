@@ -126,13 +126,18 @@ alias dev_com {
 
 # ----------------------------------------
 # Compile the design files in correct order
+
+# NOTE: We have changed the adv7181b to a new model
+
+# We have changed grab_addressing, grab_if and grab_wcontrol to a new model
+
 alias com {
   echo "\[exec\] com"
   
   vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdrampack.vhd" -87
   vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/sdramsdr.vhd" -87
   
-  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/adv7181b.vhd"
+  vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/new/adv7181b.vhd" 
   vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/linebuffer.vhd"
   vcom		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/vga/vga.vhd"
   
@@ -172,12 +177,15 @@ alias com {
   vlog -sv "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/mentor/altera_merlin_master_translator.sv"                                                            
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/dma_engine.vhd"                                                                                       
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/regfile_final.vhd"                                                                                    
-  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_if.vhd"                                                                                          
-  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_addressing.vhd"                                                                                  
+  #vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_if.vhd" 
+  vcom 		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/grab/new/grab_if.vhd"
+  #vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_addressing.vhd"
+  vcom 		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/grab/new/grab_addressing.vhd"
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_avdetect.vhd"                                                                                    
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_buffer.vhd"                                                                                      
-  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_rcontrol.vhd"                                                                                    
-  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_wcontrol.vhd"                                                                                    
+  vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_rcontrol.vhd"    
+  #vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/grab_wcontrol.vhd"
+  vcom 		"C:/Users/pwhite8/vlsi/fpga/first_nios2_system/synthesis/grab/new/grab_wcontrol.vhd"
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_new_sdram_controller_0.vhd"                                                        
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sysid.vho"                                                                         
   vcom     "C:/Users/pwhite8/vlsi/fpga/first_nios2_system/testbench/first_nios2_system_tb/simulation/submodules/first_nios2_system_sys_clk_timer.vhd"                                                                 
