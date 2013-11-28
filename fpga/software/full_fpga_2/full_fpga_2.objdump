@@ -260,7 +260,7 @@ Disassembly of section .entry:
    80014:	08406d14 	ori	at,at,436
     jmp r1
    80018:	0800683a 	jmp	at
-   8001c:	00000000 	call	0 <__alt_mem_onchip_mem-0x80000>
+   8001c:	00000000 	call	0 <__reset-0x80000>
 
 Disassembly of section .exceptions:
 
@@ -661,7 +661,7 @@ int main()
 	// Write DMA line pitch
 	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMALPITCH, DMA_LINE_PTICH);
    8023c:	00c00604 	movi	r3,24
-   80240:	00816804 	movi	r2,1440
+   80240:	00804004 	movi	r2,256
    80244:	18800035 	stwio	r2,0(r3)
 
 	// Define DMA line size
@@ -777,7 +777,7 @@ static void interruptServiceRoutine()
 	{
 		readdata += GFSTART_increment - 1;
    8032c:	e0bfff17 	ldw	r2,-4(fp)
-   80330:	1083ffc4 	addi	r2,r2,4095
+   80330:	10807fc4 	addi	r2,r2,511
    80334:	e0bfff15 	stw	r2,-4(fp)
    80338:	00000306 	br	80348 <interruptServiceRoutine+0xd0>
 	}
@@ -3476,9 +3476,9 @@ void alt_icache_flush (void* start, alt_u32 len)
    81b4c:	b9000015 	stw	r4,0(r23)
    81b50:	90000226 	beq	r18,zero,81b5c <__call_exitprocs+0x194>
    81b54:	9009883a 	mov	r4,r18
-   81b58:	00000000 	call	0 <__alt_mem_onchip_mem-0x80000>
+   81b58:	00000000 	call	0 <__reset-0x80000>
    81b5c:	8809883a 	mov	r4,r17
-   81b60:	00000000 	call	0 <__alt_mem_onchip_mem-0x80000>
+   81b60:	00000000 	call	0 <__reset-0x80000>
    81b64:	bc400017 	ldw	r17,0(r23)
    81b68:	883fb11e 	bne	r17,zero,81a30 <__call_exitprocs+0x68>
    81b6c:	003fc106 	br	81a74 <__call_exitprocs+0xac>

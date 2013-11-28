@@ -11,7 +11,6 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 
 entity dma_engine is
-
   generic (
     size_in  : integer := 8;            -- from video decoder
     size_out : integer := 16;           -- to avalon switch (memory)
@@ -57,19 +56,38 @@ architecture functional of dma_engine is
 	signal burstcount_sig 	: std_logic_vector(7 downto 0);
 	
 	-- STATE MACHINE SIGNALS
-	signal readen_set 		: std_logic;
 	signal read_enable_sig 	: std_logic;
-	signal readen_rst 		: std_logic;
-	signal address_set 		: std_logic;
-	signal address_rst		: std_logic;
 	
 	signal readdata_valid_sig : std_logic;
+	
+	signal SOL				: std_logic;
+	signal SOF 				: std_logic;
 	
 	-- COUNTERS
 	signal read_count : std_logic_vector(3 downto 0);
 	signal readdata_valid_clk_count : std_logic_vector(9 downto 0);
 	
-	signal line_toggle : std_logic;
+	signal toggle_line : std_logic;
+	
+	signal SOL_1p	: std_logic;
+	signal SOL_2p	: std_logic;
+	
+	signal SOF_1p	: std_logic;
+	signal SOF_2p	: std_logic;
+	
+	signal SOL_2p_set : std_logic;
+	
+	signal SOF_2p_set : std_logic;
+	
+	signal SOL_final	: std_logic;
+	signal SOF_final	: std_logic;
+	
+	
+	signal first_line	: std_logic;
+	signal first_line_rst	: std_logic;
+	
+	signal first_line_edge : std_logic;
+	
 	
 begin
  
@@ -82,17 +100,17 @@ begin
 	begin
 	if resetN = '0' then
 	   readdata_valid_clk_count <= (others => '0');
-	   line_toggle = '0';
+	   toggle_line <= '0';
 	elsif sclk'event and sclk ='1' then
 		if readdata_valid_sig = '1' then
 			readdata_valid_clk_count <= UNSIGNED(readdata_valid_clk_count) + 1;
 		elsif readdata_valid_clk_count = "1011010000" then
 			readdata_valid_clk_count <= (others => '0');
 			
-			if line_toggle = '0' then
-				line_toggle = '1';
-			elsif line_toggle = '1' then
-				line_toggle = '0';
+			if toggle_line = '0' then
+				toggle_line <= '1';
+			elsif toggle_line = '1' then
+				toggle_line <= '0';
 			end if;
 			
 		end if;
@@ -141,63 +159,7 @@ begin
 	end if;
 	end process;
 	
-  -- READEN_SET and ADDRESS_SET process
-	process(sclk, resetN)
-	begin
-	if resetN = '0' then
-	   readen_set <= '0';
-	elsif sclk'event and sclk ='1' then
-		read_enable_sig <= read_enable;
-	if read_enable = '1' and read_enable_sig = '0' then -- rising edge detection
-	   readen_set <= '1';
-	   address_set <= '1';
-	else
-	   readen_set <= '0';
-	   address_set <= '0';
-	end if;
-	end if;
-	end process;
 	
-	-- READEN_RST and ADDRESS_RST process
-	process(sclk, resetN, readen_sig, readen_rst)
-	begin
-	if resetN = '0' then
-	   readen_rst <= '0';
-	   address_rst <= '0';
-	elsif sclk'event and sclk ='1' then
-		readen_rst <= '0';	
-		address_rst <= '0';
-		if waitrequest = '0' and readen_sig = '1' then
-			readen_rst <= '1';
-			address_rst <= '1';
-		end if;	
-	end if;
-	end process;
-
-	-- SET THE ADDRESS OF THE NEXT BURST
-	process(sclk, resetN, readen_rst)
-	begin
-	if resetN = '0' then
-	   readen_sig <= '0';
-	   address_sig <= (others => '0');
-	elsif sclk'event and sclk='1' then
-		readen_sig <= readen_sig;
-		address_sig <= address_sig;
-	if readen_set = '1' then--and DMAEN = '1' then
-	   readen_sig <= '1';
-	elsif readen_rst = '1' then -- handled by write to clear
-	   readen_sig <= '0';
-	end if;
-	if address_set = '1' then
-		address_sig(23) <= '1';
-		address_sig(10 downto 0) <= read_address(10 downto 0);
-	elsif address_rst <= '1' then
-		address_sig(23) <= '1';
-		address_sig(10 downto 0) <= (others => '0');
-	end if;
-	end if;
-	end process;
-  
   process (sclk, resetN, read_address, read_enable)
   begin
 	  if resetN = '0' then
@@ -223,7 +185,134 @@ begin
 	end if;
   end process;
   
+  
+  -- Pipeline SOL_1p
+process (sclk, resetN)
+begin
+	if resetN = '0' then
+		SOL_1p <= '0';
+	elsif sclk = '1' and sclk'event then
+		SOL_1p <= SOL;
+	end if;
+end process;
+
+  -- SET SOL_2p
+process (sclk, resetN)
+begin
+	if resetN = '0' then
+		SOL_2p <= '0';
+	elsif sclk = '1' and sclk'event then
+		SOL_2p <= SOL_1p;
+		SOL_2p_set <= '0';
+		if SOL_2p = '0' and SOL_1p = '1' then	-- Rising edge detection
+			SOL_2p_set <= '1';
+		end if;
+	end if;
+end process;
+
+process (sclk, resetN)
+begin
+	if resetN = '0' then
+		SOL_final <= '0';
+	elsif sclk = '1' and sclk'event then
+		SOL_final <= '0';	
+		if SOL_2p_set = '1' then
+			SOL_final <= '1';
+		end if;
+	end if;
+end process;
+
+
+  -- Pipeline SOF_1p
+process (sclk, resetN)
+begin
+	if resetN = '0' then
+		SOF_1p <= '0';
+	elsif sclk = '1' and sclk'event then
+		SOF_1p <= SOF;
+	end if;
+end process;
+
+  -- SET SOL_2p
+process (sclk, resetN)
+begin
+	if resetN = '0' then
+		SOF_2p <= '0';
+	elsif sclk = '1' and sclk'event then
+		SOF_2p <= SOF_1p;
+		SOF_2p_set <= '0';
+		if SOF_2p = '0' and SOF_1p = '1' then	-- Rising edge detection
+			SOF_2p_set <= '1';
+		end if;
+	end if;
+end process;
+
+process (sclk, resetN)
+begin
+	if resetN = '0' then
+		SOF_final <= '0';
+	elsif sclk = '1' and sclk'event then
+		SOF_final <= '0';	
+		if SOF_2p_set = '1' then
+			SOF_final <= '1';
+		end if;
+	end if;
+end process;
+
+
+	-- SET THE ADDRESS OF THE NEXT BURST
+	process(sclk, resetN)
+	begin
+	if resetN = '0' then
+	   readen_sig <= '0';
+	   address_sig(22 downto 0) <= (others => '0');
+	   address_sig(31 downto 23) <= "000000001";
+	   first_line_rst <= '0';
+	   
+	elsif sclk'event and sclk='1' then
+		first_line_rst <= '0';
+		
+	if SOL_final = '1' then
+		readen_sig <= '1';
+	end if;
+	
+	if readen_sig = '1' and waitrequest = '0' then
+		readen_sig <= '0';
+	end if;
+	
+	if SOF_final = '1' then
+		address_sig(22 downto 0) <= DMAFSTART;
+	elsif SOL_final = '1' and first_line = '1' then
+		first_line_rst <= '1';
+	elsif SOL_final = '1' then
+		address_sig (22 downto 0) <= UNSIGNED(address_sig(22 downto 0)) + UNSIGNED(DMALPITCH);
+	end if;
+	
+	end if;
+	end process;
+	
+	-- Makes sure the first line does no increment the address
+	process(sclk, resetN)
+	begin
+	if resetN = '0' then
+		first_line <= '0';
+		first_line_edge <= '0';
+	elsif sclk = '1' and sclk'event then
+		first_line_edge <= SOF_final;
+		if first_line_edge = '0' and SOF_final = '1' then
+			first_line <= '1';
+		elsif first_line_rst = '1' then
+			first_line <= '0';
+		end if;
+	end if;
+	end process;
+	
+  
+  
 	--PUSH SIGNALS TO OUTPUT
+	SOF <= read_address(1);
+	SOL <= read_address(0);
+	
 	data <= data_sig;
 	address <= address_sig;
 	readen <= readen_sig;

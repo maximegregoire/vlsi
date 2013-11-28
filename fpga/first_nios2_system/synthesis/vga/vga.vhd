@@ -38,6 +38,11 @@ port (
       -- VGA connector
       hsyncN      : buffer std_logic;
       vsyncN      : buffer std_logic;
+	  
+	  -- TO DMA ENGINE
+	  SOF			: out std_logic;
+	  SOL			: out std_logic;
+	  
       -- DAC
       clockdac    : buffer std_logic;
       blankN      : buffer std_logic;
@@ -72,13 +77,21 @@ signal vvalid   : std_logic;
 signal count4   : std_logic_vector(1 downto 0);
 signal framecnt : std_logic_vector(7 downto 0);
 
+signal hsync_1p	: std_logic;
+signal vsync_1p : std_logic;
+
+signal set_SOL : std_logic;
+signal set_SOF : std_logic;
+
+signal lineOddEven_sig : std_logic;
+
 begin
 
 clockdac      <=  not dclk; -- inverted to respect hold and setup
 syncN         <= '0'; -- No composite sync required (on green component)
 blankN        <= vvalid and hvalid; -- FIXME (pipeline missing)
 rden          <= vvalid and hvalid; 
-rdaddress(10) <= not lineOddEven; 
+rdaddress(10) <= not lineOddEven_sig; 
 
  -- monochrome
 P_DATAOUT : process (SW,linebufout)
@@ -94,6 +107,51 @@ else
 end if;
 
 end process P_DATAOUT;
+
+-- SOL
+process (dclk, rstN)
+begin
+if rstN = '0' then
+	hsync_1p <= '1';
+	set_SOL <= '0';
+elsif dclk = '1' and dclk'event then
+	hsync_1p <= hsyncN;
+	set_SOL <= '0';
+	if hsync_1p = '1' and hsyncN = '0' and vvalid = '1' then
+		set_SOL  <= '1';
+	end if;
+end if;
+end process;
+
+-- SOF
+process (dclk, rstN)
+begin
+if rstN = '0' then
+	vsync_1p <= '1';
+	set_SOF <= '0';
+elsif dclk = '1' and dclk'event then
+	vsync_1p <= vsyncN;
+	set_SOF <= '0';
+	if vsync_1p = '1' and vsyncN = '0' then
+		set_SOF  <= '1';
+	end if;
+end if;
+end process;
+
+process (dclk, rstN)
+begin
+if rstN = '0' then
+	lineOddEven_sig <= '1';
+elsif dclk = '1' and dclk'event then
+	if set_SOF = '1' then
+		if lineOddEven_sig = '1' then
+			lineOddEven_sig <= '0';
+		elsif lineOddEven_sig = '0' then
+			lineOddEven_sig <= '1';
+		end if;
+	end if;
+end if;
+end process;
 
 -------------------------------------------------------------------------------
 -- Process: P_COUNTER
@@ -156,14 +214,13 @@ elsif (dclk'event and dclk='1') then
    end if;
 
    if (hvalid = '1' and hvalid1p = '0') then
-      rdaddress(9 downto 0) <= UNSIGNED(rdaddress(9 downto 0)) + 1 + framecnt;
+      rdaddress(9 downto 0) <= UNSIGNED(rdaddress(9 downto 0)) + 1; --+ framecnt; // Remove to start at raddress 0
       count4 <= unsigned(count4) + 1;
-   elsif (hvalid = '1' and count4="11") then
-      rdaddress(9 downto 0) <= UNSIGNED(rdaddress(9 downto 0)) + 1;
-      count4 <= unsigned(count4) + 1;
-      
+   --elsif (hvalid = '1' and count4="11") then -- will perform a 4x zoom
+   --   rdaddress(9 downto 0) <= UNSIGNED(rdaddress(9 downto 0)) + 1;
+   --   count4 <= unsigned(count4) + 1;
    elsif hvalid = '1' then
-      rdaddress(9 downto 0) <= rdaddress(9 downto 0);
+      rdaddress(9 downto 0) <= rdaddress(9 downto 0) + 1;
       count4 <= unsigned(count4) + 1;
    else   
       rdaddress(9 downto 0) <= (others => '0');
@@ -173,6 +230,9 @@ elsif (dclk'event and dclk='1') then
 end if;
 
 end process P_COUNTER;
+
+SOL <= set_SOL;
+SOF <= set_SOF;
 
 end functional;
 

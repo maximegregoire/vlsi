@@ -147,6 +147,11 @@ architecture rtl of first_nios2_system_tb is
 		  -- VGA connector
 		  hsyncN      : buffer std_logic;
 		  vsyncN      : buffer std_logic;
+		  
+		-- TO DMA ENGINE
+		SOF			: out std_logic;
+		SOL			: out std_logic;
+		
 		  -- DAC
 		  clockdac    : buffer std_logic;
 		  blankN      : buffer std_logic;
@@ -398,6 +403,9 @@ architecture rtl of first_nios2_system_tb is
 	--signal      GHTOTAL : std_logic_vector(10 downto 0):="11010110100"; -- 1716
 	signal GHTOTAL : std_logic_vector(10 downto 0):="00100011111"; -- 288-1
 	
+	signal SOL_sig : std_logic;
+	signal SOF_sig : std_logic;
+	
 	-- END OF THINGS WE ADDED
 	
 begin
@@ -433,12 +441,17 @@ begin
 	
 	-- DMA OUTPUTS
 	data_sig																<= first_nios2_system_inst_dma_engine_0_conduit_end_data;                    
-	wraddress_sig															<= first_nios2_system_inst_dma_engine_0_conduit_end_write_address;           
+	wraddress_sig <= first_nios2_system_inst_dma_engine_0_conduit_end_write_address;           
 	wren_sig																<= first_nios2_system_inst_dma_engine_0_conduit_end_write_enable;      
 
 	-- DMA INPUTS
 	first_nios2_system_inst_dma_engine_0_conduit_end_bfm_conduit_read_enable	<= rden_sig;
-	first_nios2_system_inst_dma_engine_0_conduit_end_bfm_conduit_read_address	<= rdaddress_sig;
+	
+	first_nios2_system_inst_dma_engine_0_conduit_end_bfm_conduit_read_address(10 downto 2)	<= (others => '0');
+	
+	first_nios2_system_inst_dma_engine_0_conduit_end_bfm_conduit_read_address(1)	<= SOF_sig;
+	first_nios2_system_inst_dma_engine_0_conduit_end_bfm_conduit_read_address(0)	<= SOL_sig;
+	
 	
 	-- VGA IN
 	hrst_sig		<= '0';				--: std_logic;	
@@ -593,6 +606,11 @@ begin
 		  -- VGA connector
 		  hsyncN      => hsyncN_sig,												--: buffer std_logic;
 		  vsyncN      => vsyncN_sig,												--: buffer std_logic;
+		  
+		  -- TO DMA ENGINE
+			SOF			=>	SOF_sig,														--: out std_logic;
+			SOL			=>	SOL_sig,														--: out std_logic;
+		  
 		  -- DAC
 		  clockdac    => clockdac_sig,												--: buffer std_logic;
 		  blankN      => blackN_sig,												--: buffer std_logic;
