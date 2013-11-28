@@ -115,28 +115,28 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1385010265481" />
+ <parameter name="timeStamp" value="1385656183800" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="new_sdram_controller_0_wire"
+   name="new_sdram_controller"
    internal="new_sdram_controller_0.wire"
    type="conduit"
    dir="end" />
  <interface
-   name="grab_if_0_conduit_end"
+   name="grab_if"
    internal="grab_if_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface
-   name="regfile_final_0_conduit_end"
+   name="regfile"
    internal="regfile_final_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface
-   name="dma_engine_0_conduit_end"
+   name="dma"
    internal="dma_engine_0.conduit_end"
    type="conduit"
    dir="end" />
@@ -365,11 +365,8 @@
   <parameter name="size_in" value="8" />
   <parameter name="size_out" value="16" />
   <parameter name="addrsize" value="23" />
-  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="100000000" />
  </module>
- <module kind="regfile_final" version="1.0" enabled="1" name="regfile_final_0">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="100000000" />
- </module>
+ <module kind="regfile_final" version="1.0" enabled="1" name="regfile_final_0" />
  <module kind="dma_engine" version="1.0" enabled="1" name="dma_engine_0">
   <parameter name="size_in" value="8" />
   <parameter name="size_out" value="16" />
@@ -580,15 +577,6 @@
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
-   kind="avalon"
-   version="13.0"
-   start="dma_engine_0.avalon_master"
-   end="new_sdram_controller_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00800000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
    kind="clock"
    version="13.0"
    start="clk_0.clk"
@@ -598,6 +586,15 @@
    version="13.0"
    start="clk_0.clk_reset"
    end="dma_engine_0.reset_sink" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="dma_engine_0.avalon_master"
+   end="new_sdram_controller_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00800000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

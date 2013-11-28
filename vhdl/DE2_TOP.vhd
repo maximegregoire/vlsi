@@ -150,23 +150,6 @@ architecture Structural_Basic of DE2_TOP is
 	
 	signal GP_0_sig : std_logic_vector(31 downto 0);
 	signal GP_1_sig : std_logic_vector(31 downto 0);
-
---	signal ramaddr_s    : std_logic_vector(7 downto 0);
---	signal ramdatain_s  : std_logic_vector(7 downto 0);
---	signal ramdataout_s : std_logic_vector(7 downto 0);
---	signal ramwren_s    : std_logic;
-
-	signal count_0 : std_logic_vector(31 downto 0);
-	signal count_0_cmp : std_logic_vector(31 downto 0);
-	signal count_0_equal : std_logic;
-	signal count_0_clear : std_logic;
-	signal count_0_en : std_logic;
-	
-	signal count_1 : std_logic_vector(31 downto 0);
-	signal count_1_cmp : std_logic_vector(31 downto 0);
-	signal count_1_equal : std_logic;
-	signal count_1_clear : std_logic;
-	signal count_1_en : std_logic;
 	
 	signal SDRAM_ADDR_sig : std_logic_vector(11 downto 0);
 	signal SDRAM_BA_sig 	: std_logic_vector(1 downto 0);
@@ -183,73 +166,9 @@ architecture Structural_Basic of DE2_TOP is
 	signal load : std_logic;
 	
 
-		 component first_nios2_system is
-        port (
-            clk_clk                             : in    std_logic                     := 'X';             -- clk
-            reset_reset_n                       : in    std_logic                     := 'X';             -- reset_n
-            regfile_0_conduit_end_AVINTDIS      : out   std_logic;                                        -- AVINTDIS
-            regfile_0_conduit_end_T1INTOVR      : out   std_logic;                                        -- T1INTOVR
-            regfile_0_conduit_end_T1INTSTS      : out   std_logic;                                        -- T1INTSTS
-            regfile_0_conduit_end_T0INTSTS      : out   std_logic;                                        -- T0INTSTS
-            regfile_0_conduit_end_T1INTEN       : out   std_logic;                                        -- T1INTEN
-            regfile_0_conduit_end_T0INTEN       : out   std_logic;                                        -- T0INTEN
-            regfile_0_conduit_end_T1CNTEN       : out   std_logic;                                        -- T1CNTEN
-            regfile_0_conduit_end_T0CNTEN       : out   std_logic;                                        -- T0CNTEN
-            regfile_0_conduit_end_T1RST         : out   std_logic;                                        -- T1RST
-            regfile_0_conduit_end_T0RST         : out   std_logic;                                        -- T0RST
-            regfile_0_conduit_end_T0CNT         : out   std_logic_vector(31 downto 0);                    -- T0CNT
-            regfile_0_conduit_end_T1CNT         : out   std_logic_vector(31 downto 0);                    -- T1CNT
-            regfile_0_conduit_end_T0CMP         : out   std_logic_vector(31 downto 0);                    -- T0CMP
-            regfile_0_conduit_end_T1CMP         : out   std_logic_vector(31 downto 0);                    -- T1CMP
-            regfile_0_conduit_end_GP0           : out   std_logic_vector(31 downto 0);                    -- GP0
-            regfile_0_conduit_end_GP1           : out   std_logic_vector(31 downto 0);                    -- GP1
-            regfile_0_conduit_end_T0INT_set     : in    std_logic                     := 'X';             -- T0INT_set
-            regfile_0_conduit_end_T1INT_set     : in    std_logic                     := 'X';             -- T1INT_set
-            regfile_0_conduit_end_T0CNT_in      : in    std_logic_vector(31 downto 0) := (others => 'X'); -- T0CNT_in
-            regfile_0_conduit_end_T1CNT_in      : in    std_logic_vector(31 downto 0) := (others => 'X'); -- T1CNT_in
-            regfile_0_conduit_end_avalon_inten  : in    std_logic                     := 'X';             -- avalon_inten
-            counter_0_conduit_end_count         : out   std_logic_vector(31 downto 0);                    -- count
-            counter_0_conduit_end_clear         : in    std_logic                     := 'X';             -- clear
-            counter_0_conduit_end_count_cmp     : in    std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-            counter_0_conduit_end_count_equal   : out   std_logic;                                        -- count_equal
-            counter_0_conduit_end_enable        : in    std_logic                     := 'X';             -- enable
-            counter_1_conduit_end_count         : out   std_logic_vector(31 downto 0);                    -- count
-            counter_1_conduit_end_clear         : in    std_logic                     := 'X';             -- clear
-            counter_1_conduit_end_count_cmp     : in    std_logic_vector(31 downto 0) := (others => 'X'); -- count_cmp
-            counter_1_conduit_end_count_equal   : out   std_logic;                                        -- count_equal
-            counter_1_conduit_end_enable        : in    std_logic                     := 'X';             -- enable
-            new_sdram_controller_0_wire_addr    : out   std_logic_vector(11 downto 0);                    -- addr
-            new_sdram_controller_0_wire_ba      : out   std_logic_vector(1 downto 0);                     -- ba
-            new_sdram_controller_0_wire_cas_n   : out   std_logic;                                        -- cas_n
-            new_sdram_controller_0_wire_cke     : out   std_logic;                                        -- cke
-            new_sdram_controller_0_wire_cs_n    : out   std_logic;                                        -- cs_n
-            new_sdram_controller_0_wire_dq      : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
-            new_sdram_controller_0_wire_dqm     : out   std_logic_vector(1 downto 0);                     -- dqm
-            new_sdram_controller_0_wire_ras_n   : out   std_logic;                                        -- ras_n
-            new_sdram_controller_0_wire_we_n    : out   std_logic                                        -- we_n
-        );
-    end component first_nios2_system;
-	 
---	 component counter_16 is
---			port (
---				-- Counter interface
---				clk 			: in std_logic;
---				rst 			: in std_logic;
---				enable	 	: in std_logic;
---				count 		: out std_logic_vector(31 downto 0)
---				);
---	end component counter_16;
---	
---	component comparator is
---			port (	
---				-- Counter interface
---				clk 			: in std_logic;
---				rst			: in std_logic;
---				count 		: in std_logic_vector(31 downto 0);
---				count_cmp	: in std_logic_vector(31 downto 0);
---				count_equal : out std_logic
---				);
---	end component comparator;
+	-- INSERT NIOS QSYS STYSTEM HERE
+	
+	-- INSERT VGA AND LINEBUFFER HERE!!!
 	
 	component hexconverter is
 			port (
@@ -441,55 +360,9 @@ xhexconverter_7: component hexconverter
 				segment7 => HEX7  -- 7 bit decoded output.
 				);
 				
------------------------------------------------------------------
--- LEDR0 - Interrupt 1 Overrun
--- LEDR1 - Interrupt 0 Status
--- LEDR2 - Interrupt 1 Status
--- LEDR3 - Avalon Interrupt Enable 
--- LEDR4 - Interrupt 0 Enable
--- LEDR5 - Interrupt 1 Enable
-
--- LEDR7 - Avalon Interface Interrupt
-
--- LEDG0 - Counter 0 equals CMP value
--- LEDG1 - Counter 1 equals CMP value
------------------------------------------------------------------		    		  
-		  xfirst_nios2_system : component first_nios2_system
-        port map (
-				clk_clk                              	=> CLOCK_50,             --                      clk.clk
-            reset_reset_n                        	=> SW(0),                --                    reset.reset_n
-            regfile_0_conduit_end_AVINTDIS       	=> LEDR(3),   			  --    regfile_0_conduit_end.AVINTDIS
-            regfile_0_conduit_end_T1INTOVR       	=> LEDR(0),   --         --                         .T1INTOVR
-            regfile_0_conduit_end_T1INTSTS       	=> LEDR(2),   --         --                         .T1INTSTS
-            regfile_0_conduit_end_T0INTSTS       	=> LEDR(1),   --         --                         .T0INTSTS
-            regfile_0_conduit_end_T1INTEN        	=> LEDR(5),    --        --                         .T1INTEN
-            regfile_0_conduit_end_T0INTEN        	=> LEDR(4),    --        --                         .T0INTEN
-            regfile_0_conduit_end_T1CNTEN        	=> count_1_en,    	   --                         .T1CNTEN
-            regfile_0_conduit_end_T0CNTEN        	=> count_0_en,        	--                         .T0CNTEN
-            regfile_0_conduit_end_T1RST          	=> count_1_clear,        --                         .T1RST
-            regfile_0_conduit_end_T0RST          	=> count_0_clear,        --                         .T0RST
-            regfile_0_conduit_end_T0CNT          	=> open,          --                         .T0CNT
-            regfile_0_conduit_end_T1CNT          	=> open,          --                         .T1CNT
-            regfile_0_conduit_end_T0CMP          	=> count_0_cmp,        --                         .T0CMP
-            regfile_0_conduit_end_T1CMP          	=> count_1_cmp,        --                         .T1CMP
-            regfile_0_conduit_end_GP0            	=> GP_0_sig,           --                         .GP0
-            regfile_0_conduit_end_GP1            	=> GP_1_sig,           	--                         .GP1 
-            regfile_0_conduit_end_T0INT_set      	=> count_0_equal,  		   --                         .T0INT_set
-            regfile_0_conduit_end_T1INT_set      	=> count_1_equal,      --                         .T1INT_set
-            regfile_0_conduit_end_T0CNT_in       	=> count_0,   			    --                         .T0CNT_in
-            regfile_0_conduit_end_T1CNT_in       	=> count_1,    			    --                         .T1CNT_in
-            regfile_0_conduit_end_avalon_inten 		=> SW(3), --                      .avalon_inten
-            counter_0_conduit_end_count        		=> count_0,        -- counter_0_conduit_end.count
-            counter_0_conduit_end_clear        		=> count_0_clear,        --                      .clear
-            counter_0_conduit_end_count_cmp    		=> count_0_cmp,    --                      .count_cmp
-            counter_0_conduit_end_count_equal  		=> count_0_equal,  --                      .count_equal
-            counter_0_conduit_end_enable       		=> count_0_en,       --                      .enable
-            counter_1_conduit_end_count        		=> count_1,       -- counter_1_conduit_end.count
-            counter_1_conduit_end_clear        		=> count_1_clear, --                      .clear
-            counter_1_conduit_end_count_cmp    		=> count_1_cmp,   --                      .count_cmp
-            counter_1_conduit_end_count_equal  		=> count_1_equal, --                      .count_equal
-            counter_1_conduit_end_enable       		=> count_1_en,    --                      .enable
-				new_sdram_controller_0_wire_addr    	=> SDRAM_ADDR_sig,    -- new_sdram_controller_0_wire.addr
+				-- INSERT NIOS QSYS PORT MAP HERE
+		  
+		  		new_sdram_controller_0_wire_addr    	=> SDRAM_ADDR_sig,    -- new_sdram_controller_0_wire.addr
             new_sdram_controller_0_wire_ba      	=> SDRAM_BA_sig,      --                            .ba
             new_sdram_controller_0_wire_cas_n   	=> SDRAM_CAS_N_sig,   --                            .cas_n
             new_sdram_controller_0_wire_cke     	=> SDRAM_CKE_sig,     --                            .cke
@@ -498,7 +371,8 @@ xhexconverter_7: component hexconverter
             new_sdram_controller_0_wire_dqm     	=> SDRAM_DQM_sig,     --                            .dqm
             new_sdram_controller_0_wire_ras_n   	=> SDRAM_RAS_N_sig,   --                            .ras_n
             new_sdram_controller_0_wire_we_n    	=> SDRAM_WE_N_sig,    --                            .we_n
-        );
+		  
+				-- END OF NIOS QSYS PORT MAP
 		  
 			DRAM_ADDR <= SDRAM_ADDR_sig;
 			DRAM_BA_1 <= SDRAM_BA_sig(1);

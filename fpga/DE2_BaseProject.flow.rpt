@@ -1,5 +1,5 @@
 Flow report for DE2_BaseProject
-Wed Oct 23 17:40:24 2013
+Thu Nov 28 11:43:27 2013
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Oct 23 17:40:24 2013      ;
+; Flow Status                        ; Flow Failed - Thu Nov 28 11:43:27 2013      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DE2_BaseProject                             ;
 ; Top-level Entity Name              ; DE2_TOP                                     ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/23/2013 17:40:14 ;
+; Start date & time ; 11/28/2013 11:43:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2_BaseProject     ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------------+----------------------------------------------------------------------+-----------------+-------------------------------------------+----------------+
 ; Assignment Name                            ; Value                                                                ; Default Value   ; Entity Name                               ; Section Id     ;
 +--------------------------------------------+----------------------------------------------------------------------+-----------------+-------------------------------------------+----------------+
-; COMPILER_SIGNATURE_ID                      ; 203178703681275.138256441403612                                      ; --              ; --                                        ; --             ;
+; COMPILER_SIGNATURE_ID                      ; 203178703681275.138565700505932                                      ; --              ; --                                        ; --             ;
 ; EDA_INCLUDE_VHDL_CONFIGURATION_DECLARATION ; Off                                                                  ; --              ; --                                        ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT                     ; Vhdl                                                                 ; --              ; --                                        ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                        ; ModelSim-Altera (VHDL)                                               ; <None>          ; --                                        ; --             ;
@@ -95,21 +95,17 @@ applicable agreement for further details.
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cmd_xbar_demux_001     ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cmd_xbar_demux_002     ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cmd_xbar_mux           ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cmd_xbar_mux_001       ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cmd_xbar_mux_006       ; --             ;
+; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cmd_xbar_mux_005       ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_cpu                    ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_id_router              ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_id_router_001          ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_id_router_006          ; --             ;
+; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_id_router_005          ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_irq_mapper             ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_jtag_uart              ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_new_sdram_controller_0 ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_onchip_mem             ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_rsp_xbar_demux         ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_rsp_xbar_demux_001     ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_rsp_xbar_demux_006     ; --             ;
+; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_rsp_xbar_demux_005     ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_rsp_xbar_mux           ; --             ;
-; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_rsp_xbar_mux_002       ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_sys_clk_timer          ; --             ;
 ; IP_TOOL_ENV                                ; Qsys                                                                 ; --              ; first_nios2_system_sysid                  ; --             ;
 ; IP_TOOL_NAME                               ; altera_avalon_sc_fifo                                                ; --              ; altera_avalon_sc_fifo                     ; --             ;
@@ -128,21 +124,17 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                               ; altera_merlin_demultiplexer                                          ; --              ; first_nios2_system_cmd_xbar_demux_001     ; --             ;
 ; IP_TOOL_NAME                               ; altera_merlin_demultiplexer                                          ; --              ; first_nios2_system_cmd_xbar_demux_002     ; --             ;
 ; IP_TOOL_NAME                               ; altera_merlin_multiplexer                                            ; --              ; first_nios2_system_cmd_xbar_mux           ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_multiplexer                                            ; --              ; first_nios2_system_cmd_xbar_mux_001       ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_multiplexer                                            ; --              ; first_nios2_system_cmd_xbar_mux_006       ; --             ;
+; IP_TOOL_NAME                               ; altera_merlin_multiplexer                                            ; --              ; first_nios2_system_cmd_xbar_mux_005       ; --             ;
 ; IP_TOOL_NAME                               ; altera_nios2_qsys                                                    ; --              ; first_nios2_system_cpu                    ; --             ;
 ; IP_TOOL_NAME                               ; altera_merlin_router                                                 ; --              ; first_nios2_system_id_router              ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_router                                                 ; --              ; first_nios2_system_id_router_001          ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_router                                                 ; --              ; first_nios2_system_id_router_006          ; --             ;
+; IP_TOOL_NAME                               ; altera_merlin_router                                                 ; --              ; first_nios2_system_id_router_005          ; --             ;
 ; IP_TOOL_NAME                               ; altera_irq_mapper                                                    ; --              ; first_nios2_system_irq_mapper             ; --             ;
 ; IP_TOOL_NAME                               ; altera_avalon_jtag_uart                                              ; --              ; first_nios2_system_jtag_uart              ; --             ;
 ; IP_TOOL_NAME                               ; altera_avalon_new_sdram_controller                                   ; --              ; first_nios2_system_new_sdram_controller_0 ; --             ;
 ; IP_TOOL_NAME                               ; altera_avalon_onchip_memory2                                         ; --              ; first_nios2_system_onchip_mem             ; --             ;
 ; IP_TOOL_NAME                               ; altera_merlin_demultiplexer                                          ; --              ; first_nios2_system_rsp_xbar_demux         ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_demultiplexer                                          ; --              ; first_nios2_system_rsp_xbar_demux_001     ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_demultiplexer                                          ; --              ; first_nios2_system_rsp_xbar_demux_006     ; --             ;
+; IP_TOOL_NAME                               ; altera_merlin_demultiplexer                                          ; --              ; first_nios2_system_rsp_xbar_demux_005     ; --             ;
 ; IP_TOOL_NAME                               ; altera_merlin_multiplexer                                            ; --              ; first_nios2_system_rsp_xbar_mux           ; --             ;
-; IP_TOOL_NAME                               ; altera_merlin_multiplexer                                            ; --              ; first_nios2_system_rsp_xbar_mux_002       ; --             ;
 ; IP_TOOL_NAME                               ; altera_avalon_timer                                                  ; --              ; first_nios2_system_sys_clk_timer          ; --             ;
 ; IP_TOOL_NAME                               ; altera_avalon_sysid_qsys                                             ; --              ; first_nios2_system_sysid                  ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; altera_avalon_sc_fifo                     ; --             ;
@@ -161,34 +153,30 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cmd_xbar_demux_001     ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cmd_xbar_demux_002     ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cmd_xbar_mux           ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cmd_xbar_mux_001       ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cmd_xbar_mux_006       ; --             ;
+; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cmd_xbar_mux_005       ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_cpu                    ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_id_router              ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_id_router_001          ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_id_router_006          ; --             ;
+; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_id_router_005          ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_irq_mapper             ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0.1                                                               ; --              ; first_nios2_system_jtag_uart              ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0.1                                                               ; --              ; first_nios2_system_new_sdram_controller_0 ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0.1                                                               ; --              ; first_nios2_system_onchip_mem             ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_rsp_xbar_demux         ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_rsp_xbar_demux_001     ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_rsp_xbar_demux_006     ; --             ;
+; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_rsp_xbar_demux_005     ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_rsp_xbar_mux           ; --             ;
-; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_rsp_xbar_mux_002       ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0.1                                                               ; --              ; first_nios2_system_sys_clk_timer          ; --             ;
 ; IP_TOOL_VERSION                            ; 13.0                                                                 ; --              ; first_nios2_system_sysid                  ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                     ; 85                                                                   ; --              ; --                                        ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                     ; 0                                                                    ; --              ; --                                        ; --             ;
-; MISC_FILE                                  ; first_nios2_system/synthesis/../../first_nios2_system.cmp            ; --              ; --                                        ; --             ;
-; MISC_FILE                                  ; first_nios2_system/synthesis/../../first_nios2_system.qsys           ; --              ; --                                        ; --             ;
+; MISC_FILE                                  ; final_fpga/synthesis/../../first_nios2_system.cmp                    ; --              ; --                                        ; --             ;
+; MISC_FILE                                  ; final_fpga/synthesis/../../first_nios2_system.qsys                   ; --              ; --                                        ; --             ;
 ; PARTITION_COLOR                            ; 14622752                                                             ; --              ; DE2_TOP                                   ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL        ; PLACEMENT_AND_ROUTING                                                ; --              ; DE2_TOP                                   ; Top            ;
 ; PARTITION_NETLIST_TYPE                     ; SOURCE                                                               ; --              ; DE2_TOP                                   ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL                  ; None (CONSERVATIVE)                                                  ; --              ; --                                        ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION              ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                ; --              ; --                                        ; --             ;
-; SLD_INFO                                   ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1382561209 ; --              ; first_nios2_system                        ; --             ;
-; SOPCINFO_FILE                              ; first_nios2_system/synthesis/../../first_nios2_system.sopcinfo       ; --              ; --                                        ; --             ;
+; SLD_INFO                                   ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1385656859 ; --              ; first_nios2_system                        ; --             ;
+; SOPCINFO_FILE                              ; final_fpga/synthesis/../../first_nios2_system.sopcinfo               ; --              ; --                                        ; --             ;
 ; SYNTHESIS_ONLY_QIP                         ; On                                                                   ; --              ; --                                        ; --             ;
 ; TOP_LEVEL_ENTITY                           ; DE2_TOP                                                              ; DE2_BaseProject ; --                                        ; --             ;
 +--------------------------------------------+----------------------------------------------------------------------+-----------------+-------------------------------------------+----------------+
@@ -199,8 +187,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 614 MB              ; 00:00:08                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:08                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 514 MB              ; 00:00:02                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

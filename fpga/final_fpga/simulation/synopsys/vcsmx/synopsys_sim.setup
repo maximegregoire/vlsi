@@ -1,0 +1,37 @@
+
+WORK > DEFAULT
+DEFAULT:                                                                        ./libraries/work/                                                                          
+work:                                                                           ./libraries/work/                                                                          
+irq_mapper:                                                                     ./libraries/irq_mapper/                                                                    
+rsp_xbar_mux:                                                                   ./libraries/rsp_xbar_mux/                                                                  
+rsp_xbar_demux_005:                                                             ./libraries/rsp_xbar_demux_005/                                                            
+rsp_xbar_demux:                                                                 ./libraries/rsp_xbar_demux/                                                                
+cmd_xbar_mux_005:                                                               ./libraries/cmd_xbar_mux_005/                                                              
+cmd_xbar_mux:                                                                   ./libraries/cmd_xbar_mux/                                                                  
+cmd_xbar_demux_002:                                                             ./libraries/cmd_xbar_demux_002/                                                            
+cmd_xbar_demux_001:                                                             ./libraries/cmd_xbar_demux_001/                                                            
+cmd_xbar_demux:                                                                 ./libraries/cmd_xbar_demux/                                                                
+id_router_005:                                                                  ./libraries/id_router_005/                                                                 
+id_router:                                                                      ./libraries/id_router/                                                                     
+addr_router_002:                                                                ./libraries/addr_router_002/                                                               
+addr_router:                                                                    ./libraries/addr_router/                                                                   
+new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo: ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
+new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo:   ./libraries/new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/  
+cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo:     ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo/    
+cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo:       ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/      
+dma_engine_0:                                                                   ./libraries/dma_engine_0/                                                                  
+regfile_final_0:                                                                ./libraries/regfile_final_0/                                                               
+grab_if_0:                                                                      ./libraries/grab_if_0/                                                                     
+new_sdram_controller_0:                                                         ./libraries/new_sdram_controller_0/                                                        
+sysid:                                                                          ./libraries/sysid/                                                                         
+sys_clk_timer:                                                                  ./libraries/sys_clk_timer/                                                                 
+jtag_uart:                                                                      ./libraries/jtag_uart/                                                                     
+cpu:                                                                            ./libraries/cpu/                                                                           
+onchip_mem:                                                                     ./libraries/onchip_mem/                                                                    
+altera:                                                                         ./libraries/altera/                                                                        
+lpm:                                                                            ./libraries/lpm/                                                                           
+sgate:                                                                          ./libraries/sgate/                                                                         
+altera_mf:                                                                      ./libraries/altera_mf/                                                                     
+altera_lnsim:                                                                   ./libraries/altera_lnsim/                                                                  
+cycloneii:                                                                      ./libraries/cycloneii/                                                                     
+LIBRARY_SCAN = TRUE

@@ -16,13 +16,13 @@
    <frequency preferredWidth="458" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
+ <library expandedCategories="Project,Library" />
  <window width="1680" height="1010" x="0" y="0" />
  <generation
    synthesis="VHDL"
    testbench_system="STANDARD"
    testbench_simulation="VHDL"
-   path="_PROJECT_NAME_"
+   path="final_fpga"
    simulation="VHDL" />
  <hdlexample language="VHDL" />
 </preferences>

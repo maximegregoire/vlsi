@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element first_nios2_system_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element first_nios2_system_inst_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element first_nios2_system_inst_dma_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element first_nios2_system_inst_grab_if_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element first_nios2_system_inst_new_sdram_controller_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element first_nios2_system_inst_regfile_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element first_nios2_system_inst_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP2C35F672C6" />
+ <parameter name="deviceFamily" value="Cyclone II" />
+ <parameter name="deviceSpeedGrade" value="Unknown" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="DE2_BaseProject.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="1" />
+ <parameter name="timeStamp" value="1385656748676" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module
+   kind="first_nios2_system"
+   version="1.0"
+   enabled="1"
+   name="first_nios2_system_inst">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="first_nios2_system" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="AUTO_DEVICE" value="EP2C35F672C6" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_clk_bfm">
+  <parameter name="CLOCK_RATE" value="100000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_reset_source"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_reset_bfm">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_new_sdram_controller_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES">addr,ba,cas_n,cke,cs_n,dq,dqm,ras_n,we_n</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="12,2,1,1,1,16,2,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,bidir,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_grab_if_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_ROLES">gclk,vdata,GSSHT,GMODE,GCONT,GFMT,GFSTART,GLPITCH,GYSS,GXSS,GACTIVE,GSPDG,DEBUG_GRABIF1,DEBUG_GRABIF2</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,8,1,2,1,1,23,23,2,2,1,1,32,32</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">output,output,output,output,output,output,output,output,output,output,input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_regfile_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_ROLES">GSPDG,GACTIVE,GFMT,GMODE,GXSS,GYSS,GFSTART,GLPITCH,SOFIEN,DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,VGAHZOOM,VGAVZOOM,PFMT,HTOTAL,HSSYNC,HESYNC,HSVALID,HEVALID,VTOTAL,VSSYNC,VESYNC,VSVALID,VEVALID,GACTIVE_IN,GSPDG_IN,GSSHT,SOFISTS,EOFIEN</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,1,2,2,2,23,23,1,1,1,23,23,16,2,2,2,16,16,16,16,16,16,16,16,16,16,1,1,1,1,1</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,input,output,output,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.0"
+   enabled="1"
+   name="first_nios2_system_inst_dma_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_ROLES">DMAEN,DMALR,DMAFSTART,DMALPITCH,DMAXSIZE,data,write_address,write_enable,read_enable,SOL_in,SOF_in</parameter>
+  <parameter name="SIGNAL_WIDTHS">1,1,23,23,16,32,11,1,1,1,1</parameter>
+  <parameter name="SIGNAL_DIRECTIONS">output,output,output,output,output,input,input,input,output,output,output</parameter>
+ </module>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst.clk" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst_reset_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="first_nios2_system_inst_reset_bfm.reset"
+   end="first_nios2_system_inst.reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="first_nios2_system_inst_new_sdram_controller_bfm.conduit"
+   end="first_nios2_system_inst.new_sdram_controller">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst_grab_if_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="first_nios2_system_inst_reset_bfm.reset"
+   end="first_nios2_system_inst_grab_if_bfm.reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="first_nios2_system_inst_grab_if_bfm.conduit"
+   end="first_nios2_system_inst.grab_if">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst_regfile_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="first_nios2_system_inst_reset_bfm.reset"
+   end="first_nios2_system_inst_regfile_bfm.reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="first_nios2_system_inst_regfile_bfm.conduit"
+   end="first_nios2_system_inst.regfile">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="first_nios2_system_inst_clk_bfm.clk"
+   end="first_nios2_system_inst_dma_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="first_nios2_system_inst_reset_bfm.reset"
+   end="first_nios2_system_inst_dma_bfm.reset" />
+ <connection
+   kind="conduit"
+   version="13.0"
+   start="first_nios2_system_inst_dma_bfm.conduit"
+   end="first_nios2_system_inst.dma">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>
