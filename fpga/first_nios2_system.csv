@@ -1,12 +1,12 @@
-# system info first_nios2_system on 2013.11.28.11:39:05
+# system info first_nios2_system on 2013.12.01.15:20:49
 system_info:
 name,value
 DEVICE,EP2C35F672C6
 DEVICE_FAMILY,Cyclone II
-GENERATION_ID,1385656661
+GENERATION_ID,1385929156
 #
 #
-# Files generated for first_nios2_system on 2013.11.28.11:39:05
+# Files generated for first_nios2_system on 2013.12.01.15:20:49
 files:
 filepath,kind,attributes,module,is_top
 final_fpga/simulation/first_nios2_system.vhd,VHDL,,first_nios2_system,true

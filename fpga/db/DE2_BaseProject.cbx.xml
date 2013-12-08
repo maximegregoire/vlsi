@@ -1,5 +1,24 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="DE2_BaseProject">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_register_bank_a_module:final_fpga_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_9qg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_jtag_uart:jtag_uart|final_fpga_jtag_uart_scfifo_w:the_final_fpga_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_m4j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_mult_cell:the_final_fpga_cpu_mult_cell|altera_mult_add:the_altmult_add_part_2" CBX_FILE_NAME="altera_mult_add_opt2.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_jtag_uart:jtag_uart|final_fpga_jtag_uart_scfifo_r:the_final_fpga_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_onchip_mem:onchip_mem|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_vlc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_0t14.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_qbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_ic_data_module:final_fpga_cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_c9d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_ic_tag_module:final_fpga_cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_01h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_nios2_oci:the_final_fpga_cpu_nios2_oci|final_fpga_cpu_nios2_ocimem:the_final_fpga_cpu_nios2_ocimem|final_fpga_cpu_ociram_sp_ram_module:final_fpga_cpu_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_qm71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_register_bank_b_module:final_fpga_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_aqg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|grab_if:grab_if_0|grab_buffer:grab_buffer_1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hlp1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_7oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_9ci.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|linebuffer:xlinebuffer|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4gq1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_mult_cell:the_final_fpga_cpu_mult_cell|altera_mult_add:the_altmult_add_part_1" CBX_FILE_NAME="altera_mult_add_mpt2.v"/>
 	</PROJECT>
 </LOG_ROOT>

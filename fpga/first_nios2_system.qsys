@@ -115,7 +115,7 @@
  <parameter name="projectName" value="DE2_BaseProject.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1385656183800" />
+ <parameter name="timeStamp" value="1385929017590" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -126,17 +126,17 @@
    type="conduit"
    dir="end" />
  <interface
-   name="grab_if"
+   name="grab_if_conduit"
    internal="grab_if_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface
-   name="regfile"
+   name="regfile_conduit"
    internal="regfile_final_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface
-   name="dma"
+   name="dma_conduit"
    internal="dma_engine_0.conduit_end"
    type="conduit"
    dir="end" />
@@ -365,12 +365,16 @@
   <parameter name="size_in" value="8" />
   <parameter name="size_out" value="16" />
   <parameter name="addrsize" value="23" />
+  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="100000000" />
  </module>
- <module kind="regfile_final" version="1.0" enabled="1" name="regfile_final_0" />
+ <module kind="regfile_final" version="1.0" enabled="1" name="regfile_final_0">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="100000000" />
+ </module>
  <module kind="dma_engine" version="1.0" enabled="1" name="dma_engine_0">
   <parameter name="size_in" value="8" />
   <parameter name="size_out" value="16" />
   <parameter name="addrsize" value="23" />
+  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="100000000" />
  </module>
  <connection
    kind="avalon"

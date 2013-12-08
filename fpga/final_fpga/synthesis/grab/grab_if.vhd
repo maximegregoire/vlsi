@@ -93,16 +93,16 @@ end grab_if;
 
 architecture functional of grab_if is
 
-constant SIMUL : boolean := TRUE;
+constant SIMUL : boolean := FALSE;
 
   -- implementation details
---  constant LINESIZE    : integer := 1440;  -- bytes / line  -- REAL IMPLEMENTATION
-  constant LINESIZE    : integer := 256;  -- bytes / line   -- SIMULATION, equal to GXSIZE, for avdetect
+  constant LINESIZE    : integer := 1440;  -- bytes / line  -- REAL IMPLEMENTATION
+  --constant LINESIZE    : integer := 256;  -- bytes / line   -- SIMULATION, equal to GXSIZE, for avdetect
   constant LINESIZELOG : integer := 11;    -- log2(LINESIZE)
   constant BRADDRSIZE  : integer := 12;    -- buffer read address size
   constant BWADDRSIZE  : integer := 13;    -- buffer write address size
-  constant BUFFERLEN   : integer := 256;  -- nb of bytes in buffer --changed
-                                           -- from 5120
+  --constant BUFFERLEN   : integer := 256;  -- nb of bytes in buffer --changed
+  constant BUFFERLEN   : integer := 5120;                                         -- from 5120
   constant WORDSIZE    : integer := 2;     -- nb of bytes/pixel
 
   --debug registers buffered

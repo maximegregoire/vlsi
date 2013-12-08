@@ -49,24 +49,37 @@ port (
       syncN       : buffer std_logic;
       red         : buffer std_logic_vector(9 downto 0);
       green       : buffer std_logic_vector(9 downto 0);
-      blue        : buffer std_logic_vector(9 downto 0)
+      blue        : buffer std_logic_vector(9 downto 0);
+	  
+	  HTOTAL  : in std_logic_vector(15 downto 0);
+      HSVALID : in std_logic_vector(15 downto 0);
+      HEVALID : in std_logic_vector(15 downto 0);
+      HESYNC  : in std_logic_vector(15 downto 0);
+	  HSSYNC  : in std_logic_vector(15 downto 0);
+	  
+	  VTOTAL  : in std_logic_vector(15 downto 0);
+      VSVALID : in std_logic_vector(15 downto 0);
+	  VEVALID : in std_logic_vector(15 downto 0);
+	  VESYNC  : in std_logic_vector(15 downto 0);
+	  VSSYNC  : in std_logic_vector(15 downto 0)
+	  
       );
 end entity vga;
 
 architecture functional of vga is
 
-constant HTOTAL  : std_logic_vector(15 downto 0):=x"0359"; -- 858-1
+--constant HTOTAL  : std_logic_vector(15 downto 0):=x"0359"; -- 858-1
 --constant HSVALID : std_logic_vector(15 downto 0):=x"0098"; -- 152
-constant HSVALID : std_logic_vector(15 downto 0):=x"0084"; -- 132
+--constant HSVALID : std_logic_vector(15 downto 0):=x"0084"; -- 132
 --constant HEVALID : std_logic_vector(15 downto 0):=x"0340"; -- 832
-constant HEVALID : std_logic_vector(15 downto 0):=x"0354"; -- 852
-constant HESYNC  : std_logic_vector(15 downto 0):=x"0060"; -- 96
+--constant HEVALID : std_logic_vector(15 downto 0):=x"0354"; -- 852
+--constant HESYNC  : std_logic_vector(15 downto 0):=x"0060"; -- 96
 
 
-constant VTOTAL  : std_logic_vector(15 downto 0):=x"0010";						--:=x"020C"; -- 525-1
-constant VSVALID : std_logic_vector(15 downto 0):=x"0002";							--:=x"0026"; -- 38 
-constant VEVALID : std_logic_vector(15 downto 0):=x"0008";							--:=x"0206"; -- 518
-constant VESYNC  : std_logic_vector(15 downto 0):=x"0003"; -- 3
+--constant VTOTAL  : std_logic_vector(15 downto 0):=x"0010";						--:=x"020C"; -- 525-1
+--constant VSVALID : std_logic_vector(15 downto 0):=x"0002";							--:=x"0026"; -- 38 
+--constant VEVALID : std_logic_vector(15 downto 0):=x"0008";							--:=x"0206"; -- 518
+--constant VESYNC  : std_logic_vector(15 downto 0):=x"0003"; -- 3
 
 
 signal hcounter : std_logic_vector(15 downto 0);
@@ -92,6 +105,7 @@ syncN         <= '0'; -- No composite sync required (on green component)
 blankN        <= vvalid and hvalid; -- FIXME (pipeline missing)
 rden          <= vvalid and hvalid; 
 rdaddress(10) <= not lineOddEven_sig; 
+
 
  -- monochrome
 P_DATAOUT : process (SW,linebufout)
@@ -163,7 +177,7 @@ begin  --  process P_COUNTER
 
 if (rstN = '0') then
    hcounter <= (others => '0');
-   vcounter <=  "0000000000000000";
+   vcounter <=  "0000000000011000";
    hsyncN   <= '1';
    vsyncN   <= '1';
    vvalid   <= '0';
@@ -175,10 +189,10 @@ if (rstN = '0') then
 elsif (dclk'event and dclk='1') then
    hvalid1p <= hvalid;
    framecnt <= framecnt;
-   if (hrst = '1' or hcounter=HTOTAL) then
+   if (hcounter=HTOTAL) then
       hcounter <= (others => '0');
       hsyncN   <= '0';
-      if (vcounter = VTOTAL or (vrst = '1' and vcounter /= "0000000000000000")) then
+      if (vcounter = VTOTAL) then
          vcounter <= (others => '0');
          vsyncN   <= '0';
          if (framecnt < 63) then
@@ -199,7 +213,7 @@ elsif (dclk'event and dclk='1') then
             vvalid <= vvalid;
          end if;
       end if;
-   else -- hrst = '0'
+   else
       hcounter <= UNSIGNED(hcounter) + 1;
       if (hcounter = HESYNC) then
          hsyncN <= '1';

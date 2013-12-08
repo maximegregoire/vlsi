@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.11.28.11:39:06
+# ACDS 13.0 156 win32 2013.12.01.15:42:58
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -26,7 +26,7 @@ if ![info exists SYSTEM_INSTANCE_NAME] {
 } 
 
 if ![info exists TOP_LEVEL_NAME] { 
-  set TOP_LEVEL_NAME "first_nios2_system"
+  set TOP_LEVEL_NAME "final_fpga"
 } 
 
 if ![info exists QSYS_SIMDIR] { 
@@ -42,19 +42,19 @@ if ![info exists QUARTUS_INSTALL_DIR] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ic_tag_ram.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ic_tag_ram.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ic_tag_ram.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ociram_default_contents.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ociram_default_contents.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ociram_default_contents.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_a.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_a.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_a.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_b.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/first_nios2_system_onchip_mem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_ic_tag_ram.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_ic_tag_ram.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_ic_tag_ram.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_ociram_default_contents.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_ociram_default_contents.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_ociram_default_contents.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_a.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_a.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_a.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_b.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_b.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_b.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/final_fpga_onchip_mem.hex ./
 }
 
 # ----------------------------------------
@@ -192,76 +192,76 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_irq_mapper.vho"                                                                     -work irq_mapper                                                                    
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_width_adapter.sv"                                                                 -work width_adapter                                                                 
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_address_alignment.sv"                                                             -work width_adapter                                                                 
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_burst_uncompressor.sv"                                                            -work width_adapter                                                                 
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                                   -work rsp_xbar_mux                                                                  
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux_005.vho"                                                             -work rsp_xbar_demux_005                                                            
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                                 -work rsp_xbar_demux                                                                
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux_005.vho"                                                               -work cmd_xbar_mux_005                                                              
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                                   -work cmd_xbar_mux                                                                  
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux_002.vho"                                                             -work cmd_xbar_demux_002                                                            
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                             -work cmd_xbar_demux_001                                                            
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                                 -work cmd_xbar_demux                                                                
-  vlog     "$QSYS_SIMDIR/submodules/mentor/altera_reset_controller.v"                                                                      -work rst_controller                                                                
-  vlog     "$QSYS_SIMDIR/submodules/mentor/altera_reset_synchronizer.v"                                                                    -work rst_controller                                                                
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_burst_adapter.sv"                                                                 -work burst_adapter                                                                 
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_address_alignment.sv"                                                             -work burst_adapter                                                                 
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_traffic_limiter.sv"                                                               -work limiter                                                                       
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_avalon_st_pipeline_base.v"                                                               -work limiter                                                                       
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_id_router_005.vho"                                                                  -work id_router_005                                                                 
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_id_router.vho"                                                                      -work id_router                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_addr_router_002.vho"                                                                -work addr_router_002                                                               
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_addr_router.vho"                                                                    -work addr_router                                                                   
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"     -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_slave_agent.sv"                                                                   -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_burst_uncompressor.sv"                                                            -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_master_agent.sv"                                                                  -work cpu_data_master_translator_avalon_universal_master_0_agent                    
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_slave_translator.sv"                                                              -work cpu_jtag_debug_module_translator                                              
-  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_master_translator.sv"                                                             -work cpu_data_master_translator                                                    
-  vcom     "$QSYS_SIMDIR/submodules/dma_engine.vhd"                                                                                        -work dma_engine_0                                                                  
-  vcom     "$QSYS_SIMDIR/submodules/regfile_final.vhd"                                                                                     -work regfile_final_0                                                               
-  vcom     "$QSYS_SIMDIR/submodules/grab_avdetect.vhd"                                                                                     -work grab_if_0                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/grab_buffer.vhd"                                                                                       -work grab_if_0                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/grab_rcontrol.vhd"                                                                                     -work grab_if_0                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/grab_addressing.vhd"                                                                                   -work grab_if_0                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/grab_if.vhd"                                                                                           -work grab_if_0                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/grab_wcontrol.vhd"                                                                                     -work grab_if_0                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0.vhd"                                                         -work new_sdram_controller_0                                                        
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_sysid.vho"                                                                          -work sysid                                                                         
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_sys_clk_timer.vhd"                                                                  -work sys_clk_timer                                                                 
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_jtag_uart.vhd"                                                                      -work jtag_uart                                                                     
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu.vho"                                                                            -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                                   -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                                      -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"                                                  -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_mult_cell.vhd"                                                                  -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_oci_test_bench.vhd"                                                             -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_test_bench.vhd"                                                                 -work cpu                                                                           
-  vcom     "$QSYS_SIMDIR/submodules/first_nios2_system_onchip_mem.vhd"                                                                     -work onchip_mem                                                                    
-  vcom     "$QSYS_SIMDIR/first_nios2_system.vhd"                                                                                                                                                                               
-  vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"                                                                                                               
-  vcom     "$QSYS_SIMDIR/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent.vhd"                                                                                                           
-  vcom     "$QSYS_SIMDIR/first_nios2_system_width_adapter.vhd"                                                                                                                                                                 
-  vcom     "$QSYS_SIMDIR/first_nios2_system_width_adapter_002.vhd"                                                                                                                                                             
-  vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator.vhd"                                                                                                                                                    
-  vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_instruction_master_translator.vhd"                                                                                                                                             
-  vcom     "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator.vhd"                                                                                                                                            
-  vcom     "$QSYS_SIMDIR/first_nios2_system_dma_engine_0_avalon_master_translator.vhd"                                                                                                                                         
-  vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                                                                                                                              
-  vcom     "$QSYS_SIMDIR/first_nios2_system_onchip_mem_s1_translator.vhd"                                                                                                                                                      
-  vcom     "$QSYS_SIMDIR/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                        
-  vcom     "$QSYS_SIMDIR/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                                                                                                                                   
-  vcom     "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                                
-  vcom     "$QSYS_SIMDIR/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"                                                                                                                                          
-  vcom     "$QSYS_SIMDIR/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
-  vcom     "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
-  vcom     "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
-  vcom     "$QSYS_SIMDIR/first_nios2_system_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                         
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_irq_mapper.vho"                                                                     -work irq_mapper                                                                    
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_width_adapter.sv"                                                         -work width_adapter                                                                 
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_address_alignment.sv"                                                     -work width_adapter                                                                 
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_burst_uncompressor.sv"                                                    -work width_adapter                                                                 
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_rsp_xbar_mux.vho"                                                                   -work rsp_xbar_mux                                                                  
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_rsp_xbar_demux_005.vho"                                                             -work rsp_xbar_demux_005                                                            
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_rsp_xbar_demux.vho"                                                                 -work rsp_xbar_demux                                                                
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_mux_005.vho"                                                               -work cmd_xbar_mux_005                                                              
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_mux.vho"                                                                   -work cmd_xbar_mux                                                                  
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_demux_002.vho"                                                             -work cmd_xbar_demux_002                                                            
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_demux_001.vho"                                                             -work cmd_xbar_demux_001                                                            
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_demux.vho"                                                                 -work cmd_xbar_demux                                                                
+  vlog     "$QSYS_SIMDIR/submodules/mentor/altera_reset_controller.v"                                                              -work rst_controller                                                                
+  vlog     "$QSYS_SIMDIR/submodules/mentor/altera_reset_synchronizer.v"                                                            -work rst_controller                                                                
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_burst_adapter.sv"                                                         -work burst_adapter                                                                 
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_address_alignment.sv"                                                     -work burst_adapter                                                                 
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_traffic_limiter.sv"                                                       -work limiter                                                                       
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_avalon_st_pipeline_base.v"                                                       -work limiter                                                                       
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_id_router_005.vho"                                                                  -work id_router_005                                                                 
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_id_router.vho"                                                                      -work id_router                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_addr_router_002.vho"                                                                -work addr_router_002                                                               
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_addr_router.vho"                                                                    -work addr_router                                                                   
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"     -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_slave_agent.sv"                                                           -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_burst_uncompressor.sv"                                                    -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent               
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_master_agent.sv"                                                          -work cpu_data_master_translator_avalon_universal_master_0_agent                    
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_slave_translator.sv"                                                      -work cpu_jtag_debug_module_translator                                              
+  vlog -sv "$QSYS_SIMDIR/submodules/mentor/altera_merlin_master_translator.sv"                                                     -work cpu_data_master_translator                                                    
+  vcom     "$QSYS_SIMDIR/submodules/dma_engine.vhd"                                                                                -work dma_engine_0                                                                  
+  vcom     "$QSYS_SIMDIR/submodules/regfile_final.vhd"                                                                             -work regfile_final_0                                                               
+  vcom     "$QSYS_SIMDIR/submodules/grab_avdetect.vhd"                                                                             -work grab_if_0                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/grab_buffer.vhd"                                                                               -work grab_if_0                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/grab_rcontrol.vhd"                                                                             -work grab_if_0                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/grab_addressing.vhd"                                                                           -work grab_if_0                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/grab_if.vhd"                                                                                   -work grab_if_0                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/grab_wcontrol.vhd"                                                                             -work grab_if_0                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_new_sdram_controller_0.vhd"                                                         -work new_sdram_controller_0                                                        
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_sysid.vho"                                                                          -work sysid                                                                         
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_sys_clk_timer.vhd"                                                                  -work sys_clk_timer                                                                 
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_jtag_uart.vhd"                                                                      -work jtag_uart                                                                     
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu.vho"                                                                            -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_sysclk.vhd"                                                   -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_tck.vhd"                                                      -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_wrapper.vhd"                                                  -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_mult_cell.vhd"                                                                  -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_oci_test_bench.vhd"                                                             -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_cpu_test_bench.vhd"                                                                 -work cpu                                                                           
+  vcom     "$QSYS_SIMDIR/submodules/final_fpga_onchip_mem.vhd"                                                                     -work onchip_mem                                                                    
+  vcom     "$QSYS_SIMDIR/final_fpga.vhd"                                                                                                                                                                               
+  vcom     "$QSYS_SIMDIR/final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"                                                                                                               
+  vcom     "$QSYS_SIMDIR/final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent.vhd"                                                                                                           
+  vcom     "$QSYS_SIMDIR/final_fpga_width_adapter.vhd"                                                                                                                                                                 
+  vcom     "$QSYS_SIMDIR/final_fpga_width_adapter_002.vhd"                                                                                                                                                             
+  vcom     "$QSYS_SIMDIR/final_fpga_cpu_data_master_translator.vhd"                                                                                                                                                    
+  vcom     "$QSYS_SIMDIR/final_fpga_cpu_instruction_master_translator.vhd"                                                                                                                                             
+  vcom     "$QSYS_SIMDIR/final_fpga_grab_if_0_avalon_master_translator.vhd"                                                                                                                                            
+  vcom     "$QSYS_SIMDIR/final_fpga_dma_engine_0_avalon_master_translator.vhd"                                                                                                                                         
+  vcom     "$QSYS_SIMDIR/final_fpga_cpu_jtag_debug_module_translator.vhd"                                                                                                                                              
+  vcom     "$QSYS_SIMDIR/final_fpga_onchip_mem_s1_translator.vhd"                                                                                                                                                      
+  vcom     "$QSYS_SIMDIR/final_fpga_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                        
+  vcom     "$QSYS_SIMDIR/final_fpga_sys_clk_timer_s1_translator.vhd"                                                                                                                                                   
+  vcom     "$QSYS_SIMDIR/final_fpga_sysid_control_slave_translator.vhd"                                                                                                                                                
+  vcom     "$QSYS_SIMDIR/final_fpga_new_sdram_controller_0_s1_translator.vhd"                                                                                                                                          
+  vcom     "$QSYS_SIMDIR/final_fpga_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
+  vcom     "$QSYS_SIMDIR/final_fpga_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
+  vcom     "$QSYS_SIMDIR/final_fpga_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
+  vcom     "$QSYS_SIMDIR/final_fpga_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                         
 }
 
 # ----------------------------------------

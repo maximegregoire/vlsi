@@ -32,8 +32,6 @@ port (
       rden        : buffer std_logic;
       rdaddress   : buffer std_logic_vector(10 downto 0);
       lineOddEven : in     std_logic;
-      hrst        : in     std_logic;    --   sync for H alignment
-      vrst        : in     std_logic;    --   sync for V alignment
       linebufout  : in     std_logic_vector(31 downto 0);
       -- VGA connector
       hsyncN      : buffer std_logic;
@@ -49,25 +47,24 @@ port (
       syncN       : buffer std_logic;
       red         : buffer std_logic_vector(9 downto 0);
       green       : buffer std_logic_vector(9 downto 0);
-      blue        : buffer std_logic_vector(9 downto 0)
+      blue        : buffer std_logic_vector(9 downto 0);
+	  
+	   HTOTAL  : in std_logic_vector(15 downto 0);
+      HSVALID : in std_logic_vector(15 downto 0);
+      HEVALID : in std_logic_vector(15 downto 0);
+      HESYNC  : in std_logic_vector(15 downto 0);
+	  HSSYNC  : in std_logic_vector(15 downto 0);
+	  
+	  VTOTAL  : in std_logic_vector(15 downto 0);
+     VSVALID : in std_logic_vector(15 downto 0);
+	  VEVALID : in std_logic_vector(15 downto 0);
+	  VESYNC  : in std_logic_vector(15 downto 0);
+	  VSSYNC  : in std_logic_vector(15 downto 0)
+	  
       );
 end entity vga;
 
 architecture functional of vga is
-
-constant HTOTAL  : std_logic_vector(15 downto 0):=x"0359"; -- 858-1
---constant HSVALID : std_logic_vector(15 downto 0):=x"0098"; -- 152
-constant HSVALID : std_logic_vector(15 downto 0):=x"0084"; -- 132
---constant HEVALID : std_logic_vector(15 downto 0):=x"0340"; -- 832
-constant HEVALID : std_logic_vector(15 downto 0):=x"0354"; -- 852
-constant HESYNC  : std_logic_vector(15 downto 0):=x"0060"; -- 96
-
-
-constant VTOTAL  : std_logic_vector(15 downto 0):=x"0010";						--:=x"020C"; -- 525-1
-constant VSVALID : std_logic_vector(15 downto 0):=x"0002";							--:=x"0026"; -- 38 
-constant VEVALID : std_logic_vector(15 downto 0):=x"0008";							--:=x"0206"; -- 518
-constant VESYNC  : std_logic_vector(15 downto 0):=x"0003"; -- 3
-
 
 signal hcounter : std_logic_vector(15 downto 0);
 signal vcounter : std_logic_vector(15 downto 0);
@@ -82,6 +79,9 @@ signal vsync_1p : std_logic;
 
 signal set_SOL : std_logic;
 signal set_SOF : std_logic;
+
+signal first_line_rst : std_logic;
+signal first_line : std_logic;
 
 signal lineOddEven_sig : std_logic;
 
@@ -100,10 +100,11 @@ if (SW(2) = '0') then
    red     <= linebufout(31 downto 24)&"00";
    green   <= linebufout(31 downto 24)&"00";
    blue    <= linebufout(31 downto 24)&"00";
+-- Hardcoded color (PINK)
 else
-   red     <= "1000000000";
-   green   <= "1111111111";
-   blue    <= "1000000000";
+   red     <= "1111111100";
+   green   <= "0110011000";
+   blue    <= "1111111100";
 end if;
 
 end process P_DATAOUT;
@@ -142,13 +143,32 @@ process (dclk, rstN)
 begin
 if rstN = '0' then
 	lineOddEven_sig <= '1';
+	first_line_rst <= '0';
 elsif dclk = '1' and dclk'event then
-	if set_SOF = '1' then
+		first_line_rst <= '0';
+	if set_SOL = '1' and first_line = '0' then
 		if lineOddEven_sig = '1' then
 			lineOddEven_sig <= '0';
 		elsif lineOddEven_sig = '0' then
 			lineOddEven_sig <= '1';
 		end if;
+	elsif set_SOL = '1' then
+		first_line_rst <= '1';
+		lineOddEven_sig <= '1';
+	end if;
+end if;
+end process;
+
+
+process (dclk, rstN)
+begin
+if rstN = '0' then
+	first_line <= '0';
+elsif dclk = '1' and dclk'event then
+	if set_SOF = '1' then
+		first_line <= '1';
+	elsif first_line_rst = '1' then
+		first_line <= '0';
 	end if;
 end if;
 end process;
@@ -163,7 +183,7 @@ begin  --  process P_COUNTER
 
 if (rstN = '0') then
    hcounter <= (others => '0');
-   vcounter <=  "0000000000000000";
+   vcounter <= (others => '0');
    hsyncN   <= '1';
    vsyncN   <= '1';
    vvalid   <= '0';
@@ -175,10 +195,10 @@ if (rstN = '0') then
 elsif (dclk'event and dclk='1') then
    hvalid1p <= hvalid;
    framecnt <= framecnt;
-   if (hrst = '1' or hcounter=HTOTAL) then
+   if (hcounter=HTOTAL) then
       hcounter <= (others => '0');
       hsyncN   <= '0';
-      if (vcounter = VTOTAL or (vrst = '1' and vcounter /= "0000000000000000")) then
+      if (vcounter = VTOTAL) then
          vcounter <= (others => '0');
          vsyncN   <= '0';
          if (framecnt < 63) then
@@ -199,7 +219,7 @@ elsif (dclk'event and dclk='1') then
             vvalid <= vvalid;
          end if;
       end if;
-   else -- hrst = '0'
+   else
       hcounter <= UNSIGNED(hcounter) + 1;
       if (hcounter = HESYNC) then
          hsyncN <= '1';

@@ -1,5 +1,69 @@
 
-State Machine - |DE2_TOP|first_nios2_system:xfirst_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_nios2_oci:the_first_nios2_system_cpu_nios2_oci|first_nios2_system_cpu_jtag_debug_module_wrapper:the_first_nios2_system_cpu_jtag_debug_module_wrapper|first_nios2_system_cpu_jtag_debug_module_tck:the_first_nios2_system_cpu_jtag_debug_module_tck|DRsize
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|altera_merlin_burst_adapter:burst_adapter|altera_merlin_burst_adapter_full:altera_merlin_burst_adapter_full.the_ba|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|grab_if:grab_if_0|grab_rcontrol:grab_rcontrol_1|state
+Name state.LASTWRITE state.MEMWAIT state.BURST state.PRE_BURST state.WAITING state.DONE 
+state.DONE 0 0 0 0 0 0 
+state.WAITING 0 0 0 0 1 1 
+state.PRE_BURST 0 0 0 1 0 1 
+state.BURST 0 0 1 0 0 1 
+state.MEMWAIT 0 1 0 0 0 1 
+state.LASTWRITE 1 0 0 0 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|grab_if:grab_if_0|grab_wcontrol:grab_wcontrol_1|state
+Name state.ACTIVE state.ACTIVEWAIT state.WAITING 
+state.WAITING 0 0 0 
+state.ACTIVEWAIT 0 1 1 
+state.ACTIVE 1 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|grab_if:grab_if_0|grab_AVdetect:grab_AVdetect_1|state
+Name state.UPDATE state.ARM2 state.ARM1 state.WAITING 
+state.WAITING 0 0 0 0 
+state.ARM1 0 0 1 1 
+state.ARM2 0 1 0 1 
+state.UPDATE 1 0 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|final_fpga_new_sdram_controller_0:new_sdram_controller_0|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|final_fpga_new_sdram_controller_0:new_sdram_controller_0|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|final_fpga_new_sdram_controller_0:new_sdram_controller_0|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|final_fpga_new_sdram_controller_0:new_sdram_controller_0|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |DE2_TOP|final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_nios2_oci:the_final_fpga_cpu_nios2_oci|final_fpga_cpu_jtag_debug_module_wrapper:the_final_fpga_cpu_jtag_debug_module_wrapper|final_fpga_cpu_jtag_debug_module_tck:the_final_fpga_cpu_jtag_debug_module_tck|DRsize
 Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
 DRsize.000 0 0 0 0 0 0 
 DRsize.001 0 0 0 0 1 1 

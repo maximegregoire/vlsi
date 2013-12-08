@@ -12,14 +12,14 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2013.11.28.11:39:06
+# ACDS 13.0 156 win32 2013.12.01.15:42:58
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
 
 # ----------------------------------------
 # initialize variables
-TOP_LEVEL_NAME="first_nios2_system"
+TOP_LEVEL_NAME="final_fpga"
 QSYS_SIMDIR="./../../"
 QUARTUS_INSTALL_DIR="C:/altera/13.0/quartus/"
 SKIP_FILE_COPY=0
@@ -82,19 +82,19 @@ mkdir -p ./libraries/cycloneii/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ic_tag_ram.dat ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ic_tag_ram.hex ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ic_tag_ram.mif ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ociram_default_contents.dat ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ociram_default_contents.hex ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_a.dat ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_a.hex ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_a.mif ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_b.dat ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_cpu_rf_ram_b.mif ./
-  cp -f $QSYS_SIMDIR/submodules/first_nios2_system_onchip_mem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_ic_tag_ram.dat ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_ic_tag_ram.hex ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_ic_tag_ram.mif ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_ociram_default_contents.dat ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_ociram_default_contents.hex ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_ociram_default_contents.mif ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_a.hex ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_b.dat ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_b.hex ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_cpu_rf_ram_b.mif ./
+  cp -f $QSYS_SIMDIR/submodules/final_fpga_onchip_mem.hex ./
 fi
 
 # ----------------------------------------
@@ -121,62 +121,62 @@ fi
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_irq_mapper.vho"                                                                     -work irq_mapper                                                                    
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_mux.vho"                                                                   -work rsp_xbar_mux                                                                  
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux_005.vho"                                                             -work rsp_xbar_demux_005                                                            
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_rsp_xbar_demux.vho"                                                                 -work rsp_xbar_demux                                                                
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux_005.vho"                                                               -work cmd_xbar_mux_005                                                              
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_mux.vho"                                                                   -work cmd_xbar_mux                                                                  
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux_002.vho"                                                             -work cmd_xbar_demux_002                                                            
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux_001.vho"                                                             -work cmd_xbar_demux_001                                                            
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cmd_xbar_demux.vho"                                                                 -work cmd_xbar_demux                                                                
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_id_router_005.vho"                                                                  -work id_router_005                                                                 
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_id_router.vho"                                                                      -work id_router                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_addr_router_002.vho"                                                                -work addr_router_002                                                               
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_addr_router.vho"                                                                    -work addr_router                                                                   
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"     -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/dma_engine.vhd"                                                                                        -work dma_engine_0                                                                  
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/regfile_final.vhd"                                                                                     -work regfile_final_0                                                               
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_avdetect.vhd"                                                                                     -work grab_if_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_buffer.vhd"                                                                                       -work grab_if_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_rcontrol.vhd"                                                                                     -work grab_if_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_addressing.vhd"                                                                                   -work grab_if_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_if.vhd"                                                                                           -work grab_if_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_wcontrol.vhd"                                                                                     -work grab_if_0                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_new_sdram_controller_0.vhd"                                                         -work new_sdram_controller_0                                                        
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_sysid.vho"                                                                          -work sysid                                                                         
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_sys_clk_timer.vhd"                                                                  -work sys_clk_timer                                                                 
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_jtag_uart.vhd"                                                                      -work jtag_uart                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu.vho"                                                                            -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.vhd"                                                   -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_tck.vhd"                                                      -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.vhd"                                                  -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_mult_cell.vhd"                                                                  -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_oci_test_bench.vhd"                                                             -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_cpu_test_bench.vhd"                                                                 -work cpu                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/submodules/first_nios2_system_onchip_mem.vhd"                                                                     -work onchip_mem                                                                    
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system.vhd"                                                                                                                                                                               
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"                                                                                                               
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent.vhd"                                                                                                           
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_width_adapter.vhd"                                                                                                                                                                 
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_width_adapter_002.vhd"                                                                                                                                                             
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator.vhd"                                                                                                                                                    
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_cpu_instruction_master_translator.vhd"                                                                                                                                             
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator.vhd"                                                                                                                                            
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_dma_engine_0_avalon_master_translator.vhd"                                                                                                                                         
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_cpu_jtag_debug_module_translator.vhd"                                                                                                                                              
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_onchip_mem_s1_translator.vhd"                                                                                                                                                      
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                        
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_sys_clk_timer_s1_translator.vhd"                                                                                                                                                   
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_sysid_control_slave_translator.vhd"                                                                                                                                                
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_new_sdram_controller_0_s1_translator.vhd"                                                                                                                                          
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
-  vhdlan -xlrm "$QSYS_SIMDIR/first_nios2_system_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                         
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_irq_mapper.vho"                                                                     -work irq_mapper                                                                    
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_rsp_xbar_mux.vho"                                                                   -work rsp_xbar_mux                                                                  
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_rsp_xbar_demux_005.vho"                                                             -work rsp_xbar_demux_005                                                            
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_rsp_xbar_demux.vho"                                                                 -work rsp_xbar_demux                                                                
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_mux_005.vho"                                                               -work cmd_xbar_mux_005                                                              
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_mux.vho"                                                                   -work cmd_xbar_mux                                                                  
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_demux_002.vho"                                                             -work cmd_xbar_demux_002                                                            
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_demux_001.vho"                                                             -work cmd_xbar_demux_001                                                            
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cmd_xbar_demux.vho"                                                                 -work cmd_xbar_demux                                                                
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_id_router_005.vho"                                                                  -work id_router_005                                                                 
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_id_router.vho"                                                                      -work id_router                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_addr_router_002.vho"                                                                -work addr_router_002                                                               
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_addr_router.vho"                                                                    -work addr_router                                                                   
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo  
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"     -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo    
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"       -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo      
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/dma_engine.vhd"                                                                                -work dma_engine_0                                                                  
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/regfile_final.vhd"                                                                             -work regfile_final_0                                                               
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_avdetect.vhd"                                                                             -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_buffer.vhd"                                                                               -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_rcontrol.vhd"                                                                             -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_addressing.vhd"                                                                           -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_if.vhd"                                                                                   -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/grab_wcontrol.vhd"                                                                             -work grab_if_0                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_new_sdram_controller_0.vhd"                                                         -work new_sdram_controller_0                                                        
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_sysid.vho"                                                                          -work sysid                                                                         
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_sys_clk_timer.vhd"                                                                  -work sys_clk_timer                                                                 
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_jtag_uart.vhd"                                                                      -work jtag_uart                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu.vho"                                                                            -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_sysclk.vhd"                                                   -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_tck.vhd"                                                      -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_jtag_debug_module_wrapper.vhd"                                                  -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_mult_cell.vhd"                                                                  -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_oci_test_bench.vhd"                                                             -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_cpu_test_bench.vhd"                                                                 -work cpu                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/submodules/final_fpga_onchip_mem.vhd"                                                                     -work onchip_mem                                                                    
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga.vhd"                                                                                                                                                                               
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"                                                                                                               
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent.vhd"                                                                                                           
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_width_adapter.vhd"                                                                                                                                                                 
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_width_adapter_002.vhd"                                                                                                                                                             
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_cpu_data_master_translator.vhd"                                                                                                                                                    
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_cpu_instruction_master_translator.vhd"                                                                                                                                             
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_grab_if_0_avalon_master_translator.vhd"                                                                                                                                            
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_dma_engine_0_avalon_master_translator.vhd"                                                                                                                                         
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_cpu_jtag_debug_module_translator.vhd"                                                                                                                                              
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_onchip_mem_s1_translator.vhd"                                                                                                                                                      
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                        
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_sys_clk_timer_s1_translator.vhd"                                                                                                                                                   
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_sysid_control_slave_translator.vhd"                                                                                                                                                
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_new_sdram_controller_0_s1_translator.vhd"                                                                                                                                          
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_regfile_final_0_avalon_slave_0_translator.vhd"                                                                                                                                     
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                                    
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                            
+  vhdlan -xlrm "$QSYS_SIMDIR/final_fpga_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"                                                                                                         
 fi
 
 # ----------------------------------------

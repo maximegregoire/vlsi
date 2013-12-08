@@ -1,0 +1,401 @@
+Partition Merge report for DE2_BaseProject
+Sat Dec 07 22:10:21 2013
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Resource Usage Summary
+  7. Partition Merge RAM Summary
+  8. Partition Merge DSP Block Usage Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                          ;
++------------------------------------+---------------------------------------------+
+; Partition Merge Status             ; Successful - Sat Dec 07 22:10:21 2013       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; DE2_BaseProject                             ;
+; Top-level Entity Name              ; DE2_TOP                                     ;
+; Family                             ; Cyclone II                                  ;
+; Total logic elements               ; 7,369 / 33,216 ( 22 % )                     ;
+;     Total combinational functions  ; 5,307 / 33,216 ( 16 % )                     ;
+;     Dedicated logic registers      ; 4,234 / 33,216 ( 13 % )                     ;
+; Total registers                    ; 4302                                        ;
+; Total pins                         ; 425 / 475 ( 89 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 272,704 / 483,840 ( 56 % )                  ;
+; Embedded Multiplier 9-bit elements ; 8 / 70 ( 11 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Post-Fit          ; Post-Fit               ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                          ;
++-----------------------------------------------------------------------------------------------+--------------+-----------+----------------+-------------------+-----------------------------------------------------------------------------------------------+---------+
+; Name                                                                                          ; Type         ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                                                                             ; Details ;
++-----------------------------------------------------------------------------------------------+--------------+-----------+----------------+-------------------+-----------------------------------------------------------------------------------------------+---------+
+; PLL:xpll|altpll:altpll_component|_clk0                                                        ; post-fitting ; connected ; Top            ; post-fit          ; PLL:xpll|altpll:altpll_component|_clk0                                                        ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[24] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[24] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[24] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[24] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[25] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[25] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[25] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[25] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[26] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[26] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[26] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[26] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[27] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[27] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[27] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[27] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[28] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[28] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[28] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[28] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[29] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[29] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[29] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[29] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[30] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[30] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[30] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[30] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[31] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[31] ; N/A     ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[31] ; post-fitting ; connected ; Top            ; post-fit          ; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|q_b[31] ; N/A     ;
+; vga:xvga|blankN                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|blankN                                                                               ; N/A     ;
+; vga:xvga|blankN                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|blankN                                                                               ; N/A     ;
+; vga:xvga|hcounter[0]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[0]                                                                          ; N/A     ;
+; vga:xvga|hcounter[0]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[0]                                                                          ; N/A     ;
+; vga:xvga|hcounter[10]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[10]                                                                         ; N/A     ;
+; vga:xvga|hcounter[10]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[10]                                                                         ; N/A     ;
+; vga:xvga|hcounter[11]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[11]                                                                         ; N/A     ;
+; vga:xvga|hcounter[11]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[11]                                                                         ; N/A     ;
+; vga:xvga|hcounter[12]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[12]                                                                         ; N/A     ;
+; vga:xvga|hcounter[12]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[12]                                                                         ; N/A     ;
+; vga:xvga|hcounter[13]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[13]                                                                         ; N/A     ;
+; vga:xvga|hcounter[13]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[13]                                                                         ; N/A     ;
+; vga:xvga|hcounter[14]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[14]                                                                         ; N/A     ;
+; vga:xvga|hcounter[14]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[14]                                                                         ; N/A     ;
+; vga:xvga|hcounter[15]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[15]                                                                         ; N/A     ;
+; vga:xvga|hcounter[15]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[15]                                                                         ; N/A     ;
+; vga:xvga|hcounter[1]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[1]                                                                          ; N/A     ;
+; vga:xvga|hcounter[1]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[1]                                                                          ; N/A     ;
+; vga:xvga|hcounter[2]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[2]                                                                          ; N/A     ;
+; vga:xvga|hcounter[2]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[2]                                                                          ; N/A     ;
+; vga:xvga|hcounter[3]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[3]                                                                          ; N/A     ;
+; vga:xvga|hcounter[3]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[3]                                                                          ; N/A     ;
+; vga:xvga|hcounter[4]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[4]                                                                          ; N/A     ;
+; vga:xvga|hcounter[4]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[4]                                                                          ; N/A     ;
+; vga:xvga|hcounter[5]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[5]                                                                          ; N/A     ;
+; vga:xvga|hcounter[5]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[5]                                                                          ; N/A     ;
+; vga:xvga|hcounter[6]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[6]                                                                          ; N/A     ;
+; vga:xvga|hcounter[6]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[6]                                                                          ; N/A     ;
+; vga:xvga|hcounter[7]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[7]                                                                          ; N/A     ;
+; vga:xvga|hcounter[7]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[7]                                                                          ; N/A     ;
+; vga:xvga|hcounter[8]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[8]                                                                          ; N/A     ;
+; vga:xvga|hcounter[8]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[8]                                                                          ; N/A     ;
+; vga:xvga|hcounter[9]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[9]                                                                          ; N/A     ;
+; vga:xvga|hcounter[9]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hcounter[9]                                                                          ; N/A     ;
+; vga:xvga|hsyncN                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hsyncN                                                                               ; N/A     ;
+; vga:xvga|hsyncN                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hsyncN                                                                               ; N/A     ;
+; vga:xvga|hvalid                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hvalid                                                                               ; N/A     ;
+; vga:xvga|hvalid                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|hvalid                                                                               ; N/A     ;
+; vga:xvga|lineOddEven_sig                                                                      ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|lineOddEven_sig                                                                      ; N/A     ;
+; vga:xvga|lineOddEven_sig                                                                      ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|lineOddEven_sig                                                                      ; N/A     ;
+; vga:xvga|rdaddress[0]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[0]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[0]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[0]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[1]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[1]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[1]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[1]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[2]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[2]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[2]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[2]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[3]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[3]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[3]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[3]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[4]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[4]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[4]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[4]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[5]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[5]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[5]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[5]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[6]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[6]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[6]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[6]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[7]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[7]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[7]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[7]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[8]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[8]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[8]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[8]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[9]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[9]                                                                         ; N/A     ;
+; vga:xvga|rdaddress[9]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|rdaddress[9]                                                                         ; N/A     ;
+; vga:xvga|set_SOF                                                                              ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|set_SOF                                                                              ; N/A     ;
+; vga:xvga|set_SOF                                                                              ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|set_SOF                                                                              ; N/A     ;
+; vga:xvga|set_SOL                                                                              ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|set_SOL                                                                              ; N/A     ;
+; vga:xvga|set_SOL                                                                              ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|set_SOL                                                                              ; N/A     ;
+; vga:xvga|vcounter[0]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[0]                                                                          ; N/A     ;
+; vga:xvga|vcounter[0]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[0]                                                                          ; N/A     ;
+; vga:xvga|vcounter[10]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[10]                                                                         ; N/A     ;
+; vga:xvga|vcounter[10]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[10]                                                                         ; N/A     ;
+; vga:xvga|vcounter[11]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[11]                                                                         ; N/A     ;
+; vga:xvga|vcounter[11]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[11]                                                                         ; N/A     ;
+; vga:xvga|vcounter[12]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[12]                                                                         ; N/A     ;
+; vga:xvga|vcounter[12]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[12]                                                                         ; N/A     ;
+; vga:xvga|vcounter[13]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[13]                                                                         ; N/A     ;
+; vga:xvga|vcounter[13]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[13]                                                                         ; N/A     ;
+; vga:xvga|vcounter[14]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[14]                                                                         ; N/A     ;
+; vga:xvga|vcounter[14]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[14]                                                                         ; N/A     ;
+; vga:xvga|vcounter[15]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[15]                                                                         ; N/A     ;
+; vga:xvga|vcounter[15]                                                                         ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[15]                                                                         ; N/A     ;
+; vga:xvga|vcounter[1]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[1]                                                                          ; N/A     ;
+; vga:xvga|vcounter[1]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[1]                                                                          ; N/A     ;
+; vga:xvga|vcounter[2]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[2]                                                                          ; N/A     ;
+; vga:xvga|vcounter[2]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[2]                                                                          ; N/A     ;
+; vga:xvga|vcounter[3]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[3]                                                                          ; N/A     ;
+; vga:xvga|vcounter[3]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[3]                                                                          ; N/A     ;
+; vga:xvga|vcounter[4]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[4]                                                                          ; N/A     ;
+; vga:xvga|vcounter[4]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[4]                                                                          ; N/A     ;
+; vga:xvga|vcounter[5]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[5]                                                                          ; N/A     ;
+; vga:xvga|vcounter[5]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[5]                                                                          ; N/A     ;
+; vga:xvga|vcounter[6]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[6]                                                                          ; N/A     ;
+; vga:xvga|vcounter[6]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[6]                                                                          ; N/A     ;
+; vga:xvga|vcounter[7]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[7]                                                                          ; N/A     ;
+; vga:xvga|vcounter[7]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[7]                                                                          ; N/A     ;
+; vga:xvga|vcounter[8]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[8]                                                                          ; N/A     ;
+; vga:xvga|vcounter[8]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[8]                                                                          ; N/A     ;
+; vga:xvga|vcounter[9]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[9]                                                                          ; N/A     ;
+; vga:xvga|vcounter[9]                                                                          ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vcounter[9]                                                                          ; N/A     ;
+; vga:xvga|vsyncN                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vsyncN                                                                               ; N/A     ;
+; vga:xvga|vsyncN                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vsyncN                                                                               ; N/A     ;
+; vga:xvga|vvalid                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vvalid                                                                               ; N/A     ;
+; vga:xvga|vvalid                                                                               ; post-fitting ; connected ; Top            ; post-fit          ; vga:xvga|vvalid                                                                               ; N/A     ;
++-----------------------------------------------------------------------------------------------+--------------+-----------+----------------+-------------------+-----------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                                          ;
++---------------------------------------------+-----------------------+-----------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top                   ; sld_hub:auto_hub      ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+-----------------------+-----------------------+--------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 6005 / 33216 ( 18 % ) ; 230 / 33216 ( < 1 % ) ; 1135 / 33216 ( 3 % )           ; 0 / 33216 ( 0 % )              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Total combinational functions               ; 4654                  ; 214                   ; 439                            ; 0                              ;
+; Logic element usage by number of LUT inputs ;                       ;                       ;                                ;                                ;
+;     -- 4 input functions                    ; 2364                  ; 86                    ; 223                            ; 0                              ;
+;     -- 3 input functions                    ; 1463                  ; 87                    ; 126                            ; 0                              ;
+;     -- <=2 input functions                  ; 827                   ; 41                    ; 90                             ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Logic elements by mode                      ;                       ;                       ;                                ;                                ;
+;     -- normal mode                          ; 4085                  ; 205                   ; 390                            ; 0                              ;
+;     -- arithmetic mode                      ; 569                   ; 9                     ; 49                             ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Total registers                             ; 3206                  ; 130                   ; 966                            ; 0                              ;
+;     -- Dedicated logic registers            ; 3138 / 33216 ( 9 % )  ; 130 / 33216 ( < 1 % ) ; 966 / 33216 ( 3 % )            ; 0 / 33216 ( 0 % )              ;
+;     -- I/O registers                        ; 68                    ; 0                     ; 0                              ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Virtual pins                                ; 0                     ; 0                     ; 0                              ; 0                              ;
+; I/O pins                                    ; 425                   ; 0                     ; 0                              ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 8 / 70 ( 11 % )       ; 0 / 70 ( 0 % )        ; 0 / 70 ( 0 % )                 ; 0 / 70 ( 0 % )                 ;
+; Total memory bits                           ; 213312                ; 0                     ; 59392                          ; 0                              ;
+; Total RAM block bits                        ; 258048                ; 0                     ; 69120                          ; 0                              ;
+; JTAG                                        ; 1 / 1 ( 100 % )       ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )                  ; 0 / 1 ( 0 % )                  ;
+; PLL                                         ; 0 / 4 ( 0 % )         ; 0 / 4 ( 0 % )         ; 0 / 4 ( 0 % )                  ; 1 / 4 ( 25 % )                 ;
+; M4K                                         ; 56 / 105 ( 53 % )     ; 0 / 105 ( 0 % )       ; 15 / 105 ( 14 % )              ; 0 / 105 ( 0 % )                ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Connections                                 ;                       ;                       ;                                ;                                ;
+;     -- Input Connections                    ; 3327                  ; 196                   ; 1385                           ; 2                              ;
+;     -- Registered Input Connections         ; 3108                  ; 140                   ; 1106                           ; 0                              ;
+;     -- Output Connections                   ; 831                   ; 366                   ; 1                              ; 3712                           ;
+;     -- Registered Output Connections        ; 118                   ; 365                   ; 0                              ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Internal Connections                        ;                       ;                       ;                                ;                                ;
+;     -- Total Connections                    ; 29747                 ; 1501                  ; 5635                           ; 3714                           ;
+;     -- Registered Connections               ; 13248                 ; 1093                  ; 4236                           ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; External Connections                        ;                       ;                       ;                                ;                                ;
+;     -- Top                                  ; 192                   ; 360                   ; 547                            ; 3059                           ;
+;     -- sld_hub:auto_hub                     ; 360                   ; 18                    ; 184                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 547                   ; 184                   ; 0                              ; 655                            ;
+;     -- hard_block:auto_generated_inst       ; 3059                  ; 0                     ; 655                            ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Partition Interface                         ;                       ;                       ;                                ;                                ;
+;     -- Input Ports                          ; 88                    ; 39                    ; 173                            ; 2                              ;
+;     -- Output Ports                         ; 225                   ; 55                    ; 126                            ; 3                              ;
+;     -- Bidir Ports                          ; 159                   ; 0                     ; 0                              ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Registered Ports                            ;                       ;                       ;                                ;                                ;
+;     -- Registered Input Ports               ; 0                     ; 3                     ; 121                            ; 0                              ;
+;     -- Registered Output Ports              ; 0                     ; 44                    ; 117                            ; 0                              ;
+;                                             ;                       ;                       ;                                ;                                ;
+; Port Connectivity                           ;                       ;                       ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0                     ; 16                    ; 0                              ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                     ; 1                     ; 0                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                     ; 0                     ; 0                              ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                     ; 0                     ; 0                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0                     ; 1                     ; 35                             ; 0                              ;
+;     -- Output Ports with no Source          ; 0                     ; 0                     ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                     ; 2                     ; 40                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                     ; 27                    ; 117                            ; 0                              ;
++---------------------------------------------+-----------------------+-----------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++--------------------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                               ;
++---------------------------------------------+----------------------------------------+
+; Resource                                    ; Usage                                  ;
++---------------------------------------------+----------------------------------------+
+; Estimated Total logic elements              ; 7,369 / 33,216 ( 22 % )                ;
+;                                             ;                                        ;
+; Total combinational functions               ; 5307                                   ;
+; Logic element usage by number of LUT inputs ;                                        ;
+;     -- 4 input functions                    ; 2673                                   ;
+;     -- 3 input functions                    ; 1676                                   ;
+;     -- <=2 input functions                  ; 958                                    ;
+;                                             ;                                        ;
+; Logic elements by mode                      ;                                        ;
+;     -- normal mode                          ; 4680                                   ;
+;     -- arithmetic mode                      ; 627                                    ;
+;                                             ;                                        ;
+; Total registers                             ; 4302                                   ;
+;     -- Dedicated logic registers            ; 4234                                   ;
+;     -- I/O registers                        ; 68                                     ;
+;                                             ;                                        ;
+; I/O pins                                    ; 425                                    ;
+; Total memory bits                           ; 272704                                 ;
+; Embedded Multiplier 9-bit elements          ; 8                                      ;
+; Total PLLs                                  ; 1                                      ;
+;     -- PLLs                                 ; 1                                      ;
+;                                             ;                                        ;
+; Maximum fan-out node                        ; PLL:xpll|altpll:altpll_component|_clk0 ;
+; Maximum fan-out                             ; 3694                                   ;
+; Total fan-out                               ; 35509                                  ;
+; Average fan-out                             ; 3.39                                   ;
++---------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------------------------------------+
+; Name                                                                                                                                                                                                                                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                        ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------------------------------------+
+; final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_ic_data_module:final_fpga_cpu_ic_data|altsyncram:the_altsyncram|altsyncram_c9d1:auto_generated|ALTSYNCRAM                                                                                                                               ; AUTO ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384  ; None                                       ;
+; final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_ic_tag_module:final_fpga_cpu_ic_tag|altsyncram:the_altsyncram|altsyncram_01h1:auto_generated|ALTSYNCRAM                                                                                                                                 ; AUTO ; Simple Dual Port ; 64           ; 21           ; 64           ; 21           ; 1344   ; final_fpga_cpu_ic_tag_ram.mif              ;
+; final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_nios2_oci:the_final_fpga_cpu_nios2_oci|final_fpga_cpu_nios2_ocimem:the_final_fpga_cpu_nios2_ocimem|final_fpga_cpu_ociram_sp_ram_module:final_fpga_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_qm71:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; 256          ; 32           ; --           ; --           ; 8192   ; final_fpga_cpu_ociram_default_contents.mif ;
+; final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_register_bank_a_module:final_fpga_cpu_register_bank_a|altsyncram:the_altsyncram|altsyncram_9qg1:auto_generated|ALTSYNCRAM                                                                                                               ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024   ; final_fpga_cpu_rf_ram_a.mif                ;
+; final_fpga:xfinal_fpga|final_fpga_cpu:cpu|final_fpga_cpu_register_bank_b_module:final_fpga_cpu_register_bank_b|altsyncram:the_altsyncram|altsyncram_aqg1:auto_generated|ALTSYNCRAM                                                                                                               ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024   ; final_fpga_cpu_rf_ram_b.mif                ;
+; final_fpga:xfinal_fpga|final_fpga_jtag_uart:jtag_uart|final_fpga_jtag_uart_scfifo_r:the_final_fpga_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2|ALTSYNCRAM                                                     ; AUTO ; Simple Dual Port ; 64           ; 8            ; 64           ; 8            ; 512    ; None                                       ;
+; final_fpga:xfinal_fpga|final_fpga_jtag_uart:jtag_uart|final_fpga_jtag_uart_scfifo_w:the_final_fpga_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2|ALTSYNCRAM                                                     ; AUTO ; Simple Dual Port ; 64           ; 8            ; 64           ; 8            ; 512    ; None                                       ;
+; final_fpga:xfinal_fpga|final_fpga_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_vlc1:auto_generated|ALTSYNCRAM                                                                                                                                                                      ; AUTO ; Single Port      ; 5120         ; 32           ; --           ; --           ; 163840 ; final_fpga_onchip_mem.hex                  ;
+; final_fpga:xfinal_fpga|grab_if:grab_if_0|grab_buffer:grab_buffer_1|altsyncram:altsyncram_component|altsyncram_hlp1:auto_generated|altsyncram_k6l1:altsyncram1|ALTSYNCRAM                                                                                                                         ; AUTO ; True Dual Port   ; 256          ; 16           ; 512          ; 8            ; 4096   ; None                                       ;
+; linebuffer:xlinebuffer|altsyncram:altsyncram_component|altsyncram_4gq1:auto_generated|ALTSYNCRAM                                                                                                                                                                                                 ; AUTO ; Simple Dual Port ; 2048         ; 32           ; 2048         ; 32           ; 65536  ; None                                       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_0t14:auto_generated|altsyncram_8hq1:altsyncram1|ALTSYNCRAM                                                                ; AUTO ; True Dual Port   ; 1024         ; 58           ; 1024         ; 58           ; 59392  ; None                                       ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Partition Merge DSP Block Usage Summary                                                       ;
++---------------------------------------+-------------+---------------------+-------------------+
+; Statistic                             ; Number Used ; Available per Block ; Maximum Available ;
++---------------------------------------+-------------+---------------------+-------------------+
+; Simple Multipliers (9-bit)            ; 0           ; 2                   ; 70                ;
+; Simple Multipliers (18-bit)           ; 4           ; 1                   ; 35                ;
+; Embedded Multiplier Blocks            ; 4           ; --                  ; 35                ;
+; Embedded Multiplier 9-bit elements    ; 8           ; 2                   ; 70                ;
+; Signed Embedded Multipliers           ; 1           ; --                  ; --                ;
+; Unsigned Embedded Multipliers         ; 3           ; --                  ; --                ;
+; Mixed Sign Embedded Multipliers       ; 0           ; --                  ; --                ;
+; Variable Sign Embedded Multipliers    ; 0           ; --                  ; --                ;
+; Dedicated Input Shift Register Chains ; 0           ; --                  ; --                ;
++---------------------------------------+-------------+---------------------+-------------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Partition Merge
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Sat Dec 07 22:10:16 2013
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off DE2_BaseProject -c DE2_BaseProject --merge=on
+Info (35006): Using previously generated Fitter netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 117 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 36 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "EXT_CLOCK"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "UART_RXD"
+    Warning (15610): No output dependent on input pin "IRDA_RXD"
+    Warning (15610): No output dependent on input pin "OTG_INT0"
+    Warning (15610): No output dependent on input pin "OTG_INT1"
+    Warning (15610): No output dependent on input pin "OTG_DREQ0"
+    Warning (15610): No output dependent on input pin "OTG_DREQ1"
+    Warning (15610): No output dependent on input pin "TDI"
+    Warning (15610): No output dependent on input pin "TCK"
+    Warning (15610): No output dependent on input pin "TCS"
+    Warning (15610): No output dependent on input pin "PS2_DAT"
+    Warning (15610): No output dependent on input pin "PS2_CLK"
+    Warning (15610): No output dependent on input pin "ENET_INT"
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+    Warning (15610): No output dependent on input pin "TD_HS"
+    Warning (15610): No output dependent on input pin "TD_VS"
+Info (21057): Implemented 8170 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 51 input pins
+    Info (21059): Implemented 219 output pins
+    Info (21060): Implemented 159 bidirectional pins
+    Info (21061): Implemented 7614 logic cells
+    Info (21064): Implemented 114 RAM segments
+    Info (21065): Implemented 1 PLLs
+    Info (21062): Implemented 8 DSP elements
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 507 megabytes
+    Info: Processing ended: Sat Dec 07 22:10:21 2013
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+

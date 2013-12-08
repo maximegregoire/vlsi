@@ -1,0 +1,198 @@
+/*
+ * nios2_isr_main.c
+ *
+ *  Created on: 2013-10-05
+ *      Author: pwhite8
+ */
+#include "system.h"
+#include "io.h"
+
+
+#include <stdio.h>
+
+#define HARDWARE 0
+#define SOFTWARE 1
+
+
+// Register Map
+#define GCTRL		0x00
+#define GFSTART		0x04
+#define GLPITCH 	0x08
+#define GINT	 	0x0C
+#define DMACTRL		0x10
+#define DMAFSTART	0x14
+#define DMALPITCH	0x18
+#define DMASIZE		0x1C
+#define VGACTRL		0x20
+#define HTOTAL		0x24
+#define HSSYNC		0x28
+#define HESYNC		0x2C
+#define HSVALID		0x30
+#define HEVALID		0x34
+#define	VTOTAL		0x38
+#define VSSYNC		0x3C
+#define VESYNC		0x40
+#define VSVALID		0x44
+#define VEVALID		0x48
+
+#define CHECK_BIT(var,pos) 	((var) & (1<<(pos)))
+#define SET_BIT(var,pos) 	(var |= (1U << pos))
+#define CLEAR_BIT(var,pos) 	(var &= ~(1U << (pos)))
+
+static void interruptServiceRoutine();
+
+volatile int GFSTART_increment;
+
+volatile int DMA_LINE_PITCH_val;
+volatile int DMA_LINE_SIZE;
+volatile int LINE_PITCH;
+
+int main()
+{
+	// 0 - Hardware		1 - Software
+	int sim = SOFTWARE;
+
+	int HTOTAL_val, HSVALID_val, HEVALID_val, HESYNC_val;
+	int VTOTAL_val, VSVALID_val, VEVALID_val, VESYNC_val;
+
+	if (sim == SOFTWARE)
+	{
+		DMA_LINE_PITCH_val = 1440;
+		DMA_LINE_SIZE =	1440;
+
+		LINE_PITCH = 2880;
+
+		HTOTAL_val = 857;
+		HSVALID_val = 132;
+		HEVALID_val = 852;
+		HESYNC_val = 96;
+		VTOTAL_val = 15;
+		VSVALID_val = 4;
+		VEVALID_val = 8;
+		VESYNC_val = 3;
+
+		GFSTART_increment = LINE_PITCH*(VEVALID_val - VSVALID_val);
+	}
+	else if (sim == HARDWARE)
+	{
+		DMA_LINE_PITCH_val = 1440;
+		DMA_LINE_SIZE =	1440;
+
+		LINE_PITCH = 1440;
+
+		//GFSTART_increment = 691200;
+
+		HTOTAL_val = 857;
+		HSVALID_val = 132;
+		HEVALID_val = 852;
+		HESYNC_val = 96;
+		VTOTAL_val = 524;
+		VSVALID_val = 38;
+		VEVALID_val = 518;
+		VESYNC_val = 3;
+
+		GFSTART_increment = LINE_PITCH*(VEVALID_val - VSVALID_val);
+	}
+
+	int data = 0xDEAD;
+
+	// Register IRQ
+	alt_irq_register(0, 0, interruptServiceRoutine);
+
+	// WRITE HORIZONTAL REISTERS
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, HTOTAL, HTOTAL_val);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, HSVALID, HSVALID_val);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, HEVALID, HEVALID_val);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, HESYNC, HESYNC_val);
+
+	// WRITE VERTICAL REGISTERS
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, VTOTAL, VTOTAL_val);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, VSVALID, VSVALID_val);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, VEVALID, VEVALID_val);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, VESYNC, VESYNC_val);
+
+	// Enable DMA
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMACTRL, 0x1);
+
+	// Set DMA start address to 0
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMAFSTART, 0);
+
+	// Write DMA line pitch
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMALPITCH, DMA_LINE_PITCH_val);
+
+	// Define DMA line size
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMASIZE, DMA_LINE_SIZE);
+
+	// Set Grab start address to 0
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GFSTART, 0);
+
+	// Enable a snapshot and write 10 to GMODE // MUST BE STARTED AT 10
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL, 0x61);
+
+	// Write the line pitch
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GLPITCH, LINE_PITCH);
+
+	printf("Done initial setup\n");
+
+	return 0;
+}
+
+
+static void interruptServiceRoutine()
+{
+	int readdata;
+	int update_gfstart = 0;
+
+	int gctrl;
+
+	int dmafstart = 0;
+
+	// Reset SOFISTS and EOFISTS
+	readdata = IORD_32DIRECT(REGFILE_FINAL_0_BASE, GINT);
+	SET_BIT(readdata, 1);
+	SET_BIT(readdata, 3);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GINT, readdata);
+
+	// Set SHHT and Grab controls
+	gctrl = IORD_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL);
+	if (CHECK_BIT(gctrl, 5))
+	{
+		CLEAR_BIT(gctrl, 5);
+	}
+	else
+	{
+		SET_BIT(gctrl, 5);
+		update_gfstart = 1;
+	}
+
+	// Update GFSTART to new line location
+	readdata = IORD_32DIRECT(REGFILE_FINAL_0_BASE, GFSTART);
+
+	if (update_gfstart == 1)
+	{
+		//End of line
+		if (readdata > LINE_PITCH/2)
+		{
+			readdata= 0;
+			dmafstart = GFSTART_increment;
+		}
+		else
+		{
+		   readdata = GFSTART_increment;
+		   dmafstart = 0;
+		}
+
+		IOWR_32DIRECT(REGFILE_FINAL_0_BASE, DMAFSTART, dmafstart);
+	}
+	else
+	{
+		readdata += LINE_PITCH/2;
+	}
+
+
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GFSTART, readdata);
+
+	// Set the SHHT
+	SET_BIT(gctrl, 0);
+	IOWR_32DIRECT(REGFILE_FINAL_0_BASE, GCTRL, gctrl);
+}

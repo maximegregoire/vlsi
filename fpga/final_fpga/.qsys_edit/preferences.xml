@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="159" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="249" />
+   <export preferredWidth="313" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="465" />
+   <clocksource preferredWidth="461" />
+   <frequency preferredWidth="458" />
+  </columns>
+ </clocktable>
+ <library expandedCategories="Project,Library" />
+ <window width="1680" height="1010" x="0" y="0" />
+ <generation
+   synthesis="VHDL"
+   testbench_system="STANDARD"
+   testbench_simulation="VHDL"
+   path="C:/Users/pwhite8/vlsi/fpga/_PROJECT_NAME_"
+   simulation="VHDL" />
+ <hdlexample language="VHDL" />
+</preferences>
