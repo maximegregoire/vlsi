@@ -1,0 +1,172 @@
+set_global_assignment -entity "final_fpga" -library "final_fpga" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "final_fpga" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "final_fpga" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../final_fpga.sopcinfo"]
+set_instance_assignment -entity "final_fpga" -library "final_fpga" -name SLD_INFO "QSYS_NAME final_fpga HAS_SOPCINFO 1 GENERATION_ID 1385930693"
+set_global_assignment -library "final_fpga" -name MISC_FILE [file join $::quartus(qip_path) "../final_fpga.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "final_fpga" -name MISC_FILE [file join $::quartus(qip_path) "../final_fpga.qsys"]
+
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rdata_fifo.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_new_sdram_controller_0_s1_translator_avalon_universal_slave_0_agent.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_width_adapter.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_width_adapter_002.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_data_master_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_instruction_master_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_grab_if_0_avalon_master_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_dma_engine_0_avalon_master_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_jtag_debug_module_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_onchip_mem_s1_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_jtag_uart_avalon_jtag_slave_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_sys_clk_timer_s1_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_sysid_control_slave_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_new_sdram_controller_0_s1_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_regfile_final_0_avalon_slave_0_translator.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_cpu_data_master_translator_avalon_universal_master_0_agent.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_grab_if_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "final_fpga_dma_engine_0_avalon_master_translator_avalon_universal_master_0_agent.vhd"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_irq_mapper.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_width_adapter.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_address_alignment.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_arbitrator.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_rsp_xbar_mux.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_rsp_xbar_demux_005.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_rsp_xbar_demux.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cmd_xbar_mux_005.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cmd_xbar_mux.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cmd_xbar_demux_002.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cmd_xbar_demux_001.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cmd_xbar_demux.sv"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "final_fpga" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_adapter.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_traffic_limiter.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_st_pipeline_base.v"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_id_router_005.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_id_router.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_addr_router_002.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_addr_router.sv"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_agent.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "final_fpga" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/dma_engine.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/regfile_final.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/grab_if.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/grab_wcontrol.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/grab_addressing.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/grab_avdetect.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/grab_buffer.vhd"]
+set_global_assignment -library "final_fpga" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/grab_rcontrol.vhd"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_new_sdram_controller_0.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_sysid.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_sys_clk_timer.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_jtag_uart.v"]
+set_global_assignment -library "final_fpga" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu.ocp"]
+set_global_assignment -library "final_fpga" -name SDC_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu.sdc"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu.v"]
+set_global_assignment -library "final_fpga" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_ic_tag_ram.mif"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_jtag_debug_module_sysclk.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_jtag_debug_module_tck.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_jtag_debug_module_wrapper.v"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_mult_cell.v"]
+set_global_assignment -library "final_fpga" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_ociram_default_contents.mif"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_oci_test_bench.v"]
+set_global_assignment -library "final_fpga" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_rf_ram_a.mif"]
+set_global_assignment -library "final_fpga" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_rf_ram_b.mif"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_cpu_test_bench.v"]
+set_global_assignment -library "final_fpga" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/final_fpga_onchip_mem.hex"]
+set_global_assignment -library "final_fpga" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/final_fpga_onchip_mem.v"]
+
+set_global_assignment -entity "final_fpga_irq_mapper" -library "final_fpga" -name IP_TOOL_NAME "altera_irq_mapper"
+set_global_assignment -entity "final_fpga_irq_mapper" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_irq_mapper" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_width_adapter"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_rsp_xbar_mux" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "final_fpga_rsp_xbar_mux" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_rsp_xbar_mux" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_rsp_xbar_demux_005" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "final_fpga_rsp_xbar_demux_005" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_rsp_xbar_demux_005" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_rsp_xbar_demux" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "final_fpga_rsp_xbar_demux" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_rsp_xbar_demux" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_cmd_xbar_mux_005" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "final_fpga_cmd_xbar_mux_005" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_cmd_xbar_mux_005" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_cmd_xbar_mux" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "final_fpga_cmd_xbar_mux" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_cmd_xbar_mux" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux_002" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux_002" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux_002" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux_001" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux_001" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux_001" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_cmd_xbar_demux" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_reset_controller" -library "final_fpga" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_burst_adapter"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_traffic_limiter"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_id_router_005" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "final_fpga_id_router_005" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_id_router_005" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_id_router" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "final_fpga_id_router" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_id_router" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_addr_router_002" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "final_fpga_addr_router_002" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_addr_router_002" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_addr_router" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "final_fpga_addr_router" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_addr_router" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "final_fpga" -name IP_TOOL_NAME "altera_avalon_sc_fifo"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_slave_agent"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_agent" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "final_fpga" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_translator" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_new_sdram_controller_0" -library "final_fpga" -name IP_TOOL_NAME "altera_avalon_new_sdram_controller"
+set_global_assignment -entity "final_fpga_new_sdram_controller_0" -library "final_fpga" -name IP_TOOL_VERSION "13.0.1"
+set_global_assignment -entity "final_fpga_new_sdram_controller_0" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_sysid" -library "final_fpga" -name IP_TOOL_NAME "altera_avalon_sysid_qsys"
+set_global_assignment -entity "final_fpga_sysid" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_sysid" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_sys_clk_timer" -library "final_fpga" -name IP_TOOL_NAME "altera_avalon_timer"
+set_global_assignment -entity "final_fpga_sys_clk_timer" -library "final_fpga" -name IP_TOOL_VERSION "13.0.1"
+set_global_assignment -entity "final_fpga_sys_clk_timer" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_jtag_uart" -library "final_fpga" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "final_fpga_jtag_uart" -library "final_fpga" -name IP_TOOL_VERSION "13.0.1"
+set_global_assignment -entity "final_fpga_jtag_uart" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_cpu" -library "final_fpga" -name IP_TOOL_NAME "altera_nios2_qsys"
+set_global_assignment -entity "final_fpga_cpu" -library "final_fpga" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "final_fpga_cpu" -library "final_fpga" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "final_fpga_onchip_mem" -library "final_fpga" -name IP_TOOL_NAME "altera_avalon_onchip_memory2"
+set_global_assignment -entity "final_fpga_onchip_mem" -library "final_fpga" -name IP_TOOL_VERSION "13.0.1"
+set_global_assignment -entity "final_fpga_onchip_mem" -library "final_fpga" -name IP_TOOL_ENV "Qsys"

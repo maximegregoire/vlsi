@@ -1,2 +1,1 @@
 v1
-PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,final_fpga:xfinal_fpga|dma_engine:dma_engine_0|lpm_mult:Mult0|mult_d8t:auto_generated|mac_mult3,
