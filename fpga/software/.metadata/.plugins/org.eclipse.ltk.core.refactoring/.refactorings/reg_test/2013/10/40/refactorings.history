@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;reg_test/nios_test.map&apos; to &apos;reg_test.map&apos;" description="Rename resource &apos;nios_test.map&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="nios_test.map" name="reg_test.map" stamp="1380807443562" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;reg_test/main_test.c&apos; to &apos;reg_test_main.c&apos;" description="Rename resource &apos;main_test.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main_test.c" name="reg_test_main.c" stamp="1380807495559" updateReferences="true"/>
-</session>
